@@ -1,7 +1,7 @@
 [
   {
     "url": "https://stripe.com",
-    "analyzed_at": "2026-04-03T17:50:52.912Z",
+    "analyzed_at": "2026-04-03T17:55:23.533Z",
     "page_title": "Stripe | Financial Infrastructure to Grow Your Revenue",
     "colors": {
       "palette": [
@@ -214,33 +214,39 @@
     },
     "overall": {
       "personality": "Warm Professional",
-      "industry": "general",
+      "industry": "fintech",
       "complexity": 100
     }
   },
   {
     "url": "https://mercury.com",
-    "analyzed_at": "2026-04-03T17:50:59.553Z",
+    "analyzed_at": "2026-04-03T17:55:30.291Z",
     "page_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies",
     "colors": {
       "palette": [
         {
-          "raw": "rgb(237, 237, 243)",
-          "hex": "#ededf3",
-          "count": 579,
-          "pct": 47
+          "raw": "rgb(42, 41, 36)",
+          "hex": "#2a2924",
+          "count": 420,
+          "pct": 34
         },
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
-          "count": 421,
-          "pct": 34
+          "count": 396,
+          "pct": 32
         },
         {
-          "raw": "rgb(195, 195, 204)",
-          "hex": "#c3c3cc",
-          "count": 146,
-          "pct": 12
+          "raw": "rgb(237, 237, 243)",
+          "hex": "#ededf3",
+          "count": 183,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(90, 85, 72)",
+          "hex": "#5a5548",
+          "count": 121,
+          "pct": 10
         },
         {
           "raw": "rgba(0, 0, 0, 0)",
@@ -255,9 +261,9 @@
           "pct": 1
         },
         {
-          "raw": "rgb(30, 30, 42)",
-          "hex": "#1e1e2a",
-          "count": 9,
+          "raw": "rgb(195, 195, 204)",
+          "hex": "#c3c3cc",
+          "count": 14,
           "pct": 1
         },
         {
@@ -267,40 +273,34 @@
           "pct": 1
         },
         {
-          "raw": "rgb(23, 23, 33)",
-          "hex": "#171721",
-          "count": 6,
-          "pct": 0
+          "raw": "rgb(239, 238, 233)",
+          "hex": "#efeee9",
+          "count": 7,
+          "pct": 1
         },
         {
-          "raw": "rgba(156, 180, 232, 0.2)",
-          "hex": "#9cb4e8",
+          "raw": "rgba(138, 117, 60, 0.1)",
+          "hex": "#8a753c",
           "count": 6,
-          "pct": 0
-        },
-        {
-          "raw": "rgba(175, 178, 206, 0.2)",
-          "hex": "#afb2ce",
-          "count": 5,
           "pct": 0
         }
       ],
-      "dominant_bg": "#171721",
+      "dominant_bg": "#f6f5f2",
       "primary_text": "#000000",
-      "color_scheme": "dark",
+      "color_scheme": "light",
       "unique_count": 15
     },
     "typography": {
       "fonts": [
         {
           "family": "arcadia",
-          "count": 1138,
+          "count": 1114,
           "heading": true,
           "body": true
         },
         {
           "family": "arcadiaDisplay",
-          "count": 56,
+          "count": 70,
           "heading": true,
           "body": true
         },
@@ -314,15 +314,15 @@
       "sizes": [
         {
           "px": 65,
-          "count": 8
+          "count": 21
         },
         {
-          "px": 49,
+          "px": 57,
           "count": 2
         },
         {
           "px": 42,
-          "count": 7
+          "count": 9
         },
         {
           "px": 32,
@@ -330,25 +330,25 @@
         },
         {
           "px": 28,
-          "count": 17
+          "count": 19
         },
         {
           "px": 24,
-          "count": 7
+          "count": 16
         },
         {
           "px": 21,
-          "count": 27
+          "count": 26
         },
         {
           "px": 18,
-          "count": 65
+          "count": 92
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 831
+          "count": 791
         },
         {
           "weight": 420,
@@ -356,11 +356,11 @@
         },
         {
           "weight": 480,
-          "count": 133
+          "count": 137
         },
         {
           "weight": 360,
-          "count": 53
+          "count": 80
         }
       ],
       "heading_font": "arcadia",
@@ -370,23 +370,23 @@
       "top_values": [
         {
           "px": 32,
-          "count": 147
+          "count": 132
         },
         {
           "px": 12,
-          "count": 71
+          "count": 56
         },
         {
           "px": 20,
-          "count": 34
+          "count": 36
         },
         {
           "px": 40,
-          "count": 34
+          "count": 35
         },
         {
           "px": 8,
-          "count": 22
+          "count": 28
         },
         {
           "px": 1,
@@ -398,11 +398,11 @@
         },
         {
           "px": 72,
-          "count": 10
+          "count": 11
         },
         {
           "px": 4,
-          "count": 9
+          "count": 8
         },
         {
           "px": 24,
@@ -417,7 +417,7 @@
       "maxWidth": 1440,
       "viewportWidth": 1440,
       "hasSidebar": false,
-      "hasHero": false,
+      "hasHero": true,
       "hasStickyHeader": false,
       "hasFooter": true
     },
@@ -427,18 +427,18 @@
       "top_radii": [
         {
           "px": 4,
-          "count": 100
+          "count": 94
         },
         {
           "px": 12,
           "count": 28
         },
         {
-          "px": 8,
-          "count": 13
+          "px": 40,
+          "count": 10
         },
         {
-          "px": 40,
+          "px": 8,
           "count": 9
         },
         {
@@ -448,34 +448,34 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "fintech",
       "complexity": 100
     }
   },
   {
     "url": "https://wise.com",
-    "analyzed_at": "2026-04-03T17:51:12.900Z",
+    "analyzed_at": "2026-04-03T17:55:43.620Z",
     "page_title": "Wise: The international account | Money without borders | Wise South Korea",
     "colors": {
       "palette": [
         {
           "raw": "rgb(69, 71, 69)",
           "hex": "#454745",
-          "count": 1542,
-          "pct": 57
+          "count": 1760,
+          "pct": 61
         },
         {
           "raw": "rgb(22, 51, 0)",
           "hex": "#163300",
-          "count": 507,
-          "pct": 19
+          "count": 506,
+          "pct": 17
         },
         {
           "raw": "rgb(14, 15, 12)",
           "hex": "#0e0f0c",
-          "count": 374,
-          "pct": 14
+          "count": 370,
+          "pct": 13
         },
         {
           "raw": "rgba(22, 51, 0, 0.08)",
@@ -486,7 +486,7 @@
         {
           "raw": "rgb(159, 232, 112)",
           "hex": "#9fe870",
-          "count": 43,
+          "count": 46,
           "pct": 2
         },
         {
@@ -498,7 +498,7 @@
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 24,
+          "count": 21,
           "pct": 1
         },
         {
@@ -529,13 +529,13 @@
       "fonts": [
         {
           "family": "Inter",
-          "count": 2422,
+          "count": 2637,
           "heading": true,
           "body": true
         },
         {
           "family": "Wise Sans",
-          "count": 70,
+          "count": 69,
           "heading": true,
           "body": true
         },
@@ -583,21 +583,21 @@
         },
         {
           "px": 45,
-          "count": 47
+          "count": 89
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 1806
+          "count": 1867
         },
         {
           "weight": 600,
-          "count": 652
+          "count": 674
         },
         {
           "weight": 500,
-          "count": 33
+          "count": 164
         },
         {
           "weight": 900,
@@ -611,15 +611,15 @@
       "top_values": [
         {
           "px": 8,
-          "count": 412
+          "count": 411
         },
         {
           "px": 9,
-          "count": 198
+          "count": 199
         },
         {
           "px": 12,
-          "count": 165
+          "count": 163
         },
         {
           "px": 24,
@@ -627,7 +627,7 @@
         },
         {
           "px": 32,
-          "count": 110
+          "count": 109
         },
         {
           "px": 48,
@@ -635,18 +635,18 @@
         },
         {
           "px": 16,
-          "count": 72
+          "count": 66
         },
         {
           "px": 56,
           "count": 50
         },
         {
-          "px": 28,
-          "count": 48
+          "px": 3,
+          "count": 44
         },
         {
-          "px": 3,
+          "px": 28,
           "count": 44
         }
       ],
@@ -676,11 +676,11 @@
         },
         {
           "px": 9999,
-          "count": 64
+          "count": 60
         },
         {
           "px": 19,
-          "count": 24
+          "count": 25
         },
         {
           "px": 1000,
@@ -689,14 +689,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Warm Professional",
       "industry": "fintech",
       "complexity": 100
     }
   },
   {
     "url": "https://linear.app",
-    "analyzed_at": "2026-04-03T17:51:20.548Z",
+    "analyzed_at": "2026-04-03T17:55:51.591Z",
     "page_title": "Linear – The system for product development",
     "colors": {
       "palette": [
@@ -918,21 +918,21 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "developer_tools",
+      "personality": "Soft Wellness",
+      "industry": "saas",
       "complexity": 100
     }
   },
   {
     "url": "https://vercel.com",
-    "analyzed_at": "2026-04-03T17:51:28.097Z",
+    "analyzed_at": "2026-04-03T17:55:59.701Z",
     "page_title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
     "colors": {
       "palette": [
         {
           "raw": "rgb(237, 237, 237)",
           "hex": "#ededed",
-          "count": 961,
+          "count": 962,
           "pct": 54
         },
         {
@@ -999,7 +999,7 @@
       "fonts": [
         {
           "family": "Geist",
-          "count": 1592,
+          "count": 1593,
           "heading": true,
           "body": true
         },
@@ -1043,7 +1043,7 @@
         },
         {
           "px": 16,
-          "count": 847
+          "count": 848
         },
         {
           "px": 14,
@@ -1053,7 +1053,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 1374
+          "count": 1375
         },
         {
           "weight": 500,
@@ -1153,14 +1153,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://notion.so",
-    "analyzed_at": "2026-04-03T17:51:37.164Z",
+    "analyzed_at": "2026-04-03T17:56:07.863Z",
     "page_title": "나만을 위한 AI 워크스페이스 | Notion (노션)",
     "colors": {
       "palette": [
@@ -1382,14 +1382,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Warm Professional",
+      "industry": "saas",
       "complexity": 100
     }
   },
   {
     "url": "https://github.com",
-    "analyzed_at": "2026-04-03T17:51:44.453Z",
+    "analyzed_at": "2026-04-03T17:56:15.089Z",
     "page_title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
     "colors": {
       "palette": [
@@ -1629,14 +1629,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://supabase.com",
-    "analyzed_at": "2026-04-03T17:51:51.256Z",
+    "analyzed_at": "2026-04-03T17:56:21.846Z",
     "page_title": "Supabase | The Postgres Development Platform.",
     "colors": {
       "palette": [
@@ -1846,21 +1846,21 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://tailwindcss.com",
-    "analyzed_at": "2026-04-03T17:51:57.597Z",
+    "analyzed_at": "2026-04-03T17:56:27.895Z",
     "page_title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "colors": {
       "palette": [
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 1562,
+          "count": 1561,
           "pct": 65
         },
         {
@@ -1927,7 +1927,7 @@
       "fonts": [
         {
           "family": "inter",
-          "count": 1574,
+          "count": 1573,
           "heading": true,
           "body": true
         },
@@ -1975,7 +1975,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 2031
+          "count": 2030
         },
         {
           "weight": 500,
@@ -2075,14 +2075,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Warm Professional",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://nextjs.org",
-    "analyzed_at": "2026-04-03T17:52:03.565Z",
+    "analyzed_at": "2026-04-03T17:56:34.562Z",
     "page_title": "Next.js by Vercel - The React Framework",
     "colors": {
       "palette": [
@@ -2312,14 +2312,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://astro.build",
-    "analyzed_at": "2026-04-03T17:52:10.426Z",
+    "analyzed_at": "2026-04-03T17:56:40.788Z",
     "page_title": "Astro",
     "colors": {
       "palette": [
@@ -2559,14 +2559,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://vitejs.dev",
-    "analyzed_at": "2026-04-03T17:52:17.203Z",
+    "analyzed_at": "2026-04-03T17:56:47.289Z",
     "page_title": "Vite | Next Generation Frontend Tooling",
     "colors": {
       "palette": [
@@ -2768,27 +2768,27 @@
       ]
     },
     "overall": {
-      "personality": "Warm Professional",
-      "industry": "general",
+      "personality": "Bold Minimal",
+      "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://figma.com",
-    "analyzed_at": "2026-04-03T17:52:25.028Z",
-    "page_title": "Figma | 협업을 위한 인터페이스 디자인 도구",
+    "analyzed_at": "2026-04-03T17:56:53.337Z",
+    "page_title": "Figma: The Collaborative Interface Design Tool",
     "colors": {
       "palette": [
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
-          "count": 605,
+          "count": 606,
           "pct": 61
         },
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 327,
+          "count": 332,
           "pct": 33
         },
         {
@@ -2806,7 +2806,7 @@
         {
           "raw": "rgba(255, 255, 255, 0.16)",
           "hex": "#ffffff",
-          "count": 7,
+          "count": 5,
           "pct": 1
         },
         {
@@ -2849,13 +2849,13 @@
       "fonts": [
         {
           "family": "figmaSans",
-          "count": 918,
+          "count": 926,
           "heading": true,
           "body": true
         },
         {
           "family": "figmaMono",
-          "count": 13,
+          "count": 11,
           "heading": true,
           "body": true
         }
@@ -2875,29 +2875,29 @@
         },
         {
           "px": 18,
-          "count": 452
+          "count": 458
         },
         {
           "px": 16,
-          "count": 399
+          "count": 403
         },
         {
           "px": 12,
-          "count": 5
+          "count": 3
         }
       ],
       "weights": [
         {
           "weight": 330,
-          "count": 435
+          "count": 439
         },
         {
           "weight": 400,
-          "count": 372
+          "count": 371
         },
         {
           "weight": 320,
-          "count": 71
+          "count": 74
         },
         {
           "weight": 480,
@@ -2915,11 +2915,11 @@
         },
         {
           "px": 12,
-          "count": 75
+          "count": 78
         },
         {
           "px": 8,
-          "count": 65
+          "count": 61
         },
         {
           "px": 2,
@@ -2946,7 +2946,7 @@
           "count": 16
         },
         {
-          "px": 5,
+          "px": 21,
           "count": 10
         }
       ],
@@ -2980,7 +2980,7 @@
         },
         {
           "px": 4,
-          "count": 5
+          "count": 3
         },
         {
           "px": 16,
@@ -2989,14 +2989,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Warm Professional",
+      "industry": "design_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://framer.com",
-    "analyzed_at": "2026-04-03T17:52:33.305Z",
+    "analyzed_at": "2026-04-03T17:57:01.305Z",
     "page_title": "Framer: Create a professional website, free. No code website builder loved by designers.",
     "colors": {
       "palette": [
@@ -3236,14 +3236,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "developer_tools",
+      "personality": "Soft Wellness",
+      "industry": "design_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://shopify.com",
-    "analyzed_at": "2026-04-03T17:52:39.422Z",
+    "analyzed_at": "2026-04-03T17:57:07.338Z",
     "page_title": "Shopify 대한민국",
     "colors": {
       "palette": [
@@ -3471,14 +3471,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "ecommerce",
       "complexity": 100
     }
   },
   {
     "url": "https://gumroad.com",
-    "analyzed_at": "2026-04-03T17:52:45.741Z",
+    "analyzed_at": "2026-04-03T17:57:13.754Z",
     "page_title": "Earn your first dollar online with Gumroad",
     "colors": {
       "palette": [
@@ -3708,14 +3708,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Bold Minimal",
+      "industry": "ecommerce",
       "complexity": 100
     }
   },
   {
     "url": "https://duolingo.com",
-    "analyzed_at": "2026-04-03T17:52:53.832Z",
+    "analyzed_at": "2026-04-03T17:57:21.680Z",
     "page_title": "듀오링고 - 세계에서 가장 인기 있는 학습 방법",
     "colors": {
       "palette": [
@@ -3928,13 +3928,13 @@
     },
     "overall": {
       "personality": "Warm Professional",
-      "industry": "general",
+      "industry": "education",
       "complexity": 100
     }
   },
   {
     "url": "https://coursera.org",
-    "analyzed_at": "2026-04-03T17:53:01.067Z",
+    "analyzed_at": "2026-04-03T17:57:29.355Z",
     "page_title": "Coursera | Courses, Professional Certificates, and Degrees Online",
     "colors": {
       "palette": [
@@ -4148,14 +4148,157 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Warm Professional",
       "industry": "education",
       "complexity": 100
     }
   },
   {
+    "url": "https://calm.com",
+    "analyzed_at": "2026-04-03T17:57:35.712Z",
+    "page_title": "Access to this page has been denied",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 8,
+          "pct": 53
+        },
+        {
+          "raw": "rgb(98, 99, 100)",
+          "hex": "#626364",
+          "count": 3,
+          "pct": 20
+        },
+        {
+          "raw": "rgb(250, 251, 252)",
+          "hex": "#fafbfc",
+          "count": 2,
+          "pct": 13
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 1,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(177, 181, 184)",
+          "hex": "#b1b5b8",
+          "count": 1,
+          "pct": 7
+        }
+      ],
+      "dominant_bg": "#fafbfc",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 5
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Roboto",
+          "count": 9,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 3,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 29,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 2
+        },
+        {
+          "px": 16,
+          "count": 8
+        },
+        {
+          "px": 10,
+          "count": 1
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 11
+        },
+        {
+          "weight": 500,
+          "count": 1
+        }
+      ],
+      "heading_font": "Roboto",
+      "body_font": "Roboto"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 2
+        },
+        {
+          "px": 11,
+          "count": 1
+        },
+        {
+          "px": 29,
+          "count": 1
+        },
+        {
+          "px": 33,
+          "count": 1
+        },
+        {
+          "px": 67,
+          "count": 1
+        }
+      ],
+      "grid_aligned_pct": 33,
+      "density": "spacious",
+      "unique_count": 5
+    },
+    "layout": {
+      "maxWidth": 1424,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 3,
+          "count": 1
+        },
+        {
+          "px": 100,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "healthcare",
+      "complexity": 45
+    }
+  },
+  {
     "url": "https://headspace.com",
-    "analyzed_at": "2026-04-03T17:53:15.590Z",
+    "analyzed_at": "2026-04-03T17:57:43.001Z",
     "page_title": "Mental Health App for Meditation & Sleep - Headspace",
     "colors": {
       "palette": [
@@ -4371,14 +4514,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Warm Professional",
       "industry": "healthcare",
       "complexity": 100
     }
   },
   {
     "url": "https://discord.com",
-    "analyzed_at": "2026-04-03T17:53:22.967Z",
+    "analyzed_at": "2026-04-03T17:57:50.272Z",
     "page_title": "Discord - Group Chat That’s All Fun & Games",
     "colors": {
       "palette": [
@@ -4606,14 +4749,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Bold Minimal",
+      "industry": "social",
       "complexity": 100
     }
   },
   {
     "url": "https://slack.com",
-    "analyzed_at": "2026-04-03T17:53:31.457Z",
+    "analyzed_at": "2026-04-03T17:57:58.476Z",
     "page_title": "Slack | AI 업무 플랫폼 및 생산성 도구",
     "colors": {
       "palette": [
@@ -4841,14 +4984,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Soft Wellness",
+      "industry": "social",
       "complexity": 100
     }
   },
   {
     "url": "https://todoist.com",
-    "analyzed_at": "2026-04-03T17:53:39.972Z",
+    "analyzed_at": "2026-04-03T17:58:06.967Z",
     "page_title": "Todoist | 일과 생활을 관리하기 위한 To Do List",
     "colors": {
       "palette": [
@@ -5082,20 +5225,20 @@
           "count": 4
         },
         {
-          "px": 6,
+          "px": 3,
           "count": 1
         }
       ]
     },
     "overall": {
       "personality": "Warm Professional",
-      "industry": "general",
+      "industry": "saas",
       "complexity": 100
     }
   },
   {
     "url": "https://1password.com",
-    "analyzed_at": "2026-04-03T17:53:46.497Z",
+    "analyzed_at": "2026-04-03T17:58:13.509Z",
     "page_title": "Passwords, Secrets, and Access Management | 1Password",
     "colors": {
       "palette": [
@@ -5311,14 +5454,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Soft Wellness",
+      "industry": "saas",
       "complexity": 100
     }
   },
   {
     "url": "https://arc.net",
-    "analyzed_at": "2026-04-03T17:53:52.537Z",
+    "analyzed_at": "2026-04-03T17:58:19.506Z",
     "page_title": "Arc from The Browser Company",
     "colors": {
       "palette": [
@@ -5555,13 +5698,13 @@
     },
     "overall": {
       "personality": "Warm Professional",
-      "industry": "general",
+      "industry": "saas",
       "complexity": 100
     }
   },
   {
     "url": "https://raycast.com",
-    "analyzed_at": "2026-04-03T17:54:01.622Z",
+    "analyzed_at": "2026-04-03T17:58:28.420Z",
     "page_title": "Raycast - Your shortcut to everything",
     "colors": {
       "palette": [
@@ -5795,14 +5938,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://posthog.com",
-    "analyzed_at": "2026-04-03T17:54:08.797Z",
+    "analyzed_at": "2026-04-03T17:58:35.974Z",
     "page_title": "PostHog – We make dev tools for product engineers",
     "colors": {
       "palette": [
@@ -5815,8 +5958,8 @@
         {
           "raw": "rgb(55, 65, 81)",
           "hex": "#374151",
-          "count": 234,
-          "pct": 19
+          "count": 241,
+          "pct": 20
         },
         {
           "raw": "rgb(0, 0, 0)",
@@ -5835,12 +5978,6 @@
           "hex": "#111827",
           "count": 69,
           "pct": 6
-        },
-        {
-          "raw": "rgb(245, 78, 0)",
-          "hex": "#f54e00",
-          "count": 33,
-          "pct": 3
         },
         {
           "raw": "rgb(158, 160, 150)",
@@ -5865,6 +6002,12 @@
           "hex": "#eb9d2a",
           "count": 16,
           "pct": 1
+        },
+        {
+          "raw": "rgb(0, 255, 0)",
+          "hex": "#00ff00",
+          "count": 16,
+          "pct": 1
         }
       ],
       "dominant_bg": "#eeefe9",
@@ -5876,7 +6019,7 @@
       "fonts": [
         {
           "family": "IBM Plex Sans Variable",
-          "count": 1114,
+          "count": 1116,
           "heading": true,
           "body": true
         },
@@ -5930,7 +6073,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 816
+          "count": 818
         },
         {
           "weight": 600,
@@ -5964,7 +6107,7 @@
         },
         {
           "px": 6,
-          "count": 99
+          "count": 103
         },
         {
           "px": 17,
@@ -6030,28 +6173,34 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Warm Professional",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://resend.com",
-    "analyzed_at": "2026-04-03T17:54:16.296Z",
+    "analyzed_at": "2026-04-03T17:58:43.272Z",
     "page_title": "Resend · Email for developers",
     "colors": {
       "palette": [
         {
           "raw": "rgb(240, 240, 240)",
           "hex": "#f0f0f0",
-          "count": 855,
-          "pct": 36
+          "count": 856,
+          "pct": 34
         },
         {
           "raw": "rgb(248, 248, 248)",
           "hex": "#f8f8f8",
           "count": 329,
-          "pct": 14
+          "pct": 13
+        },
+        {
+          "raw": "rgb(161, 164, 165)",
+          "hex": "#a1a4a5",
+          "count": 311,
+          "pct": 12
         },
         {
           "raw": "rgba(241, 247, 254, 0.71)",
@@ -6060,46 +6209,40 @@
           "pct": 10
         },
         {
-          "raw": "rgb(161, 164, 165)",
-          "hex": "#a1a4a5",
-          "count": 233,
-          "pct": 10
-        },
-        {
           "raw": "rgb(160, 160, 160)",
           "hex": "#a0a0a0",
           "count": 216,
-          "pct": 9
+          "pct": 8
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 123,
+          "pct": 5
         },
         {
           "raw": "rgb(171, 171, 171)",
           "hex": "#ababab",
           "count": 89,
-          "pct": 4
+          "pct": 3
         },
         {
           "raw": "rgb(70, 74, 77)",
           "hex": "#464a4d",
           "count": 84,
-          "pct": 4
+          "pct": 3
+        },
+        {
+          "raw": "rgba(252, 253, 255, 0.937)",
+          "hex": "#fcfdff",
+          "count": 73,
+          "pct": 3
         },
         {
           "raw": "rgb(108, 108, 108)",
           "hex": "#6c6c6c",
           "count": 66,
           "pct": 3
-        },
-        {
-          "raw": "rgba(252, 253, 255, 0.937)",
-          "hex": "#fcfdff",
-          "count": 61,
-          "pct": 3
-        },
-        {
-          "raw": "rgb(255, 255, 255)",
-          "hex": "#ffffff",
-          "count": 57,
-          "pct": 2
         }
       ],
       "dominant_bg": "#000000",
@@ -6111,7 +6254,7 @@
       "fonts": [
         {
           "family": "inter",
-          "count": 1452,
+          "count": 1619,
           "heading": false,
           "body": true
         },
@@ -6167,21 +6310,21 @@
         },
         {
           "px": 16,
-          "count": 938
+          "count": 961
         },
         {
           "px": 14,
-          "count": 594
+          "count": 660
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 2207
+          "count": 2296
         },
         {
           "weight": 500,
-          "count": 109
+          "count": 187
         },
         {
           "weight": 600,
@@ -6256,7 +6399,7 @@
       "top_radii": [
         {
           "px": 33554400,
-          "count": 173
+          "count": 251
         },
         {
           "px": 16,
@@ -6277,14 +6420,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
+      "personality": "Soft Wellness",
       "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://clerk.com",
-    "analyzed_at": "2026-04-03T17:54:24.656Z",
+    "analyzed_at": "2026-04-03T17:58:51.708Z",
     "page_title": "Clerk | Authentication and User Management",
     "colors": {
       "palette": [
@@ -6518,14 +6661,14 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "general",
+      "personality": "Warm Professional",
+      "industry": "developer_tools",
       "complexity": 100
     }
   },
   {
     "url": "https://cal.com",
-    "analyzed_at": "2026-04-03T17:54:31.483Z",
+    "analyzed_at": "2026-04-03T17:58:58.622Z",
     "page_title": "Cal.com | Open Scheduling Infrastructure",
     "colors": {
       "palette": [
@@ -6765,8 +6908,8 @@
       ]
     },
     "overall": {
-      "personality": "Energetic Pop",
-      "industry": "education",
+      "personality": "Warm Professional",
+      "industry": "saas",
       "complexity": 100
     }
   }
