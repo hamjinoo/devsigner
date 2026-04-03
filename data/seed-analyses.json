@@ -1,0 +1,6900 @@
+[
+  {
+    "url": "https://stripe.com",
+    "analyzed_at": "2026-04-03T17:42:38.493Z",
+    "page_title": "Stripe | Financial Infrastructure to Grow Your Revenue",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 898,
+          "pct": 44
+        },
+        {
+          "raw": "rgb(83, 58, 253)",
+          "hex": "#533afd",
+          "count": 434,
+          "pct": 21
+        },
+        {
+          "raw": "rgb(80, 97, 122)",
+          "hex": "#50617a",
+          "count": 160,
+          "pct": 8
+        },
+        {
+          "raw": "rgb(6, 27, 49)",
+          "hex": "#061b31",
+          "count": 133,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 100,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(100, 116, 141)",
+          "hex": "#64748d",
+          "count": 69,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(0, 0, 238)",
+          "hex": "#0000ee",
+          "count": 35,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(127, 125, 252)",
+          "hex": "#7f7dfc",
+          "count": 34,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(60, 79, 105)",
+          "hex": "#3c4f69",
+          "count": 18,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(39, 57, 81)",
+          "hex": "#273951",
+          "count": 16,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#533afd",
+      "primary_text": "#000000",
+      "color_scheme": "mixed",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "sohne-var",
+          "count": 1902,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 56,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 17
+        },
+        {
+          "px": 32,
+          "count": 11
+        },
+        {
+          "px": 26,
+          "count": 34
+        },
+        {
+          "px": 22,
+          "count": 20
+        },
+        {
+          "px": 18,
+          "count": 16
+        },
+        {
+          "px": 16,
+          "count": 1570
+        },
+        {
+          "px": 15,
+          "count": 1
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1568
+        },
+        {
+          "weight": 300,
+          "count": 332
+        },
+        {
+          "weight": 500,
+          "count": 2
+        }
+      ],
+      "heading_font": "sohne-var",
+      "body_font": "sohne-var"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 185
+        },
+        {
+          "px": 8,
+          "count": 90
+        },
+        {
+          "px": 24,
+          "count": 62
+        },
+        {
+          "px": 4,
+          "count": 46
+        },
+        {
+          "px": 12,
+          "count": 42
+        },
+        {
+          "px": 6,
+          "count": 40
+        },
+        {
+          "px": 2,
+          "count": 37
+        },
+        {
+          "px": 32,
+          "count": 35
+        },
+        {
+          "px": 64,
+          "count": 22
+        },
+        {
+          "px": 10,
+          "count": 21
+        }
+      ],
+      "grid_aligned_pct": 75,
+      "density": "balanced",
+      "unique_count": 34
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 4,
+          "count": 56
+        },
+        {
+          "px": 6,
+          "count": 40
+        },
+        {
+          "px": 1,
+          "count": 31
+        },
+        {
+          "px": 5,
+          "count": 6
+        },
+        {
+          "px": 8,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://mercury.com",
+    "analyzed_at": "2026-04-03T17:42:46.668Z",
+    "page_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(42, 41, 36)",
+          "hex": "#2a2924",
+          "count": 420,
+          "pct": 34
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 396,
+          "pct": 32
+        },
+        {
+          "raw": "rgb(237, 237, 243)",
+          "hex": "#ededf3",
+          "count": 183,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(90, 85, 72)",
+          "hex": "#5a5548",
+          "count": 121,
+          "pct": 10
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 23,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 18,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(195, 195, 204)",
+          "hex": "#c3c3cc",
+          "count": 14,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(237, 236, 251)",
+          "hex": "#edecfb",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(239, 238, 233)",
+          "hex": "#efeee9",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(138, 117, 60, 0.1)",
+          "hex": "#8a753c",
+          "count": 6,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#f6f5f2",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "arcadia",
+          "count": 1114,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "arcadiaDisplay",
+          "count": 70,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-sans-serif",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 65,
+          "count": 21
+        },
+        {
+          "px": 57,
+          "count": 2
+        },
+        {
+          "px": 42,
+          "count": 9
+        },
+        {
+          "px": 32,
+          "count": 8
+        },
+        {
+          "px": 28,
+          "count": 19
+        },
+        {
+          "px": 24,
+          "count": 16
+        },
+        {
+          "px": 21,
+          "count": 26
+        },
+        {
+          "px": 18,
+          "count": 92
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 791
+        },
+        {
+          "weight": 420,
+          "count": 177
+        },
+        {
+          "weight": 480,
+          "count": 137
+        },
+        {
+          "weight": 360,
+          "count": 80
+        }
+      ],
+      "heading_font": "arcadia",
+      "body_font": "arcadia"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 32,
+          "count": 132
+        },
+        {
+          "px": 12,
+          "count": 56
+        },
+        {
+          "px": 20,
+          "count": 36
+        },
+        {
+          "px": 40,
+          "count": 35
+        },
+        {
+          "px": 8,
+          "count": 28
+        },
+        {
+          "px": 1,
+          "count": 14
+        },
+        {
+          "px": 2,
+          "count": 12
+        },
+        {
+          "px": 72,
+          "count": 11
+        },
+        {
+          "px": 4,
+          "count": 8
+        },
+        {
+          "px": 24,
+          "count": 8
+        }
+      ],
+      "grid_aligned_pct": 93,
+      "density": "spacious",
+      "unique_count": 16
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 4,
+          "count": 94
+        },
+        {
+          "px": 12,
+          "count": 28
+        },
+        {
+          "px": 40,
+          "count": 10
+        },
+        {
+          "px": 8,
+          "count": 9
+        },
+        {
+          "px": 32,
+          "count": 5
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "fintech",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://wise.com",
+    "analyzed_at": "2026-04-03T17:42:56.464Z",
+    "page_title": "Wise: The international account | Money without borders | Wise South Korea",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(69, 71, 69)",
+          "hex": "#454745",
+          "count": 931,
+          "pct": 45
+        },
+        {
+          "raw": "rgb(22, 51, 0)",
+          "hex": "#163300",
+          "count": 506,
+          "pct": 24
+        },
+        {
+          "raw": "rgb(14, 15, 12)",
+          "hex": "#0e0f0c",
+          "count": 367,
+          "pct": 18
+        },
+        {
+          "raw": "rgba(22, 51, 0, 0.08)",
+          "hex": "#163300",
+          "count": 112,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(159, 232, 112)",
+          "hex": "#9fe870",
+          "count": 46,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(232, 235, 230)",
+          "hex": "#e8ebe6",
+          "count": 38,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 21,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(134, 134, 133)",
+          "hex": "#868685",
+          "count": 12,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(226, 246, 213)",
+          "hex": "#e2f6d5",
+          "count": 11,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(11, 76, 114)",
+          "hex": "#0b4c72",
+          "count": 10,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#454745",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 1867,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Wise Sans",
+          "count": 15,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 105,
+          "count": 2
+        },
+        {
+          "px": 89,
+          "count": 2
+        },
+        {
+          "px": 61,
+          "count": 1
+        },
+        {
+          "px": 59,
+          "count": 2
+        },
+        {
+          "px": 52,
+          "count": 6
+        },
+        {
+          "px": 45,
+          "count": 5
+        },
+        {
+          "px": 40,
+          "count": 3
+        },
+        {
+          "px": 36,
+          "count": 5
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1360
+        },
+        {
+          "weight": 600,
+          "count": 504
+        },
+        {
+          "weight": 500,
+          "count": 9
+        },
+        {
+          "weight": 900,
+          "count": 9
+        }
+      ],
+      "heading_font": "Inter",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 411
+        },
+        {
+          "px": 9,
+          "count": 199
+        },
+        {
+          "px": 12,
+          "count": 163
+        },
+        {
+          "px": 24,
+          "count": 161
+        },
+        {
+          "px": 32,
+          "count": 109
+        },
+        {
+          "px": 48,
+          "count": 103
+        },
+        {
+          "px": 16,
+          "count": 66
+        },
+        {
+          "px": 56,
+          "count": 50
+        },
+        {
+          "px": 3,
+          "count": 44
+        },
+        {
+          "px": 28,
+          "count": 44
+        }
+      ],
+      "grid_aligned_pct": 74,
+      "density": "balanced",
+      "unique_count": 30
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 50,
+          "count": 224
+        },
+        {
+          "px": 2,
+          "count": 148
+        },
+        {
+          "px": 9999,
+          "count": 60
+        },
+        {
+          "px": 19,
+          "count": 25
+        },
+        {
+          "px": 1000,
+          "count": 22
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "fintech",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://linear.app",
+    "analyzed_at": "2026-04-03T17:43:05.643Z",
+    "page_title": "Linear – The system for product development",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(247, 248, 248)",
+          "hex": "#f7f8f8",
+          "count": 1399,
+          "pct": 53
+        },
+        {
+          "raw": "rgb(98, 102, 109)",
+          "hex": "#62666d",
+          "count": 358,
+          "pct": 14
+        },
+        {
+          "raw": "rgb(208, 214, 224)",
+          "hex": "#d0d6e0",
+          "count": 173,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(138, 143, 152)",
+          "hex": "#8a8f98",
+          "count": 125,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(226, 228, 231)",
+          "hex": "#e2e4e7",
+          "count": 120,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 109,
+          "pct": 4
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.05)",
+          "hex": "#ffffff",
+          "count": 81,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(247, 156, 224)",
+          "hex": "#f79ce0",
+          "count": 41,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 25,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(85, 205, 255)",
+          "hex": "#55cdff",
+          "count": 22,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#08090a",
+      "primary_text": "#f7f8f8",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter Variable",
+          "count": 2144,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Berkeley Mono",
+          "count": 267,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 72,
+          "count": 1
+        },
+        {
+          "px": 64,
+          "count": 6
+        },
+        {
+          "px": 48,
+          "count": 8
+        },
+        {
+          "px": 32,
+          "count": 2
+        },
+        {
+          "px": 24,
+          "count": 5
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 16
+        },
+        {
+          "px": 17,
+          "count": 1
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 2191
+        },
+        {
+          "weight": 510,
+          "count": 198
+        },
+        {
+          "weight": 590,
+          "count": 18
+        },
+        {
+          "weight": 300,
+          "count": 4
+        }
+      ],
+      "heading_font": "Inter Variable",
+      "body_font": "Inter Variable"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 221
+        },
+        {
+          "px": 32,
+          "count": 128
+        },
+        {
+          "px": 12,
+          "count": 84
+        },
+        {
+          "px": 24,
+          "count": 76
+        },
+        {
+          "px": 6,
+          "count": 48
+        },
+        {
+          "px": 4,
+          "count": 33
+        },
+        {
+          "px": 2,
+          "count": 28
+        },
+        {
+          "px": 22,
+          "count": 25
+        },
+        {
+          "px": 16,
+          "count": 23
+        },
+        {
+          "px": 19,
+          "count": 23
+        }
+      ],
+      "grid_aligned_pct": 71,
+      "density": "balanced",
+      "unique_count": 60
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 2,
+          "count": 46
+        },
+        {
+          "px": 6,
+          "count": 42
+        },
+        {
+          "px": 4,
+          "count": 40
+        },
+        {
+          "px": 50,
+          "count": 38
+        },
+        {
+          "px": 12,
+          "count": 23
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://vercel.com",
+    "analyzed_at": "2026-04-03T17:43:13.522Z",
+    "page_title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(237, 237, 237)",
+          "hex": "#ededed",
+          "count": 960,
+          "pct": 54
+        },
+        {
+          "raw": "rgb(161, 161, 161)",
+          "hex": "#a1a1a1",
+          "count": 488,
+          "pct": 28
+        },
+        {
+          "raw": "rgb(136, 136, 136)",
+          "hex": "#888888",
+          "count": 69,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(10, 10, 10)",
+          "hex": "#0a0a0a",
+          "count": 66,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(128, 128, 128)",
+          "hex": "#808080",
+          "count": 36,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 34,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(125, 125, 125)",
+          "hex": "#7d7d7d",
+          "count": 20,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 19,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(46, 46, 46)",
+          "hex": "#2e2e2e",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(143, 143, 143)",
+          "hex": "#8f8f8f",
+          "count": 9,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#000000",
+      "primary_text": "#ededed",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Geist",
+          "count": 1591,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Geist Mono",
+          "count": 67,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "monospace",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 48,
+          "count": 33
+        },
+        {
+          "px": 40,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 8
+        },
+        {
+          "px": 24,
+          "count": 16
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 36
+        },
+        {
+          "px": 16,
+          "count": 846
+        },
+        {
+          "px": 14,
+          "count": 618
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1373
+        },
+        {
+          "weight": 500,
+          "count": 227
+        },
+        {
+          "weight": 600,
+          "count": 57
+        },
+        {
+          "weight": 700,
+          "count": 2
+        }
+      ],
+      "heading_font": "Geist",
+      "body_font": "Geist"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 2,
+          "count": 278
+        },
+        {
+          "px": 12,
+          "count": 255
+        },
+        {
+          "px": 8,
+          "count": 191
+        },
+        {
+          "px": 4,
+          "count": 150
+        },
+        {
+          "px": 6,
+          "count": 133
+        },
+        {
+          "px": 16,
+          "count": 88
+        },
+        {
+          "px": 48,
+          "count": 54
+        },
+        {
+          "px": 1,
+          "count": 32
+        },
+        {
+          "px": 10,
+          "count": 29
+        },
+        {
+          "px": 14,
+          "count": 24
+        }
+      ],
+      "grid_aligned_pct": 59,
+      "density": "compact",
+      "unique_count": 25
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 6,
+          "count": 45
+        },
+        {
+          "px": 4,
+          "count": 40
+        },
+        {
+          "px": 9999,
+          "count": 24
+        },
+        {
+          "px": 100,
+          "count": 16
+        },
+        {
+          "px": 8,
+          "count": 13
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://notion.so",
+    "analyzed_at": "2026-04-03T17:43:22.623Z",
+    "page_title": "나만을 위한 AI 워크스페이스 | Notion (노션)",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgba(0, 0, 0, 0.9)",
+          "hex": "#000000",
+          "count": 314,
+          "pct": 25
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.95)",
+          "hex": "#000000",
+          "count": 187,
+          "pct": 15
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.54)",
+          "hex": "#000000",
+          "count": 135,
+          "pct": 11
+        },
+        {
+          "raw": "rgb(246, 245, 244)",
+          "hex": "#f6f5f4",
+          "count": 111,
+          "pct": 9
+        },
+        {
+          "raw": "rgb(49, 48, 46)",
+          "hex": "#31302e",
+          "count": 84,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 83,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(163, 158, 152)",
+          "hex": "#a39e98",
+          "count": 63,
+          "pct": 5
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 56,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 29,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(97, 93, 89)",
+          "hex": "#615d59",
+          "count": 24,
+          "pct": 2
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "NotionInter",
+          "count": 1113,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Lyon Text",
+          "count": 2,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 1
+        },
+        {
+          "px": 54,
+          "count": 6
+        },
+        {
+          "px": 48,
+          "count": 16
+        },
+        {
+          "px": 42,
+          "count": 3
+        },
+        {
+          "px": 40,
+          "count": 22
+        },
+        {
+          "px": 32,
+          "count": 2
+        },
+        {
+          "px": 26,
+          "count": 3
+        },
+        {
+          "px": 24,
+          "count": 63
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 831
+        },
+        {
+          "weight": 500,
+          "count": 199
+        },
+        {
+          "weight": 700,
+          "count": 59
+        },
+        {
+          "weight": 600,
+          "count": 26
+        }
+      ],
+      "heading_font": "NotionInter",
+      "body_font": "NotionInter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 169
+        },
+        {
+          "px": 4,
+          "count": 130
+        },
+        {
+          "px": 24,
+          "count": 128
+        },
+        {
+          "px": 16,
+          "count": 95
+        },
+        {
+          "px": 6,
+          "count": 82
+        },
+        {
+          "px": 5,
+          "count": 52
+        },
+        {
+          "px": 3,
+          "count": 46
+        },
+        {
+          "px": 15,
+          "count": 20
+        },
+        {
+          "px": 10,
+          "count": 18
+        },
+        {
+          "px": 12,
+          "count": 18
+        }
+      ],
+      "grid_aligned_pct": 70,
+      "density": "balanced",
+      "unique_count": 27
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 66
+        },
+        {
+          "px": 5,
+          "count": 59
+        },
+        {
+          "px": 12,
+          "count": 50
+        },
+        {
+          "px": 4,
+          "count": 26
+        },
+        {
+          "px": 9999,
+          "count": 18
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://github.com",
+    "analyzed_at": "2026-04-03T17:43:31.210Z",
+    "page_title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(240, 246, 252)",
+          "hex": "#f0f6fc",
+          "count": 516,
+          "pct": 37
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 298,
+          "pct": 21
+        },
+        {
+          "raw": "rgb(36, 41, 47)",
+          "hex": "#24292f",
+          "count": 172,
+          "pct": 12
+        },
+        {
+          "raw": "rgb(121, 192, 255)",
+          "hex": "#79c0ff",
+          "count": 132,
+          "pct": 9
+        },
+        {
+          "raw": "rgb(145, 152, 161)",
+          "hex": "#9198a1",
+          "count": 105,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(87, 96, 106)",
+          "hex": "#57606a",
+          "count": 73,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(139, 148, 158)",
+          "hex": "#8b949e",
+          "count": 52,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(13, 17, 23)",
+          "hex": "#0d1117",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.75)",
+          "hex": "#ffffff",
+          "count": 6,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.85)",
+          "hex": "#ffffff",
+          "count": 6,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#0d1117",
+      "primary_text": "#f0f6fc",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Mona Sans",
+          "count": 1139,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Mona Sans VF",
+          "count": 208,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Mona Sans Mono",
+          "count": 17,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-monospace",
+          "count": 4,
+          "heading": true,
+          "body": false
+        },
+        {
+          "family": "sans-serif",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 2
+        },
+        {
+          "px": 40,
+          "count": 12
+        },
+        {
+          "px": 24,
+          "count": 3
+        },
+        {
+          "px": 22,
+          "count": 26
+        },
+        {
+          "px": 18,
+          "count": 45
+        },
+        {
+          "px": 16,
+          "count": 1042
+        },
+        {
+          "px": 14,
+          "count": 160
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1060
+        },
+        {
+          "weight": 500,
+          "count": 275
+        },
+        {
+          "weight": 460,
+          "count": 11
+        },
+        {
+          "weight": 600,
+          "count": 11
+        }
+      ],
+      "heading_font": "Mona Sans",
+      "body_font": "Mona Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 4,
+          "count": 99
+        },
+        {
+          "px": 16,
+          "count": 94
+        },
+        {
+          "px": 8,
+          "count": 66
+        },
+        {
+          "px": 24,
+          "count": 66
+        },
+        {
+          "px": 32,
+          "count": 42
+        },
+        {
+          "px": 48,
+          "count": 31
+        },
+        {
+          "px": 20,
+          "count": 28
+        },
+        {
+          "px": 12,
+          "count": 21
+        },
+        {
+          "px": 2,
+          "count": 19
+        },
+        {
+          "px": 64,
+          "count": 16
+        }
+      ],
+      "grid_aligned_pct": 93,
+      "density": "spacious",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 6,
+          "count": 16
+        },
+        {
+          "px": 60,
+          "count": 12
+        },
+        {
+          "px": 24,
+          "count": 7
+        },
+        {
+          "px": 8,
+          "count": 6
+        },
+        {
+          "px": 16,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://supabase.com",
+    "analyzed_at": "2026-04-03T17:43:38.641Z",
+    "page_title": "Supabase | The Postgres Development Platform.",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(250, 250, 250)",
+          "hex": "#fafafa",
+          "count": 1088,
+          "pct": 47
+        },
+        {
+          "raw": "rgb(137, 137, 137)",
+          "hex": "#898989",
+          "count": 345,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(77, 77, 77)",
+          "hex": "#4d4d4d",
+          "count": 260,
+          "pct": 11
+        },
+        {
+          "raw": "rgb(180, 180, 180)",
+          "hex": "#b4b4b4",
+          "count": 245,
+          "pct": 11
+        },
+        {
+          "raw": "rgb(23, 23, 23)",
+          "hex": "#171717",
+          "count": 124,
+          "pct": 5
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 89,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(18, 18, 18)",
+          "hex": "#121212",
+          "count": 69,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 54,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(36, 36, 36)",
+          "hex": "#242424",
+          "count": 8,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(62, 207, 142)",
+          "hex": "#3ecf8e",
+          "count": 6,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#121212",
+      "primary_text": "#ffffff",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Circular",
+          "count": 2025,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Source Code Pro",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 72,
+          "count": 3
+        },
+        {
+          "px": 36,
+          "count": 15
+        },
+        {
+          "px": 24,
+          "count": 2
+        },
+        {
+          "px": 18,
+          "count": 9
+        },
+        {
+          "px": 16,
+          "count": 1666
+        },
+        {
+          "px": 14,
+          "count": 248
+        },
+        {
+          "px": 12,
+          "count": 83
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1943
+        },
+        {
+          "weight": 500,
+          "count": 83
+        }
+      ],
+      "heading_font": "Circular",
+      "body_font": "Circular"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 24,
+          "count": 238
+        },
+        {
+          "px": 8,
+          "count": 235
+        },
+        {
+          "px": 16,
+          "count": 147
+        },
+        {
+          "px": 1,
+          "count": 140
+        },
+        {
+          "px": 12,
+          "count": 66
+        },
+        {
+          "px": 20,
+          "count": 51
+        },
+        {
+          "px": 32,
+          "count": 47
+        },
+        {
+          "px": 4,
+          "count": 42
+        },
+        {
+          "px": 80,
+          "count": 24
+        },
+        {
+          "px": 10,
+          "count": 17
+        }
+      ],
+      "grid_aligned_pct": 84,
+      "density": "balanced",
+      "unique_count": 18
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 127
+        },
+        {
+          "px": 8,
+          "count": 61
+        },
+        {
+          "px": 16,
+          "count": 55
+        },
+        {
+          "px": 6,
+          "count": 37
+        },
+        {
+          "px": 11,
+          "count": 35
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://tailwindcss.com",
+    "analyzed_at": "2026-04-03T17:43:45.095Z",
+    "page_title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 1560,
+          "pct": 64
+        },
+        {
+          "raw": "lab(65.5349 -2.25151 -14.5072)",
+          "hex": "lab(65.5349 -2.25151 -14.5072)",
+          "count": 114,
+          "pct": 5
+        },
+        {
+          "raw": "lab(98.1434 -0.369519 -1.05966)",
+          "hex": "lab(98.1434 -0.369519 -1.05966)",
+          "count": 113,
+          "pct": 5
+        },
+        {
+          "raw": "lab(84.7652 -1.94535 -7.93337)",
+          "hex": "lab(84.7652 -1.94535 -7.93337)",
+          "count": 88,
+          "pct": 4
+        },
+        {
+          "raw": "lab(80.3307 -20.2945 -31.385)",
+          "hex": "lab(80.3307 -20.2945 -31.385)",
+          "count": 51,
+          "pct": 2
+        },
+        {
+          "raw": "lab(64.5597 64.3615 -12.7988)",
+          "hex": "lab(64.5597 64.3615 -12.7988)",
+          "count": 45,
+          "pct": 2
+        },
+        {
+          "raw": "lab(65.9269 -0.832707 -8.17473)",
+          "hex": "lab(65.9269 -0.832707 -8.17473)",
+          "count": 36,
+          "pct": 1
+        },
+        {
+          "raw": "lab(1.90334 0.278696 -5.48866)",
+          "hex": "lab(1.90334 0.278696 -5.48866)",
+          "count": 26,
+          "pct": 1
+        },
+        {
+          "raw": "lab(56.9303 76.8162 -8.07021)",
+          "hex": "lab(56.9303 76.8162 -8.07021)",
+          "count": 25,
+          "pct": 1
+        },
+        {
+          "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+          "hex": "oklab(0.999994 0.0000455678 0.0000200868 / 0.25)",
+          "count": 18,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "inter",
+          "count": 1572,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "plexMono",
+          "count": 533,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 1
+        },
+        {
+          "px": 40,
+          "count": 5
+        },
+        {
+          "px": 36,
+          "count": 1
+        },
+        {
+          "px": 30,
+          "count": 4
+        },
+        {
+          "px": 24,
+          "count": 9
+        },
+        {
+          "px": 20,
+          "count": 3
+        },
+        {
+          "px": 18,
+          "count": 2
+        },
+        {
+          "px": 17,
+          "count": 4
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 2029
+        },
+        {
+          "weight": 500,
+          "count": 46
+        },
+        {
+          "weight": 600,
+          "count": 29
+        },
+        {
+          "weight": 700,
+          "count": 1
+        }
+      ],
+      "heading_font": "inter",
+      "body_font": "inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 317
+        },
+        {
+          "px": 16,
+          "count": 146
+        },
+        {
+          "px": 32,
+          "count": 81
+        },
+        {
+          "px": 24,
+          "count": 74
+        },
+        {
+          "px": 4,
+          "count": 59
+        },
+        {
+          "px": 40,
+          "count": 23
+        },
+        {
+          "px": 12,
+          "count": 22
+        },
+        {
+          "px": 64,
+          "count": 13
+        },
+        {
+          "px": 20,
+          "count": 8
+        },
+        {
+          "px": 2,
+          "count": 5
+        }
+      ],
+      "grid_aligned_pct": 97,
+      "density": "balanced",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 33554400,
+          "count": 44
+        },
+        {
+          "px": 8,
+          "count": 36
+        },
+        {
+          "px": 16,
+          "count": 20
+        },
+        {
+          "px": 12,
+          "count": 12
+        },
+        {
+          "px": 4,
+          "count": 5
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://nextjs.org",
+    "analyzed_at": "2026-04-03T17:43:51.628Z",
+    "page_title": "Next.js by Vercel - The React Framework",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(237, 237, 237)",
+          "hex": "#ededed",
+          "count": 1181,
+          "pct": 75
+        },
+        {
+          "raw": "rgb(136, 136, 136)",
+          "hex": "#888888",
+          "count": 184,
+          "pct": 12
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 82,
+          "pct": 5
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 18,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(250, 250, 250)",
+          "hex": "#fafafa",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(10, 10, 10)",
+          "hex": "#0a0a0a",
+          "count": 15,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 12,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.6)",
+          "hex": "#000000",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.3)",
+          "hex": "#ffffff",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(143, 143, 143)",
+          "hex": "#8f8f8f",
+          "count": 7,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#000000",
+      "primary_text": "#ededed",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Geist",
+          "count": 1409,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Geist Mono",
+          "count": 10,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Georgia",
+          "count": 6,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Inter",
+          "count": 2,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 72,
+          "count": 1
+        },
+        {
+          "px": 40,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 3
+        },
+        {
+          "px": 24,
+          "count": 25
+        },
+        {
+          "px": 20,
+          "count": 42
+        },
+        {
+          "px": 18,
+          "count": 2
+        },
+        {
+          "px": 16,
+          "count": 1189
+        },
+        {
+          "px": 14,
+          "count": 118
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1334
+        },
+        {
+          "weight": 600,
+          "count": 65
+        },
+        {
+          "weight": 500,
+          "count": 28
+        }
+      ],
+      "heading_font": "Geist",
+      "body_font": "Geist"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 24,
+          "count": 81
+        },
+        {
+          "px": 8,
+          "count": 47
+        },
+        {
+          "px": 16,
+          "count": 44
+        },
+        {
+          "px": 4,
+          "count": 41
+        },
+        {
+          "px": 12,
+          "count": 37
+        },
+        {
+          "px": 6,
+          "count": 21
+        },
+        {
+          "px": 10,
+          "count": 19
+        },
+        {
+          "px": 32,
+          "count": 15
+        },
+        {
+          "px": 14,
+          "count": 10
+        },
+        {
+          "px": 48,
+          "count": 7
+        }
+      ],
+      "grid_aligned_pct": 81,
+      "density": "balanced",
+      "unique_count": 25
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 109
+        },
+        {
+          "px": 2,
+          "count": 45
+        },
+        {
+          "px": 1,
+          "count": 23
+        },
+        {
+          "px": 12,
+          "count": 16
+        },
+        {
+          "px": 6,
+          "count": 12
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://astro.build",
+    "analyzed_at": "2026-04-03T17:43:58.122Z",
+    "page_title": "Astro",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(242, 246, 250)",
+          "hex": "#f2f6fa",
+          "count": 695,
+          "pct": 56
+        },
+        {
+          "raw": "rgb(191, 193, 201)",
+          "hex": "#bfc1c9",
+          "count": 172,
+          "pct": 14
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 122,
+          "pct": 10
+        },
+        {
+          "raw": "rgb(238, 240, 249)",
+          "hex": "#eef0f9",
+          "count": 76,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(49, 120, 198)",
+          "hex": "#3178c6",
+          "count": 20,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(84, 185, 255)",
+          "hex": "#54b9ff",
+          "count": 19,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(12, 15, 25)",
+          "hex": "#0c0f19",
+          "count": 18,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(75, 243, 200)",
+          "hex": "#4bf3c8",
+          "count": 18,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(133, 139, 152)",
+          "hex": "#858b98",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(216, 51, 51)",
+          "hex": "#d83333",
+          "count": 12,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#060913",
+      "primary_text": "#f2f6fa",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "ui-sans-serif",
+          "count": 954,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-monospace",
+          "count": 124,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "MDIO",
+          "count": 29,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Inter",
+          "count": 25,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Obviously",
+          "count": 21,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 200,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 36,
+          "count": 4
+        },
+        {
+          "px": 30,
+          "count": 12
+        },
+        {
+          "px": 20,
+          "count": 10
+        },
+        {
+          "px": 18,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 933
+        },
+        {
+          "px": 14,
+          "count": 164
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 988
+        },
+        {
+          "weight": 300,
+          "count": 96
+        },
+        {
+          "weight": 600,
+          "count": 48
+        },
+        {
+          "weight": 700,
+          "count": 16
+        }
+      ],
+      "heading_font": "ui-sans-serif",
+      "body_font": "ui-sans-serif"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 160
+        },
+        {
+          "px": 16,
+          "count": 149
+        },
+        {
+          "px": 4,
+          "count": 112
+        },
+        {
+          "px": 12,
+          "count": 97
+        },
+        {
+          "px": 24,
+          "count": 79
+        },
+        {
+          "px": 32,
+          "count": 58
+        },
+        {
+          "px": 10,
+          "count": 20
+        },
+        {
+          "px": 3,
+          "count": 12
+        },
+        {
+          "px": 20,
+          "count": 12
+        },
+        {
+          "px": 22,
+          "count": 12
+        }
+      ],
+      "grid_aligned_pct": 92,
+      "density": "balanced",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1280,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 58
+        },
+        {
+          "px": 8,
+          "count": 32
+        },
+        {
+          "px": 12,
+          "count": 28
+        },
+        {
+          "px": 16,
+          "count": 21
+        },
+        {
+          "px": 6,
+          "count": 9
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://vitejs.dev",
+    "analyzed_at": "2026-04-03T17:44:05.079Z",
+    "page_title": "Vite | Next Generation Frontend Tooling",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 336,
+          "pct": 75
+        },
+        {
+          "raw": "rgb(134, 126, 142)",
+          "hex": "#867e8e",
+          "count": 40,
+          "pct": 9
+        },
+        {
+          "raw": "rgb(152, 152, 159)",
+          "hex": "#98989f",
+          "count": 31,
+          "pct": 7
+        },
+        {
+          "raw": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+          "hex": "oklab(0.999994 0.0000455677 0.0000200868 / 0.7)",
+          "count": 17,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(22, 23, 29)",
+          "hex": "#16171d",
+          "count": 7,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(59, 52, 64)",
+          "hex": "#3b3440",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(20, 18, 26)",
+          "hex": "#14121a",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(179, 154, 255)",
+          "hex": "#b39aff",
+          "count": 3,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(55, 10, 127)",
+          "hex": "#370a7f",
+          "count": 3,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#16171d",
+      "primary_text": "#ffffff",
+      "color_scheme": "dark",
+      "unique_count": 9
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 355,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "APK Protocol",
+          "count": 37,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "KH Teka Mono",
+          "count": 31,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 60,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 6
+        },
+        {
+          "px": 40,
+          "count": 2
+        },
+        {
+          "px": 24,
+          "count": 8
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 34
+        },
+        {
+          "px": 16,
+          "count": 325
+        },
+        {
+          "px": 14,
+          "count": 32
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 392
+        },
+        {
+          "weight": 500,
+          "count": 31
+        }
+      ],
+      "heading_font": "APK Protocol",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 40,
+          "count": 84
+        },
+        {
+          "px": 32,
+          "count": 72
+        },
+        {
+          "px": 12,
+          "count": 55
+        },
+        {
+          "px": 20,
+          "count": 39
+        },
+        {
+          "px": 8,
+          "count": 37
+        },
+        {
+          "px": 28,
+          "count": 30
+        },
+        {
+          "px": 16,
+          "count": 26
+        },
+        {
+          "px": 64,
+          "count": 20
+        },
+        {
+          "px": 24,
+          "count": 15
+        },
+        {
+          "px": 4,
+          "count": 9
+        }
+      ],
+      "grid_aligned_pct": 100,
+      "density": "spacious",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 15
+        },
+        {
+          "px": 4,
+          "count": 11
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://figma.com",
+    "analyzed_at": "2026-04-03T17:44:13.498Z",
+    "page_title": "Figma | 협업을 위한 인터페이스 디자인 도구",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 598,
+          "pct": 61
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 327,
+          "pct": 33
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.16)",
+          "hex": "#000000",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.65)",
+          "hex": "#000000",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.16)",
+          "hex": "#ffffff",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.6)",
+          "hex": "#ffffff",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.24)",
+          "hex": "#ffffff",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(51, 223, 223)",
+          "hex": "#33dfdf",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(185, 142, 1)",
+          "hex": "#b98e01",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(230, 230, 230)",
+          "hex": "#e6e6e6",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "figmaSans",
+          "count": 911,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "figmaMono",
+          "count": 13,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 72,
+          "count": 6
+        },
+        {
+          "px": 56,
+          "count": 7
+        },
+        {
+          "px": 24,
+          "count": 23
+        },
+        {
+          "px": 18,
+          "count": 452
+        },
+        {
+          "px": 16,
+          "count": 392
+        },
+        {
+          "px": 12,
+          "count": 5
+        }
+      ],
+      "weights": [
+        {
+          "weight": 330,
+          "count": 435
+        },
+        {
+          "weight": 400,
+          "count": 365
+        },
+        {
+          "weight": 320,
+          "count": 71
+        },
+        {
+          "weight": 480,
+          "count": 16
+        }
+      ],
+      "heading_font": "figmaSans",
+      "body_font": "figmaSans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 81
+        },
+        {
+          "px": 12,
+          "count": 75
+        },
+        {
+          "px": 8,
+          "count": 64
+        },
+        {
+          "px": 2,
+          "count": 33
+        },
+        {
+          "px": 24,
+          "count": 33
+        },
+        {
+          "px": 6,
+          "count": 20
+        },
+        {
+          "px": 30,
+          "count": 18
+        },
+        {
+          "px": 120,
+          "count": 17
+        },
+        {
+          "px": 18,
+          "count": 16
+        },
+        {
+          "px": 5,
+          "count": 10
+        }
+      ],
+      "grid_aligned_pct": 73,
+      "density": "balanced",
+      "unique_count": 22
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 50,
+          "count": 47
+        },
+        {
+          "px": 8,
+          "count": 8
+        },
+        {
+          "px": 2,
+          "count": 6
+        },
+        {
+          "px": 4,
+          "count": 5
+        },
+        {
+          "px": 16,
+          "count": 2
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://framer.com",
+    "analyzed_at": "2026-04-03T17:44:22.960Z",
+    "page_title": "Framer: Create a professional website, free. No code website builder loved by designers.",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 1728,
+          "pct": 43
+        },
+        {
+          "raw": "rgb(0, 0, 238)",
+          "hex": "#0000ee",
+          "count": 1584,
+          "pct": 39
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 355,
+          "pct": 9
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.6)",
+          "hex": "#ffffff",
+          "count": 160,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(166, 166, 166)",
+          "hex": "#a6a6a6",
+          "count": 50,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(0, 153, 255, 0.15)",
+          "hex": "#0099ff",
+          "count": 15,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.1)",
+          "hex": "#ffffff",
+          "count": 13,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.08)",
+          "hex": "#ffffff",
+          "count": 12,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(204, 204, 204)",
+          "hex": "#cccccc",
+          "count": 12,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(8, 8, 8)",
+          "hex": "#080808",
+          "count": 11,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#000000",
+      "primary_text": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "sans-serif",
+          "count": 3160,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Inter Variable",
+          "count": 331,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Inter",
+          "count": 202,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "GT Walsheim Medium",
+          "count": 26,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Mona Sans",
+          "count": 11,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 110,
+          "count": 2
+        },
+        {
+          "px": 85,
+          "count": 1
+        },
+        {
+          "px": 62,
+          "count": 5
+        },
+        {
+          "px": 32,
+          "count": 20
+        },
+        {
+          "px": 24,
+          "count": 13
+        },
+        {
+          "px": 22,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 6
+        },
+        {
+          "px": 18,
+          "count": 18
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 3510
+        },
+        {
+          "weight": 500,
+          "count": 190
+        },
+        {
+          "weight": 600,
+          "count": 35
+        },
+        {
+          "weight": 700,
+          "count": 1
+        }
+      ],
+      "heading_font": "Inter Variable",
+      "body_font": "sans-serif"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 10,
+          "count": 572
+        },
+        {
+          "px": 15,
+          "count": 211
+        },
+        {
+          "px": 60,
+          "count": 201
+        },
+        {
+          "px": 5,
+          "count": 178
+        },
+        {
+          "px": 20,
+          "count": 68
+        },
+        {
+          "px": 2,
+          "count": 49
+        },
+        {
+          "px": 1,
+          "count": 47
+        },
+        {
+          "px": 4,
+          "count": 46
+        },
+        {
+          "px": 40,
+          "count": 46
+        },
+        {
+          "px": 14,
+          "count": 42
+        }
+      ],
+      "grid_aligned_pct": 26,
+      "density": "balanced",
+      "unique_count": 29
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 100,
+          "count": 155
+        },
+        {
+          "px": 10,
+          "count": 135
+        },
+        {
+          "px": 8,
+          "count": 118
+        },
+        {
+          "px": 15,
+          "count": 85
+        },
+        {
+          "px": 1,
+          "count": 45
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://shopify.com",
+    "analyzed_at": "2026-04-03T17:44:29.362Z",
+    "page_title": "Shopify 대한민국",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 857,
+          "pct": 75
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 75,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(161, 161, 170)",
+          "hex": "#a1a1aa",
+          "count": 71,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(157, 171, 173)",
+          "hex": "#9dabad",
+          "count": 19,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(54, 244, 164)",
+          "hex": "#36f4a4",
+          "count": 16,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(6, 26, 28)",
+          "hex": "#061a1c",
+          "count": 15,
+          "pct": 1
+        },
+        {
+          "raw": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "hex": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "count": 13,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(2, 9, 10)",
+          "hex": "#02090a",
+          "count": 10,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(151, 151, 162)",
+          "hex": "#9797a2",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(153, 179, 173)",
+          "hex": "#99b3ad",
+          "count": 7,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#000000",
+      "primary_text": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "NeueHaasGrotesk",
+          "count": 653,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Inter-Variable",
+          "count": 394,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-monospace",
+          "count": 4,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 56
+        },
+        {
+          "px": 70,
+          "count": 2
+        },
+        {
+          "px": 55,
+          "count": 13
+        },
+        {
+          "px": 48,
+          "count": 8
+        },
+        {
+          "px": 28,
+          "count": 3
+        },
+        {
+          "px": 24,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 28
+        },
+        {
+          "px": 18,
+          "count": 46
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 931
+        },
+        {
+          "weight": 500,
+          "count": 67
+        },
+        {
+          "weight": 330,
+          "count": 25
+        },
+        {
+          "weight": 550,
+          "count": 19
+        }
+      ],
+      "heading_font": "NeueHaasGrotesk",
+      "body_font": "NeueHaasGrotesk"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 12,
+          "count": 59
+        },
+        {
+          "px": 32,
+          "count": 57
+        },
+        {
+          "px": 16,
+          "count": 53
+        },
+        {
+          "px": 10,
+          "count": 48
+        },
+        {
+          "px": 8,
+          "count": 47
+        },
+        {
+          "px": 4,
+          "count": 46
+        },
+        {
+          "px": 24,
+          "count": 45
+        },
+        {
+          "px": 64,
+          "count": 35
+        },
+        {
+          "px": 40,
+          "count": 24
+        },
+        {
+          "px": 13,
+          "count": 12
+        }
+      ],
+      "grid_aligned_pct": 81,
+      "density": "spacious",
+      "unique_count": 27
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 12,
+          "count": 54
+        },
+        {
+          "px": 33554400,
+          "count": 17
+        },
+        {
+          "px": 4,
+          "count": 16
+        },
+        {
+          "px": 8,
+          "count": 10
+        },
+        {
+          "px": 340,
+          "count": 8
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "ecommerce",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://gumroad.com",
+    "analyzed_at": "2026-04-03T17:44:35.894Z",
+    "page_title": "Earn your first dollar online with Gumroad",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 530,
+          "pct": 70
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 191,
+          "pct": 25
+        },
+        {
+          "raw": "rgb(244, 244, 240)",
+          "hex": "#f4f4f0",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 201, 0)",
+          "hex": "#ffc900",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(36, 36, 35)",
+          "hex": "#242423",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(221, 221, 221)",
+          "hex": "#dddddd",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(241, 243, 51)",
+          "hex": "#f1f333",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(220, 52, 30)",
+          "hex": "#dc341e",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "oklab(0.259939 -0.000510752 0.00176638 / 0.5)",
+          "hex": "oklab(0.259939 -0.000510752 0.00176638 / 0.5)",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 144, 232)",
+          "hex": "#ff90e8",
+          "count": 2,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#242423",
+      "primary_text": "#ffffff",
+      "color_scheme": "dark",
+      "unique_count": 10
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "ABC Favorit",
+          "count": 592,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Arial",
+          "count": 4,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "lucida grande",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 192,
+          "count": 1
+        },
+        {
+          "px": 96,
+          "count": 2
+        },
+        {
+          "px": 72,
+          "count": 3
+        },
+        {
+          "px": 48,
+          "count": 7
+        },
+        {
+          "px": 36,
+          "count": 4
+        },
+        {
+          "px": 30,
+          "count": 1
+        },
+        {
+          "px": 24,
+          "count": 108
+        },
+        {
+          "px": 20,
+          "count": 13
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 476
+        },
+        {
+          "weight": 500,
+          "count": 118
+        },
+        {
+          "weight": 700,
+          "count": 4
+        }
+      ],
+      "heading_font": "ABC Favorit",
+      "body_font": "ABC Favorit"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 257
+        },
+        {
+          "px": 8,
+          "count": 231
+        },
+        {
+          "px": 12,
+          "count": 104
+        },
+        {
+          "px": 32,
+          "count": 51
+        },
+        {
+          "px": 24,
+          "count": 23
+        },
+        {
+          "px": 4,
+          "count": 19
+        },
+        {
+          "px": 40,
+          "count": 18
+        },
+        {
+          "px": 58,
+          "count": 8
+        },
+        {
+          "px": 6,
+          "count": 6
+        },
+        {
+          "px": 48,
+          "count": 6
+        }
+      ],
+      "grid_aligned_pct": 98,
+      "density": "balanced",
+      "unique_count": 20
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "none",
+      "top_radii": [
+        {
+          "px": 33554400,
+          "count": 123
+        },
+        {
+          "px": 4,
+          "count": 14
+        },
+        {
+          "px": 24,
+          "count": 10
+        },
+        {
+          "px": 16,
+          "count": 9
+        },
+        {
+          "px": 6,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://duolingo.com",
+    "analyzed_at": "2026-04-03T17:44:44.378Z",
+    "page_title": "듀오링고 - 세계에서 가장 인기 있는 학습 방법",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(241, 247, 251)",
+          "hex": "#f1f7fb",
+          "count": 949,
+          "pct": 85
+        },
+        {
+          "raw": "rgb(165, 237, 110)",
+          "hex": "#a5ed6e",
+          "count": 63,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(119, 119, 119)",
+          "hex": "#777777",
+          "count": 32,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(75, 75, 75)",
+          "hex": "#4b4b4b",
+          "count": 16,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(88, 204, 2)",
+          "hex": "#58cc02",
+          "count": 14,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(28, 176, 246)",
+          "hex": "#1cb0f6",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(175, 175, 175)",
+          "hex": "#afafaf",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(215, 255, 184)",
+          "hex": "#d7ffb8",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(0, 0, 238)",
+          "hex": "#0000ee",
+          "count": 2,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "din-round",
+          "count": 1092,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "feather",
+          "count": 11,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "sans-serif",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 2
+        },
+        {
+          "px": 48,
+          "count": 9
+        },
+        {
+          "px": 32,
+          "count": 1
+        },
+        {
+          "px": 19,
+          "count": 6
+        },
+        {
+          "px": 17,
+          "count": 985
+        },
+        {
+          "px": 16,
+          "count": 1
+        },
+        {
+          "px": 15,
+          "count": 70
+        },
+        {
+          "px": 14,
+          "count": 2
+        }
+      ],
+      "weights": [
+        {
+          "weight": 500,
+          "count": 980
+        },
+        {
+          "weight": 700,
+          "count": 123
+        },
+        {
+          "weight": 400,
+          "count": 1
+        }
+      ],
+      "heading_font": "din-round",
+      "body_font": "din-round"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 56
+        },
+        {
+          "px": 16,
+          "count": 15
+        },
+        {
+          "px": 10,
+          "count": 12
+        },
+        {
+          "px": 24,
+          "count": 9
+        },
+        {
+          "px": 12,
+          "count": 7
+        },
+        {
+          "px": 101,
+          "count": 7
+        },
+        {
+          "px": 40,
+          "count": 6
+        },
+        {
+          "px": 96,
+          "count": 6
+        },
+        {
+          "px": 32,
+          "count": 5
+        },
+        {
+          "px": 48,
+          "count": 5
+        }
+      ],
+      "grid_aligned_pct": 79,
+      "density": "spacious",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 12,
+          "count": 9
+        },
+        {
+          "px": 2,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://coursera.org",
+    "analyzed_at": "2026-04-03T17:44:52.830Z",
+    "page_title": "Coursera | Courses, Professional Certificates, and Degrees Online",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(15, 17, 20)",
+          "hex": "#0f1114",
+          "count": 1261,
+          "pct": 73
+        },
+        {
+          "raw": "rgb(232, 238, 247)",
+          "hex": "#e8eef7",
+          "count": 180,
+          "pct": 10
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 105,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(0, 86, 210)",
+          "hex": "#0056d2",
+          "count": 101,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(91, 103, 128)",
+          "hex": "#5b6780",
+          "count": 59,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(240, 246, 255)",
+          "hex": "#f0f6ff",
+          "count": 15,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 244, 232)",
+          "hex": "#fff4e8",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(132, 149, 176)",
+          "hex": "#8495b0",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(227, 238, 255)",
+          "hex": "#e3eeff",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 12
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Source Sans Pro",
+          "count": 1458,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 30,
+          "count": 1
+        },
+        {
+          "px": 28,
+          "count": 3
+        },
+        {
+          "px": 24,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 29
+        },
+        {
+          "px": 16,
+          "count": 977
+        },
+        {
+          "px": 14,
+          "count": 445
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1264
+        },
+        {
+          "weight": 600,
+          "count": 181
+        },
+        {
+          "weight": 700,
+          "count": 14
+        }
+      ],
+      "heading_font": "Source Sans Pro",
+      "body_font": "Source Sans Pro"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 465
+        },
+        {
+          "px": 16,
+          "count": 233
+        },
+        {
+          "px": 4,
+          "count": 111
+        },
+        {
+          "px": 10,
+          "count": 74
+        },
+        {
+          "px": 12,
+          "count": 74
+        },
+        {
+          "px": 2,
+          "count": 44
+        },
+        {
+          "px": 48,
+          "count": 38
+        },
+        {
+          "px": 32,
+          "count": 18
+        },
+        {
+          "px": 20,
+          "count": 14
+        },
+        {
+          "px": 24,
+          "count": 10
+        }
+      ],
+      "grid_aligned_pct": 88,
+      "density": "balanced",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 84
+        },
+        {
+          "px": 4,
+          "count": 54
+        },
+        {
+          "px": 16,
+          "count": 33
+        },
+        {
+          "px": 100,
+          "count": 26
+        },
+        {
+          "px": 24,
+          "count": 11
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "education",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://calm.com",
+    "analyzed_at": "2026-04-03T17:44:59.233Z",
+    "page_title": "Access to this page has been denied",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 8,
+          "pct": 53
+        },
+        {
+          "raw": "rgb(98, 99, 100)",
+          "hex": "#626364",
+          "count": 3,
+          "pct": 20
+        },
+        {
+          "raw": "rgb(250, 251, 252)",
+          "hex": "#fafbfc",
+          "count": 2,
+          "pct": 13
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 1,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(177, 181, 184)",
+          "hex": "#b1b5b8",
+          "count": 1,
+          "pct": 7
+        }
+      ],
+      "dominant_bg": "#fafbfc",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 5
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Roboto",
+          "count": 9,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 3,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 29,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 2
+        },
+        {
+          "px": 16,
+          "count": 8
+        },
+        {
+          "px": 10,
+          "count": 1
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 11
+        },
+        {
+          "weight": 500,
+          "count": 1
+        }
+      ],
+      "heading_font": "Roboto",
+      "body_font": "Roboto"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 2
+        },
+        {
+          "px": 11,
+          "count": 1
+        },
+        {
+          "px": 29,
+          "count": 1
+        },
+        {
+          "px": 33,
+          "count": 1
+        },
+        {
+          "px": 67,
+          "count": 1
+        }
+      ],
+      "grid_aligned_pct": 33,
+      "density": "spacious",
+      "unique_count": 5
+    },
+    "layout": {
+      "maxWidth": 1424,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 3,
+          "count": 1
+        },
+        {
+          "px": 100,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "general",
+      "complexity": 45
+    }
+  },
+  {
+    "url": "https://headspace.com",
+    "analyzed_at": "2026-04-03T17:45:08.212Z",
+    "page_title": "Mental Health App for Meditation & Sleep - Headspace",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(75, 76, 77)",
+          "hex": "#4b4c4d",
+          "count": 1195,
+          "pct": 51
+        },
+        {
+          "raw": "rgb(68, 66, 63)",
+          "hex": "#44423f",
+          "count": 364,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(45, 44, 43)",
+          "hex": "#2d2c2b",
+          "count": 359,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 138,
+          "pct": 6
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 114,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(0, 0, 238)",
+          "hex": "#0000ee",
+          "count": 70,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 56,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(249, 244, 242)",
+          "hex": "#f9f4f2",
+          "count": 31,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(0, 97, 239)",
+          "hex": "#0061ef",
+          "count": 12,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(255, 206, 0)",
+          "hex": "#ffce00",
+          "count": 7,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#4b4c4d",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Headspace Apercu",
+          "count": 2256,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 72,
+          "count": 2
+        },
+        {
+          "px": 64,
+          "count": 3
+        },
+        {
+          "px": 56,
+          "count": 2
+        },
+        {
+          "px": 52,
+          "count": 2
+        },
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 40,
+          "count": 7
+        },
+        {
+          "px": 32,
+          "count": 29
+        },
+        {
+          "px": 29,
+          "count": 6
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1920
+        },
+        {
+          "weight": 700,
+          "count": 213
+        },
+        {
+          "weight": 500,
+          "count": 123
+        }
+      ],
+      "heading_font": "Headspace Apercu",
+      "body_font": "Headspace Apercu"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 24,
+          "count": 119
+        },
+        {
+          "px": 4,
+          "count": 111
+        },
+        {
+          "px": 16,
+          "count": 71
+        },
+        {
+          "px": 32,
+          "count": 52
+        },
+        {
+          "px": 8,
+          "count": 42
+        },
+        {
+          "px": 48,
+          "count": 36
+        },
+        {
+          "px": 6,
+          "count": 31
+        },
+        {
+          "px": 12,
+          "count": 16
+        },
+        {
+          "px": 10,
+          "count": 14
+        },
+        {
+          "px": 19,
+          "count": 14
+        }
+      ],
+      "grid_aligned_pct": 85,
+      "density": "balanced",
+      "unique_count": 36
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 24,
+          "count": 22
+        },
+        {
+          "px": 16,
+          "count": 21
+        },
+        {
+          "px": 50,
+          "count": 21
+        },
+        {
+          "px": 32,
+          "count": 18
+        },
+        {
+          "px": 8,
+          "count": 10
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "healthcare",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://discord.com",
+    "analyzed_at": "2026-04-03T17:45:16.733Z",
+    "page_title": "Discord - Group Chat That’s All Fun & Games",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 273,
+          "pct": 61
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 141,
+          "pct": 32
+        },
+        {
+          "raw": "rgb(51, 51, 51)",
+          "hex": "#333333",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(88, 101, 242)",
+          "hex": "#5865f2",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.7)",
+          "hex": "#ffffff",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(35, 39, 42)",
+          "hex": "#23272a",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(221, 221, 221, 0)",
+          "hex": "#dddddd",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(26, 32, 129)",
+          "hex": "#1a2081",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(53, 237, 126)",
+          "hex": "#35ed7e",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.8)",
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#1a2081",
+      "primary_text": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 12
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Ggsans",
+          "count": 273,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Abcgintodiscord",
+          "count": 102,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ABC Ginto Normal",
+          "count": 28,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Abcgintodiscordnord",
+          "count": 26,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 61,
+          "count": 16
+        },
+        {
+          "px": 56,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 3
+        },
+        {
+          "px": 36,
+          "count": 6
+        },
+        {
+          "px": 20,
+          "count": 14
+        },
+        {
+          "px": 16,
+          "count": 390
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 348
+        },
+        {
+          "weight": 500,
+          "count": 56
+        },
+        {
+          "weight": 700,
+          "count": 20
+        },
+        {
+          "weight": 800,
+          "count": 6
+        }
+      ],
+      "heading_font": "Abcgintodiscord",
+      "body_font": "Ggsans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 10,
+          "count": 28
+        },
+        {
+          "px": 16,
+          "count": 27
+        },
+        {
+          "px": 12,
+          "count": 26
+        },
+        {
+          "px": 40,
+          "count": 24
+        },
+        {
+          "px": 28,
+          "count": 18
+        },
+        {
+          "px": 24,
+          "count": 12
+        },
+        {
+          "px": 4,
+          "count": 9
+        },
+        {
+          "px": 8,
+          "count": 8
+        },
+        {
+          "px": 20,
+          "count": 5
+        },
+        {
+          "px": 48,
+          "count": 5
+        }
+      ],
+      "grid_aligned_pct": 71,
+      "density": "spacious",
+      "unique_count": 42
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "none",
+      "top_radii": [
+        {
+          "px": 12,
+          "count": 13
+        },
+        {
+          "px": 16,
+          "count": 10
+        },
+        {
+          "px": 104,
+          "count": 6
+        },
+        {
+          "px": 120,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://slack.com",
+    "analyzed_at": "2026-04-03T17:45:25.307Z",
+    "page_title": "Slack | AI 업무 플랫폼 및 생산성 도구",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 577,
+          "pct": 48
+        },
+        {
+          "raw": "rgb(105, 105, 105)",
+          "hex": "#696969",
+          "count": 260,
+          "pct": 22
+        },
+        {
+          "raw": "rgb(18, 100, 163)",
+          "hex": "#1264a3",
+          "count": 95,
+          "pct": 8
+        },
+        {
+          "raw": "rgba(29, 28, 29, 0.5)",
+          "hex": "#1d1c1d",
+          "count": 40,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 38,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(72, 26, 84)",
+          "hex": "#481a54",
+          "count": 32,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(29, 28, 29)",
+          "hex": "#1d1c1d",
+          "count": 24,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(29, 29, 29)",
+          "hex": "#1d1d1d",
+          "count": 21,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(117, 117, 117)",
+          "hex": "#757575",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(115, 3, 148)",
+          "hex": "#730394",
+          "count": 13,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#611f69",
+      "primary_text": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "NotoSansKR",
+          "count": 1043,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "SeolSansHeavy",
+          "count": 79,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 76,
+          "count": 2
+        },
+        {
+          "px": 64,
+          "count": 2
+        },
+        {
+          "px": 58,
+          "count": 5
+        },
+        {
+          "px": 50,
+          "count": 3
+        },
+        {
+          "px": 44,
+          "count": 13
+        },
+        {
+          "px": 32,
+          "count": 5
+        },
+        {
+          "px": 24,
+          "count": 17
+        },
+        {
+          "px": 22,
+          "count": 16
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 982
+        },
+        {
+          "weight": 700,
+          "count": 97
+        },
+        {
+          "weight": 600,
+          "count": 38
+        },
+        {
+          "weight": 300,
+          "count": 6
+        }
+      ],
+      "heading_font": "SeolSansHeavy",
+      "body_font": "NotoSansKR"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 169
+        },
+        {
+          "px": 6,
+          "count": 140
+        },
+        {
+          "px": 12,
+          "count": 67
+        },
+        {
+          "px": 8,
+          "count": 48
+        },
+        {
+          "px": 10,
+          "count": 39
+        },
+        {
+          "px": 32,
+          "count": 28
+        },
+        {
+          "px": 4,
+          "count": 25
+        },
+        {
+          "px": 24,
+          "count": 18
+        },
+        {
+          "px": 40,
+          "count": 15
+        },
+        {
+          "px": 30,
+          "count": 12
+        }
+      ],
+      "grid_aligned_pct": 64,
+      "density": "balanced",
+      "unique_count": 31
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 16,
+          "count": 34
+        },
+        {
+          "px": 4,
+          "count": 14
+        },
+        {
+          "px": 8,
+          "count": 8
+        },
+        {
+          "px": 48,
+          "count": 5
+        },
+        {
+          "px": 90,
+          "count": 4
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://todoist.com",
+    "analyzed_at": "2026-04-03T17:45:34.314Z",
+    "page_title": "Todoist | 일과 생활을 관리하기 위한 To Do List",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(37, 34, 30)",
+          "hex": "#25221e",
+          "count": 475,
+          "pct": 65
+        },
+        {
+          "raw": "rgba(37, 34, 30, 0.66)",
+          "hex": "#25221e",
+          "count": 80,
+          "pct": 11
+        },
+        {
+          "raw": "rgba(37, 34, 30, 0.49)",
+          "hex": "#25221e",
+          "count": 58,
+          "pct": 8
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 29,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(15, 102, 174)",
+          "hex": "#0f66ae",
+          "count": 20,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(227, 68, 50)",
+          "hex": "#e34432",
+          "count": 13,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 12,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(37, 34, 30, 0.18)",
+          "hex": "#25221e",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(249, 247, 246)",
+          "hex": "#f9f7f6",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(128, 128, 128)",
+          "hex": "#808080",
+          "count": 5,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#fefdfc",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter-5486e50ce5a4efdf",
+          "count": 342,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Graphik-1bbd4a4c7a2fb472",
+          "count": 328,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Arial",
+          "count": 6,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Caecilia-8d8a7c9be503e3f3",
+          "count": 5,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Shantell Sans-5a9740f6b2ed8488",
+          "count": 3,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 55,
+          "count": 1
+        },
+        {
+          "px": 44,
+          "count": 1
+        },
+        {
+          "px": 38,
+          "count": 7
+        },
+        {
+          "px": 22,
+          "count": 12
+        },
+        {
+          "px": 21,
+          "count": 9
+        },
+        {
+          "px": 20,
+          "count": 5
+        },
+        {
+          "px": 19,
+          "count": 19
+        },
+        {
+          "px": 18,
+          "count": 13
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 339
+        },
+        {
+          "weight": 500,
+          "count": 193
+        },
+        {
+          "weight": 600,
+          "count": 68
+        },
+        {
+          "weight": 475,
+          "count": 67
+        }
+      ],
+      "heading_font": "Inter-5486e50ce5a4efdf",
+      "body_font": "Inter-5486e50ce5a4efdf"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 78
+        },
+        {
+          "px": 9,
+          "count": 76
+        },
+        {
+          "px": 12,
+          "count": 72
+        },
+        {
+          "px": 4,
+          "count": 66
+        },
+        {
+          "px": 24,
+          "count": 55
+        },
+        {
+          "px": 14,
+          "count": 50
+        },
+        {
+          "px": 8,
+          "count": 30
+        },
+        {
+          "px": 20,
+          "count": 13
+        },
+        {
+          "px": 48,
+          "count": 10
+        },
+        {
+          "px": 32,
+          "count": 9
+        }
+      ],
+      "grid_aligned_pct": 66,
+      "density": "balanced",
+      "unique_count": 26
+    },
+    "layout": {
+      "maxWidth": 0,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 45
+        },
+        {
+          "px": 10,
+          "count": 17
+        },
+        {
+          "px": 15,
+          "count": 15
+        },
+        {
+          "px": 13,
+          "count": 4
+        },
+        {
+          "px": 6,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://1password.com",
+    "analyzed_at": "2026-04-03T17:45:41.136Z",
+    "page_title": "Passwords, Secrets, and Access Management | 1Password",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgba(255, 255, 255, 0.8)",
+          "hex": "#ffffff",
+          "count": 308,
+          "pct": 52
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 170,
+          "pct": 29
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 58,
+          "pct": 10
+        },
+        {
+          "raw": "rgb(48, 49, 54)",
+          "hex": "#303136",
+          "count": 28,
+          "pct": 5
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 14,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(20, 95, 228)",
+          "hex": "#145fe4",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(29, 29, 33)",
+          "hex": "#1d1d21",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(203, 184, 142)",
+          "hex": "#cbb88e",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgb(36, 37, 41)",
+          "hex": "#242529",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 9
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "agileSans",
+          "count": 569,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-sans-serif",
+          "count": 9,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 128,
+          "count": 3
+        },
+        {
+          "px": 88,
+          "count": 1
+        },
+        {
+          "px": 64,
+          "count": 2
+        },
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 40,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 9
+        },
+        {
+          "px": 18,
+          "count": 9
+        }
+      ],
+      "weights": [
+        {
+          "weight": 350,
+          "count": 502
+        },
+        {
+          "weight": 400,
+          "count": 41
+        },
+        {
+          "weight": 300,
+          "count": 26
+        },
+        {
+          "weight": 500,
+          "count": 9
+        }
+      ],
+      "heading_font": "agileSans",
+      "body_font": "agileSans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 12,
+          "count": 103
+        },
+        {
+          "px": 24,
+          "count": 31
+        },
+        {
+          "px": 2,
+          "count": 28
+        },
+        {
+          "px": 32,
+          "count": 28
+        },
+        {
+          "px": 72,
+          "count": 18
+        },
+        {
+          "px": 8,
+          "count": 17
+        },
+        {
+          "px": 16,
+          "count": 16
+        },
+        {
+          "px": 4,
+          "count": 12
+        },
+        {
+          "px": 10,
+          "count": 12
+        },
+        {
+          "px": 64,
+          "count": 8
+        }
+      ],
+      "grid_aligned_pct": 85,
+      "density": "spacious",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 25,
+          "count": 7
+        },
+        {
+          "px": 9999,
+          "count": 6
+        },
+        {
+          "px": 2,
+          "count": 3
+        },
+        {
+          "px": 16,
+          "count": 3
+        },
+        {
+          "px": 4,
+          "count": 2
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://arc.net",
+    "analyzed_at": "2026-04-03T17:45:47.756Z",
+    "page_title": "Arc from The Browser Company",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(49, 57, 251)",
+          "hex": "#3139fb",
+          "count": 123,
+          "pct": 41
+        },
+        {
+          "raw": "rgb(255, 252, 236)",
+          "hex": "#fffcec",
+          "count": 60,
+          "pct": 20
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 46,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 30,
+          "pct": 10
+        },
+        {
+          "raw": "rgb(255, 250, 221)",
+          "hex": "#fffadd",
+          "count": 19,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(105, 105, 105)",
+          "hex": "#696969",
+          "count": 10,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(39, 2, 194)",
+          "hex": "#2702c2",
+          "count": 7,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.65)",
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0.85)",
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#fffcec",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 10
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Marlin Soft SQ",
+          "count": 115,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Marlin",
+          "count": 96,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "InterVariable",
+          "count": 46,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "ABC Favorit Mono",
+          "count": 10,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "-apple-system",
+          "count": 9,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 46,
+          "count": 4
+        },
+        {
+          "px": 40,
+          "count": 5
+        },
+        {
+          "px": 36,
+          "count": 1
+        },
+        {
+          "px": 28,
+          "count": 6
+        },
+        {
+          "px": 24,
+          "count": 5
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 17,
+          "count": 11
+        },
+        {
+          "px": 16,
+          "count": 182
+        }
+      ],
+      "weights": [
+        {
+          "weight": 700,
+          "count": 114
+        },
+        {
+          "weight": 400,
+          "count": 104
+        },
+        {
+          "weight": 600,
+          "count": 44
+        },
+        {
+          "weight": 500,
+          "count": 21
+        }
+      ],
+      "heading_font": "Marlin Soft SQ",
+      "body_font": "Marlin Soft SQ"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 24,
+          "count": 77
+        },
+        {
+          "px": 8,
+          "count": 29
+        },
+        {
+          "px": 32,
+          "count": 21
+        },
+        {
+          "px": 16,
+          "count": 20
+        },
+        {
+          "px": 12,
+          "count": 19
+        },
+        {
+          "px": 10,
+          "count": 13
+        },
+        {
+          "px": 4,
+          "count": 8
+        },
+        {
+          "px": 3,
+          "count": 5
+        },
+        {
+          "px": 6,
+          "count": 5
+        },
+        {
+          "px": 20,
+          "count": 5
+        }
+      ],
+      "grid_aligned_pct": 86,
+      "density": "balanced",
+      "unique_count": 24
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 9
+        },
+        {
+          "px": 10,
+          "count": 3
+        },
+        {
+          "px": 4,
+          "count": 1
+        },
+        {
+          "px": 22,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://raycast.com",
+    "analyzed_at": "2026-04-03T17:45:57.703Z",
+    "page_title": "Raycast - Your shortcut to everything",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 1932,
+          "pct": 69
+        },
+        {
+          "raw": "rgb(106, 107, 108)",
+          "hex": "#6a6b6c",
+          "count": 179,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(156, 156, 157)",
+          "hex": "#9c9c9d",
+          "count": 136,
+          "pct": 5
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.05)",
+          "hex": "#ffffff",
+          "count": 102,
+          "pct": 4
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 96,
+          "pct": 3
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.6)",
+          "hex": "#ffffff",
+          "count": 80,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(67, 67, 69)",
+          "hex": "#434345",
+          "count": 71,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(230, 230, 230)",
+          "hex": "#e6e6e6",
+          "count": 58,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.4)",
+          "hex": "#ffffff",
+          "count": 51,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(255, 255, 255, 0.1)",
+          "hex": "#ffffff",
+          "count": 24,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#07080a",
+      "primary_text": "#ffffff",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 1911,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "SF Pro Text",
+          "count": 525,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "SF Pro",
+          "count": 37,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "GeistMono",
+          "count": 31,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 1
+        },
+        {
+          "px": 56,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 220
+        },
+        {
+          "px": 24,
+          "count": 369
+        },
+        {
+          "px": 22,
+          "count": 2
+        },
+        {
+          "px": 20,
+          "count": 20
+        },
+        {
+          "px": 18,
+          "count": 28
+        },
+        {
+          "px": 16,
+          "count": 1276
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 1421
+        },
+        {
+          "weight": 500,
+          "count": 849
+        },
+        {
+          "weight": 600,
+          "count": 187
+        },
+        {
+          "weight": 700,
+          "count": 41
+        }
+      ],
+      "heading_font": "Inter",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 15,
+          "count": 636
+        },
+        {
+          "px": 8,
+          "count": 416
+        },
+        {
+          "px": 24,
+          "count": 259
+        },
+        {
+          "px": 16,
+          "count": 122
+        },
+        {
+          "px": 12,
+          "count": 121
+        },
+        {
+          "px": 10,
+          "count": 83
+        },
+        {
+          "px": 4,
+          "count": 47
+        },
+        {
+          "px": 3,
+          "count": 34
+        },
+        {
+          "px": 50,
+          "count": 25
+        },
+        {
+          "px": 32,
+          "count": 20
+        }
+      ],
+      "grid_aligned_pct": 56,
+      "density": "balanced",
+      "unique_count": 37
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 11,
+          "count": 159
+        },
+        {
+          "px": 8,
+          "count": 109
+        },
+        {
+          "px": 100,
+          "count": 101
+        },
+        {
+          "px": 6,
+          "count": 69
+        },
+        {
+          "px": 12,
+          "count": 55
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://posthog.com",
+    "analyzed_at": "2026-04-03T17:46:05.673Z",
+    "page_title": "PostHog – We make dev tools for product engineers",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(77, 79, 70)",
+          "hex": "#4d4f46",
+          "count": 424,
+          "pct": 37
+        },
+        {
+          "raw": "rgb(55, 65, 81)",
+          "hex": "#374151",
+          "count": 199,
+          "pct": 17
+        },
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 170,
+          "pct": 15
+        },
+        {
+          "raw": "rgb(35, 37, 29)",
+          "hex": "#23251d",
+          "count": 97,
+          "pct": 8
+        },
+        {
+          "raw": "rgb(17, 24, 39)",
+          "hex": "#111827",
+          "count": 50,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(245, 78, 0)",
+          "hex": "#f54e00",
+          "count": 33,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(158, 160, 150)",
+          "hex": "#9ea096",
+          "count": 25,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 23,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(225, 215, 194)",
+          "hex": "#e1d7c2",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(235, 157, 42)",
+          "hex": "#eb9d2a",
+          "count": 16,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#eeefe9",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "IBM Plex Sans Variable",
+          "count": 1058,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-monospace",
+          "count": 5,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Source Code Pro",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 36,
+          "count": 1
+        },
+        {
+          "px": 30,
+          "count": 13
+        },
+        {
+          "px": 24,
+          "count": 1
+        },
+        {
+          "px": 21,
+          "count": 8
+        },
+        {
+          "px": 20,
+          "count": 3
+        },
+        {
+          "px": 19,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 4
+        },
+        {
+          "px": 16,
+          "count": 236
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 779
+        },
+        {
+          "weight": 600,
+          "count": 150
+        },
+        {
+          "weight": 500,
+          "count": 83
+        },
+        {
+          "weight": 700,
+          "count": 39
+        }
+      ],
+      "heading_font": "IBM Plex Sans Variable",
+      "body_font": "IBM Plex Sans Variable"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 4,
+          "count": 206
+        },
+        {
+          "px": 8,
+          "count": 200
+        },
+        {
+          "px": 2,
+          "count": 104
+        },
+        {
+          "px": 6,
+          "count": 99
+        },
+        {
+          "px": 17,
+          "count": 66
+        },
+        {
+          "px": 16,
+          "count": 42
+        },
+        {
+          "px": 5,
+          "count": 20
+        },
+        {
+          "px": 10,
+          "count": 20
+        },
+        {
+          "px": 12,
+          "count": 11
+        },
+        {
+          "px": 32,
+          "count": 10
+        }
+      ],
+      "grid_aligned_pct": 60,
+      "density": "compact",
+      "unique_count": 23
+    },
+    "layout": {
+      "maxWidth": 898,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 4,
+          "count": 59
+        },
+        {
+          "px": 6,
+          "count": 26
+        },
+        {
+          "px": 2,
+          "count": 16
+        },
+        {
+          "px": 9999,
+          "count": 8
+        },
+        {
+          "px": 5,
+          "count": 2
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://resend.com",
+    "analyzed_at": "2026-04-03T17:46:13.701Z",
+    "page_title": "Resend · Email for developers",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(240, 240, 240)",
+          "hex": "#f0f0f0",
+          "count": 855,
+          "pct": 38
+        },
+        {
+          "raw": "rgb(248, 248, 248)",
+          "hex": "#f8f8f8",
+          "count": 323,
+          "pct": 14
+        },
+        {
+          "raw": "rgb(161, 164, 165)",
+          "hex": "#a1a4a5",
+          "count": 233,
+          "pct": 10
+        },
+        {
+          "raw": "rgb(160, 160, 160)",
+          "hex": "#a0a0a0",
+          "count": 216,
+          "pct": 10
+        },
+        {
+          "raw": "rgba(241, 247, 254, 0.71)",
+          "hex": "#f1f7fe",
+          "count": 168,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(171, 171, 171)",
+          "hex": "#ababab",
+          "count": 95,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(70, 74, 77)",
+          "hex": "#464a4d",
+          "count": 84,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(108, 108, 108)",
+          "hex": "#6c6c6c",
+          "count": 72,
+          "pct": 3
+        },
+        {
+          "raw": "rgba(252, 253, 255, 0.937)",
+          "hex": "#fcfdff",
+          "count": 61,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 37,
+          "pct": 2
+        }
+      ],
+      "dominant_bg": "#000000",
+      "primary_text": "#ffffff",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "inter",
+          "count": 1342,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "commitMono",
+          "count": 814,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "aBCFavorit",
+          "count": 31,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Helvetica",
+          "count": 25,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "domaine",
+          "count": 4,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 2
+        },
+        {
+          "px": 77,
+          "count": 2
+        },
+        {
+          "px": 56,
+          "count": 10
+        },
+        {
+          "px": 24,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 13
+        },
+        {
+          "px": 18,
+          "count": 18
+        },
+        {
+          "px": 16,
+          "count": 901
+        },
+        {
+          "px": 14,
+          "count": 516
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 2082
+        },
+        {
+          "weight": 500,
+          "count": 108
+        },
+        {
+          "weight": 600,
+          "count": 24
+        },
+        {
+          "weight": 700,
+          "count": 2
+        }
+      ],
+      "heading_font": "aBCFavorit",
+      "body_font": "inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 179
+        },
+        {
+          "px": 24,
+          "count": 168
+        },
+        {
+          "px": 4,
+          "count": 132
+        },
+        {
+          "px": 2,
+          "count": 112
+        },
+        {
+          "px": 8,
+          "count": 112
+        },
+        {
+          "px": 32,
+          "count": 104
+        },
+        {
+          "px": 14,
+          "count": 85
+        },
+        {
+          "px": 6,
+          "count": 68
+        },
+        {
+          "px": 1,
+          "count": 41
+        },
+        {
+          "px": 12,
+          "count": 35
+        }
+      ],
+      "grid_aligned_pct": 72,
+      "density": "balanced",
+      "unique_count": 20
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 33554400,
+          "count": 173
+        },
+        {
+          "px": 16,
+          "count": 71
+        },
+        {
+          "px": 6,
+          "count": 52
+        },
+        {
+          "px": 8,
+          "count": 30
+        },
+        {
+          "px": 4,
+          "count": 10
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://clerk.com",
+    "analyzed_at": "2026-04-03T17:46:24.484Z",
+    "page_title": "Clerk | Authentication and User Management",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 1957,
+          "pct": 62
+        },
+        {
+          "raw": "rgb(19, 19, 22)",
+          "hex": "#131316",
+          "count": 296,
+          "pct": 9
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 192,
+          "pct": 6
+        },
+        {
+          "raw": "rgb(94, 95, 110)",
+          "hex": "#5e5f6e",
+          "count": 147,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(116, 118, 134)",
+          "hex": "#747686",
+          "count": 119,
+          "pct": 4
+        },
+        {
+          "raw": "rgba(0, 0, 0, 0)",
+          "hex": "#000000",
+          "count": 97,
+          "pct": 3
+        },
+        {
+          "raw": "rgb(147, 148, 161)",
+          "hex": "#9394a1",
+          "count": 55,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(247, 247, 248)",
+          "hex": "#f7f7f8",
+          "count": 47,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(47, 48, 55)",
+          "hex": "#2f3037",
+          "count": 44,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(105, 106, 120)",
+          "hex": "#696a78",
+          "count": 27,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#f7f7f8",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "geistNumbers",
+          "count": 1814,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-sans-serif",
+          "count": 793,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Inter",
+          "count": 169,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "soehneMono",
+          "count": 51,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 8
+        },
+        {
+          "px": 24,
+          "count": 2
+        },
+        {
+          "px": 22,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 4
+        },
+        {
+          "px": 18,
+          "count": 3
+        },
+        {
+          "px": 17,
+          "count": 9
+        },
+        {
+          "px": 16,
+          "count": 1942
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 2282
+        },
+        {
+          "weight": 500,
+          "count": 457
+        },
+        {
+          "weight": 600,
+          "count": 52
+        },
+        {
+          "weight": 700,
+          "count": 22
+        }
+      ],
+      "heading_font": "geistNumbers",
+      "body_font": "geistNumbers"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 166
+        },
+        {
+          "px": 12,
+          "count": 165
+        },
+        {
+          "px": 16,
+          "count": 145
+        },
+        {
+          "px": 4,
+          "count": 117
+        },
+        {
+          "px": 32,
+          "count": 99
+        },
+        {
+          "px": 10,
+          "count": 89
+        },
+        {
+          "px": 24,
+          "count": 88
+        },
+        {
+          "px": 6,
+          "count": 81
+        },
+        {
+          "px": 2,
+          "count": 63
+        },
+        {
+          "px": 20,
+          "count": 61
+        }
+      ],
+      "grid_aligned_pct": 76,
+      "density": "balanced",
+      "unique_count": 40
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 167
+        },
+        {
+          "px": 6,
+          "count": 75
+        },
+        {
+          "px": 8,
+          "count": 48
+        },
+        {
+          "px": 3,
+          "count": 32
+        },
+        {
+          "px": 4,
+          "count": 27
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://cal.com",
+    "analyzed_at": "2026-04-03T17:46:32.106Z",
+    "page_title": "Cal.com | Open Scheduling Infrastructure",
+    "colors": {
+      "palette": [
+        {
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 2071,
+          "pct": 65
+        },
+        {
+          "raw": "rgb(0, 0, 238)",
+          "hex": "#0000ee",
+          "count": 210,
+          "pct": 7
+        },
+        {
+          "raw": "rgb(137, 137, 137)",
+          "hex": "#898989",
+          "count": 176,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(255, 255, 255)",
+          "hex": "#ffffff",
+          "count": 174,
+          "pct": 5
+        },
+        {
+          "raw": "rgb(36, 36, 36)",
+          "hex": "#242424",
+          "count": 139,
+          "pct": 4
+        },
+        {
+          "raw": "rgb(224, 224, 224)",
+          "hex": "#e0e0e0",
+          "count": 64,
+          "pct": 2
+        },
+        {
+          "raw": "rgba(20, 20, 20, 0.15)",
+          "hex": "#141414",
+          "count": 57,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(17, 17, 17)",
+          "hex": "#111111",
+          "count": 54,
+          "pct": 2
+        },
+        {
+          "raw": "rgb(211, 211, 211)",
+          "hex": "#d3d3d3",
+          "count": 48,
+          "pct": 1
+        },
+        {
+          "raw": "rgb(41, 41, 41)",
+          "hex": "#292929",
+          "count": 47,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#f4f4f4",
+      "primary_text": "#000000",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "sans-serif",
+          "count": 2315,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Cal Sans UI Variable Light",
+          "count": 216,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Inter",
+          "count": 67,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Matter Regular",
+          "count": 44,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Cal Sans",
+          "count": 42,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 1
+        },
+        {
+          "px": 48,
+          "count": 7
+        },
+        {
+          "px": 24,
+          "count": 24
+        },
+        {
+          "px": 20,
+          "count": 4
+        },
+        {
+          "px": 18,
+          "count": 7
+        },
+        {
+          "px": 16,
+          "count": 138
+        },
+        {
+          "px": 14,
+          "count": 178
+        },
+        {
+          "px": 12,
+          "count": 2342
+        }
+      ],
+      "weights": [
+        {
+          "weight": 400,
+          "count": 2401
+        },
+        {
+          "weight": 300,
+          "count": 216
+        },
+        {
+          "weight": 500,
+          "count": 63
+        },
+        {
+          "weight": 600,
+          "count": 45
+        }
+      ],
+      "heading_font": "Cal Sans UI Variable Light",
+      "body_font": "sans-serif"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 10,
+          "count": 324
+        },
+        {
+          "px": 4,
+          "count": 315
+        },
+        {
+          "px": 24,
+          "count": 230
+        },
+        {
+          "px": 8,
+          "count": 176
+        },
+        {
+          "px": 2,
+          "count": 174
+        },
+        {
+          "px": 12,
+          "count": 157
+        },
+        {
+          "px": 16,
+          "count": 80
+        },
+        {
+          "px": 6,
+          "count": 42
+        },
+        {
+          "px": 20,
+          "count": 42
+        },
+        {
+          "px": 48,
+          "count": 12
+        }
+      ],
+      "grid_aligned_pct": 65,
+      "density": "compact",
+      "unique_count": 17
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 85
+        },
+        {
+          "px": 100,
+          "count": 67
+        },
+        {
+          "px": 12,
+          "count": 64
+        },
+        {
+          "px": 16,
+          "count": 48
+        },
+        {
+          "px": 4,
+          "count": 39
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Energetic Pop",
+      "industry": "education",
+      "complexity": 100
+    }
+  }
+]
