@@ -1,0 +1,47 @@
+name: Design Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.tsx'
+      - '**/*.jsx'
+      - '**/*.vue'
+      - '**/*.svelte'
+      - '**/*.css'
+      - '**/*.scss'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  design-review:
+    name: Run Design Review
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Build devsigner
+        run: npm run build
+
+      - name: Install action dependencies
+        run: cd action && npm install
+
+      - name: Run devsigner design review
+        uses: ./
+        with:
+          threshold: '50'
+          focus: 'all'
+          include: '**/*.{tsx,jsx,vue,svelte,css,scss}'
+          github-token: ${{ secrets.GITHUB_TOKEN }}

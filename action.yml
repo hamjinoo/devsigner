@@ -1,0 +1,37 @@
+name: 'devsigner Design Review'
+description: 'Automated design review for your UI code. Checks spacing, color contrast, typography, and accessibility.'
+author: 'hamjinoo'
+
+branding:
+  icon: 'eye'
+  color: 'purple'
+
+inputs:
+  threshold:
+    description: 'Minimum design score (0-100). The check fails if any file scores below this.'
+    required: false
+    default: '50'
+  focus:
+    description: 'Comma-separated design aspects to check: spacing, color, typography, layout, or all.'
+    required: false
+    default: 'all'
+  include:
+    description: 'Glob pattern for files to review.'
+    required: false
+    default: '**/*.{tsx,jsx,vue,svelte,css,scss}'
+  github-token:
+    description: 'GitHub token for posting PR comments. Defaults to the automatic GITHUB_TOKEN.'
+    required: false
+    default: '${{ github.token }}'
+
+outputs:
+  lowest-score:
+    description: 'The lowest design score among all reviewed files.'
+  total-errors:
+    description: 'Total number of design errors across all files.'
+  total-warnings:
+    description: 'Total number of design warnings across all files.'
+
+runs:
+  using: 'node20'
+  main: 'action/index.js'
