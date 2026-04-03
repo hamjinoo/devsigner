@@ -8,6 +8,7 @@ import { registerDesignReference } from "./tools/design-reference.js";
 import { registerDesignIdentity } from "./tools/design-identity.js";
 import { registerRenderAndReview } from "./tools/render-and-review.js";
 import { registerScreenshotReview } from "./tools/screenshot-review.js";
+import { registerDesignSession } from "./tools/design-session.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -20,5 +21,6 @@ export function registerAllTools(server: McpServer): void {
   registerDesignIdentity(server);
   registerRenderAndReview(server);
   registerScreenshotReview(server);
+  registerDesignSession(server);
   registerDesignSystemResources(server);
 }
