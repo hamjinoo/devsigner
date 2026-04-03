@@ -730,7 +730,7 @@ export function registerDesignFix(server: McpServer): void {
     async ({ code, framework, fix_level }) => {
       // 1. Parse and score BEFORE
       const parsedBefore = parseCode(code, framework);
-      const issuesBefore = runDesignRules(parsedBefore.declarations, ["all"] as FocusArea[]);
+      const issuesBefore = runDesignRules(parsedBefore.declarations, ["all"] as FocusArea[], parsedBefore.blocks);
       const scoreBefore = calculateScore(issuesBefore);
 
       // 2. Apply fixes
@@ -738,7 +738,7 @@ export function registerDesignFix(server: McpServer): void {
 
       // 3. Parse and score AFTER
       const parsedAfter = parseCode(fixedCode, framework);
-      const issuesAfter = runDesignRules(parsedAfter.declarations, ["all"] as FocusArea[]);
+      const issuesAfter = runDesignRules(parsedAfter.declarations, ["all"] as FocusArea[], parsedAfter.blocks);
       const scoreAfter = calculateScore(issuesAfter);
 
       // 4. Build the response

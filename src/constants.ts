@@ -8,7 +8,7 @@ export const WCAG_AA_LARGE = 3;
 export const WCAG_AAA_NORMAL = 7;
 export const WCAG_AAA_LARGE = 4.5;
 
-export const MAX_DISTINCT_COLORS = 6;
+export const MAX_DISTINCT_COLORS = 10;
 export const MAX_DISTINCT_FONT_SIZES = 6;
 export const MAX_DISTINCT_FONT_WEIGHTS = 3;
 

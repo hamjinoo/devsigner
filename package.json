@@ -1,6 +1,6 @@
 {
   "name": "devsigner",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Design assistant MCP server for developers who lack design skills",
   "type": "module",
   "bin": {

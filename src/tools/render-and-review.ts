@@ -130,7 +130,7 @@ export function registerRenderAndReview(server: McpServer): void {
           html = html.replace("background: #ffffff", "background: #0a0a0a");
         }
 
-        await page.setContent(html, { waitUntil: "networkidle0", timeout: 10000 });
+        await page.setContent(html, { waitUntil: "domcontentloaded", timeout: 30000 });
 
         // Wait a bit for any CSS transitions/animations
         await new Promise((r) => setTimeout(r, 500));
@@ -155,7 +155,7 @@ export function registerRenderAndReview(server: McpServer): void {
         // Run design review if requested
         if (run_design_review) {
           const parsed = parseCode(code);
-          const issues = runDesignRules(parsed.declarations, ["all"] as FocusArea[]);
+          const issues = runDesignRules(parsed.declarations, ["all"] as FocusArea[], parsed.blocks);
           const score = calculateScore(issues);
 
           const reviewLines = [

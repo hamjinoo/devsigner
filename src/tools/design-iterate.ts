@@ -25,7 +25,7 @@ async function renderToScreenshot(
   viewport: { width: number; height: number },
 ): Promise<string> {
   const html = wrapInHTML(code, viewport);
-  await page.setContent(html, { waitUntil: "networkidle0", timeout: 10000 });
+  await page.setContent(html, { waitUntil: "domcontentloaded", timeout: 30000 });
   // Allow CSS transitions / animations to settle
   await new Promise((r) => setTimeout(r, 500));
   const screenshot = await page.screenshot({
@@ -41,7 +41,7 @@ function reviewCode(
   framework: string,
 ): { score: number; issues: DesignIssue[] } {
   const parsed = parseCode(code, framework);
-  const issues = runDesignRules(parsed.declarations, ["all"] as FocusArea[]);
+  const issues = runDesignRules(parsed.declarations, ["all"] as FocusArea[], parsed.blocks);
   const score = calculateScore(issues);
   return { score, issues };
 }

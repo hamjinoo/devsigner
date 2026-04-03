@@ -1,22 +1,33 @@
-import type { StyleDeclaration } from "./css-extractor.js";
+import type { StyleDeclaration, StyleBlock } from "./css-extractor.js";
 
 export function extractInlineStyles(code: string): StyleDeclaration[] {
-  const declarations: StyleDeclaration[] = [];
+  return extractInlineStyleBlocks(code).flatMap((b) => b.declarations);
+}
+
+export function extractInlineStyleBlocks(code: string): StyleBlock[] {
+  const blocks: StyleBlock[] = [];
+  let elementIdx = 0;
 
   // HTML style="..."
   const htmlStyleRegex = /style\s*=\s*"([^"]*)"/gi;
   let match;
   while ((match = htmlStyleRegex.exec(code)) !== null) {
-    declarations.push(...parseStyleString(match[1]));
+    const declarations = parseStyleString(match[1]);
+    if (declarations.length > 0) {
+      blocks.push({ selector: `[inline-style-${elementIdx++}]`, declarations });
+    }
   }
 
   // JSX style={{ ... }}
   const jsxStyleRegex = /style\s*=\s*\{\{([\s\S]*?)\}\}/g;
   while ((match = jsxStyleRegex.exec(code)) !== null) {
-    declarations.push(...parseJSXStyleObject(match[1]));
+    const declarations = parseJSXStyleObject(match[1]);
+    if (declarations.length > 0) {
+      blocks.push({ selector: `[jsx-style-${elementIdx++}]`, declarations });
+    }
   }
 
-  return declarations;
+  return blocks;
 }
 
 function parseStyleString(style: string): StyleDeclaration[] {

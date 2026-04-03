@@ -1,13 +1,14 @@
-import type { StyleDeclaration } from "./css-extractor.js";
+import type { StyleDeclaration, StyleBlock } from "./css-extractor.js";
 import { extractCSSBlocks, extractAllDeclarations } from "./css-extractor.js";
-import { extractInlineStyles } from "./inline-style-extractor.js";
-import { extractTailwindStyles } from "./tailwind-extractor.js";
+import { extractInlineStyles, extractInlineStyleBlocks } from "./inline-style-extractor.js";
+import { extractTailwindStyles, extractTailwindStyleBlocks } from "./tailwind-extractor.js";
 import { detectFramework, type Framework } from "./framework-detector.js";
 import { expandShorthand } from "../utils/css-value-parser.js";
 
 export interface ParsedStyles {
   framework: Framework;
   declarations: StyleDeclaration[];
+  blocks: StyleBlock[];
 }
 
 export function parseCode(code: string, frameworkHint?: string): ParsedStyles {
@@ -18,6 +19,12 @@ export function parseCode(code: string, frameworkHint?: string): ParsedStyles {
   const cssDeclarations = extractAllDeclarations(code);
   const inlineDeclarations = extractInlineStyles(code);
   const tailwindDeclarations = extractTailwindStyles(code);
+
+  // Collect blocks (preserving per-selector / per-element grouping)
+  const cssBlocks = extractCSSBlocks(code);
+  const inlineBlocks = extractInlineStyleBlocks(code);
+  const tailwindBlocks = extractTailwindStyleBlocks(code);
+  const allBlocks = [...cssBlocks, ...inlineBlocks, ...tailwindBlocks];
 
   // Expand shorthands
   const allDeclarations: StyleDeclaration[] = [];
@@ -33,7 +40,7 @@ export function parseCode(code: string, frameworkHint?: string): ParsedStyles {
     }
   }
 
-  return { framework, declarations: allDeclarations };
+  return { framework, declarations: allDeclarations, blocks: allBlocks };
 }
 
-export { type StyleDeclaration, type Framework, detectFramework };
+export { type StyleDeclaration, type StyleBlock, type Framework, detectFramework };

@@ -20,7 +20,7 @@ export function registerDesignReview(server: McpServer): void {
     },
     async ({ code, framework, focus }) => {
       const parsed = parseCode(code, framework);
-      const issues = runDesignRules(parsed.declarations, focus as FocusArea[]);
+      const issues = runDesignRules(parsed.declarations, focus as FocusArea[], parsed.blocks);
       const score = calculateScore(issues);
 
       const errors = issues.filter((i) => i.severity === "error");

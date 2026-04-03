@@ -1,4 +1,4 @@
-import type { StyleDeclaration } from "./css-extractor.js";
+import type { StyleDeclaration, StyleBlock } from "./css-extractor.js";
 
 const TAILWIND_MAP: Record<string, StyleDeclaration> = {};
 
@@ -90,13 +90,19 @@ for (const [cls, value] of Object.entries(maxWidths)) {
 }
 
 export function extractTailwindStyles(code: string): StyleDeclaration[] {
-  const declarations: StyleDeclaration[] = [];
+  return extractTailwindStyleBlocks(code).flatMap((b) => b.declarations);
+}
+
+export function extractTailwindStyleBlocks(code: string): StyleBlock[] {
+  const blocks: StyleBlock[] = [];
   const classRegex = /(?:className|class)\s*=\s*(?:"([^"]*)"|'([^']*)'|\{`([^`]*)`\})/g;
   let match;
+  let elementIdx = 0;
 
   while ((match = classRegex.exec(code)) !== null) {
     const classString = match[1] || match[2] || match[3] || "";
     const classes = classString.split(/\s+/).filter(Boolean);
+    const declarations: StyleDeclaration[] = [];
 
     for (const cls of classes) {
       // Strip responsive/state prefixes (e.g., md:p-4 -> p-4, hover:bg-blue-500 -> bg-blue-500)
@@ -120,7 +126,11 @@ export function extractTailwindStyles(code: string): StyleDeclaration[] {
         });
       }
     }
+
+    if (declarations.length > 0) {
+      blocks.push({ selector: `[tailwind-${elementIdx++}]`, declarations });
+    }
   }
 
-  return declarations;
+  return blocks;
 }

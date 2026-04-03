@@ -1,4 +1,4 @@
-import type { StyleDeclaration } from "../parsers/css-extractor.js";
+import type { StyleDeclaration, StyleBlock } from "../parsers/css-extractor.js";
 import type { DesignIssue } from "./types.js";
 import { checkSpacing } from "./spacing.js";
 import { checkColors } from "./color.js";
@@ -9,7 +9,8 @@ export type FocusArea = "spacing" | "color" | "typography" | "layout" | "all";
 
 export function runDesignRules(
   declarations: StyleDeclaration[],
-  focus: FocusArea[] = ["all"]
+  focus: FocusArea[] = ["all"],
+  blocks: StyleBlock[] = []
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
   const runAll = focus.includes("all");
@@ -19,7 +20,7 @@ export function runDesignRules(
   }
 
   if (runAll || focus.includes("color")) {
-    issues.push(...checkColors(declarations));
+    issues.push(...checkColors(declarations, blocks));
   }
 
   if (runAll || focus.includes("typography")) {
@@ -36,16 +37,22 @@ export function runDesignRules(
 export function calculateScore(issues: DesignIssue[]): number {
   let score = 100;
 
+  // Deduplicate: only count unique issue messages to avoid penalizing repeated patterns
+  const seen = new Set<string>();
   for (const issue of issues) {
+    const key = `${issue.severity}:${issue.category}:${issue.message}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
     switch (issue.severity) {
       case "error":
         score -= 10;
         break;
       case "warning":
-        score -= 5;
+        score -= 4;
         break;
       case "info":
-        score -= 2;
+        score -= 1;
         break;
     }
   }
