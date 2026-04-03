@@ -11,6 +11,9 @@ import { registerRenderAndReview } from "./tools/render-and-review.js";
 import { registerScreenshotReview } from "./tools/screenshot-review.js";
 import { registerDesignSession } from "./tools/design-session.js";
 import { registerGeneratePage } from "./tools/generate-page.js";
+import { registerDesignIterate } from "./tools/design-iterate.js";
+import { registerFigmaTools } from "./tools/figma.js";
+import { registerA11yAudit } from "./tools/a11y-audit.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -26,5 +29,8 @@ export function registerAllTools(server: McpServer): void {
   registerScreenshotReview(server);
   registerDesignSession(server);
   registerGeneratePage(server);
+  registerDesignIterate(server);
+  registerFigmaTools(server);
+  registerA11yAudit(server);
   registerDesignSystemResources(server);
 }

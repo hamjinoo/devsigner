@@ -5,7 +5,7 @@ import { readFile } from "node:fs/promises";
 import { parseCode } from "../parsers/index.js";
 import { runDesignRules, calculateScore, type FocusArea } from "../rules/index.js";
 
-async function findChrome(): Promise<string | null> {
+export async function findChrome(): Promise<string | null> {
   const paths = [
     // Windows
     "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
@@ -36,7 +36,7 @@ async function findChrome(): Promise<string | null> {
   return null;
 }
 
-function wrapInHTML(code: string, viewport: { width: number; height: number }): string {
+export function wrapInHTML(code: string, viewport: { width: number; height: number }): string {
   // If it's already a full HTML document, use as-is
   if (code.includes("<!DOCTYPE") || code.includes("<html")) {
     return code;

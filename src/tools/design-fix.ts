@@ -20,9 +20,9 @@ import {
   OPTIMAL_LINE_HEIGHT_BODY,
 } from "../constants.js";
 
-type FixLevel = "safe" | "moderate" | "aggressive";
+export type FixLevel = "safe" | "moderate" | "aggressive";
 
-interface FixResult {
+export interface FixResult {
   description: string;
   category: string;
   before: string;
@@ -671,7 +671,7 @@ function fixHTMLInlineStyles(code: string, fixes: FixResult[], level: FixLevel):
 
 // ─── Main Fix Pipeline ────────────────────────────────────────────────────────
 
-function applyFixes(code: string, level: FixLevel): { fixedCode: string; fixes: FixResult[] } {
+export function applyFixes(code: string, level: FixLevel): { fixedCode: string; fixes: FixResult[] } {
   const fixes: FixResult[] = [];
   let result = code;
 
