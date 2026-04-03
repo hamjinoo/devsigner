@@ -14,7 +14,7 @@ const VARIANT_TOKENS: Record<string, DesignTokenSet> = {
     spacing: { sm: "0.5rem", md: "1rem", lg: "1.5rem", xl: "2rem" },
   },
   modern: {
-    borderRadius: "0.75rem",
+    borderRadius: "1rem",
     shadow: "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
     spacing: { sm: "0.5rem", md: "1rem", lg: "1.5rem", xl: "2.5rem" },
   },
@@ -24,7 +24,7 @@ const VARIANT_TOKENS: Record<string, DesignTokenSet> = {
     spacing: { sm: "0.5rem", md: "1rem", lg: "2rem", xl: "3rem" },
   },
   playful: {
-    borderRadius: "1rem",
+    borderRadius: "1.25rem",
     shadow: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
     spacing: { sm: "0.75rem", md: "1.25rem", lg: "2rem", xl: "3rem" },
   },

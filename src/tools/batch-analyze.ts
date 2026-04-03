@@ -72,7 +72,7 @@ async function runBatchAnalysis(
         const spacing = processSpacing(rawData.spacing);
         const shapes = processShapes(rawData.shapes);
         const personality = estimatePersonality(colors, typography, spacing, shapes);
-        const industry = estimateIndustry(rawData.title, colors);
+        const industry = estimateIndustry(rawData.title, colors, url);
 
         const analysis: DesignAnalysis = {
           url,

@@ -1,7 +1,7 @@
 [
   {
     "url": "https://stripe.com",
-    "analyzed_at": "2026-04-03T17:42:38.493Z",
+    "analyzed_at": "2026-04-03T17:50:52.912Z",
     "page_title": "Stripe | Financial Infrastructure to Grow Your Revenue",
     "colors": {
       "palette": [
@@ -220,33 +220,27 @@
   },
   {
     "url": "https://mercury.com",
-    "analyzed_at": "2026-04-03T17:42:46.668Z",
+    "analyzed_at": "2026-04-03T17:50:59.553Z",
     "page_title": "Online Business Banking For Startups, Small Businesses & Scaling Companies",
     "colors": {
       "palette": [
         {
-          "raw": "rgb(42, 41, 36)",
-          "hex": "#2a2924",
-          "count": 420,
-          "pct": 34
+          "raw": "rgb(237, 237, 243)",
+          "hex": "#ededf3",
+          "count": 579,
+          "pct": 47
         },
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
-          "count": 396,
-          "pct": 32
+          "count": 421,
+          "pct": 34
         },
         {
-          "raw": "rgb(237, 237, 243)",
-          "hex": "#ededf3",
-          "count": 183,
-          "pct": 15
-        },
-        {
-          "raw": "rgb(90, 85, 72)",
-          "hex": "#5a5548",
-          "count": 121,
-          "pct": 10
+          "raw": "rgb(195, 195, 204)",
+          "hex": "#c3c3cc",
+          "count": 146,
+          "pct": 12
         },
         {
           "raw": "rgba(0, 0, 0, 0)",
@@ -261,9 +255,9 @@
           "pct": 1
         },
         {
-          "raw": "rgb(195, 195, 204)",
-          "hex": "#c3c3cc",
-          "count": 14,
+          "raw": "rgb(30, 30, 42)",
+          "hex": "#1e1e2a",
+          "count": 9,
           "pct": 1
         },
         {
@@ -273,34 +267,40 @@
           "pct": 1
         },
         {
-          "raw": "rgb(239, 238, 233)",
-          "hex": "#efeee9",
-          "count": 7,
-          "pct": 1
+          "raw": "rgb(23, 23, 33)",
+          "hex": "#171721",
+          "count": 6,
+          "pct": 0
         },
         {
-          "raw": "rgba(138, 117, 60, 0.1)",
-          "hex": "#8a753c",
+          "raw": "rgba(156, 180, 232, 0.2)",
+          "hex": "#9cb4e8",
           "count": 6,
+          "pct": 0
+        },
+        {
+          "raw": "rgba(175, 178, 206, 0.2)",
+          "hex": "#afb2ce",
+          "count": 5,
           "pct": 0
         }
       ],
-      "dominant_bg": "#f6f5f2",
+      "dominant_bg": "#171721",
       "primary_text": "#000000",
-      "color_scheme": "light",
+      "color_scheme": "dark",
       "unique_count": 15
     },
     "typography": {
       "fonts": [
         {
           "family": "arcadia",
-          "count": 1114,
+          "count": 1138,
           "heading": true,
           "body": true
         },
         {
           "family": "arcadiaDisplay",
-          "count": 70,
+          "count": 56,
           "heading": true,
           "body": true
         },
@@ -314,15 +314,15 @@
       "sizes": [
         {
           "px": 65,
-          "count": 21
+          "count": 8
         },
         {
-          "px": 57,
+          "px": 49,
           "count": 2
         },
         {
           "px": 42,
-          "count": 9
+          "count": 7
         },
         {
           "px": 32,
@@ -330,25 +330,25 @@
         },
         {
           "px": 28,
-          "count": 19
+          "count": 17
         },
         {
           "px": 24,
-          "count": 16
+          "count": 7
         },
         {
           "px": 21,
-          "count": 26
+          "count": 27
         },
         {
           "px": 18,
-          "count": 92
+          "count": 65
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 791
+          "count": 831
         },
         {
           "weight": 420,
@@ -356,11 +356,11 @@
         },
         {
           "weight": 480,
-          "count": 137
+          "count": 133
         },
         {
           "weight": 360,
-          "count": 80
+          "count": 53
         }
       ],
       "heading_font": "arcadia",
@@ -370,23 +370,23 @@
       "top_values": [
         {
           "px": 32,
-          "count": 132
+          "count": 147
         },
         {
           "px": 12,
-          "count": 56
+          "count": 71
         },
         {
           "px": 20,
-          "count": 36
+          "count": 34
         },
         {
           "px": 40,
-          "count": 35
+          "count": 34
         },
         {
           "px": 8,
-          "count": 28
+          "count": 22
         },
         {
           "px": 1,
@@ -398,11 +398,11 @@
         },
         {
           "px": 72,
-          "count": 11
+          "count": 10
         },
         {
           "px": 4,
-          "count": 8
+          "count": 9
         },
         {
           "px": 24,
@@ -417,7 +417,7 @@
       "maxWidth": 1440,
       "viewportWidth": 1440,
       "hasSidebar": false,
-      "hasHero": true,
+      "hasHero": false,
       "hasStickyHeader": false,
       "hasFooter": true
     },
@@ -427,18 +427,18 @@
       "top_radii": [
         {
           "px": 4,
-          "count": 94
+          "count": 100
         },
         {
           "px": 12,
           "count": 28
         },
         {
-          "px": 40,
-          "count": 10
+          "px": 8,
+          "count": 13
         },
         {
-          "px": 8,
+          "px": 40,
           "count": 9
         },
         {
@@ -455,63 +455,63 @@
   },
   {
     "url": "https://wise.com",
-    "analyzed_at": "2026-04-03T17:42:56.464Z",
+    "analyzed_at": "2026-04-03T17:51:12.900Z",
     "page_title": "Wise: The international account | Money without borders | Wise South Korea",
     "colors": {
       "palette": [
         {
           "raw": "rgb(69, 71, 69)",
           "hex": "#454745",
-          "count": 931,
-          "pct": 45
+          "count": 1542,
+          "pct": 57
         },
         {
           "raw": "rgb(22, 51, 0)",
           "hex": "#163300",
-          "count": 506,
-          "pct": 24
+          "count": 507,
+          "pct": 19
         },
         {
           "raw": "rgb(14, 15, 12)",
           "hex": "#0e0f0c",
-          "count": 367,
-          "pct": 18
+          "count": 374,
+          "pct": 14
         },
         {
           "raw": "rgba(22, 51, 0, 0.08)",
           "hex": "#163300",
           "count": 112,
-          "pct": 5
+          "pct": 4
         },
         {
           "raw": "rgb(159, 232, 112)",
           "hex": "#9fe870",
-          "count": 46,
+          "count": 43,
           "pct": 2
         },
         {
           "raw": "rgb(232, 235, 230)",
           "hex": "#e8ebe6",
           "count": 38,
-          "pct": 2
+          "pct": 1
         },
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 21,
+          "count": 24,
           "pct": 1
         },
         {
           "raw": "rgb(134, 134, 133)",
           "hex": "#868685",
           "count": 12,
-          "pct": 1
+          "pct": 0
         },
         {
           "raw": "rgb(226, 246, 213)",
           "hex": "#e2f6d5",
           "count": 11,
-          "pct": 1
+          "pct": 0
         },
         {
           "raw": "rgb(11, 76, 114)",
@@ -529,18 +529,34 @@
       "fonts": [
         {
           "family": "Inter",
-          "count": 1867,
+          "count": 2422,
           "heading": true,
           "body": true
         },
         {
           "family": "Wise Sans",
-          "count": 15,
+          "count": 70,
           "heading": true,
+          "body": true
+        },
+        {
+          "family": "monospace",
+          "count": 4,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "sans-serif",
+          "count": 4,
+          "heading": false,
           "body": true
         }
       ],
       "sizes": [
+        {
+          "px": 300,
+          "count": 16
+        },
         {
           "px": 105,
           "count": 2
@@ -558,34 +574,30 @@
           "count": 2
         },
         {
+          "px": 56,
+          "count": 11
+        },
+        {
           "px": 52,
           "count": 6
         },
         {
           "px": 45,
-          "count": 5
-        },
-        {
-          "px": 40,
-          "count": 3
-        },
-        {
-          "px": 36,
-          "count": 5
+          "count": 47
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 1360
+          "count": 1806
         },
         {
           "weight": 600,
-          "count": 504
+          "count": 652
         },
         {
           "weight": 500,
-          "count": 9
+          "count": 33
         },
         {
           "weight": 900,
@@ -599,15 +611,15 @@
       "top_values": [
         {
           "px": 8,
-          "count": 411
+          "count": 412
         },
         {
           "px": 9,
-          "count": 199
+          "count": 198
         },
         {
           "px": 12,
-          "count": 163
+          "count": 165
         },
         {
           "px": 24,
@@ -615,7 +627,7 @@
         },
         {
           "px": 32,
-          "count": 109
+          "count": 110
         },
         {
           "px": 48,
@@ -623,18 +635,18 @@
         },
         {
           "px": 16,
-          "count": 66
+          "count": 72
         },
         {
           "px": 56,
           "count": 50
         },
         {
-          "px": 3,
-          "count": 44
+          "px": 28,
+          "count": 48
         },
         {
-          "px": 28,
+          "px": 3,
           "count": 44
         }
       ],
@@ -664,11 +676,11 @@
         },
         {
           "px": 9999,
-          "count": 60
+          "count": 64
         },
         {
           "px": 19,
-          "count": 25
+          "count": 24
         },
         {
           "px": 1000,
@@ -684,7 +696,7 @@
   },
   {
     "url": "https://linear.app",
-    "analyzed_at": "2026-04-03T17:43:05.643Z",
+    "analyzed_at": "2026-04-03T17:51:20.548Z",
     "page_title": "Linear – The system for product development",
     "colors": {
       "palette": [
@@ -913,14 +925,14 @@
   },
   {
     "url": "https://vercel.com",
-    "analyzed_at": "2026-04-03T17:43:13.522Z",
+    "analyzed_at": "2026-04-03T17:51:28.097Z",
     "page_title": "Vercel: Build and deploy the best web experiences with the AI Cloud",
     "colors": {
       "palette": [
         {
           "raw": "rgb(237, 237, 237)",
           "hex": "#ededed",
-          "count": 960,
+          "count": 961,
           "pct": 54
         },
         {
@@ -987,7 +999,7 @@
       "fonts": [
         {
           "family": "Geist",
-          "count": 1591,
+          "count": 1592,
           "heading": true,
           "body": true
         },
@@ -1031,7 +1043,7 @@
         },
         {
           "px": 16,
-          "count": 846
+          "count": 847
         },
         {
           "px": 14,
@@ -1041,7 +1053,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 1373
+          "count": 1374
         },
         {
           "weight": 500,
@@ -1148,7 +1160,7 @@
   },
   {
     "url": "https://notion.so",
-    "analyzed_at": "2026-04-03T17:43:22.623Z",
+    "analyzed_at": "2026-04-03T17:51:37.164Z",
     "page_title": "나만을 위한 AI 워크스페이스 | Notion (노션)",
     "colors": {
       "palette": [
@@ -1377,7 +1389,7 @@
   },
   {
     "url": "https://github.com",
-    "analyzed_at": "2026-04-03T17:43:31.210Z",
+    "analyzed_at": "2026-04-03T17:51:44.453Z",
     "page_title": "GitHub · Change is constant. GitHub keeps you ahead. · GitHub",
     "colors": {
       "palette": [
@@ -1624,7 +1636,7 @@
   },
   {
     "url": "https://supabase.com",
-    "analyzed_at": "2026-04-03T17:43:38.641Z",
+    "analyzed_at": "2026-04-03T17:51:51.256Z",
     "page_title": "Supabase | The Postgres Development Platform.",
     "colors": {
       "palette": [
@@ -1841,15 +1853,15 @@
   },
   {
     "url": "https://tailwindcss.com",
-    "analyzed_at": "2026-04-03T17:43:45.095Z",
+    "analyzed_at": "2026-04-03T17:51:57.597Z",
     "page_title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
     "colors": {
       "palette": [
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 1560,
-          "pct": 64
+          "count": 1562,
+          "pct": 65
         },
         {
           "raw": "lab(65.5349 -2.25151 -14.5072)",
@@ -1915,7 +1927,7 @@
       "fonts": [
         {
           "family": "inter",
-          "count": 1572,
+          "count": 1574,
           "heading": true,
           "body": true
         },
@@ -1963,7 +1975,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 2029
+          "count": 2031
         },
         {
           "weight": 500,
@@ -2070,7 +2082,7 @@
   },
   {
     "url": "https://nextjs.org",
-    "analyzed_at": "2026-04-03T17:43:51.628Z",
+    "analyzed_at": "2026-04-03T17:52:03.565Z",
     "page_title": "Next.js by Vercel - The React Framework",
     "colors": {
       "palette": [
@@ -2307,7 +2319,7 @@
   },
   {
     "url": "https://astro.build",
-    "analyzed_at": "2026-04-03T17:43:58.122Z",
+    "analyzed_at": "2026-04-03T17:52:10.426Z",
     "page_title": "Astro",
     "colors": {
       "palette": [
@@ -2554,7 +2566,7 @@
   },
   {
     "url": "https://vitejs.dev",
-    "analyzed_at": "2026-04-03T17:44:05.079Z",
+    "analyzed_at": "2026-04-03T17:52:17.203Z",
     "page_title": "Vite | Next Generation Frontend Tooling",
     "colors": {
       "palette": [
@@ -2763,14 +2775,14 @@
   },
   {
     "url": "https://figma.com",
-    "analyzed_at": "2026-04-03T17:44:13.498Z",
+    "analyzed_at": "2026-04-03T17:52:25.028Z",
     "page_title": "Figma | 협업을 위한 인터페이스 디자인 도구",
     "colors": {
       "palette": [
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
-          "count": 598,
+          "count": 605,
           "pct": 61
         },
         {
@@ -2810,6 +2822,12 @@
           "pct": 0
         },
         {
+          "raw": "rgba(0, 0, 0, 0.08)",
+          "hex": "#000000",
+          "count": 3,
+          "pct": 0
+        },
+        {
           "raw": "rgb(51, 223, 223)",
           "hex": "#33dfdf",
           "count": 3,
@@ -2819,12 +2837,6 @@
           "raw": "rgb(185, 142, 1)",
           "hex": "#b98e01",
           "count": 3,
-          "pct": 0
-        },
-        {
-          "raw": "rgb(230, 230, 230)",
-          "hex": "#e6e6e6",
-          "count": 1,
           "pct": 0
         }
       ],
@@ -2837,7 +2849,7 @@
       "fonts": [
         {
           "family": "figmaSans",
-          "count": 911,
+          "count": 918,
           "heading": true,
           "body": true
         },
@@ -2867,7 +2879,7 @@
         },
         {
           "px": 16,
-          "count": 392
+          "count": 399
         },
         {
           "px": 12,
@@ -2881,7 +2893,7 @@
         },
         {
           "weight": 400,
-          "count": 365
+          "count": 372
         },
         {
           "weight": 320,
@@ -2907,7 +2919,7 @@
         },
         {
           "px": 8,
-          "count": 64
+          "count": 65
         },
         {
           "px": 2,
@@ -2984,7 +2996,7 @@
   },
   {
     "url": "https://framer.com",
-    "analyzed_at": "2026-04-03T17:44:22.960Z",
+    "analyzed_at": "2026-04-03T17:52:33.305Z",
     "page_title": "Framer: Create a professional website, free. No code website builder loved by designers.",
     "colors": {
       "palette": [
@@ -3231,14 +3243,14 @@
   },
   {
     "url": "https://shopify.com",
-    "analyzed_at": "2026-04-03T17:44:29.362Z",
+    "analyzed_at": "2026-04-03T17:52:39.422Z",
     "page_title": "Shopify 대한민국",
     "colors": {
       "palette": [
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 857,
+          "count": 861,
           "pct": 75
         },
         {
@@ -3311,7 +3323,7 @@
         },
         {
           "family": "Inter-Variable",
-          "count": 394,
+          "count": 398,
           "heading": true,
           "body": true
         },
@@ -3359,7 +3371,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 931
+          "count": 935
         },
         {
           "weight": 500,
@@ -3466,7 +3478,7 @@
   },
   {
     "url": "https://gumroad.com",
-    "analyzed_at": "2026-04-03T17:44:35.894Z",
+    "analyzed_at": "2026-04-03T17:52:45.741Z",
     "page_title": "Earn your first dollar online with Gumroad",
     "colors": {
       "palette": [
@@ -3703,7 +3715,7 @@
   },
   {
     "url": "https://duolingo.com",
-    "analyzed_at": "2026-04-03T17:44:44.378Z",
+    "analyzed_at": "2026-04-03T17:52:53.832Z",
     "page_title": "듀오링고 - 세계에서 가장 인기 있는 학습 방법",
     "colors": {
       "palette": [
@@ -3922,49 +3934,43 @@
   },
   {
     "url": "https://coursera.org",
-    "analyzed_at": "2026-04-03T17:44:52.830Z",
+    "analyzed_at": "2026-04-03T17:53:01.067Z",
     "page_title": "Coursera | Courses, Professional Certificates, and Degrees Online",
     "colors": {
       "palette": [
         {
           "raw": "rgb(15, 17, 20)",
           "hex": "#0f1114",
-          "count": 1261,
-          "pct": 73
+          "count": 750,
+          "pct": 78
         },
         {
-          "raw": "rgb(232, 238, 247)",
-          "hex": "#e8eef7",
-          "count": 180,
+          "raw": "rgb(0, 86, 210)",
+          "hex": "#0056d2",
+          "count": 96,
           "pct": 10
         },
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 105,
-          "pct": 6
-        },
-        {
-          "raw": "rgb(0, 86, 210)",
-          "hex": "#0056d2",
-          "count": 101,
-          "pct": 6
+          "count": 74,
+          "pct": 8
         },
         {
           "raw": "rgb(91, 103, 128)",
           "hex": "#5b6780",
-          "count": 59,
-          "pct": 3
+          "count": 18,
+          "pct": 2
         },
         {
           "raw": "rgb(240, 246, 255)",
           "hex": "#f0f6ff",
-          "count": 15,
+          "count": 14,
           "pct": 1
         },
         {
-          "raw": "rgb(255, 244, 232)",
-          "hex": "#fff4e8",
+          "raw": "rgb(232, 238, 247)",
+          "hex": "#e8eef7",
           "count": 4,
           "pct": 0
         },
@@ -3975,14 +3981,20 @@
           "pct": 0
         },
         {
+          "raw": "rgb(255, 244, 232)",
+          "hex": "#fff4e8",
+          "count": 1,
+          "pct": 0
+        },
+        {
           "raw": "rgb(132, 149, 176)",
           "hex": "#8495b0",
           "count": 1,
           "pct": 0
         },
         {
-          "raw": "rgb(227, 238, 255)",
-          "hex": "#e3eeff",
+          "raw": "rgb(0, 39, 97)",
+          "hex": "#002761",
           "count": 1,
           "pct": 0
         }
@@ -3990,13 +4002,13 @@
       "dominant_bg": "#ffffff",
       "primary_text": "#000000",
       "color_scheme": "light",
-      "unique_count": 12
+      "unique_count": 11
     },
     "typography": {
       "fonts": [
         {
           "family": "Source Sans Pro",
-          "count": 1458,
+          "count": 901,
           "heading": true,
           "body": true
         },
@@ -4022,33 +4034,33 @@
         },
         {
           "px": 24,
-          "count": 3
+          "count": 2
         },
         {
           "px": 20,
-          "count": 29
+          "count": 26
         },
         {
           "px": 16,
-          "count": 977
+          "count": 482
         },
         {
           "px": 14,
-          "count": 445
+          "count": 387
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 1264
+          "count": 757
         },
         {
           "weight": 600,
-          "count": 181
+          "count": 143
         },
         {
           "weight": 700,
-          "count": 14
+          "count": 2
         }
       ],
       "heading_font": "Source Sans Pro",
@@ -4058,15 +4070,11 @@
       "top_values": [
         {
           "px": 8,
-          "count": 465
+          "count": 187
         },
         {
           "px": 16,
-          "count": 233
-        },
-        {
-          "px": 4,
-          "count": 111
+          "count": 165
         },
         {
           "px": 10,
@@ -4074,22 +4082,26 @@
         },
         {
           "px": 12,
-          "count": 74
+          "count": 63
         },
         {
           "px": 2,
-          "count": 44
+          "count": 39
+        },
+        {
+          "px": 4,
+          "count": 32
         },
         {
           "px": 48,
-          "count": 38
-        },
-        {
-          "px": 32,
-          "count": 18
+          "count": 30
         },
         {
           "px": 20,
+          "count": 14
+        },
+        {
+          "px": 32,
           "count": 14
         },
         {
@@ -4097,7 +4109,7 @@
           "count": 10
         }
       ],
-      "grid_aligned_pct": 88,
+      "grid_aligned_pct": 80,
       "density": "balanced",
       "unique_count": 19
     },
@@ -4115,23 +4127,23 @@
       "top_radii": [
         {
           "px": 8,
-          "count": 84
-        },
-        {
-          "px": 4,
-          "count": 54
-        },
-        {
-          "px": 16,
-          "count": 33
+          "count": 30
         },
         {
           "px": 100,
           "count": 26
         },
         {
+          "px": 16,
+          "count": 15
+        },
+        {
           "px": 24,
-          "count": 11
+          "count": 10
+        },
+        {
+          "px": 18,
+          "count": 3
         }
       ]
     },
@@ -4142,158 +4154,15 @@
     }
   },
   {
-    "url": "https://calm.com",
-    "analyzed_at": "2026-04-03T17:44:59.233Z",
-    "page_title": "Access to this page has been denied",
-    "colors": {
-      "palette": [
-        {
-          "raw": "rgb(0, 0, 0)",
-          "hex": "#000000",
-          "count": 8,
-          "pct": 53
-        },
-        {
-          "raw": "rgb(98, 99, 100)",
-          "hex": "#626364",
-          "count": 3,
-          "pct": 20
-        },
-        {
-          "raw": "rgb(250, 251, 252)",
-          "hex": "#fafbfc",
-          "count": 2,
-          "pct": 13
-        },
-        {
-          "raw": "rgb(255, 255, 255)",
-          "hex": "#ffffff",
-          "count": 1,
-          "pct": 7
-        },
-        {
-          "raw": "rgb(177, 181, 184)",
-          "hex": "#b1b5b8",
-          "count": 1,
-          "pct": 7
-        }
-      ],
-      "dominant_bg": "#fafbfc",
-      "primary_text": "#000000",
-      "color_scheme": "light",
-      "unique_count": 5
-    },
-    "typography": {
-      "fonts": [
-        {
-          "family": "Roboto",
-          "count": 9,
-          "heading": false,
-          "body": true
-        },
-        {
-          "family": "Noto Sans KR",
-          "count": 3,
-          "heading": false,
-          "body": true
-        }
-      ],
-      "sizes": [
-        {
-          "px": 29,
-          "count": 1
-        },
-        {
-          "px": 18,
-          "count": 2
-        },
-        {
-          "px": 16,
-          "count": 8
-        },
-        {
-          "px": 10,
-          "count": 1
-        }
-      ],
-      "weights": [
-        {
-          "weight": 400,
-          "count": 11
-        },
-        {
-          "weight": 500,
-          "count": 1
-        }
-      ],
-      "heading_font": "Roboto",
-      "body_font": "Roboto"
-    },
-    "spacing": {
-      "top_values": [
-        {
-          "px": 8,
-          "count": 2
-        },
-        {
-          "px": 11,
-          "count": 1
-        },
-        {
-          "px": 29,
-          "count": 1
-        },
-        {
-          "px": 33,
-          "count": 1
-        },
-        {
-          "px": 67,
-          "count": 1
-        }
-      ],
-      "grid_aligned_pct": 33,
-      "density": "spacious",
-      "unique_count": 5
-    },
-    "layout": {
-      "maxWidth": 1424,
-      "viewportWidth": 1440,
-      "hasSidebar": false,
-      "hasHero": false,
-      "hasStickyHeader": false,
-      "hasFooter": false
-    },
-    "shapes": {
-      "corner_style": "pill",
-      "shadow_style": "subtle",
-      "top_radii": [
-        {
-          "px": 3,
-          "count": 1
-        },
-        {
-          "px": 100,
-          "count": 1
-        }
-      ]
-    },
-    "overall": {
-      "personality": "Soft Wellness",
-      "industry": "general",
-      "complexity": 45
-    }
-  },
-  {
     "url": "https://headspace.com",
-    "analyzed_at": "2026-04-03T17:45:08.212Z",
+    "analyzed_at": "2026-04-03T17:53:15.590Z",
     "page_title": "Mental Health App for Meditation & Sleep - Headspace",
     "colors": {
       "palette": [
         {
           "raw": "rgb(75, 76, 77)",
           "hex": "#4b4c4d",
-          "count": 1195,
+          "count": 1205,
           "pct": 51
         },
         {
@@ -4305,13 +4174,13 @@
         {
           "raw": "rgb(45, 44, 43)",
           "hex": "#2d2c2b",
-          "count": 359,
+          "count": 360,
           "pct": 15
         },
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 138,
+          "count": 140,
           "pct": 6
         },
         {
@@ -4335,13 +4204,13 @@
         {
           "raw": "rgb(249, 244, 242)",
           "hex": "#f9f4f2",
-          "count": 31,
+          "count": 33,
           "pct": 1
         },
         {
           "raw": "rgb(0, 97, 239)",
           "hex": "#0061ef",
-          "count": 12,
+          "count": 16,
           "pct": 1
         },
         {
@@ -4360,7 +4229,7 @@
       "fonts": [
         {
           "family": "Headspace Apercu",
-          "count": 2256,
+          "count": 2272,
           "heading": true,
           "body": true
         }
@@ -4402,15 +4271,19 @@
       "weights": [
         {
           "weight": 400,
-          "count": 1920
+          "count": 1932
         },
         {
           "weight": 700,
-          "count": 213
+          "count": 214
         },
         {
           "weight": 500,
           "count": 123
+        },
+        {
+          "weight": 600,
+          "count": 3
         }
       ],
       "heading_font": "Headspace Apercu",
@@ -4428,7 +4301,7 @@
         },
         {
           "px": 16,
-          "count": 71
+          "count": 74
         },
         {
           "px": 32,
@@ -4448,20 +4321,20 @@
         },
         {
           "px": 12,
-          "count": 16
+          "count": 22
         },
         {
           "px": 10,
-          "count": 14
+          "count": 19
         },
         {
           "px": 19,
           "count": 14
         }
       ],
-      "grid_aligned_pct": 85,
+      "grid_aligned_pct": 83,
       "density": "balanced",
-      "unique_count": 36
+      "unique_count": 37
     },
     "layout": {
       "maxWidth": 1440,
@@ -4505,7 +4378,7 @@
   },
   {
     "url": "https://discord.com",
-    "analyzed_at": "2026-04-03T17:45:16.733Z",
+    "analyzed_at": "2026-04-03T17:53:22.967Z",
     "page_title": "Discord - Group Chat That’s All Fun & Games",
     "colors": {
       "palette": [
@@ -4740,7 +4613,7 @@
   },
   {
     "url": "https://slack.com",
-    "analyzed_at": "2026-04-03T17:45:25.307Z",
+    "analyzed_at": "2026-04-03T17:53:31.457Z",
     "page_title": "Slack | AI 업무 플랫폼 및 생산성 도구",
     "colors": {
       "palette": [
@@ -4975,14 +4848,14 @@
   },
   {
     "url": "https://todoist.com",
-    "analyzed_at": "2026-04-03T17:45:34.314Z",
+    "analyzed_at": "2026-04-03T17:53:39.972Z",
     "page_title": "Todoist | 일과 생활을 관리하기 위한 To Do List",
     "colors": {
       "palette": [
         {
           "raw": "rgb(37, 34, 30)",
           "hex": "#25221e",
-          "count": 475,
+          "count": 481,
           "pct": 65
         },
         {
@@ -5000,7 +4873,7 @@
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 29,
+          "count": 30,
           "pct": 4
         },
         {
@@ -5010,15 +4883,15 @@
           "pct": 3
         },
         {
-          "raw": "rgb(227, 68, 50)",
-          "hex": "#e34432",
-          "count": 13,
+          "raw": "rgb(0, 0, 0)",
+          "hex": "#000000",
+          "count": 14,
           "pct": 2
         },
         {
-          "raw": "rgb(0, 0, 0)",
-          "hex": "#000000",
-          "count": 12,
+          "raw": "rgb(227, 68, 50)",
+          "hex": "#e34432",
+          "count": 13,
           "pct": 2
         },
         {
@@ -5028,14 +4901,14 @@
           "pct": 1
         },
         {
-          "raw": "rgb(249, 247, 246)",
-          "hex": "#f9f7f6",
+          "raw": "rgb(207, 53, 32)",
+          "hex": "#cf3520",
           "count": 5,
           "pct": 1
         },
         {
-          "raw": "rgb(128, 128, 128)",
-          "hex": "#808080",
+          "raw": "rgb(249, 247, 246)",
+          "hex": "#f9f7f6",
           "count": 5,
           "pct": 1
         }
@@ -5049,13 +4922,13 @@
       "fonts": [
         {
           "family": "Inter-5486e50ce5a4efdf",
-          "count": 342,
+          "count": 350,
           "heading": true,
           "body": true
         },
         {
           "family": "Graphik-1bbd4a4c7a2fb472",
-          "count": 328,
+          "count": 332,
           "heading": true,
           "body": true
         },
@@ -5115,7 +4988,7 @@
       "weights": [
         {
           "weight": 400,
-          "count": 339
+          "count": 347
         },
         {
           "weight": 500,
@@ -5123,7 +4996,7 @@
         },
         {
           "weight": 600,
-          "count": 68
+          "count": 72
         },
         {
           "weight": 475,
@@ -5145,7 +5018,7 @@
         },
         {
           "px": 12,
-          "count": 72
+          "count": 74
         },
         {
           "px": 4,
@@ -5161,7 +5034,7 @@
         },
         {
           "px": 8,
-          "count": 30
+          "count": 37
         },
         {
           "px": 20,
@@ -5176,14 +5049,14 @@
           "count": 9
         }
       ],
-      "grid_aligned_pct": 66,
+      "grid_aligned_pct": 67,
       "density": "balanced",
       "unique_count": 26
     },
     "layout": {
       "maxWidth": 0,
       "viewportWidth": 1440,
-      "hasSidebar": false,
+      "hasSidebar": true,
       "hasHero": true,
       "hasStickyHeader": false,
       "hasFooter": true
@@ -5194,11 +5067,11 @@
       "top_radii": [
         {
           "px": 8,
-          "count": 45
+          "count": 46
         },
         {
           "px": 10,
-          "count": 17
+          "count": 18
         },
         {
           "px": 15,
@@ -5222,7 +5095,7 @@
   },
   {
     "url": "https://1password.com",
-    "analyzed_at": "2026-04-03T17:45:41.136Z",
+    "analyzed_at": "2026-04-03T17:53:46.497Z",
     "page_title": "Passwords, Secrets, and Access Management | 1Password",
     "colors": {
       "palette": [
@@ -5445,7 +5318,7 @@
   },
   {
     "url": "https://arc.net",
-    "analyzed_at": "2026-04-03T17:45:47.756Z",
+    "analyzed_at": "2026-04-03T17:53:52.537Z",
     "page_title": "Arc from The Browser Company",
     "colors": {
       "palette": [
@@ -5688,7 +5561,7 @@
   },
   {
     "url": "https://raycast.com",
-    "analyzed_at": "2026-04-03T17:45:57.703Z",
+    "analyzed_at": "2026-04-03T17:54:01.622Z",
     "page_title": "Raycast - Your shortcut to everything",
     "colors": {
       "palette": [
@@ -5929,27 +5802,27 @@
   },
   {
     "url": "https://posthog.com",
-    "analyzed_at": "2026-04-03T17:46:05.673Z",
+    "analyzed_at": "2026-04-03T17:54:08.797Z",
     "page_title": "PostHog – We make dev tools for product engineers",
     "colors": {
       "palette": [
         {
           "raw": "rgb(77, 79, 70)",
           "hex": "#4d4f46",
-          "count": 424,
-          "pct": 37
+          "count": 422,
+          "pct": 35
         },
         {
           "raw": "rgb(55, 65, 81)",
           "hex": "#374151",
-          "count": 199,
-          "pct": 17
+          "count": 234,
+          "pct": 19
         },
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
           "count": 170,
-          "pct": 15
+          "pct": 14
         },
         {
           "raw": "rgb(35, 37, 29)",
@@ -5960,8 +5833,8 @@
         {
           "raw": "rgb(17, 24, 39)",
           "hex": "#111827",
-          "count": 50,
-          "pct": 4
+          "count": 69,
+          "pct": 6
         },
         {
           "raw": "rgb(245, 78, 0)",
@@ -5972,7 +5845,7 @@
         {
           "raw": "rgb(158, 160, 150)",
           "hex": "#9ea096",
-          "count": 25,
+          "count": 29,
           "pct": 2
         },
         {
@@ -6003,7 +5876,7 @@
       "fonts": [
         {
           "family": "IBM Plex Sans Variable",
-          "count": 1058,
+          "count": 1114,
           "heading": true,
           "body": true
         },
@@ -6027,7 +5900,7 @@
         },
         {
           "px": 30,
-          "count": 13
+          "count": 14
         },
         {
           "px": 24,
@@ -6035,7 +5908,7 @@
         },
         {
           "px": 21,
-          "count": 8
+          "count": 15
         },
         {
           "px": 20,
@@ -6057,11 +5930,11 @@
       "weights": [
         {
           "weight": 400,
-          "count": 779
+          "count": 816
         },
         {
           "weight": 600,
-          "count": 150
+          "count": 161
         },
         {
           "weight": 500,
@@ -6069,7 +5942,7 @@
         },
         {
           "weight": 700,
-          "count": 39
+          "count": 46
         }
       ],
       "heading_font": "IBM Plex Sans Variable",
@@ -6095,11 +5968,11 @@
         },
         {
           "px": 17,
-          "count": 66
+          "count": 43
         },
         {
           "px": 16,
-          "count": 42
+          "count": 40
         },
         {
           "px": 5,
@@ -6118,7 +5991,7 @@
           "count": 10
         }
       ],
-      "grid_aligned_pct": 60,
+      "grid_aligned_pct": 61,
       "density": "compact",
       "unique_count": 23
     },
@@ -6164,7 +6037,7 @@
   },
   {
     "url": "https://resend.com",
-    "analyzed_at": "2026-04-03T17:46:13.701Z",
+    "analyzed_at": "2026-04-03T17:54:16.296Z",
     "page_title": "Resend · Email for developers",
     "colors": {
       "palette": [
@@ -6172,13 +6045,19 @@
           "raw": "rgb(240, 240, 240)",
           "hex": "#f0f0f0",
           "count": 855,
-          "pct": 38
+          "pct": 36
         },
         {
           "raw": "rgb(248, 248, 248)",
           "hex": "#f8f8f8",
-          "count": 323,
+          "count": 329,
           "pct": 14
+        },
+        {
+          "raw": "rgba(241, 247, 254, 0.71)",
+          "hex": "#f1f7fe",
+          "count": 247,
+          "pct": 10
         },
         {
           "raw": "rgb(161, 164, 165)",
@@ -6190,18 +6069,12 @@
           "raw": "rgb(160, 160, 160)",
           "hex": "#a0a0a0",
           "count": 216,
-          "pct": 10
-        },
-        {
-          "raw": "rgba(241, 247, 254, 0.71)",
-          "hex": "#f1f7fe",
-          "count": 168,
-          "pct": 7
+          "pct": 9
         },
         {
           "raw": "rgb(171, 171, 171)",
           "hex": "#ababab",
-          "count": 95,
+          "count": 89,
           "pct": 4
         },
         {
@@ -6213,7 +6086,7 @@
         {
           "raw": "rgb(108, 108, 108)",
           "hex": "#6c6c6c",
-          "count": 72,
+          "count": 66,
           "pct": 3
         },
         {
@@ -6225,7 +6098,7 @@
         {
           "raw": "rgb(255, 255, 255)",
           "hex": "#ffffff",
-          "count": 37,
+          "count": 57,
           "pct": 2
         }
       ],
@@ -6238,7 +6111,7 @@
       "fonts": [
         {
           "family": "inter",
-          "count": 1342,
+          "count": 1452,
           "heading": false,
           "body": true
         },
@@ -6261,9 +6134,9 @@
           "body": true
         },
         {
-          "family": "domaine",
-          "count": 4,
-          "heading": true,
+          "family": "-apple-system",
+          "count": 16,
+          "heading": false,
           "body": true
         }
       ],
@@ -6294,21 +6167,21 @@
         },
         {
           "px": 16,
-          "count": 901
+          "count": 938
         },
         {
           "px": 14,
-          "count": 516
+          "count": 594
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 2082
+          "count": 2207
         },
         {
           "weight": 500,
-          "count": 108
+          "count": 109
         },
         {
           "weight": 600,
@@ -6326,7 +6199,7 @@
       "top_values": [
         {
           "px": 16,
-          "count": 179
+          "count": 181
         },
         {
           "px": 24,
@@ -6334,14 +6207,14 @@
         },
         {
           "px": 4,
-          "count": 132
-        },
-        {
-          "px": 2,
-          "count": 112
+          "count": 134
         },
         {
           "px": 8,
+          "count": 116
+        },
+        {
+          "px": 2,
           "count": 112
         },
         {
@@ -6367,7 +6240,7 @@
       ],
       "grid_aligned_pct": 72,
       "density": "balanced",
-      "unique_count": 20
+      "unique_count": 21
     },
     "layout": {
       "maxWidth": 1440,
@@ -6399,7 +6272,7 @@
         },
         {
           "px": 4,
-          "count": 10
+          "count": 20
         }
       ]
     },
@@ -6411,7 +6284,7 @@
   },
   {
     "url": "https://clerk.com",
-    "analyzed_at": "2026-04-03T17:46:24.484Z",
+    "analyzed_at": "2026-04-03T17:54:24.656Z",
     "page_title": "Clerk | Authentication and User Management",
     "colors": {
       "palette": [
@@ -6652,21 +6525,21 @@
   },
   {
     "url": "https://cal.com",
-    "analyzed_at": "2026-04-03T17:46:32.106Z",
+    "analyzed_at": "2026-04-03T17:54:31.483Z",
     "page_title": "Cal.com | Open Scheduling Infrastructure",
     "colors": {
       "palette": [
         {
           "raw": "rgb(0, 0, 0)",
           "hex": "#000000",
-          "count": 2071,
-          "pct": 65
+          "count": 2287,
+          "pct": 67
         },
         {
           "raw": "rgb(0, 0, 238)",
           "hex": "#0000ee",
           "count": 210,
-          "pct": 7
+          "pct": 6
         },
         {
           "raw": "rgb(137, 137, 137)",
@@ -6726,7 +6599,7 @@
       "fonts": [
         {
           "family": "sans-serif",
-          "count": 2315,
+          "count": 2531,
           "heading": false,
           "body": true
         },
@@ -6786,13 +6659,13 @@
         },
         {
           "px": 12,
-          "count": 2342
+          "count": 2558
         }
       ],
       "weights": [
         {
           "weight": 400,
-          "count": 2401
+          "count": 2617
         },
         {
           "weight": 300,
@@ -6814,7 +6687,7 @@
       "top_values": [
         {
           "px": 10,
-          "count": 324
+          "count": 372
         },
         {
           "px": 4,
@@ -6853,7 +6726,7 @@
           "count": 12
         }
       ],
-      "grid_aligned_pct": 65,
+      "grid_aligned_pct": 64,
       "density": "compact",
       "unique_count": 17
     },

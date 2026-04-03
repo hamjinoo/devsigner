@@ -507,15 +507,85 @@ export function processShapes(rawShapes: any) {
 }
 
 export function estimatePersonality(colors: any, typography: any, spacing: any, shapes: any): string {
-  if (colors.color_scheme === "dark" && shapes.corner_style === "sharp") return "Bold Minimal";
-  if (shapes.corner_style === "pill" && colors.color_count > 8) return "Energetic Pop";
-  if (shapes.corner_style === "pill" && spacing.density === "spacious") return "Soft Wellness";
-  if (typography.heading_font && typography.fonts.some((f: any) => f.family.toLowerCase().includes("serif"))) return "Elegant Editorial";
-  if (spacing.density === "compact" && shapes.shadow_style === "none") return "Data Dense";
-  return "Warm Professional";
+  const scores: Record<string, number> = {
+    "Bold Minimal": 0,
+    "Warm Professional": 0,
+    "Energetic Pop": 0,
+    "Elegant Editorial": 0,
+    "Data Dense": 0,
+    "Soft Wellness": 0,
+  };
+
+  // Bold Minimal
+  if (colors.color_scheme === "dark") scores["Bold Minimal"] += 3;
+  if (shapes.shadow_style === "none") scores["Bold Minimal"] += 2;
+  if (colors.color_count < 8) scores["Bold Minimal"] += 2;
+  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Bold Minimal"] += 1;
+  if (spacing.density === "spacious") scores["Bold Minimal"] += 2;
+
+  // Warm Professional
+  if (colors.color_scheme === "light") scores["Warm Professional"] += 3;
+  if (shapes.shadow_style === "subtle") scores["Warm Professional"] += 2;
+  if (shapes.corner_style === "rounded") scores["Warm Professional"] += 2;
+  if (spacing.density === "balanced") scores["Warm Professional"] += 1;
+  if (colors.color_count >= 8 && colors.color_count <= 15) scores["Warm Professional"] += 1;
+
+  // Energetic Pop
+  if (colors.color_count > 15) scores["Energetic Pop"] += 3;
+  if (shapes.corner_style === "pill") scores["Energetic Pop"] += 2;
+  if (shapes.shadow_style === "dramatic") scores["Energetic Pop"] += 2;
+  if (spacing.density === "balanced") scores["Energetic Pop"] += 1;
+  if (colors.accent_color) {
+    const accent = colors.palette?.find((c: any) => c.hex === colors.accent_color);
+    if (accent && accent.hsl.s > 0.7) scores["Energetic Pop"] += 2;
+  }
+
+  // Elegant Editorial
+  if (typography.heading_font && typography.heading_font.toLowerCase().includes("serif")) scores["Elegant Editorial"] += 4;
+  if (shapes.shadow_style === "none") scores["Elegant Editorial"] += 2;
+  if (spacing.density === "spacious") scores["Elegant Editorial"] += 2;
+  if (shapes.corner_style === "sharp") scores["Elegant Editorial"] += 1;
+
+  // Data Dense
+  if (spacing.density === "compact") scores["Data Dense"] += 3;
+  if (shapes.shadow_style === "none") scores["Data Dense"] += 2;
+  if (colors.color_count < 6) scores["Data Dense"] += 2;
+  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Data Dense"] += 1;
+
+  // Soft Wellness
+  if (shapes.corner_style === "pill") scores["Soft Wellness"] += 3;
+  if (shapes.shadow_style === "subtle") scores["Soft Wellness"] += 2;
+  if (spacing.density === "spacious") scores["Soft Wellness"] += 2;
+  if (colors.color_scheme === "light") scores["Soft Wellness"] += 1;
+  if (colors.color_count < 10) scores["Soft Wellness"] += 1;
+
+  // Find highest score; ties go to "Warm Professional"
+  let best = "Warm Professional";
+  let bestScore = scores["Warm Professional"];
+  for (const [name, score] of Object.entries(scores)) {
+    if (score > bestScore) {
+      best = name;
+      bestScore = score;
+    }
+  }
+  return best;
 }
 
-export function estimateIndustry(title: string, colors: any): string {
+export function estimateIndustry(title: string, colors: any, url?: string): string {
+  // Check URL domain first (more reliable)
+  if (url) {
+    const domain = url.toLowerCase();
+    if (/stripe\.com|wise\.com|mercury\.com/.test(domain)) return "fintech";
+    if (/github\.com|vercel\.com|netlify|heroku|supabase\.com|tailwindcss\.com|nextjs\.org|astro\.build|vitejs\.dev/.test(domain)) return "developer_tools";
+    if (/shopify\.com|gumroad\.com|amazon/.test(domain)) return "ecommerce";
+    if (/duolingo|coursera|udemy/.test(domain)) return "education";
+    if (/calm\.com|headspace\.com/.test(domain)) return "healthcare";
+    if (/discord|slack|twitter/.test(domain)) return "social";
+    if (/linear\.app|notion\.so|todoist/.test(domain)) return "saas";
+    if (/figma\.com|framer\.com|canva/.test(domain)) return "design_tools";
+  }
+
+  // Fall back to title matching
   const lower = title.toLowerCase();
   if (/bank|finance|pay|money|crypto|fintech/i.test(lower)) return "fintech";
   if (/health|medical|wellness|care|calm/i.test(lower)) return "healthcare";
@@ -524,6 +594,7 @@ export function estimateIndustry(title: string, colors: any): string {
   if (/dashboard|analytics|admin|saas/i.test(lower)) return "saas";
   if (/social|chat|message|community/i.test(lower)) return "social";
   if (/dev|code|api|git|terminal/i.test(lower)) return "developer_tools";
+  if (/design|figma|sketch|prototype/i.test(lower)) return "design_tools";
   return "general";
 }
 
@@ -601,7 +672,7 @@ export function registerAnalyzeUrl(server: McpServer): void {
         const spacing = processSpacing(rawData.spacing);
         const shapes = processShapes(rawData.shapes);
         const personality = estimatePersonality(colors, typography, spacing, shapes);
-        const industry = estimateIndustry(rawData.title, colors);
+        const industry = estimateIndustry(rawData.title, colors, url);
 
         // Build analysis object (PostgreSQL-ready)
         const analysis: DesignAnalysis = {

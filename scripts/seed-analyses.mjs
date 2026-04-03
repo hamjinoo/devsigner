@@ -165,23 +165,74 @@ function processAnalysis(url, raw) {
   const shadowCount = Object.values(raw.shadows).reduce((s,c) => s + c, 0);
   const shadowStyle = shadowCount === 0 ? "none" : "subtle";
 
-  // Personality
-  let personality = "Warm Professional";
-  if (colorScheme === "dark" && cornerStyle === "sharp") personality = "Bold Minimal";
-  else if (cornerStyle === "pill" && palette.length > 8) personality = "Energetic Pop";
-  else if (cornerStyle === "pill" && density === "spacious") personality = "Soft Wellness";
-  else if (fonts.some(f => f.family.toLowerCase().includes("serif") && f.heading)) personality = "Elegant Editorial";
-  else if (density === "compact" && shadowStyle === "none") personality = "Data Dense";
+  // Personality — scoring system (matches analyze-url.ts)
+  const scores = {
+    "Bold Minimal": 0, "Warm Professional": 0, "Energetic Pop": 0,
+    "Elegant Editorial": 0, "Data Dense": 0, "Soft Wellness": 0,
+  };
+  // Bold Minimal
+  if (colorScheme === "dark") scores["Bold Minimal"] += 3;
+  if (shadowStyle === "none") scores["Bold Minimal"] += 2;
+  if (palette.length < 8) scores["Bold Minimal"] += 2;
+  if (cornerStyle === "sharp" || cornerStyle === "subtle") scores["Bold Minimal"] += 1;
+  if (density === "spacious") scores["Bold Minimal"] += 2;
+  // Warm Professional
+  if (colorScheme === "light") scores["Warm Professional"] += 3;
+  if (shadowStyle === "subtle") scores["Warm Professional"] += 2;
+  if (cornerStyle === "rounded") scores["Warm Professional"] += 2;
+  if (density === "balanced") scores["Warm Professional"] += 1;
+  if (palette.length >= 8 && palette.length <= 15) scores["Warm Professional"] += 1;
+  // Energetic Pop
+  if (palette.length > 15) scores["Energetic Pop"] += 3;
+  if (cornerStyle === "pill") scores["Energetic Pop"] += 2;
+  if (shadowStyle === "dramatic") scores["Energetic Pop"] += 2;
+  if (density === "balanced") scores["Energetic Pop"] += 1;
+  // Elegant Editorial
+  if (fonts.some(f => f.family.toLowerCase().includes("serif") && f.heading)) scores["Elegant Editorial"] += 4;
+  if (shadowStyle === "none") scores["Elegant Editorial"] += 2;
+  if (density === "spacious") scores["Elegant Editorial"] += 2;
+  if (cornerStyle === "sharp") scores["Elegant Editorial"] += 1;
+  // Data Dense
+  if (density === "compact") scores["Data Dense"] += 3;
+  if (shadowStyle === "none") scores["Data Dense"] += 2;
+  if (palette.length < 6) scores["Data Dense"] += 2;
+  if (cornerStyle === "sharp" || cornerStyle === "subtle") scores["Data Dense"] += 1;
+  // Soft Wellness
+  if (cornerStyle === "pill") scores["Soft Wellness"] += 3;
+  if (shadowStyle === "subtle") scores["Soft Wellness"] += 2;
+  if (density === "spacious") scores["Soft Wellness"] += 2;
+  if (colorScheme === "light") scores["Soft Wellness"] += 1;
+  if (palette.length < 10) scores["Soft Wellness"] += 1;
 
-  // Industry
-  const t = raw.title.toLowerCase();
-  const industry = /bank|finance|pay|money|crypto/i.test(t) ? "fintech"
-    : /health|medical|wellness|calm/i.test(t) ? "healthcare"
-    : /shop|store|buy|cart/i.test(t) ? "ecommerce"
-    : /learn|course|edu/i.test(t) ? "education"
-    : /dashboard|analytics|admin/i.test(t) ? "saas"
-    : /dev|code|api|git|deploy|build/i.test(t) ? "developer_tools"
-    : "general";
+  const personality = Object.entries(scores).sort((a,b) => b[1] - a[1])[0][0];
+
+  // Industry — URL first, then title fallback (matches analyze-url.ts)
+  const domainMap = {
+    "stripe.com": "fintech", "wise.com": "fintech", "mercury.com": "fintech",
+    "github.com": "developer_tools", "vercel.com": "developer_tools", "supabase.com": "developer_tools",
+    "tailwindcss.com": "developer_tools", "nextjs.org": "developer_tools", "astro.build": "developer_tools",
+    "vitejs.dev": "developer_tools", "posthog.com": "developer_tools", "resend.com": "developer_tools",
+    "clerk.com": "developer_tools", "cal.com": "saas", "raycast.com": "developer_tools",
+    "figma.com": "design_tools", "framer.com": "design_tools",
+    "shopify.com": "ecommerce", "gumroad.com": "ecommerce",
+    "duolingo.com": "education", "coursera.org": "education",
+    "calm.com": "healthcare", "headspace.com": "healthcare",
+    "discord.com": "social", "slack.com": "social",
+    "notion.so": "saas", "linear.app": "saas", "todoist.com": "saas",
+    "1password.com": "saas", "arc.net": "saas",
+  };
+  let industry = "general";
+  for (const [domain, ind] of Object.entries(domainMap)) {
+    if (url.includes(domain)) { industry = ind; break; }
+  }
+  if (industry === "general") {
+    const t = raw.title.toLowerCase();
+    if (/bank|finance|pay|money|crypto/i.test(t)) industry = "fintech";
+    else if (/health|medical|wellness|calm/i.test(t)) industry = "healthcare";
+    else if (/shop|store|buy|cart/i.test(t)) industry = "ecommerce";
+    else if (/learn|course|edu/i.test(t)) industry = "education";
+    else if (/dev|code|api|git|deploy|build/i.test(t)) industry = "developer_tools";
+  }
 
   return {
     url,

@@ -243,8 +243,8 @@ function generateIdentityPalette(personality: DesignPersonality, baseHue: number
 function getTypographySystem(voice: string): Record<string, string> {
   const systems: Record<string, Record<string, string>> = {
     neutral: {
-      font_heading: "Inter, system-ui, sans-serif",
-      font_body: "Inter, system-ui, sans-serif",
+      font_heading: "Inter, Geist, system-ui, sans-serif",
+      font_body: "Inter, Geist, system-ui, sans-serif",
       weight_heading: "700",
       weight_body: "400",
       heading_xxl: "48px",
@@ -260,8 +260,8 @@ function getTypographySystem(voice: string): Record<string, string> {
       letter_spacing_heading: "-0.02em",
     },
     confident: {
-      font_heading: "'Inter Tight', Inter, system-ui, sans-serif",
-      font_body: "Inter, system-ui, sans-serif",
+      font_heading: "'Inter Tight', Inter, Geist, system-ui, sans-serif",
+      font_body: "Inter, Geist, system-ui, sans-serif",
       weight_heading: "800",
       weight_body: "400",
       heading_xxl: "56px",
@@ -366,7 +366,7 @@ function getCornerRadius(style: string): Record<string, string> {
   const map: Record<string, Record<string, string>> = {
     sharp: { sm: "0px", md: "2px", lg: "4px", full: "4px" },
     subtle: { sm: "2px", md: "4px", lg: "6px", full: "8px" },
-    rounded: { sm: "4px", md: "8px", lg: "12px", full: "16px" },
+    rounded: { sm: "6px", md: "12px", lg: "16px", full: "20px" },
     pill: { sm: "8px", md: "12px", lg: "20px", full: "9999px" },
   };
   return map[style] || map["rounded"];
