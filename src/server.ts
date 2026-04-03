@@ -14,6 +14,7 @@ import { registerGeneratePage } from "./tools/generate-page.js";
 import { registerDesignIterate } from "./tools/design-iterate.js";
 import { registerFigmaTools } from "./tools/figma.js";
 import { registerA11yAudit } from "./tools/a11y-audit.js";
+import { registerAnalyzeUrl } from "./tools/analyze-url.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -32,5 +33,6 @@ export function registerAllTools(server: McpServer): void {
   registerDesignIterate(server);
   registerFigmaTools(server);
   registerA11yAudit(server);
+  registerAnalyzeUrl(server);
   registerDesignSystemResources(server);
 }
