@@ -1,0 +1,102 @@
+{
+  "name": "devsigner-vscode",
+  "displayName": "devsigner - Design Review",
+  "description": "Design sense for your code. Automatic design review with scoring.",
+  "version": "0.1.0",
+  "publisher": "hamjinoo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamjinoo/devsigner.git",
+    "directory": "vscode-extension"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Linters",
+    "Other"
+  ],
+  "icon": "icon.png",
+  "activationEvents": [
+    "onLanguage:typescriptreact",
+    "onLanguage:javascriptreact",
+    "onLanguage:vue",
+    "onLanguage:svelte",
+    "onLanguage:css"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "devsigner.reviewFile",
+        "title": "devsigner: Review Current File"
+      },
+      {
+        "command": "devsigner.fixFile",
+        "title": "devsigner: Fix Current File"
+      },
+      {
+        "command": "devsigner.generatePalette",
+        "title": "devsigner: Generate Color Palette"
+      }
+    ],
+    "configuration": {
+      "title": "devsigner",
+      "properties": {
+        "devsigner.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable devsigner design review."
+        },
+        "devsigner.scoreThreshold": {
+          "type": "number",
+          "default": 70,
+          "minimum": 0,
+          "maximum": 100,
+          "description": "Minimum design score before showing a warning in the status bar."
+        },
+        "devsigner.reviewOnSave": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically run design review when a file is saved."
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "devsigner-sidebar",
+          "title": "devsigner",
+          "icon": "$(paintcan)"
+        }
+      ]
+    },
+    "views": {
+      "devsigner-sidebar": [
+        {
+          "id": "devsigner.issuesView",
+          "name": "Design Issues",
+          "type": "tree"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run build",
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "compile": "tsc -p tsconfig.json --noEmit",
+    "package": "npx @vscode/vsce package --no-dependencies"
+  },
+  "dependencies": {
+    "devsigner": "file:.."
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0",
+    "@vscode/vsce": "^3.0.0"
+  }
+}
