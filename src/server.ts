@@ -1,5 +1,6 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { registerDesignReview } from "./tools/design-review.js";
+import { registerDesignFix } from "./tools/design-fix.js";
 import { registerColorPalette } from "./tools/color-palette.js";
 import { registerComponentSuggest } from "./tools/component-suggest.js";
 import { registerScanProject } from "./tools/scan-project.js";
@@ -9,10 +10,12 @@ import { registerDesignIdentity } from "./tools/design-identity.js";
 import { registerRenderAndReview } from "./tools/render-and-review.js";
 import { registerScreenshotReview } from "./tools/screenshot-review.js";
 import { registerDesignSession } from "./tools/design-session.js";
+import { registerGeneratePage } from "./tools/generate-page.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
   registerDesignReview(server);
+  registerDesignFix(server);
   registerColorPalette(server);
   registerComponentSuggest(server);
   registerScanProject(server);
@@ -22,5 +25,6 @@ export function registerAllTools(server: McpServer): void {
   registerRenderAndReview(server);
   registerScreenshotReview(server);
   registerDesignSession(server);
+  registerGeneratePage(server);
   registerDesignSystemResources(server);
 }
