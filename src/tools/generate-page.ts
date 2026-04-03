@@ -1,5 +1,7 @@
 import type { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { z } from "zod";
+import { loadContext } from "../context/project-context.js";
+import type { DesignIdentityData } from "../context/project-context.js";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -590,6 +592,127 @@ const PERSONALITY_NOTES: Record<Personality, { summary: string; decisions: strin
     ],
   },
 };
+
+// ---------------------------------------------------------------------------
+// Helper: build DesignTokens / TailwindPersonality from saved identity
+// ---------------------------------------------------------------------------
+
+function identityToDesignTokens(
+  identity: DesignIdentityData,
+  base: DesignTokens,
+): DesignTokens {
+  const p = identity.palette;
+  const ty = identity.typography;
+  const co = identity.corners;
+  const sh = identity.shadows;
+
+  return {
+    ...base,
+    // Colors — use identity palette when keys exist, fall back to base
+    bg: p.bg ?? p.background ?? base.bg,
+    bgAlt: p.bgAlt ?? p.background_alt ?? base.bgAlt,
+    bgCard: p.bgCard ?? p.card ?? base.bgCard,
+    text: p.text ?? base.text,
+    textMuted: p.textMuted ?? p.text_muted ?? base.textMuted,
+    textHeading: p.textHeading ?? p.text_heading ?? base.textHeading,
+    primary: p.primary ?? base.primary,
+    primaryHover: p.primaryHover ?? p.primary_hover ?? base.primaryHover,
+    primaryText: p.primaryText ?? p.primary_text ?? base.primaryText,
+    accent: p.accent ?? base.accent,
+    border: p.border ?? base.border,
+    borderLight: p.borderLight ?? p.border_light ?? base.borderLight,
+    // Dark overrides
+    darkBg: p.darkBg ?? p.dark_bg ?? base.darkBg,
+    darkBgAlt: p.darkBgAlt ?? p.dark_bg_alt ?? base.darkBgAlt,
+    darkBgCard: p.darkBgCard ?? p.dark_bg_card ?? base.darkBgCard,
+    darkText: p.darkText ?? p.dark_text ?? base.darkText,
+    darkTextMuted: p.darkTextMuted ?? p.dark_text_muted ?? base.darkTextMuted,
+    darkTextHeading: p.darkTextHeading ?? p.dark_text_heading ?? base.darkTextHeading,
+    darkBorder: p.darkBorder ?? p.dark_border ?? base.darkBorder,
+    // Typography
+    fontFamily: ty.fontFamily ?? ty.font_family ?? ty.body ?? base.fontFamily,
+    headingFontFamily: ty.headingFontFamily ?? ty.heading_font_family ?? ty.heading ?? base.headingFontFamily,
+    headingWeight: ty.headingWeight ?? ty.heading_weight ?? base.headingWeight,
+    bodyWeight: ty.bodyWeight ?? ty.body_weight ?? base.bodyWeight,
+    // Layout / corners
+    radius: co.default ?? co.md ?? base.radius,
+    radiusSm: co.sm ?? base.radiusSm,
+    radiusLg: co.lg ?? base.radiusLg,
+    // Shadows
+    shadow: sh.default ?? sh.md ?? base.shadow,
+    shadowLg: sh.lg ?? base.shadowLg,
+    // Hero
+    heroBg: p.heroBg ?? p.hero_bg ?? base.heroBg,
+    darkHeroBg: p.darkHeroBg ?? p.dark_hero_bg ?? base.darkHeroBg,
+    // Input / focus
+    inputBorder: p.inputBorder ?? p.input_border ?? base.inputBorder,
+    inputBg: p.inputBg ?? p.input_bg ?? base.inputBg,
+    focusRing: p.focusRing ?? p.focus_ring ?? base.focusRing,
+    // Semantic
+    successColor: p.success ?? p.successColor ?? base.successColor,
+    dangerColor: p.danger ?? p.dangerColor ?? base.dangerColor,
+    warningColor: p.warning ?? p.warningColor ?? base.warningColor,
+  };
+}
+
+/**
+ * Build a TailwindPersonality from a saved identity.  Because Tailwind
+ * classes cannot be derived programmatically from arbitrary hex values we
+ * use Tailwind's arbitrary-value syntax, e.g. `bg-[#1a2b3c]`.
+ */
+function identityToTailwindPersonality(
+  identity: DesignIdentityData,
+  base: TailwindPersonality,
+): TailwindPersonality {
+  const p = identity.palette;
+  const co = identity.corners;
+  const sh = identity.shadows;
+
+  // Tiny helper: wrap a hex/value in arbitrary Tailwind class
+  const arb = (prefix: string, value: string | undefined): string | undefined =>
+    value ? `${prefix}-[${value}]` : undefined;
+
+  // Radius mapping helper
+  const radiusArb = (value: string | undefined): string | undefined =>
+    value ? `rounded-[${value}]` : undefined;
+
+  // Shadow: arbitrary shadows are complex; keep base unless identity provides them
+  const shadowArb = (value: string | undefined, fallback: string): string =>
+    value && value !== "none" ? `shadow-[${value.replace(/ /g, "_")}]` : (value === "none" ? "shadow-none" : fallback);
+
+  return {
+    ...base,
+    bg: arb("bg", p.bg ?? p.background) ?? base.bg,
+    bgAlt: arb("bg", p.bgAlt ?? p.background_alt) ?? base.bgAlt,
+    bgCard: arb("bg", p.bgCard ?? p.card) ?? base.bgCard,
+    text: arb("text", p.text) ?? base.text,
+    textMuted: arb("text", p.textMuted ?? p.text_muted) ?? base.textMuted,
+    textHeading: arb("text", p.textHeading ?? p.text_heading) ?? base.textHeading,
+    primary: arb("text", p.primary) ?? base.primary,
+    primaryHover: arb("text", p.primaryHover ?? p.primary_hover) ?? base.primaryHover,
+    primaryBg: arb("bg", p.primary) ?? base.primaryBg,
+    primaryBgHover: arb("hover:bg", p.primaryHover ?? p.primary_hover) ?? base.primaryBgHover,
+    accent: arb("text", p.accent) ?? base.accent,
+    border: arb("border", p.border) ?? base.border,
+    shadow: shadowArb(sh.default ?? sh.md, base.shadow),
+    shadowLg: shadowArb(sh.lg, base.shadowLg),
+    radius: radiusArb(co.default ?? co.md) ?? base.radius,
+    radiusSm: radiusArb(co.sm) ?? base.radiusSm,
+    radiusLg: radiusArb(co.lg) ?? base.radiusLg,
+    heroBg: arb("bg", p.heroBg ?? p.hero_bg) ?? base.heroBg,
+    inputBorder: arb("border", p.inputBorder ?? p.input_border) ?? base.inputBorder,
+    inputBg: arb("bg", p.inputBg ?? p.input_bg) ?? base.inputBg,
+    focusRing: arb("focus:ring", p.focusRing ?? p.focus_ring) ?? base.focusRing,
+    // Dark overrides
+    darkBg: arb("dark:bg", p.darkBg ?? p.dark_bg) ?? base.darkBg,
+    darkBgAlt: arb("dark:bg", p.darkBgAlt ?? p.dark_bg_alt) ?? base.darkBgAlt,
+    darkBgCard: arb("dark:bg", p.darkBgCard ?? p.dark_bg_card) ?? base.darkBgCard,
+    darkText: arb("dark:text", p.darkText ?? p.dark_text) ?? base.darkText,
+    darkTextMuted: arb("dark:text", p.darkTextMuted ?? p.dark_text_muted) ?? base.darkTextMuted,
+    darkTextHeading: arb("dark:text", p.darkTextHeading ?? p.dark_text_heading) ?? base.darkTextHeading,
+    darkBorder: arb("dark:border", p.darkBorder ?? p.dark_border) ?? base.darkBorder,
+  };
+}
 
 // ---------------------------------------------------------------------------
 // Helper: resolve colors for dark/light mode
@@ -2286,28 +2409,77 @@ export function registerGeneratePage(server: McpServer): void {
         .boolean()
         .default(false)
         .describe("Generate dark-mode version of the page"),
+      project_path: z
+        .string()
+        .optional()
+        .describe("Absolute path to the project root. When provided, loads the saved design identity from .devsigner/context.json to override design tokens."),
     },
-    async ({ page_type, framework, style, personality, product_name, dark_mode }) => {
+    async ({ page_type, framework, style, personality, product_name, dark_mode, project_path }) => {
+      // ---------------------------------------------------------------
+      // Load saved design identity when project_path is provided
+      // ---------------------------------------------------------------
+      let identityUsed = false;
+      let identityProductName: string | undefined;
+      let savedTokens: DesignTokens | undefined;
+      let savedTw: TailwindPersonality | undefined;
+
+      if (project_path) {
+        try {
+          const ctx = await loadContext(project_path);
+          if (ctx.identity) {
+            const identity = ctx.identity;
+            identityProductName = identity.product;
+
+            // Save originals so we can restore after generation
+            savedTokens = TOKENS[personality];
+            savedTw = TW[personality];
+
+            // Override with identity-derived tokens
+            TOKENS[personality] = identityToDesignTokens(identity, savedTokens);
+            TW[personality] = identityToTailwindPersonality(identity, savedTw);
+
+            identityUsed = true;
+          }
+        } catch {
+          // If loading fails, fall through to default behavior
+        }
+      }
+
+      const resolvedProductName = identityProductName ?? product_name ?? "Acme";
+
       const input: PageInput = {
         page_type,
         framework,
         style,
         personality,
-        product_name: product_name || "Acme",
+        product_name: resolvedProductName,
         dark_mode,
       };
 
-      const { code, lang } = generatePage(input);
+      let code: string;
+      let lang: string;
+      try {
+        ({ code, lang } = generatePage(input));
+      } finally {
+        // Restore original tokens so future calls are unaffected
+        if (savedTokens) TOKENS[personality] = savedTokens;
+        if (savedTw) TW[personality] = savedTw;
+      }
+
       const notes = PERSONALITY_NOTES[personality];
       const structure = PAGE_STRUCTURE[page_type] || [];
       const hints = CUSTOMIZATION_HINTS[page_type] || [];
+
+      const identityNote = identityUsed
+        ? `\n> **Note:** This page was generated using the saved design identity from \`${project_path}/.devsigner/context.json\`. Colors, typography, spacing, corners, and shadows reflect your project's identity.\n`
+        : "";
 
       const lines = [
         `# Generated Page: ${page_type.charAt(0).toUpperCase() + page_type.slice(1)}`,
         ``,
         `**Framework:** ${framework} | **Style:** ${style} | **Personality:** ${notes.summary}`,
         `**Dark mode:** ${dark_mode ? "Yes" : "No"} | **Product name:** ${input.product_name}`,
-        ``,
+        identityNote,
         `---`,
         ``,
         `## Page Structure`,

@@ -119,7 +119,7 @@ export interface DesignAnalysis {
 
 // ─── Browser-based extraction ────────────────────────────────────────────────
 
-async function extractDesignData(page: any): Promise<{
+export async function extractDesignData(page: any): Promise<{
   colors: any;
   typography: any;
   spacing: any;
@@ -313,13 +313,13 @@ async function extractDesignData(page: any): Promise<{
 
 // ─── Post-processing (Node.js side) ─────────────────────────────────────────
 
-function parseRGBString(str: string): RGB | null {
+export function parseRGBString(str: string): RGB | null {
   const m = str.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
   if (!m) return null;
   return { r: parseInt(m[1]), g: parseInt(m[2]), b: parseInt(m[3]) };
 }
 
-function processColors(rawColors: any) {
+export function processColors(rawColors: any) {
   const palette: DesignAnalysis["colors"]["palette"] = [];
   const totalCount = Object.values(rawColors.counts).reduce((s: number, v: any) => s + v.count, 0) as number;
 
@@ -392,7 +392,7 @@ function processColors(rawColors: any) {
   };
 }
 
-function processTypography(rawTypo: any) {
+export function processTypography(rawTypo: any) {
   const fonts = Object.entries(rawTypo.fonts).map(([family, data]: [string, any]) => ({
     family,
     count: data.count,
@@ -439,7 +439,7 @@ function processTypography(rawTypo: any) {
   };
 }
 
-function processSpacing(rawSpacing: any) {
+export function processSpacing(rawSpacing: any) {
   const values = Object.entries(rawSpacing).map(([px, data]: [string, any]) => ({
     value_px: parseInt(px),
     count: data.count,
@@ -474,7 +474,7 @@ function gcd(a: number, b: number): number {
   return a;
 }
 
-function processShapes(rawShapes: any) {
+export function processShapes(rawShapes: any) {
   const radii = Object.entries(rawShapes.radii).map(([px, count]: [string, any]) => ({
     value_px: parseInt(px),
     count,
@@ -506,7 +506,7 @@ function processShapes(rawShapes: any) {
   };
 }
 
-function estimatePersonality(colors: any, typography: any, spacing: any, shapes: any): string {
+export function estimatePersonality(colors: any, typography: any, spacing: any, shapes: any): string {
   if (colors.color_scheme === "dark" && shapes.corner_style === "sharp") return "Bold Minimal";
   if (shapes.corner_style === "pill" && colors.color_count > 8) return "Energetic Pop";
   if (shapes.corner_style === "pill" && spacing.density === "spacious") return "Soft Wellness";
@@ -515,7 +515,7 @@ function estimatePersonality(colors: any, typography: any, spacing: any, shapes:
   return "Warm Professional";
 }
 
-function estimateIndustry(title: string, colors: any): string {
+export function estimateIndustry(title: string, colors: any): string {
   const lower = title.toLowerCase();
   if (/bank|finance|pay|money|crypto|fintech/i.test(lower)) return "fintech";
   if (/health|medical|wellness|care|calm/i.test(lower)) return "healthcare";
