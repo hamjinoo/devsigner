@@ -104,7 +104,7 @@ Then add to your MCP config:
 ### Option 3: From source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/devsigner.git
+git clone https://github.com/hamjinoo/devsigner.git
 cd devsigner
 npm install
 npm run build
@@ -392,7 +392,7 @@ Contributions are welcome! Whether it's new rules, component templates, or bug f
 
 ```bash
 # Clone and install
-git clone https://github.com/YOUR_USERNAME/devsigner.git
+git clone https://github.com/hamjinoo/devsigner.git
 cd devsigner
 npm install
 
