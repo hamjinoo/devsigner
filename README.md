@@ -1,6 +1,9 @@
 <p align="center">
   <img src="https://img.shields.io/badge/MCP-Server-blue?style=for-the-badge" alt="MCP Server" />
+  <img src="https://img.shields.io/badge/Tools-20-orange?style=for-the-badge" alt="20 Tools" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+  <img src="https://img.shields.io/badge/WCAG_2.1-AA%2FAAA-green?style=for-the-badge" alt="WCAG 2.1" />
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
   <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge" alt="PRs Welcome" />
 </p>
@@ -10,15 +13,17 @@
 </h1>
 
 <p align="center">
-  <strong>A design-sense MCP server for developers who can't design.</strong>
+  <strong>The complete design toolkit MCP server for developers who can't design.</strong>
   <br />
-  Stop guessing. Get instant, actionable design feedback right in your IDE.
+  20 tools. Analyze, generate, fix, iterate. From first pixel to Figma handoff.
 </p>
 
 <p align="center">
   <a href="#-quick-start">Quick Start</a> &bull;
-  <a href="#-tools">Tools</a> &bull;
-  <a href="#-examples">Examples</a> &bull;
+  <a href="#-all-20-tools">Tools</a> &bull;
+  <a href="#-design-session-flow">Session Flow</a> &bull;
+  <a href="#-figma-integration">Figma</a> &bull;
+  <a href="#-accessibility">Accessibility</a> &bull;
   <a href="#-how-it-works">How It Works</a> &bull;
   <a href="#-contributing">Contributing</a>
 </p>
@@ -30,22 +35,27 @@
 You're a developer. You can build anything. But your UIs look like this:
 
 ```
-┌──────────────────────────────────────────┐
-│  padding: 13px (why?)                    │
-│  margin: 7px  (why not 8?)               │
-│                                          │
-│  ██████ #000000 text on #333333 bg       │
-│  (can you even read this?)               │
-│                                          │
-│  font-size: 13px, 14px, 15px, 17px       │
-│  (pick a scale, any scale)               │
-│                                          │
-│  z-index: 99999 (the classic)            │
-└──────────────────────────────────────────┘
+┌──────────────────────────────────────────────────┐
+│  padding: 13px (why?)                            │
+│  margin: 7px  (why not 8?)                       │
+│                                                  │
+│  ██████ #000000 text on #333333 bg               │
+│  (can you even read this?)                       │
+│                                                  │
+│  font-size: 13px, 14px, 15px, 17px               │
+│  (pick a scale, any scale)                       │
+│                                                  │
+│  z-index: 99999 (the classic)                    │
+│                                                  │
+│  "I'll just eyeball the spacing"                 │
+│  (narrator: they should not have eyeballed it)   │
+│                                                  │
+│  Opens Figma → stares → closes Figma             │
+└──────────────────────────────────────────────────┘
                Score: 23/100
 ```
 
-**devsigner** catches these mistakes and tells you exactly how to fix them.
+You don't need a design degree. You need **devsigner** -- 20 MCP tools that review your UI, generate production-ready code, auto-fix issues, and even pull design specs straight from Figma.
 
 ---
 
@@ -123,134 +133,224 @@ npm run build
 
 ---
 
-## Tools
+## All 20 Tools
 
-devsigner provides **3 tools** that work inside any MCP-compatible client:
+### Analysis
 
-### `design_review` — Your AI design critic
+| Tool | Description |
+|------|-------------|
+| `design_review` | Code-based design analysis with scoring. Paste your UI code, get a detailed report with a score out of 100. Checks spacing, color, typography, and layout. |
+| `screenshot_review` | Visual review of existing screenshots. Point it at a screenshot and get design feedback on what the user actually sees. |
+| `scan_project` | Auto-detect your project's tech stack and design patterns. Understands React, Vue, Svelte, Tailwind, CSS modules, and more. |
+| `a11y_audit` | Full WCAG 2.1 accessibility compliance audit at A, AA, or AAA level. Catches contrast failures, missing labels, focus traps, and more. |
 
-Paste your UI code and get a detailed design report with a score.
+### Generation
+
+| Tool | Description |
+|------|-------------|
+| `color_palette` | Generate complete color systems from a description. Includes semantic colors, dark mode, contrast validation, and outputs as CSS variables, Tailwind config, or design tokens. |
+| `component_suggest` | 20+ well-designed component templates. Pricing cards, login forms, navbars, hero sections, dashboards, and more. Token-based and framework-ready. |
+| `generate_page` | Full page generation. Landing pages, dashboards, pricing pages, login screens, settings panels, and 404 pages -- complete and production-ready. |
+| `design_identity` | Product design personality system. Choose from 6 archetypes to generate a consistent visual identity: typography, colors, spacing, and tone. |
+
+### Fixing
+
+| Tool | Description |
+|------|-------------|
+| `design_fix` | Auto-correct design issues in your code. Three modes: **safe** (non-breaking only), **moderate** (visual improvements), **aggressive** (full redesign). |
+| `design_iterate` | Automated render, review, fix, re-render loop. Hands-off iterative improvement until the score meets your target. |
+
+### Visual
+
+| Tool | Description |
+|------|-------------|
+| `render_and_review` | Render your code in a real Chrome browser, capture a screenshot, and get visual feedback on the actual rendered result. |
+| `screenshot_review` | Analyze existing screenshots or mockups for design issues without needing the source code. |
+
+### Knowledge
+
+| Tool | Description |
+|------|-------------|
+| `design_guide` | Query Material Design 3, Apple HIG, shadcn, and Ant Design guidelines. Get authoritative answers on spacing, typography, color, and component patterns. |
+| `design_reference` | 15+ real product design patterns across 7 industries. See how Stripe, Linear, Notion, and others solve the same UI problem you're facing. |
+
+### Figma
+
+| Tool | Description |
+|------|-------------|
+| `figma_inspect` | Read Figma files and extract the full design system: colors, typography, spacing, components, and layout structure. |
+| `figma_to_code` | Convert Figma frames directly to code. Supports React, Vue, Svelte, and plain HTML/CSS output. |
+
+### Session & Context
+
+| Tool | Description |
+|------|-------------|
+| `design_session` | Start or resume persistent design sessions. Tracks your project's design state across conversations. |
+| `save_identity` | Save a generated design identity to your project for consistent reuse. |
+| `log_review` | Track review scores over time. See your design quality trend across sessions. |
+| `log_decision` | Record design decisions with reasoning. Build a searchable decision log for your team. |
+| `design_feedback` | Teach devsigner what works and reject what doesn't. The system learns your preferences within a session. |
+
+---
+
+## Design Review in Action
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  📊 Design Review Report                            │
+│  Design Review Report                               │
 │                                                     │
 │  Framework: React          Score: ██████░░░░ 62/100 │
 │                                                     │
-│  ❌ ERRORS (must fix)                               │
-│  ├─ [color] Contrast 1.66:1 — needs 4.5:1 for AA   │
-│  │  → Lighten text or darken background             │
-│  │                                                  │
-│  ⚠️ WARNINGS (should fix)                           │
-│  ├─ [spacing] padding: 13px not on 4px grid         │
-│  │  → Use 12px or 16px                              │
-│  ├─ [typography] line-height 1.1 too tight           │
-│  │  → Use 1.4–1.8 for body text                    │
-│  ├─ [layout] z-index: 999 is excessive              │
-│  │  → Use scale: 1, 10, 20, 30, 40, 50             │
-│  │                                                  │
-│  💡 SUGGESTIONS (nice to have)                      │
-│  ├─ [color] Avoid pure #000000                      │
-│  │  → Try #1a1a1a for softer dark                   │
-│  └─ [typography] 13px is unusual                    │
-│     → Use even sizes: 12px or 14px                  │
+│  ERRORS (must fix)                                  │
+│  |-- [color] Contrast 1.66:1 -- needs 4.5:1 for AA │
+│  |   -> Lighten text or darken background           │
+│  |                                                  │
+│  WARNINGS (should fix)                              │
+│  |-- [spacing] padding: 13px not on 4px grid        │
+│  |   -> Use 12px or 16px                            │
+│  |-- [typography] line-height 1.1 too tight          │
+│  |   -> Use 1.4-1.8 for body text                   │
+│  |-- [layout] z-index: 999 is excessive              │
+│  |   -> Use scale: 1, 10, 20, 30, 40, 50            │
+│  |                                                  │
+│  SUGGESTIONS (nice to have)                         │
+│  |-- [color] Avoid pure #000000                     │
+│  |   -> Try #1a1a1a for softer dark                 │
+│  +-- [typography] 13px is unusual                   │
+│      -> Use even sizes: 12px or 14px                │
 └─────────────────────────────────────────────────────┘
 ```
-
-**Checks performed:**
-
-| Category | What it checks |
-|----------|---------------|
-| **Spacing** | 4px/8px grid alignment, spacing consistency, scale adherence |
-| **Color** | WCAG AA/AAA contrast ratios, color count, pure black/white usage |
-| **Typography** | Type scale consistency, line-height, font weight count, hierarchy |
-| **Layout** | z-index sanity, max-width for readability, text alignment consistency |
-
-**Input:**
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `code` | string | *(required)* | Your UI code (HTML, CSS, React, Vue, Svelte) |
-| `framework` | `"react" \| "vue" \| "svelte" \| "html" \| "auto"` | `"auto"` | Framework hint |
-| `focus` | `("spacing" \| "color" \| "typography" \| "layout" \| "all")[]` | `["all"]` | Which aspects to review |
 
 ---
 
-### `color_palette` — Never pick bad colors again
+## Design Session Flow
 
-Describe your project and get a complete, production-ready color system.
+The real power of devsigner is the **iterative design loop**. Instead of a single review, devsigner can continuously improve your UI:
 
 ```
-┌─────────────────────────────────────────────────────┐
-│  🎨 Color Palette: Fintech                          │
-│                                                     │
-│  Generated from: "fintech app, trustworthy"         │
-│                                                     │
-│  Primary    ■■■■■■■■■■  #1a56db (Deep Blue)        │
-│  Secondary  ■■■■■■■■■■  #2563a8                    │
-│  Accent     ■■■■■■■■■■  #db881a                    │
-│                                                     │
-│  ✅ Success  ■  #22874a                              │
-│  ⚠️ Warning  ■  #c88a08                              │
-│  ❌ Error    ■  #d94a4a                              │
-│  ℹ️ Info     ■  #2e7bc2                              │
-│                                                     │
-│  Contrast Report:                                   │
-│  Primary on light bg → 8.21:1 ✅ AAA                │
-│  Foreground on dark  → 15.3:1 ✅ AAA                │
-│                                                     │
-│  Output: CSS Variables / Tailwind / Design Tokens   │
-└─────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│                    Iterative Design Loop                     │
+│                                                             │
+│   1. START SESSION                                          │
+│      design_session("start")                                │
+│      |                                                      │
+│      v                                                      │
+│   2. ESTABLISH IDENTITY                                     │
+│      design_identity("fintech, trustworthy")                │
+│      |                                                      │
+│      v                                                      │
+│   3. GENERATE                                               │
+│      generate_page("dashboard") or component_suggest(...)   │
+│      |                                                      │
+│      v                                                      │
+│   4. RENDER + REVIEW          <----+                        │
+│      render_and_review(code)       |                        │
+│      Score: 58/100                 |                        │
+│      |                             |                        │
+│      v                             |                        │
+│   5. AUTO-FIX                      |                        │
+│      design_fix(code, "moderate")  |                        │
+│      |                             |                        │
+│      v                             |                        │
+│   6. SCORE CHECK                   |                        │
+│      Score >= 85? ----NO----------+                         │
+│      |                                                      │
+│      YES                                                    │
+│      |                                                      │
+│      v                                                      │
+│   7. SAVE + LOG                                             │
+│      save_identity() + log_review() + log_decision()        │
+│      |                                                      │
+│      v                                                      │
+│   DONE -- Score: 91/100                                     │
+│                                                             │
+│   Or skip all that and use:                                 │
+│      design_iterate(code, target: 85)                       │
+│      (does steps 4-6 automatically)                         │
+└─────────────────────────────────────────────────────────────┘
 ```
-
-**Built-in presets:** Professional, Fintech, Healthcare, Creative, E-Commerce, Education, SaaS, Nature, Playful, Minimal
-
-**Input:**
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `description` | string | *(required)* | Project mood/industry (e.g., "fintech app, professional") |
-| `base_color` | string | - | Starting hex color to build around |
-| `format` | `"css_variables" \| "tailwind_config" \| "design_tokens" \| "all"` | `"all"` | Output format |
-| `dark_mode` | boolean | `true` | Include dark mode variant |
 
 ---
 
-### `component_suggest` — Copy-paste beautiful components
+## Figma Integration
 
-Get well-designed, token-based components ready for your framework.
+Bridge the gap between design and code. No more eyeballing pixels from a Figma mockup.
+
+```
+┌──────────────────────────────────────────────────────┐
+│  Figma Workflow                                      │
+│                                                      │
+│  figma_inspect(file_url)                             │
+│  |                                                   │
+│  v                                                   │
+│  ┌──────────────────────────┐                        │
+│  │  Extracted Design System  │                       │
+│  │  - 5 colors              │                        │
+│  │  - 3 font families       │                        │
+│  │  - 8px spacing grid      │                        │
+│  │  - 12 components found   │                        │
+│  └──────────────┬───────────┘                        │
+│                 |                                     │
+│                 v                                     │
+│  figma_to_code(frame, "react")                       │
+│  |                                                   │
+│  v                                                   │
+│  ┌──────────────────────────┐                        │
+│  │  Generated React Code     │                       │
+│  │  - Pixel-accurate         │                       │
+│  │  - Uses design tokens     │                       │
+│  │  - Responsive             │                       │
+│  └──────────────────────────┘                        │
+│                                                      │
+│  Then run design_review on the output to validate.   │
+└──────────────────────────────────────────────────────┘
+```
+
+---
+
+## Accessibility
+
+`a11y_audit` runs a full WCAG 2.1 compliance check on your code or rendered pages.
 
 ```
 ┌─────────────────────────────────────────────────────┐
-│  🧩 Pricing Card (React, Modern)                    │
+│  Accessibility Audit Report          Level: AA      │
 │                                                     │
-│  ┌─────────────────────────┐                        │
-│  │  PRO                    │                        │
-│  │  $29 /month             │                        │
-│  │                         │                        │
-│  │  ✓ Feature one          │                        │
-│  │  ✓ Feature two          │                        │
-│  │  ✓ Feature three        │                        │
-│  │                         │                        │
-│  │  ┌───────────────────┐  │                        │
-│  │  │   Get Started     │  │                        │
-│  │  └───────────────────┘  │                        │
-│  └─────────────────────────┘                        │
+│  PASS  12 checks passed                             │
+│  FAIL   4 issues found                              │
 │                                                     │
-│  Design Decisions:                                  │
-│  • Border radius: 0.75rem (modern feel)             │
-│  • Spacing: consistent 4-step scale                 │
-│  • Typography: 2 sizes, 2 weights for clarity       │
-│  • Color: neutral base + blue accent                │
+│  [1.4.3] Contrast (Minimum)              FAIL       │
+│  Text "#777" on "#fff" = 4.48:1                     │
+│  -> Darken to "#757575" for 4.6:1                   │
+│                                                     │
+│  [2.4.7] Focus Visible                   FAIL       │
+│  Button has outline: none with no replacement       │
+│  -> Add :focus-visible with visible ring            │
+│                                                     │
+│  [1.3.1] Info and Relationships          FAIL       │
+│  Form inputs missing associated <label>             │
+│  -> Add <label for="..."> or aria-label             │
+│                                                     │
+│  [4.1.2] Name, Role, Value              FAIL        │
+│  Icon button has no accessible name                 │
+│  -> Add aria-label="Close" to icon button           │
 └─────────────────────────────────────────────────────┘
 ```
 
-**Available templates:** Pricing Card, Login Form *(more coming soon)*
+Supports **Level A**, **Level AA**, and **Level AAA** auditing.
 
-**Input:**
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `component` | string | *(required)* | What you need (e.g., "pricing card", "login form") |
-| `framework` | `"react" \| "vue" \| "svelte" \| "html"` | *(required)* | Target framework |
-| `variant` | `"minimal" \| "modern" \| "corporate" \| "playful"` | `"modern"` | Design style |
+---
+
+## MCP Resources
+
+devsigner also exposes design system knowledge as MCP resources that your AI client can read directly:
+
+| Resource URI | Description |
+|-------------|-------------|
+| `devsigner://design-system/material3` | Material Design 3 guidelines |
+| `devsigner://design-system/apple-hig` | Apple Human Interface Guidelines |
+| `devsigner://design-system/shadcn` | shadcn/ui conventions and patterns |
+| `devsigner://design-system/ant-design` | Ant Design system specifications |
 
 ---
 
@@ -265,62 +365,90 @@ Get well-designed, token-based components ready for your framework.
 > </div>
 > ```
 
-**devsigner** will catch:
-- `padding: 13px` → not on 4px grid, suggest 12px or 16px
-- `color: #333 on #000` → contrast ratio 1.66:1, fails WCAG AA
-- `fontSize: 15px` → odd value, suggest 14px or 16px
+**devsigner** catches:
+- `padding: 13px` -- not on 4px grid, suggest 12px or 16px
+- `color: #333 on #000` -- contrast ratio 1.66:1, fails WCAG AA
+- `fontSize: 15px` -- odd value, suggest 14px or 16px
 
-### Generate a color palette
+### Generate a full page
 
-> **You:** "Generate a color palette for a healthcare SaaS dashboard"
+> **You:** "Generate a pricing page for my SaaS product with a modern feel"
 
-**devsigner** returns complete CSS variables, Tailwind config, and design tokens with WCAG-validated contrast ratios.
+**devsigner** generates a complete pricing page with proper grid layout, typography hierarchy, color-coded tiers, and responsive breakpoints.
 
-### Get a component
+### Fix it automatically
 
-> **You:** "Give me a login form in Vue with a minimal style"
+> **You:** "Fix all the design issues in this component, moderate mode"
 
-**devsigner** returns a complete, well-designed Vue component with proper spacing, typography, and color.
+**devsigner** returns corrected code with every spacing, color, and typography issue resolved -- while keeping your component logic untouched.
+
+### Pull from Figma
+
+> **You:** "Inspect this Figma file and generate React components for the dashboard frame"
+
+**devsigner** extracts the design system from Figma, converts the specified frame to React code, and validates the output against the original design specs.
+
+### Run an accessibility audit
+
+> **You:** "Run an a11y audit on this form at WCAG AA level"
+
+**devsigner** checks every form element for proper labels, contrast ratios, focus management, keyboard navigation, and ARIA attributes.
 
 ---
 
 ## How It Works
 
 ```
-┌──────────────────────────────────────────────────────────┐
-│                    Your IDE / Terminal                     │
-│                                                          │
-│   You: "Review my component"                             │
-│    │                                                     │
-│    ▼                                                     │
-│   ┌────────────────┐    stdio    ┌───────────────────┐   │
-│   │  Claude/Cursor  │◄──────────►│  devsigner MCP    │   │
-│   │  (MCP Client)   │            │                   │   │
-│   └────────────────┘            │  ┌─────────────┐  │   │
-│                                  │  │   Parsers   │  │   │
-│                                  │  │ CSS/Tailwind│  │   │
-│                                  │  │ Inline/JSX  │  │   │
-│                                  │  └──────┬──────┘  │   │
-│                                  │         ▼         │   │
-│                                  │  ┌─────────────┐  │   │
-│                                  │  │ Rules Engine│  │   │
-│                                  │  │ Spacing     │  │   │
-│                                  │  │ Color/WCAG  │  │   │
-│                                  │  │ Typography  │  │   │
-│                                  │  │ Layout      │  │   │
-│                                  │  └─────────────┘  │   │
-│                                  └───────────────────┘   │
-│                                                          │
-│   devsigner: "Score 62/100. Here are 7 issues..."       │
-└──────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────┐
+│                       Your IDE / Terminal                         │
+│                                                                   │
+│   You: "Review my dashboard and fix it"                          │
+│    |                                                              │
+│    v                                                              │
+│   ┌────────────────┐    stdio    ┌─────────────────────────────┐  │
+│   │  Claude/Cursor  |<---------->|  devsigner MCP Server       |  │
+│   │  (MCP Client)   |            |                             |  │
+│   └────────────────┘            |  ┌────────┐  ┌───────────┐  |  │
+│                                  |  |Parsers |  | Renderers |  |  │
+│                                  |  |CSS     |  | Puppeteer |  |  │
+│                                  |  |Tailwind|  | Chrome    |  |  │
+│                                  |  |JSX     |  └─────┬─────┘  |  │
+│                                  |  └───┬────┘        |        |  │
+│                                  |      v             v        |  │
+│                                  |  ┌─────────────────────┐    |  │
+│                                  |  |    Rules Engine      |    |  │
+│                                  |  |  Spacing  | Color    |    |  │
+│                                  |  |  Typo     | Layout   |    |  │
+│                                  |  |  A11y     | WCAG     |    |  │
+│                                  |  └─────────┬───────────┘    |  │
+│                                  |            v                |  │
+│                                  |  ┌─────────────────────┐    |  │
+│                                  |  |    Generators        |    |  │
+│                                  |  |  Pages  | Components |    |  │
+│                                  |  |  Colors | Identity   |    |  │
+│                                  |  └─────────┬───────────┘    |  │
+│                                  |            v                |  │
+│                                  |  ┌─────────────────────┐    |  │
+│                                  |  |    Integrations      |    |  │
+│                                  |  |  Figma  | Sessions   |    |  │
+│                                  |  |  Guides | References |    |  │
+│                                  |  └─────────────────────┘    |  │
+│                                  └─────────────────────────────┘  │
+│                                                                   │
+│   devsigner: "Score 62/100. Found 7 issues. Auto-fixing..."     │
+│   devsigner: "Score 89/100. Ship it."                            │
+└───────────────────────────────────────────────────────────────────┘
 ```
 
 **Key design decisions:**
 
-- **No API keys needed** — All analysis runs locally with a deterministic rules engine. No external AI calls.
-- **Zero config** — Works out of the box. No `.devsignerrc` needed.
-- **Framework-agnostic** — Parses React, Vue, Svelte, plain HTML/CSS, and Tailwind classes.
-- **Actionable, not vague** — Every issue comes with a specific, copy-pasteable fix.
+- **No API keys needed** -- All analysis runs locally with a deterministic rules engine. No external AI calls.
+- **Zero config** -- Works out of the box. No `.devsignerrc` needed.
+- **Framework-agnostic** -- Parses React, Vue, Svelte, plain HTML/CSS, and Tailwind classes.
+- **Actionable, not vague** -- Every issue comes with a specific, copy-pasteable fix.
+- **Iterative by design** -- Tools compose into loops. Review, fix, re-render, repeat.
+- **Figma-native** -- Read real Figma files, extract design systems, generate code.
+- **Accessibility-first** -- WCAG 2.1 compliance is not an afterthought.
 
 ---
 
@@ -342,7 +470,8 @@ Get well-designed, token-based components ready for your framework.
 
 | Rule | Severity | Description |
 |------|----------|-------------|
-| WCAG AA contrast | Error | Text/background contrast must be ≥4.5:1 (normal) or ≥3:1 (large) |
+| WCAG AA contrast | Error | Text/background contrast must be >=4.5:1 (normal) or >=3:1 (large) |
+| WCAG AAA contrast | Error | Text/background contrast must be >=7:1 (normal) or >=4.5:1 (large) |
 | Pure black | Info | Suggests softer alternatives to `#000000` |
 | Pure white | Info | Suggests softer alternatives to `#ffffff` |
 | Color count | Warning | Flags >6 distinct colors |
@@ -355,10 +484,10 @@ Get well-designed, token-based components ready for your framework.
 | Rule | Severity | Description |
 |------|----------|-------------|
 | Font size count | Warning | Flags >6 distinct font sizes |
-| Odd font sizes | Info | Suggests even-numbered alternatives (13px → 12/14px) |
-| Type scale ratio | Info | Adjacent sizes should differ by ≥1.2x |
+| Odd font sizes | Info | Suggests even-numbered alternatives (13px -> 12/14px) |
+| Type scale ratio | Info | Adjacent sizes should differ by >=1.2x |
 | Font weight count | Warning | Flags >3 distinct weights |
-| Line height | Warning | Body text line-height should be 1.4–1.8 |
+| Line height | Warning | Body text line-height should be 1.4-1.8 |
 
 </details>
 
@@ -373,22 +502,44 @@ Get well-designed, token-based components ready for your framework.
 
 </details>
 
+<details>
+<summary><strong>Accessibility Rules (WCAG 2.1)</strong></summary>
+
+| Rule | Level | Description |
+|------|-------|-------------|
+| 1.1.1 Non-text Content | A | Images must have alt text |
+| 1.3.1 Info and Relationships | A | Form inputs need associated labels |
+| 1.4.3 Contrast (Minimum) | AA | 4.5:1 for normal text, 3:1 for large text |
+| 1.4.6 Contrast (Enhanced) | AAA | 7:1 for normal text, 4.5:1 for large text |
+| 2.1.1 Keyboard | A | All interactive elements must be keyboard accessible |
+| 2.4.7 Focus Visible | AA | Focus indicator must be visible |
+| 4.1.2 Name, Role, Value | A | Interactive elements need accessible names |
+
+</details>
+
 ---
 
 ## Roadmap
 
-- [ ] **More component templates** — Hero, Navbar, Footer, Dashboard, Feature Grid, Testimonial
-- [ ] **Screenshot review** — Upload a screenshot, get design feedback
-- [ ] **Figma integration** — Read Figma files and compare with code
-- [ ] **Custom rules** — `.devsignerrc.json` for project-specific design systems
-- [ ] **Auto-fix mode** — Return corrected code, not just suggestions
-- [ ] **Tailwind v4** — Native `@theme` block support
+- [x] ~~Screenshot review~~ -- Upload a screenshot, get design feedback
+- [x] ~~Figma integration~~ -- Read Figma files and convert to code
+- [x] ~~Auto-fix mode~~ -- Return corrected code, not just suggestions
+- [x] ~~Accessibility audit~~ -- WCAG 2.1 A/AA/AAA compliance
+- [x] ~~Design sessions~~ -- Persistent context across conversations
+- [x] ~~Full page generation~~ -- Complete pages, not just components
+- [x] ~~Design identity system~~ -- Consistent personality across a product
+- [ ] **Custom rules** -- `.devsignerrc.json` for project-specific design systems
+- [ ] **Tailwind v4** -- Native `@theme` block support
+- [ ] **Storybook integration** -- Review components in Storybook
+- [ ] **Design diff** -- Compare before/after screenshots automatically
+- [ ] **Team presets** -- Shared design identities across a team
+- [ ] **VS Code extension** -- Inline design hints in the editor gutter
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Whether it's new rules, component templates, or bug fixes.
+Contributions are welcome! Whether it's new rules, component templates, Figma improvements, or bug fixes.
 
 ```bash
 # Clone and install
@@ -406,13 +557,29 @@ npm run build
 npx @modelcontextprotocol/inspector node dist/index.js
 ```
 
+### Project structure
+
+```
+src/
+  tools/            # All 20 tool implementations
+  rules/            # Design rule modules (spacing, color, typography, layout)
+  parsers/          # CSS, Tailwind, JSX, inline style parsers
+  components/       # Component templates (20+ designs)
+  palettes/         # Color palette presets and generation
+  resources/        # MCP resource definitions (design system guides)
+  context/          # Session and identity management
+  utils/            # Shared utilities (contrast calculation, etc.)
+  server.ts         # MCP server setup and tool registration
+  index.ts          # Entry point
+```
+
 ### Adding a new component template
 
-Templates live in `src/tools/component-suggest.ts`. Each template uses `{{token}}` placeholders that get replaced with design tokens:
+Templates live in `src/components/`. Each template uses `{{token}}` placeholders that get replaced with design tokens:
 
-- `{{borderRadius}}` — Corner radius for the variant
-- `{{shadow}}` — Box shadow for the variant
-- `{{spacing.sm}}` / `{{spacing.md}}` / `{{spacing.lg}}` / `{{spacing.xl}}` — Spacing scale
+- `{{borderRadius}}` -- Corner radius for the variant
+- `{{shadow}}` -- Box shadow for the variant
+- `{{spacing.sm}}` / `{{spacing.md}}` / `{{spacing.lg}}` / `{{spacing.xl}}` -- Spacing scale
 
 ### Adding a new design rule
 
@@ -429,5 +596,5 @@ MIT
 <p align="center">
   <strong>Built for developers who code better than they design.</strong>
   <br />
-  <sub>If that's you, give us a ⭐</sub>
+  <sub>If that's you, give us a star on <a href="https://github.com/hamjinoo/devsigner">GitHub</a></sub>
 </p>
