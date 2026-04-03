@@ -230,7 +230,7 @@ function fixColorsInCSS(code: string, fixes: FixResult[], level: FixLevel): stri
 
   // Fix pure black -> #111827
   result = replaceColorValue(result, "#000000", "#111827", fixes, "Pure black softened to #111827");
-  result = replaceColorValue(result, "#000", "#111827", fixes, "Pure black softened to #111827");
+  result = replaceColorValue(result, "#000", "#111827", fixes, "Pure black (#000) softened to #111827");
   result = replaceColorValue(result, "rgb(0, 0, 0)", "#111827", fixes, "Pure black softened to #111827");
   result = replaceColorValue(result, "rgb(0,0,0)", "#111827", fixes, "Pure black softened to #111827");
 
@@ -253,14 +253,15 @@ function replaceColorValue(
   const escaped = oldColor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const pattern = new RegExp(`(:\\s*)${escaped}(?=\\s*[;}"'])`, "gi");
 
-  if (pattern.test(code)) {
+  const replaced = code.replace(pattern, `$1${newColor}`);
+  if (replaced !== code) {
     fixes.push({
       description,
       category: "color",
       before: oldColor,
       after: newColor,
     });
-    return code.replace(pattern, `$1${newColor}`);
+    return replaced;
   }
 
   return code;
