@@ -23,6 +23,9 @@ import { registerLivePreview } from "./tools/live-preview.js";
 import { registerResponsivePreview } from "./tools/responsive-preview.js";
 import { registerExportTokens } from "./tools/export-tokens.js";
 import { registerDesignCompare } from "./tools/design-compare.js";
+import { registerBatchReview } from "./tools/batch-review.js";
+import { registerSuggestAnimations } from "./tools/suggest-animations.js";
+import { registerGenerateStyleGuide } from "./tools/generate-style-guide.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -50,5 +53,8 @@ export function registerAllTools(server: McpServer): void {
   registerResponsivePreview(server);
   registerExportTokens(server);
   registerDesignCompare(server);
+  registerBatchReview(server);
+  registerSuggestAnimations(server);
+  registerGenerateStyleGuide(server);
   registerDesignSystemResources(server);
 }
