@@ -16720,5 +16720,3933 @@
       "industry": "general",
       "complexity": 100
     }
+  },
+  {
+    "url": "https://airbnb.com",
+    "analyzed_at": "2026-04-04T07:24:18.182Z",
+    "page_title": "에어비앤비 | 휴가지 숙소, 통나무집, 해변가 주택 등",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#222222",
+          "count": 903,
+          "pct": 61
+        },
+        {
+          "hex": "#6a6a6a",
+          "count": 412,
+          "pct": 28
+        },
+        {
+          "hex": "#c1c1c1",
+          "count": 87,
+          "pct": 6
+        },
+        {
+          "hex": "#dddddd",
+          "count": 26,
+          "pct": 2
+        },
+        {
+          "hex": "#ffffff",
+          "count": 17,
+          "pct": 1
+        },
+        {
+          "hex": "#f2f2f2",
+          "count": 11,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 10,
+          "pct": 1
+        },
+        {
+          "hex": "#b0b0b0",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "hex": "#ff385c",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 13
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Airbnb Cereal VF",
+          "count": 1408,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 28,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 3
+        },
+        {
+          "px": 16,
+          "count": 97
+        },
+        {
+          "px": 14,
+          "count": 740
+        },
+        {
+          "px": 13,
+          "count": 51
+        },
+        {
+          "px": 12,
+          "count": 483
+        },
+        {
+          "px": 11,
+          "count": 34
+        }
+      ],
+      "heading_font": "Airbnb Cereal VF",
+      "body_font": "Airbnb Cereal VF"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 12,
+          "count": 109
+        },
+        {
+          "px": 4,
+          "count": 57
+        },
+        {
+          "px": 2,
+          "count": 56
+        },
+        {
+          "px": 10,
+          "count": 42
+        },
+        {
+          "px": 6,
+          "count": 34
+        },
+        {
+          "px": 8,
+          "count": 29
+        },
+        {
+          "px": 15,
+          "count": 7
+        },
+        {
+          "px": 44,
+          "count": 6
+        },
+        {
+          "px": 24,
+          "count": 4
+        },
+        {
+          "px": 48,
+          "count": 4
+        }
+      ],
+      "grid_aligned_pct": 59,
+      "density": "compact",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1425,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 20,
+          "count": 76
+        },
+        {
+          "px": 50,
+          "count": 34
+        },
+        {
+          "px": 14,
+          "count": 20
+        },
+        {
+          "px": 9,
+          "count": 9
+        },
+        {
+          "px": 32,
+          "count": 5
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "ecommerce",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://spotify.com",
+    "analyzed_at": "2026-04-04T07:24:26.458Z",
+    "page_title": "Spotify – Web Player",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#b3b3b3",
+          "count": 437,
+          "pct": 64
+        },
+        {
+          "hex": "#ffffff",
+          "count": 83,
+          "pct": 12
+        },
+        {
+          "hex": "#ffffff",
+          "count": 47,
+          "pct": 7
+        },
+        {
+          "hex": "#181818",
+          "count": 30,
+          "pct": 4
+        },
+        {
+          "hex": "#333333",
+          "count": 30,
+          "pct": 4
+        },
+        {
+          "hex": "#000000",
+          "count": 14,
+          "pct": 2
+        },
+        {
+          "hex": "#ffffff",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#121212",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "hex": "#1f1f1f",
+          "count": 5,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#121212",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "SpotifyMixUI",
+          "count": 492,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "SpotifyMixUITitle",
+          "count": 1,
+          "heading": true,
+          "body": false
+        }
+      ],
+      "sizes": [
+        {
+          "px": 32,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 432
+        },
+        {
+          "px": 14,
+          "count": 48
+        },
+        {
+          "px": 13,
+          "count": 11
+        },
+        {
+          "px": 12,
+          "count": 2
+        }
+      ],
+      "heading_font": "SpotifyMixUI",
+      "body_font": "SpotifyMixUI"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 189
+        },
+        {
+          "px": 8,
+          "count": 94
+        },
+        {
+          "px": 7,
+          "count": 31
+        },
+        {
+          "px": 159,
+          "count": 30
+        },
+        {
+          "px": 12,
+          "count": 25
+        },
+        {
+          "px": 4,
+          "count": 14
+        },
+        {
+          "px": 2,
+          "count": 12
+        },
+        {
+          "px": 20,
+          "count": 8
+        },
+        {
+          "px": 24,
+          "count": 7
+        },
+        {
+          "px": 6,
+          "count": 6
+        }
+      ],
+      "grid_aligned_pct": 81,
+      "density": "balanced",
+      "unique_count": 18
+    },
+    "layout": {
+      "maxWidth": 1085,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 1000,
+          "count": 75
+        },
+        {
+          "px": 8,
+          "count": 36
+        },
+        {
+          "px": 6,
+          "count": 30
+        },
+        {
+          "px": 9999,
+          "count": 24
+        },
+        {
+          "px": 4,
+          "count": 11
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "entertainment",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://medium.com",
+    "analyzed_at": "2026-04-04T07:24:32.092Z",
+    "page_title": "Medium: Read and write stories.",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 71,
+          "pct": 69
+        },
+        {
+          "hex": "#242424",
+          "count": 13,
+          "pct": 13
+        },
+        {
+          "hex": "#6b6b6b",
+          "count": 10,
+          "pct": 10
+        },
+        {
+          "hex": "#ffffff",
+          "count": 3,
+          "pct": 3
+        },
+        {
+          "hex": "#f7f4ed",
+          "count": 3,
+          "pct": 3
+        },
+        {
+          "hex": "#191919",
+          "count": 2,
+          "pct": 2
+        },
+        {
+          "hex": "#000000",
+          "count": 1,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 7
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "medium-content-sans-serif-font",
+          "count": 63,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "sohne",
+          "count": 23,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 9,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "gt-super",
+          "count": 2,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 120,
+          "count": 2
+        },
+        {
+          "px": 22,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 72
+        },
+        {
+          "px": 14,
+          "count": 11
+        },
+        {
+          "px": 13,
+          "count": 10
+        }
+      ],
+      "heading_font": "sohne",
+      "body_font": "medium-content-sans-serif-font"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 4
+        },
+        {
+          "px": 16,
+          "count": 2
+        },
+        {
+          "px": 20,
+          "count": 2
+        },
+        {
+          "px": 24,
+          "count": 2
+        },
+        {
+          "px": 25,
+          "count": 2
+        },
+        {
+          "px": 48,
+          "count": 2
+        },
+        {
+          "px": 75,
+          "count": 1
+        }
+      ],
+      "grid_aligned_pct": 80,
+      "density": "spacious",
+      "unique_count": 7
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 2,
+          "count": 1
+        },
+        {
+          "px": 1386,
+          "count": 1
+        },
+        {
+          "px": 1980,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "media",
+      "complexity": 65
+    }
+  },
+  {
+    "url": "https://substack.com",
+    "analyzed_at": "2026-04-04T07:24:39.465Z",
+    "page_title": "Substack",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#eeeeee",
+          "count": 367,
+          "pct": 48
+        },
+        {
+          "hex": "#777777",
+          "count": 316,
+          "pct": 41
+        },
+        {
+          "hex": "#232525",
+          "count": 20,
+          "pct": 3
+        },
+        {
+          "hex": "#ffffff",
+          "count": 18,
+          "pct": 2
+        },
+        {
+          "hex": "#161718",
+          "count": 13,
+          "pct": 2
+        },
+        {
+          "hex": "#ff6719",
+          "count": 11,
+          "pct": 1
+        },
+        {
+          "hex": "#1b1c1d",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#363737",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "hex": "#000000",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "hex": "#808080",
+          "count": 2,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#161718",
+      "color_scheme": "dark",
+      "unique_count": 11
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "system-ui",
+          "count": 645,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Spectral",
+          "count": 10,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Cahuenga",
+          "count": 3,
+          "heading": true,
+          "body": false
+        },
+        {
+          "family": "SF Pro Display",
+          "count": 2,
+          "heading": true,
+          "body": false
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 32,
+          "count": 1
+        },
+        {
+          "px": 24,
+          "count": 2
+        },
+        {
+          "px": 20,
+          "count": 74
+        },
+        {
+          "px": 19,
+          "count": 131
+        },
+        {
+          "px": 17,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 1
+        },
+        {
+          "px": 15,
+          "count": 389
+        },
+        {
+          "px": 13,
+          "count": 60
+        }
+      ],
+      "heading_font": "Cahuenga",
+      "body_font": "system-ui"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 179
+        },
+        {
+          "px": 16,
+          "count": 35
+        },
+        {
+          "px": 4,
+          "count": 33
+        },
+        {
+          "px": 12,
+          "count": 30
+        },
+        {
+          "px": 6,
+          "count": 28
+        },
+        {
+          "px": 20,
+          "count": 17
+        },
+        {
+          "px": 24,
+          "count": 12
+        },
+        {
+          "px": 32,
+          "count": 9
+        },
+        {
+          "px": 10,
+          "count": 6
+        },
+        {
+          "px": 2,
+          "count": 1
+        }
+      ],
+      "grid_aligned_pct": 90,
+      "density": "compact",
+      "unique_count": 11
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 83
+        },
+        {
+          "px": 9999,
+          "count": 45
+        },
+        {
+          "px": 12,
+          "count": 22
+        },
+        {
+          "px": 4,
+          "count": 3
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "media",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://openai.com",
+    "analyzed_at": "2026-04-04T07:24:47.866Z",
+    "page_title": "OpenAI | OpenAI",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#ffffff",
+          "count": 558,
+          "pct": 78
+        },
+        {
+          "hex": "#ffffff",
+          "count": 96,
+          "pct": 14
+        },
+        {
+          "hex": "#ffffff",
+          "count": 18,
+          "pct": 3
+        },
+        {
+          "hex": "#000000",
+          "count": 17,
+          "pct": 2
+        },
+        {
+          "hex": "#ffffff",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "hex": "#000000",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "hex": "#1f1f1f",
+          "count": 2,
+          "pct": 0
+        },
+        {
+          "hex": "#333333",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 9
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "OpenAI Sans",
+          "count": 677,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 48,
+          "count": 3
+        },
+        {
+          "px": 28,
+          "count": 1
+        },
+        {
+          "px": 22,
+          "count": 4
+        },
+        {
+          "px": 18,
+          "count": 21
+        },
+        {
+          "px": 17,
+          "count": 333
+        },
+        {
+          "px": 16,
+          "count": 60
+        },
+        {
+          "px": 14,
+          "count": 235
+        },
+        {
+          "px": 13,
+          "count": 20
+        }
+      ],
+      "heading_font": "OpenAI Sans",
+      "body_font": "OpenAI Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 69
+        },
+        {
+          "px": 32,
+          "count": 58
+        },
+        {
+          "px": 8,
+          "count": 38
+        },
+        {
+          "px": 12,
+          "count": 31
+        },
+        {
+          "px": 24,
+          "count": 15
+        },
+        {
+          "px": 4,
+          "count": 14
+        },
+        {
+          "px": 20,
+          "count": 13
+        },
+        {
+          "px": 64,
+          "count": 7
+        },
+        {
+          "px": 40,
+          "count": 4
+        },
+        {
+          "px": 120,
+          "count": 4
+        }
+      ],
+      "grid_aligned_pct": 99,
+      "density": "balanced",
+      "unique_count": 16
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "none",
+      "top_radii": [
+        {
+          "px": 6,
+          "count": 36
+        },
+        {
+          "px": 9999,
+          "count": 13
+        },
+        {
+          "px": 40,
+          "count": 7
+        },
+        {
+          "px": 4,
+          "count": 4
+        },
+        {
+          "px": 24,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Bold Minimal",
+      "industry": "ai",
+      "complexity": 99
+    }
+  },
+  {
+    "url": "https://anthropic.com",
+    "analyzed_at": "2026-04-04T07:24:56.907Z",
+    "page_title": "Home \\ Anthropic",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#141413",
+          "count": 388,
+          "pct": 52
+        },
+        {
+          "hex": "#b0aea5",
+          "count": 158,
+          "pct": 21
+        },
+        {
+          "hex": "#faf9f5",
+          "count": 157,
+          "pct": 21
+        },
+        {
+          "hex": "#87867f",
+          "count": 22,
+          "pct": 3
+        },
+        {
+          "hex": "color(srgb 0.0784314 0.0784314 0.0745098 / 0.6)",
+          "count": 12,
+          "pct": 2
+        },
+        {
+          "hex": "#e8e6dc",
+          "count": 4,
+          "pct": 1
+        },
+        {
+          "hex": "#e3dacc",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "hex": "#f0eee6",
+          "count": 2,
+          "pct": 0
+        },
+        {
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "hex": "#141413",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#faf9f5",
+      "color_scheme": "light",
+      "unique_count": 11
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Anthropic Sans",
+          "count": 416,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Anthropic Serif",
+          "count": 302,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Anthropic Mono",
+          "count": 6,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "sans-serif",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 1
+        },
+        {
+          "px": 61,
+          "count": 25
+        },
+        {
+          "px": 26,
+          "count": 3
+        },
+        {
+          "px": 24,
+          "count": 9
+        },
+        {
+          "px": 20,
+          "count": 191
+        },
+        {
+          "px": 18,
+          "count": 8
+        },
+        {
+          "px": 16,
+          "count": 468
+        },
+        {
+          "px": 15,
+          "count": 11
+        }
+      ],
+      "heading_font": "Anthropic Sans",
+      "body_font": "Anthropic Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 107
+        },
+        {
+          "px": 4,
+          "count": 78
+        },
+        {
+          "px": 2,
+          "count": 46
+        },
+        {
+          "px": 16,
+          "count": 41
+        },
+        {
+          "px": 31,
+          "count": 36
+        },
+        {
+          "px": 12,
+          "count": 30
+        },
+        {
+          "px": 24,
+          "count": 14
+        },
+        {
+          "px": 22,
+          "count": 10
+        },
+        {
+          "px": 46,
+          "count": 4
+        },
+        {
+          "px": 61,
+          "count": 3
+        }
+      ],
+      "grid_aligned_pct": 72,
+      "density": "balanced",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 17
+        },
+        {
+          "px": 50,
+          "count": 10
+        },
+        {
+          "px": 16,
+          "count": 8
+        },
+        {
+          "px": 4,
+          "count": 2
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "ai",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://replicate.com",
+    "analyzed_at": "2026-04-04T07:25:05.136Z",
+    "page_title": "Replicate - Run AI with an API",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#eeeeee",
+          "count": 1067,
+          "pct": 57
+        },
+        {
+          "hex": "#b4b4b4",
+          "count": 219,
+          "pct": 12
+        },
+        {
+          "hex": "#ffffff",
+          "count": 157,
+          "pct": 8
+        },
+        {
+          "hex": "#111111",
+          "count": 77,
+          "pct": 4
+        },
+        {
+          "hex": "#c9d1d9",
+          "count": 64,
+          "pct": 3
+        },
+        {
+          "hex": "#ea2804",
+          "count": 58,
+          "pct": 3
+        },
+        {
+          "hex": "#222222",
+          "count": 41,
+          "pct": 2
+        },
+        {
+          "hex": "#191919",
+          "count": 41,
+          "pct": 2
+        },
+        {
+          "hex": "#606060",
+          "count": 41,
+          "pct": 2
+        },
+        {
+          "hex": "#a5d6ff",
+          "count": 27,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#111111",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "basier-square",
+          "count": 1280,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "jetbrains-mono",
+          "count": 225,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "rb-freigeist-neue",
+          "count": 187,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 128,
+          "count": 5
+        },
+        {
+          "px": 72,
+          "count": 4
+        },
+        {
+          "px": 48,
+          "count": 3
+        },
+        {
+          "px": 30,
+          "count": 11
+        },
+        {
+          "px": 29,
+          "count": 5
+        },
+        {
+          "px": 24,
+          "count": 1
+        },
+        {
+          "px": 20,
+          "count": 12
+        },
+        {
+          "px": 18,
+          "count": 51
+        }
+      ],
+      "heading_font": "basier-square",
+      "body_font": "basier-square"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 316
+        },
+        {
+          "px": 8,
+          "count": 238
+        },
+        {
+          "px": 2,
+          "count": 157
+        },
+        {
+          "px": 4,
+          "count": 76
+        },
+        {
+          "px": 1,
+          "count": 24
+        },
+        {
+          "px": 32,
+          "count": 24
+        },
+        {
+          "px": 64,
+          "count": 24
+        },
+        {
+          "px": 24,
+          "count": 23
+        },
+        {
+          "px": 12,
+          "count": 22
+        },
+        {
+          "px": 6,
+          "count": 16
+        }
+      ],
+      "grid_aligned_pct": 78,
+      "density": "balanced",
+      "unique_count": 18
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 149
+        },
+        {
+          "px": 4,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "ai",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://huggingface.co",
+    "analyzed_at": "2026-04-04T07:25:12.293Z",
+    "page_title": "Hugging Face – The AI community building the future.",
+    "colors": {
+      "palette": [
+        {
+          "hex": "oklch(0.928 0.006 264.531)",
+          "count": 362,
+          "pct": 45
+        },
+        {
+          "hex": "oklch(0.707 0.022 261.325)",
+          "count": 147,
+          "pct": 18
+        },
+        {
+          "hex": "#ffffff",
+          "count": 67,
+          "pct": 8
+        },
+        {
+          "hex": "oklch(0.872 0.01 258.338)",
+          "count": 55,
+          "pct": 7
+        },
+        {
+          "hex": "#b3bcc9",
+          "count": 51,
+          "pct": 6
+        },
+        {
+          "hex": "oklch(0.551 0.027 264.364)",
+          "count": 27,
+          "pct": 3
+        },
+        {
+          "hex": "oklch(0.21 0.034 264.665)",
+          "count": 21,
+          "pct": 3
+        },
+        {
+          "hex": "oklab(0.21 -0.00316127 -0.0338527 / 0.6)",
+          "count": 13,
+          "pct": 2
+        },
+        {
+          "hex": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "count": 13,
+          "pct": 2
+        },
+        {
+          "hex": "#0b0f19",
+          "count": 11,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#0b0f19",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Source Sans Pro",
+          "count": 731,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "IBM Plex Mono",
+          "count": 10,
+          "heading": true,
+          "body": false
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 4
+        },
+        {
+          "px": 60,
+          "count": 9
+        },
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 30,
+          "count": 10
+        },
+        {
+          "px": 24,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 41
+        },
+        {
+          "px": 18,
+          "count": 51
+        },
+        {
+          "px": 16,
+          "count": 357
+        }
+      ],
+      "heading_font": "Source Sans Pro",
+      "body_font": "Source Sans Pro"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 149
+        },
+        {
+          "px": 2,
+          "count": 104
+        },
+        {
+          "px": 6,
+          "count": 76
+        },
+        {
+          "px": 24,
+          "count": 50
+        },
+        {
+          "px": 16,
+          "count": 45
+        },
+        {
+          "px": 12,
+          "count": 39
+        },
+        {
+          "px": 32,
+          "count": 30
+        },
+        {
+          "px": 4,
+          "count": 12
+        },
+        {
+          "px": 73,
+          "count": 11
+        },
+        {
+          "px": 40,
+          "count": 9
+        }
+      ],
+      "grid_aligned_pct": 63,
+      "density": "balanced",
+      "unique_count": 25
+    },
+    "layout": {
+      "maxWidth": 1280,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 41
+        },
+        {
+          "px": 33554400,
+          "count": 21
+        },
+        {
+          "px": 26,
+          "count": 12
+        },
+        {
+          "px": 12,
+          "count": 10
+        },
+        {
+          "px": 4,
+          "count": 8
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "ai",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://fly.io",
+    "analyzed_at": "2026-04-04T07:25:18.612Z",
+    "page_title": "Build fast. Run any code fearlessly. · Fly",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#281950",
+          "count": 173,
+          "pct": 36
+        },
+        {
+          "hex": "#ffffff",
+          "count": 106,
+          "pct": 22
+        },
+        {
+          "hex": "#281950",
+          "count": 93,
+          "pct": 19
+        },
+        {
+          "hex": "#a39ac1",
+          "count": 42,
+          "pct": 9
+        },
+        {
+          "hex": "#202237",
+          "count": 20,
+          "pct": 4
+        },
+        {
+          "hex": "#ffffff",
+          "count": 8,
+          "pct": 2
+        },
+        {
+          "hex": "#10b981",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#7c3aed",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "hex": "#3b82f6",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "hex": "#f59e0b",
+          "count": 6,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Fricolage Grotesque",
+          "count": 434,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Mackinac",
+          "count": 18,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 64,
+          "count": 6
+        },
+        {
+          "px": 36,
+          "count": 8
+        },
+        {
+          "px": 22,
+          "count": 4
+        },
+        {
+          "px": 19,
+          "count": 50
+        },
+        {
+          "px": 18,
+          "count": 1
+        },
+        {
+          "px": 17,
+          "count": 4
+        },
+        {
+          "px": 16,
+          "count": 277
+        },
+        {
+          "px": 15,
+          "count": 94
+        }
+      ],
+      "heading_font": "Fricolage Grotesque",
+      "body_font": "Fricolage Grotesque"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 12,
+          "count": 73
+        },
+        {
+          "px": 16,
+          "count": 73
+        },
+        {
+          "px": 32,
+          "count": 68
+        },
+        {
+          "px": 10,
+          "count": 46
+        },
+        {
+          "px": 24,
+          "count": 45
+        },
+        {
+          "px": 8,
+          "count": 19
+        },
+        {
+          "px": 20,
+          "count": 16
+        },
+        {
+          "px": 128,
+          "count": 16
+        },
+        {
+          "px": 80,
+          "count": 11
+        },
+        {
+          "px": 28,
+          "count": 6
+        }
+      ],
+      "grid_aligned_pct": 86,
+      "density": "spacious",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1200,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 16,
+          "count": 9
+        },
+        {
+          "px": 9999,
+          "count": 9
+        },
+        {
+          "px": 10,
+          "count": 4
+        },
+        {
+          "px": 4,
+          "count": 2
+        },
+        {
+          "px": 8,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://cloudflare.com",
+    "analyzed_at": "2026-04-04T07:25:26.545Z",
+    "page_title": "모든 곳에서 연결하고, 보호하고, 구축하기 | Cloudflare",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 2217,
+          "pct": 84
+        },
+        {
+          "hex": "#ffffff",
+          "count": 260,
+          "pct": 10
+        },
+        {
+          "hex": "#ff6633",
+          "count": 81,
+          "pct": 3
+        },
+        {
+          "hex": "#222222",
+          "count": 60,
+          "pct": 2
+        },
+        {
+          "hex": "#4b5563",
+          "count": 10,
+          "pct": 0
+        },
+        {
+          "hex": "#e1e1e1",
+          "count": 7,
+          "pct": 0
+        },
+        {
+          "hex": "#f8f8fb",
+          "count": 6,
+          "pct": 0
+        },
+        {
+          "hex": "#070033",
+          "count": 5,
+          "pct": 0
+        },
+        {
+          "hex": "#dfdfdf",
+          "count": 3,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 9
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Noto Sans KR",
+          "count": 2580,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 70,
+          "count": 2
+        },
+        {
+          "px": 48,
+          "count": 23
+        },
+        {
+          "px": 36,
+          "count": 4
+        },
+        {
+          "px": 24,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 1
+        },
+        {
+          "px": 18,
+          "count": 21
+        },
+        {
+          "px": 16,
+          "count": 1914
+        },
+        {
+          "px": 14,
+          "count": 524
+        }
+      ],
+      "heading_font": "Noto Sans KR",
+      "body_font": "Noto Sans KR"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 10,
+          "count": 355
+        },
+        {
+          "px": 4,
+          "count": 183
+        },
+        {
+          "px": 6,
+          "count": 156
+        },
+        {
+          "px": 8,
+          "count": 147
+        },
+        {
+          "px": 24,
+          "count": 140
+        },
+        {
+          "px": 20,
+          "count": 91
+        },
+        {
+          "px": 16,
+          "count": 78
+        },
+        {
+          "px": 14,
+          "count": 69
+        },
+        {
+          "px": 32,
+          "count": 61
+        },
+        {
+          "px": 12,
+          "count": 55
+        }
+      ],
+      "grid_aligned_pct": 59,
+      "density": "balanced",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1360,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "rounded",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 44
+        },
+        {
+          "px": 2,
+          "count": 8
+        },
+        {
+          "px": 6,
+          "count": 7
+        },
+        {
+          "px": 4,
+          "count": 4
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://digitalocean.com",
+    "analyzed_at": "2026-04-04T07:25:32.616Z",
+    "page_title": "DigitalOcean: AI-Powered Unified Inference Cloud Infrastructure",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 713,
+          "pct": 49
+        },
+        {
+          "hex": "#000c2a",
+          "count": 256,
+          "pct": 18
+        },
+        {
+          "hex": "#ffffff",
+          "count": 168,
+          "pct": 12
+        },
+        {
+          "hex": "#4d5b7c",
+          "count": 157,
+          "pct": 11
+        },
+        {
+          "hex": "#000000",
+          "count": 43,
+          "pct": 3
+        },
+        {
+          "hex": "#0069ff",
+          "count": 41,
+          "pct": 3
+        },
+        {
+          "hex": "#f9fafe",
+          "count": 12,
+          "pct": 1
+        },
+        {
+          "hex": "#eff2fb",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "hex": "#1433d6",
+          "count": 8,
+          "pct": 1
+        },
+        {
+          "hex": "#006650",
+          "count": 6,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#1433d6",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 1335,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Epilogue",
+          "count": 40,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Inter-Regular",
+          "count": 4,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Inter-Bold",
+          "count": 3,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 48,
+          "count": 1
+        },
+        {
+          "px": 36,
+          "count": 5
+        },
+        {
+          "px": 24,
+          "count": 10
+        },
+        {
+          "px": 20,
+          "count": 14
+        },
+        {
+          "px": 18,
+          "count": 5
+        },
+        {
+          "px": 16,
+          "count": 1181
+        },
+        {
+          "px": 15,
+          "count": 1
+        },
+        {
+          "px": 14,
+          "count": 160
+        }
+      ],
+      "heading_font": "Inter",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 270
+        },
+        {
+          "px": 12,
+          "count": 147
+        },
+        {
+          "px": 16,
+          "count": 94
+        },
+        {
+          "px": 32,
+          "count": 91
+        },
+        {
+          "px": 24,
+          "count": 43
+        },
+        {
+          "px": 40,
+          "count": 38
+        },
+        {
+          "px": 6,
+          "count": 32
+        },
+        {
+          "px": 56,
+          "count": 14
+        },
+        {
+          "px": 128,
+          "count": 14
+        },
+        {
+          "px": 2,
+          "count": 12
+        }
+      ],
+      "grid_aligned_pct": 91,
+      "density": "balanced",
+      "unique_count": 24
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 8,
+          "count": 55
+        },
+        {
+          "px": 16,
+          "count": 39
+        },
+        {
+          "px": 32,
+          "count": 7
+        },
+        {
+          "px": 999,
+          "count": 7
+        },
+        {
+          "px": 40,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://firebase.google.com",
+    "analyzed_at": "2026-04-04T07:25:40.687Z",
+    "page_title": "Firebase | Google's Mobile and Web App Development Platform",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 253,
+          "pct": 42
+        },
+        {
+          "hex": "#ffffff",
+          "count": 140,
+          "pct": 23
+        },
+        {
+          "hex": "#000000",
+          "count": 94,
+          "pct": 16
+        },
+        {
+          "hex": "#1e88e5",
+          "count": 33,
+          "pct": 6
+        },
+        {
+          "hex": "#000000",
+          "count": 25,
+          "pct": 4
+        },
+        {
+          "hex": "#000000",
+          "count": 15,
+          "pct": 3
+        },
+        {
+          "hex": "#f57c00",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "hex": "#1e1e1e",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "hex": "#f1f3f4",
+          "count": 3,
+          "pct": 1
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Google Sans",
+          "count": 513,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "JetBrains Mono",
+          "count": 33,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Material Icons",
+          "count": 4,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Google Sans Text",
+          "count": 3,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 75,
+          "count": 4
+        },
+        {
+          "px": 44,
+          "count": 1
+        },
+        {
+          "px": 35,
+          "count": 6
+        },
+        {
+          "px": 34,
+          "count": 1
+        },
+        {
+          "px": 30,
+          "count": 3
+        },
+        {
+          "px": 26,
+          "count": 2
+        },
+        {
+          "px": 24,
+          "count": 4
+        },
+        {
+          "px": 22,
+          "count": 65
+        }
+      ],
+      "heading_font": "Google Sans",
+      "body_font": "Google Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 71
+        },
+        {
+          "px": 12,
+          "count": 67
+        },
+        {
+          "px": 6,
+          "count": 60
+        },
+        {
+          "px": 18,
+          "count": 56
+        },
+        {
+          "px": 20,
+          "count": 44
+        },
+        {
+          "px": 16,
+          "count": 43
+        },
+        {
+          "px": 32,
+          "count": 42
+        },
+        {
+          "px": 40,
+          "count": 38
+        },
+        {
+          "px": 24,
+          "count": 35
+        },
+        {
+          "px": 4,
+          "count": 21
+        }
+      ],
+      "grid_aligned_pct": 67,
+      "density": "balanced",
+      "unique_count": 29
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 100,
+          "count": 17
+        },
+        {
+          "px": 4,
+          "count": 10
+        },
+        {
+          "px": 20,
+          "count": 9
+        },
+        {
+          "px": 8,
+          "count": 6
+        },
+        {
+          "px": 50,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://twitch.tv",
+    "analyzed_at": "2026-04-04T07:25:48.037Z",
+    "page_title": "Twitch",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#efeff1",
+          "count": 421,
+          "pct": 85
+        },
+        {
+          "hex": "#53535f",
+          "count": 53,
+          "pct": 11
+        },
+        {
+          "hex": "#bf94ff",
+          "count": 9,
+          "pct": 2
+        },
+        {
+          "hex": "#0e0e10",
+          "count": 3,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 3,
+          "pct": 1
+        },
+        {
+          "hex": "#18181b",
+          "count": 2,
+          "pct": 0
+        },
+        {
+          "hex": "#d3d3d9",
+          "count": 2,
+          "pct": 0
+        },
+        {
+          "hex": "#000000",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "hex": "#9147ff",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "hex": "#26262c",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#0e0e10",
+      "color_scheme": "dark",
+      "unique_count": 10
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 431,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Roobert",
+          "count": 4,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 18,
+          "count": 1
+        },
+        {
+          "px": 14,
+          "count": 362
+        },
+        {
+          "px": 12,
+          "count": 72
+        },
+        {
+          "px": 10,
+          "count": 1
+        }
+      ],
+      "heading_font": "Inter",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 4,
+          "count": 31
+        },
+        {
+          "px": 8,
+          "count": 29
+        },
+        {
+          "px": 5,
+          "count": 24
+        },
+        {
+          "px": 16,
+          "count": 18
+        },
+        {
+          "px": 212,
+          "count": 9
+        },
+        {
+          "px": 24,
+          "count": 7
+        },
+        {
+          "px": 6,
+          "count": 6
+        },
+        {
+          "px": 15,
+          "count": 6
+        },
+        {
+          "px": 2,
+          "count": 5
+        },
+        {
+          "px": 1,
+          "count": 4
+        }
+      ],
+      "grid_aligned_pct": 68,
+      "density": "balanced",
+      "unique_count": 12
+    },
+    "layout": {
+      "maxWidth": 1200,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 4,
+          "count": 48
+        },
+        {
+          "px": 9000,
+          "count": 18
+        },
+        {
+          "px": 2,
+          "count": 2
+        },
+        {
+          "px": 6,
+          "count": 2
+        },
+        {
+          "px": 8,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "entertainment",
+      "complexity": 74
+    }
+  },
+  {
+    "url": "https://pinterest.com",
+    "analyzed_at": "2026-04-04T07:25:53.667Z",
+    "page_title": "Pinterest - 핀터레스트",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#211922",
+          "count": 65,
+          "pct": 71
+        },
+        {
+          "hex": "#000000",
+          "count": 11,
+          "pct": 12
+        },
+        {
+          "hex": "#ffffff",
+          "count": 5,
+          "pct": 5
+        },
+        {
+          "hex": "#ffffff",
+          "count": 4,
+          "pct": 4
+        },
+        {
+          "hex": "#e60023",
+          "count": 2,
+          "pct": 2
+        },
+        {
+          "hex": "#e5e5e0",
+          "count": 2,
+          "pct": 2
+        },
+        {
+          "hex": "#62625b",
+          "count": 2,
+          "pct": 2
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 7
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Pin Sans",
+          "count": 79,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "-apple-system",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 16,
+          "count": 9
+        },
+        {
+          "px": 12,
+          "count": 71
+        }
+      ],
+      "heading_font": "Pin Sans",
+      "body_font": "Pin Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 16,
+          "count": 15
+        },
+        {
+          "px": 6,
+          "count": 14
+        },
+        {
+          "px": 14,
+          "count": 14
+        },
+        {
+          "px": 8,
+          "count": 1
+        }
+      ],
+      "grid_aligned_pct": 36,
+      "density": "balanced",
+      "unique_count": 4
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "none",
+      "top_radii": [
+        {
+          "px": 16,
+          "count": 7
+        },
+        {
+          "px": 12,
+          "count": 1
+        },
+        {
+          "px": 24,
+          "count": 1
+        },
+        {
+          "px": 999,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Bold Minimal",
+      "industry": "general",
+      "complexity": 39
+    }
+  },
+  {
+    "url": "https://dropbox.com",
+    "analyzed_at": "2026-04-04T07:26:00.672Z",
+    "page_title": "dropbox.com",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 456,
+          "pct": 42
+        },
+        {
+          "hex": "#1e1919",
+          "count": 340,
+          "pct": 31
+        },
+        {
+          "hex": "#f7f5f2",
+          "count": 187,
+          "pct": 17
+        },
+        {
+          "hex": "#524a3e",
+          "count": 63,
+          "pct": 6
+        },
+        {
+          "hex": "#ffffff",
+          "count": 11,
+          "pct": 1
+        },
+        {
+          "hex": "#eee9e2",
+          "count": 9,
+          "pct": 1
+        },
+        {
+          "hex": "#0000ee",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#0061fe",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "hex": "#f7f5f2",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "hex": "#1c1d21",
+          "count": 3,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#1e1919",
+      "color_scheme": "dark",
+      "unique_count": 11
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Noto Sans KR",
+          "count": 760,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Atlas Grotesk Web",
+          "count": 231,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Arial",
+          "count": 29,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Sharp Grotesk",
+          "count": 17,
+          "heading": true,
+          "body": false
+        },
+        {
+          "family": "Sharp Grotesk 23",
+          "count": 2,
+          "heading": true,
+          "body": false
+        }
+      ],
+      "sizes": [
+        {
+          "px": 40,
+          "count": 1
+        },
+        {
+          "px": 32,
+          "count": 2
+        },
+        {
+          "px": 26,
+          "count": 4
+        },
+        {
+          "px": 20,
+          "count": 9
+        },
+        {
+          "px": 18,
+          "count": 12
+        },
+        {
+          "px": 16,
+          "count": 836
+        },
+        {
+          "px": 14,
+          "count": 133
+        },
+        {
+          "px": 13,
+          "count": 29
+        }
+      ],
+      "heading_font": "Atlas Grotesk Web",
+      "body_font": "Noto Sans KR"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 12,
+          "count": 153
+        },
+        {
+          "px": 16,
+          "count": 111
+        },
+        {
+          "px": 24,
+          "count": 81
+        },
+        {
+          "px": 4,
+          "count": 48
+        },
+        {
+          "px": 8,
+          "count": 42
+        },
+        {
+          "px": 48,
+          "count": 17
+        },
+        {
+          "px": 72,
+          "count": 13
+        },
+        {
+          "px": 52,
+          "count": 12
+        },
+        {
+          "px": 120,
+          "count": 10
+        },
+        {
+          "px": 32,
+          "count": 9
+        }
+      ],
+      "grid_aligned_pct": 97,
+      "density": "balanced",
+      "unique_count": 18
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": true,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "none",
+      "top_radii": [
+        {
+          "px": 12,
+          "count": 35
+        },
+        {
+          "px": 16,
+          "count": 8
+        },
+        {
+          "px": 8,
+          "count": 3
+        },
+        {
+          "px": 100,
+          "count": 3
+        },
+        {
+          "px": 20,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Bold Minimal",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://zoom.us",
+    "analyzed_at": "2026-04-04T07:26:08.242Z",
+    "page_title": "One platform to connect | Zoom",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#00053d",
+          "count": 434,
+          "pct": 31
+        },
+        {
+          "hex": "#ffffff",
+          "count": 377,
+          "pct": 27
+        },
+        {
+          "hex": "#0b5cff",
+          "count": 153,
+          "pct": 11
+        },
+        {
+          "hex": "#00031f",
+          "count": 145,
+          "pct": 10
+        },
+        {
+          "hex": "#000000",
+          "count": 113,
+          "pct": 8
+        },
+        {
+          "hex": "#181819",
+          "count": 54,
+          "pct": 4
+        },
+        {
+          "hex": "#696b6e",
+          "count": 37,
+          "pct": 3
+        },
+        {
+          "hex": "#e6f0ff",
+          "count": 37,
+          "pct": 3
+        },
+        {
+          "hex": "#d1def2",
+          "count": 10,
+          "pct": 1
+        },
+        {
+          "hex": "#f3f8ff",
+          "count": 6,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Almaden Sans",
+          "count": 1194,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "icozm",
+          "count": 43,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Happy Face Semi Bold",
+          "count": 30,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "ui-sans-serif",
+          "count": 9,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 1,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 54,
+          "count": 6
+        },
+        {
+          "px": 46,
+          "count": 7
+        },
+        {
+          "px": 32,
+          "count": 8
+        },
+        {
+          "px": 26,
+          "count": 4
+        },
+        {
+          "px": 22,
+          "count": 2
+        },
+        {
+          "px": 20,
+          "count": 56
+        },
+        {
+          "px": 18,
+          "count": 16
+        },
+        {
+          "px": 16,
+          "count": 724
+        }
+      ],
+      "heading_font": "Almaden Sans",
+      "body_font": "Almaden Sans"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 6,
+          "count": 466
+        },
+        {
+          "px": 16,
+          "count": 170
+        },
+        {
+          "px": 10,
+          "count": 150
+        },
+        {
+          "px": 20,
+          "count": 150
+        },
+        {
+          "px": 12,
+          "count": 58
+        },
+        {
+          "px": 4,
+          "count": 38
+        },
+        {
+          "px": 40,
+          "count": 31
+        },
+        {
+          "px": 24,
+          "count": 22
+        },
+        {
+          "px": 18,
+          "count": 19
+        },
+        {
+          "px": 60,
+          "count": 18
+        }
+      ],
+      "grid_aligned_pct": 42,
+      "density": "balanced",
+      "unique_count": 29
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 20,
+          "count": 33
+        },
+        {
+          "px": 12,
+          "count": 32
+        },
+        {
+          "px": 6,
+          "count": 30
+        },
+        {
+          "px": 8,
+          "count": 28
+        },
+        {
+          "px": 50,
+          "count": 16
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://figma.com/community",
+    "analyzed_at": "2026-04-04T07:26:16.272Z",
+    "page_title": "Discover community-made templates, plugins, and widgets | Figma",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#000000",
+          "count": 912,
+          "pct": 71
+        },
+        {
+          "hex": "#000000",
+          "count": 156,
+          "pct": 12
+        },
+        {
+          "hex": "#007be5",
+          "count": 124,
+          "pct": 10
+        },
+        {
+          "hex": "#000000",
+          "count": 37,
+          "pct": 3
+        },
+        {
+          "hex": "#ffffff",
+          "count": 33,
+          "pct": 3
+        },
+        {
+          "hex": "#000000",
+          "count": 7,
+          "pct": 1
+        },
+        {
+          "hex": "#fcfcfc",
+          "count": 5,
+          "pct": 0
+        },
+        {
+          "hex": "#e6e6e6",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "hex": "#ffe9f2",
+          "count": 1,
+          "pct": 0
+        },
+        {
+          "hex": "#fffad0",
+          "count": 1,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter",
+          "count": 1065,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Noto Sans KR",
+          "count": 6,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Whyte",
+          "count": 2,
+          "heading": false,
+          "body": true
+        },
+        {
+          "family": "Figma Sans",
+          "count": 2,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 24,
+          "count": 97
+        },
+        {
+          "px": 16,
+          "count": 761
+        },
+        {
+          "px": 15,
+          "count": 1
+        },
+        {
+          "px": 14,
+          "count": 8
+        },
+        {
+          "px": 13,
+          "count": 143
+        },
+        {
+          "px": 12,
+          "count": 4
+        },
+        {
+          "px": 11,
+          "count": 61
+        }
+      ],
+      "heading_font": "Inter",
+      "body_font": "Inter"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 1,
+          "count": 176
+        },
+        {
+          "px": 12,
+          "count": 102
+        },
+        {
+          "px": 4,
+          "count": 95
+        },
+        {
+          "px": 10,
+          "count": 88
+        },
+        {
+          "px": 24,
+          "count": 61
+        },
+        {
+          "px": 8,
+          "count": 51
+        },
+        {
+          "px": 16,
+          "count": 43
+        },
+        {
+          "px": 215,
+          "count": 42
+        },
+        {
+          "px": 6,
+          "count": 14
+        },
+        {
+          "px": 32,
+          "count": 13
+        }
+      ],
+      "grid_aligned_pct": 53,
+      "density": "balanced",
+      "unique_count": 21
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": true,
+      "hasHero": true,
+      "hasStickyHeader": false,
+      "hasFooter": false
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 2,
+          "count": 156
+        },
+        {
+          "px": 6,
+          "count": 44
+        },
+        {
+          "px": 15,
+          "count": 29
+        },
+        {
+          "px": 12,
+          "count": 15
+        },
+        {
+          "px": 4,
+          "count": 12
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "design_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://linear.app/changelog",
+    "analyzed_at": "2026-04-04T07:26:23.977Z",
+    "page_title": "Changelog – Linear",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#d0d6e0",
+          "count": 1292,
+          "pct": 50
+        },
+        {
+          "hex": "#f7f8f8",
+          "count": 561,
+          "pct": 22
+        },
+        {
+          "hex": "#08090a",
+          "count": 365,
+          "pct": 14
+        },
+        {
+          "hex": "#62666d",
+          "count": 124,
+          "pct": 5
+        },
+        {
+          "hex": "#1c1c1f",
+          "count": 94,
+          "pct": 4
+        },
+        {
+          "hex": "#8a8f98",
+          "count": 64,
+          "pct": 2
+        },
+        {
+          "hex": "#000000",
+          "count": 29,
+          "pct": 1
+        },
+        {
+          "hex": "#ffffff",
+          "count": 13,
+          "pct": 1
+        },
+        {
+          "hex": "#23252a",
+          "count": 10,
+          "pct": 0
+        },
+        {
+          "hex": "#ffffff",
+          "count": 9,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#08090a",
+      "color_scheme": "dark",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Inter Variable",
+          "count": 2003,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Berkeley Mono",
+          "count": 94,
+          "heading": false,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 32,
+          "count": 12
+        },
+        {
+          "px": 24,
+          "count": 147
+        },
+        {
+          "px": 21,
+          "count": 2
+        },
+        {
+          "px": 17,
+          "count": 976
+        },
+        {
+          "px": 16,
+          "count": 138
+        },
+        {
+          "px": 15,
+          "count": 266
+        },
+        {
+          "px": 14,
+          "count": 59
+        },
+        {
+          "px": 13,
+          "count": 476
+        }
+      ],
+      "heading_font": "Inter Variable",
+      "body_font": "Inter Variable"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 978
+        },
+        {
+          "px": 6,
+          "count": 408
+        },
+        {
+          "px": 1,
+          "count": 184
+        },
+        {
+          "px": 4,
+          "count": 184
+        },
+        {
+          "px": 16,
+          "count": 130
+        },
+        {
+          "px": 24,
+          "count": 118
+        },
+        {
+          "px": 3,
+          "count": 90
+        },
+        {
+          "px": 12,
+          "count": 82
+        },
+        {
+          "px": 20,
+          "count": 70
+        },
+        {
+          "px": 32,
+          "count": 34
+        }
+      ],
+      "grid_aligned_pct": 69,
+      "density": "compact",
+      "unique_count": 24
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 9999,
+          "count": 328
+        },
+        {
+          "px": 4,
+          "count": 111
+        },
+        {
+          "px": 8,
+          "count": 81
+        },
+        {
+          "px": 5,
+          "count": 48
+        },
+        {
+          "px": 6,
+          "count": 3
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "saas",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://vercel.com/templates",
+    "analyzed_at": "2026-04-04T07:26:30.315Z",
+    "page_title": "Find your Template",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#ededed",
+          "count": 623,
+          "pct": 48
+        },
+        {
+          "hex": "#a1a1a1",
+          "count": 368,
+          "pct": 29
+        },
+        {
+          "hex": "#888888",
+          "count": 68,
+          "pct": 5
+        },
+        {
+          "hex": "#0a0a0a",
+          "count": 63,
+          "pct": 5
+        },
+        {
+          "hex": "#ffffff",
+          "count": 61,
+          "pct": 5
+        },
+        {
+          "hex": "#000000",
+          "count": 31,
+          "pct": 2
+        },
+        {
+          "hex": "#7d7d7d",
+          "count": 30,
+          "pct": 2
+        },
+        {
+          "hex": "#111111",
+          "count": 25,
+          "pct": 2
+        },
+        {
+          "hex": "#8f8f8f",
+          "count": 11,
+          "pct": 1
+        },
+        {
+          "hex": "#000000",
+          "count": 3,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#000000",
+      "color_scheme": "dark",
+      "unique_count": 14
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "Geist",
+          "count": 1181,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "Geist Mono",
+          "count": 18,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 32,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 328
+        },
+        {
+          "px": 14,
+          "count": 539
+        },
+        {
+          "px": 13,
+          "count": 278
+        },
+        {
+          "px": 12,
+          "count": 48
+        },
+        {
+          "px": 8,
+          "count": 5
+        }
+      ],
+      "heading_font": "Geist",
+      "body_font": "Geist"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 2,
+          "count": 360
+        },
+        {
+          "px": 12,
+          "count": 243
+        },
+        {
+          "px": 4,
+          "count": 153
+        },
+        {
+          "px": 8,
+          "count": 125
+        },
+        {
+          "px": 11,
+          "count": 100
+        },
+        {
+          "px": 6,
+          "count": 78
+        },
+        {
+          "px": 24,
+          "count": 68
+        },
+        {
+          "px": 20,
+          "count": 60
+        },
+        {
+          "px": 10,
+          "count": 39
+        },
+        {
+          "px": 3,
+          "count": 20
+        }
+      ],
+      "grid_aligned_pct": 52,
+      "density": "compact",
+      "unique_count": 19
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": false,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 6,
+          "count": 66
+        },
+        {
+          "px": 4,
+          "count": 65
+        },
+        {
+          "px": 8,
+          "count": 60
+        },
+        {
+          "px": 9999,
+          "count": 9
+        },
+        {
+          "px": 2,
+          "count": 6
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Soft Wellness",
+      "industry": "developer_tools",
+      "complexity": 100
+    }
+  },
+  {
+    "url": "https://tailwindui.com",
+    "analyzed_at": "2026-04-04T07:26:37.187Z",
+    "page_title": "Official Tailwind UI Components & Templates - Tailwind Plus",
+    "colors": {
+      "palette": [
+        {
+          "hex": "#ffffff",
+          "count": 707,
+          "pct": 74
+        },
+        {
+          "hex": "oklch(0.707 0.022 261.325)",
+          "count": 193,
+          "pct": 20
+        },
+        {
+          "hex": "oklch(0.585 0.233 277.117)",
+          "count": 20,
+          "pct": 2
+        },
+        {
+          "hex": "oklch(0.373 0.034 259.733)",
+          "count": 6,
+          "pct": 1
+        },
+        {
+          "hex": "oklab(0.999994 0.0000455678 0.0000200868 / 0.1)",
+          "count": 5,
+          "pct": 1
+        },
+        {
+          "hex": "oklch(0.13 0.028 261.692)",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "hex": "oklab(0.999994 0.0000455678 0.0000200868 / 0.05)",
+          "count": 4,
+          "pct": 0
+        },
+        {
+          "hex": "oklch(0.656 0.241 354.308)",
+          "count": 3,
+          "pct": 0
+        },
+        {
+          "hex": "oklch(0.551 0.027 264.364)",
+          "count": 2,
+          "pct": 0
+        },
+        {
+          "hex": "oklch(0.673 0.182 276.935)",
+          "count": 2,
+          "pct": 0
+        }
+      ],
+      "dominant_bg": "#ffffff",
+      "color_scheme": "light",
+      "unique_count": 15
+    },
+    "typography": {
+      "fonts": [
+        {
+          "family": "InterVariable",
+          "count": 884,
+          "heading": true,
+          "body": true
+        },
+        {
+          "family": "IBM Plex Mono",
+          "count": 46,
+          "heading": true,
+          "body": true
+        }
+      ],
+      "sizes": [
+        {
+          "px": 96,
+          "count": 1
+        },
+        {
+          "px": 60,
+          "count": 5
+        },
+        {
+          "px": 40,
+          "count": 4
+        },
+        {
+          "px": 24,
+          "count": 8
+        },
+        {
+          "px": 18,
+          "count": 1
+        },
+        {
+          "px": 16,
+          "count": 586
+        },
+        {
+          "px": 14,
+          "count": 272
+        },
+        {
+          "px": 13,
+          "count": 18
+        }
+      ],
+      "heading_font": "InterVariable",
+      "body_font": "InterVariable"
+    },
+    "spacing": {
+      "top_values": [
+        {
+          "px": 8,
+          "count": 442
+        },
+        {
+          "px": 16,
+          "count": 69
+        },
+        {
+          "px": 24,
+          "count": 45
+        },
+        {
+          "px": 12,
+          "count": 40
+        },
+        {
+          "px": 40,
+          "count": 23
+        },
+        {
+          "px": 64,
+          "count": 18
+        },
+        {
+          "px": 32,
+          "count": 11
+        },
+        {
+          "px": 48,
+          "count": 4
+        },
+        {
+          "px": 80,
+          "count": 4
+        },
+        {
+          "px": 160,
+          "count": 4
+        }
+      ],
+      "grid_aligned_pct": 99,
+      "density": "balanced",
+      "unique_count": 22
+    },
+    "layout": {
+      "maxWidth": 1440,
+      "viewportWidth": 1440,
+      "hasSidebar": false,
+      "hasHero": false,
+      "hasStickyHeader": true,
+      "hasFooter": true
+    },
+    "shapes": {
+      "corner_style": "pill",
+      "shadow_style": "subtle",
+      "top_radii": [
+        {
+          "px": 12,
+          "count": 37
+        },
+        {
+          "px": 33554400,
+          "count": 14
+        },
+        {
+          "px": 32,
+          "count": 2
+        },
+        {
+          "px": 16,
+          "count": 1
+        }
+      ]
+    },
+    "overall": {
+      "personality": "Warm Professional",
+      "industry": "general",
+      "complexity": 100
+    }
   }
 ]
