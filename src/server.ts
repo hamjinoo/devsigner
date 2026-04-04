@@ -21,6 +21,8 @@ import { registerScreenshotToCode } from "./tools/screenshot-to-code.js";
 import { registerScaffoldProject } from "./tools/scaffold-project.js";
 import { registerLivePreview } from "./tools/live-preview.js";
 import { registerResponsivePreview } from "./tools/responsive-preview.js";
+import { registerExportTokens } from "./tools/export-tokens.js";
+import { registerDesignCompare } from "./tools/design-compare.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -46,5 +48,7 @@ export function registerAllTools(server: McpServer): void {
   registerScaffoldProject(server);
   registerLivePreview(server);
   registerResponsivePreview(server);
+  registerExportTokens(server);
+  registerDesignCompare(server);
   registerDesignSystemResources(server);
 }

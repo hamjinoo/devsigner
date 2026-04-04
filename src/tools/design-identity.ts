@@ -4,7 +4,7 @@ import { rgbToHex, hslToRgb, rgbToHsl, parseColor, generateShadeScale, type HSL 
 
 // --- Design Personality Archetypes ---
 
-interface DesignPersonality {
+export interface DesignPersonality {
   name: string;
   description: string;
   keywords: string[];
@@ -29,7 +29,7 @@ interface DesignPersonality {
   signature: string;
 }
 
-const PERSONALITIES: DesignPersonality[] = [
+export const PERSONALITIES: DesignPersonality[] = [
   {
     name: "Bold Minimal",
     description: "Extreme restraint with one bold punch. Like Linear or Vercel.",
@@ -188,7 +188,7 @@ const PERSONALITIES: DesignPersonality[] = [
   },
 ];
 
-function matchPersonality(description: string, competitors: string, mood: string): DesignPersonality {
+export function matchPersonality(description: string, competitors: string, mood: string): DesignPersonality {
   const combined = `${description} ${competitors} ${mood}`.toLowerCase();
 
   let best = PERSONALITIES[0];
@@ -208,7 +208,7 @@ function matchPersonality(description: string, competitors: string, mood: string
   return best;
 }
 
-function generateIdentityPalette(personality: DesignPersonality, baseHue: number): Record<string, string> {
+export function generateIdentityPalette(personality: DesignPersonality, baseHue: number): Record<string, string> {
   const satMap = { muted: 0.25, medium: 0.55, vibrant: 0.7, bold: 0.85 };
   const sat = satMap[personality.colorIntensity];
 
@@ -240,7 +240,7 @@ function generateIdentityPalette(personality: DesignPersonality, baseHue: number
   };
 }
 
-function getTypographySystem(voice: string): Record<string, string> {
+export function getTypographySystem(voice: string): Record<string, string> {
   const systems: Record<string, Record<string, string>> = {
     neutral: {
       font_heading: "Inter, Geist, system-ui, sans-serif",
@@ -332,7 +332,7 @@ function getTypographySystem(voice: string): Record<string, string> {
   return systems[voice] || systems["neutral"];
 }
 
-function getSpacingSystem(density: string): Record<string, string> {
+export function getSpacingSystem(density: string): Record<string, string> {
   const systems: Record<string, Record<string, string>> = {
     spacious: {
       page_padding: "64px",
@@ -362,7 +362,7 @@ function getSpacingSystem(density: string): Record<string, string> {
   return systems[density] || systems["balanced"];
 }
 
-function getCornerRadius(style: string): Record<string, string> {
+export function getCornerRadius(style: string): Record<string, string> {
   const map: Record<string, Record<string, string>> = {
     sharp: { sm: "0px", md: "2px", lg: "4px", full: "4px" },
     subtle: { sm: "2px", md: "4px", lg: "6px", full: "8px" },
@@ -372,7 +372,7 @@ function getCornerRadius(style: string): Record<string, string> {
   return map[style] || map["rounded"];
 }
 
-function getShadowSystem(style: string): Record<string, string> {
+export function getShadowSystem(style: string): Record<string, string> {
   const map: Record<string, Record<string, string>> = {
     none: { sm: "none", md: "none", lg: "none" },
     subtle: {
@@ -406,7 +406,7 @@ const MOOD_TO_HUE: Record<string, number> = {
   playful: 330, fun: 330, joy: 50, happy: 50,
 };
 
-function moodToHue(mood: string): number {
+export function moodToHue(mood: string): number {
   const lower = mood.toLowerCase();
   for (const [keyword, hue] of Object.entries(MOOD_TO_HUE)) {
     if (lower.includes(keyword)) return hue;
