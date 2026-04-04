@@ -27,6 +27,9 @@ import { registerBatchReview } from "./tools/batch-review.js";
 import { registerSuggestAnimations } from "./tools/suggest-animations.js";
 import { registerGenerateStyleGuide } from "./tools/generate-style-guide.js";
 import { registerDesignWizard } from "./tools/design-wizard.js";
+import { registerCompeteAnalyze } from "./tools/compete-analyze.js";
+import { registerPerfAudit } from "./tools/perf-audit.js";
+import { registerMigrateStyles } from "./tools/migrate-styles.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -58,5 +61,8 @@ export function registerAllTools(server: McpServer): void {
   registerSuggestAnimations(server);
   registerGenerateStyleGuide(server);
   registerDesignWizard(server);
+  registerCompeteAnalyze(server);
+  registerPerfAudit(server);
+  registerMigrateStyles(server);
   registerDesignSystemResources(server);
 }
