@@ -11,7 +11,7 @@ import { GRID_BASE, SPACING_SCALE, MAX_DISTINCT_COLORS, MAX_DISTINCT_FONT_SIZES 
 // Types
 // ---------------------------------------------------------------------------
 
-interface TechStack {
+export interface TechStack {
   framework: string | null;
   cssFramework: string | null;
   componentLibrary: string | null;
@@ -46,7 +46,7 @@ interface TypographyStat {
   weights: Record<string, number>;
 }
 
-interface ProjectDesignProfile {
+export interface ProjectDesignProfile {
   techStack: TechStack;
   designTokens: DesignToken[];
   tailwindConfig: Record<string, unknown> | null;
@@ -61,7 +61,7 @@ interface ProjectDesignProfile {
 // Helpers — safe file reading
 // ---------------------------------------------------------------------------
 
-async function readFileSafe(filePath: string): Promise<string | null> {
+export async function readFileSafe(filePath: string): Promise<string | null> {
   try {
     return await fsp.readFile(filePath, "utf-8");
   } catch {
@@ -69,7 +69,7 @@ async function readFileSafe(filePath: string): Promise<string | null> {
   }
 }
 
-async function readJsonSafe(filePath: string): Promise<Record<string, unknown> | null> {
+export async function readJsonSafe(filePath: string): Promise<Record<string, unknown> | null> {
   const text = await readFileSafe(filePath);
   if (!text) return null;
   try {
@@ -79,7 +79,7 @@ async function readJsonSafe(filePath: string): Promise<Record<string, unknown> |
   }
 }
 
-async function collectFiles(projectPath: string, patterns: string[]): Promise<string[]> {
+export async function collectFiles(projectPath: string, patterns: string[]): Promise<string[]> {
   const files: string[] = [];
   for (const pattern of patterns) {
     try {
@@ -101,7 +101,7 @@ async function collectFiles(projectPath: string, patterns: string[]): Promise<st
 // 1. Tech stack detection
 // ---------------------------------------------------------------------------
 
-function detectTechStack(pkg: Record<string, unknown> | null): TechStack {
+export function detectTechStack(pkg: Record<string, unknown> | null): TechStack {
   const stack: TechStack = {
     framework: null,
     cssFramework: null,
@@ -174,7 +174,7 @@ function detectTechStack(pkg: Record<string, unknown> | null): TechStack {
 // 2. Tailwind config parsing
 // ---------------------------------------------------------------------------
 
-async function parseTailwindConfig(projectPath: string): Promise<{
+export async function parseTailwindConfig(projectPath: string): Promise<{
   raw: Record<string, unknown> | null;
   configColors: Set<string>;
 }> {
@@ -220,7 +220,7 @@ async function parseTailwindConfig(projectPath: string): Promise<{
 // 3. Design token discovery
 // ---------------------------------------------------------------------------
 
-async function discoverDesignTokens(projectPath: string): Promise<DesignToken[]> {
+export async function discoverDesignTokens(projectPath: string): Promise<DesignToken[]> {
   const tokens: DesignToken[] = [];
 
   // CSS custom properties from globals.css / variables.css / tokens.css / theme.css
@@ -357,7 +357,7 @@ function normalizeHex(hex: string): string {
   return rgb ? rgbToHex(rgb) : hex.toLowerCase();
 }
 
-async function extractProjectColors(
+export async function extractProjectColors(
   projectPath: string,
   configColors: Set<string>
 ): Promise<ColorStat[]> {
@@ -427,7 +427,7 @@ async function extractProjectColors(
 // 5. Spacing extraction
 // ---------------------------------------------------------------------------
 
-async function extractSpacingPatterns(projectPath: string): Promise<SpacingStat[]> {
+export async function extractSpacingPatterns(projectPath: string): Promise<SpacingStat[]> {
   const spacingMap = new Map<string, { px: number; count: number }>();
 
   const spacingProps = new Set([
@@ -511,7 +511,7 @@ async function extractSpacingPatterns(projectPath: string): Promise<SpacingStat[
 // 6. Typography extraction
 // ---------------------------------------------------------------------------
 
-async function extractTypography(projectPath: string): Promise<TypographyStat> {
+export async function extractTypography(projectPath: string): Promise<TypographyStat> {
   const fonts: Record<string, number> = {};
   const sizes: Record<string, number> = {};
   const weights: Record<string, number> = {};
@@ -585,7 +585,7 @@ async function extractTypography(projectPath: string): Promise<TypographyStat> {
 // 7. Insight generation
 // ---------------------------------------------------------------------------
 
-function generateInsights(
+export function generateInsights(
   profile: Omit<ProjectDesignProfile, "insights">
 ): string[] {
   const insights: string[] = [];
@@ -732,7 +732,7 @@ function findNearDuplicateColors(hexColors: string[]): [string, string][] {
 // Format output
 // ---------------------------------------------------------------------------
 
-function formatProfile(profile: ProjectDesignProfile): string {
+export function formatProfile(profile: ProjectDesignProfile): string {
   const lines: string[] = [];
 
   lines.push("# Project Design Profile");

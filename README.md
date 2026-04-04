@@ -1,6 +1,6 @@
 <p align="center">
   <img src="https://img.shields.io/badge/MCP-Server-blue?style=for-the-badge" alt="MCP Server" />
-  <img src="https://img.shields.io/badge/Tools-20-orange?style=for-the-badge" alt="20 Tools" />
+  <img src="https://img.shields.io/badge/Tools-33-orange?style=for-the-badge" alt="33 Tools" />
   <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
   <img src="https://img.shields.io/badge/WCAG_2.1-AA%2FAAA-green?style=for-the-badge" alt="WCAG 2.1" />
@@ -15,12 +15,12 @@
 <p align="center">
   <strong>The complete design toolkit MCP server for developers who can't design.</strong>
   <br />
-  20 tools. Analyze, generate, fix, iterate. From first pixel to Figma handoff.
+  33 tools. Analyze, generate, fix, iterate. From first pixel to Figma handoff.
 </p>
 
 <p align="center">
   <a href="#-quick-start">Quick Start</a> &bull;
-  <a href="#-all-20-tools">Tools</a> &bull;
+  <a href="#-all-33-tools">Tools</a> &bull;
   <a href="#-design-session-flow">Session Flow</a> &bull;
   <a href="#-figma-integration">Figma</a> &bull;
   <a href="#-accessibility">Accessibility</a> &bull;
@@ -55,7 +55,7 @@ You're a developer. You can build anything. But your UIs look like this:
                Score: 23/100
 ```
 
-You don't need a design degree. You need **devsigner** -- 20 MCP tools that review your UI, generate production-ready code, auto-fix issues, and even pull design specs straight from Figma.
+You don't need a design degree. You need **devsigner** -- 33 MCP tools that review your UI, generate production-ready code, auto-fix issues, and even pull design specs straight from Figma.
 
 ---
 
@@ -133,7 +133,7 @@ npm run build
 
 ---
 
-## All 20 Tools
+## All 33 Tools
 
 ### Analysis
 
@@ -143,6 +143,7 @@ npm run build
 | `screenshot_review` | Visual review of existing screenshots. Point it at a screenshot and get design feedback on what the user actually sees. |
 | `scan_project` | Auto-detect your project's tech stack and design patterns. Understands React, Vue, Svelte, Tailwind, CSS modules, and more. |
 | `a11y_audit` | Full WCAG 2.1 accessibility compliance audit at A, AA, or AAA level. Catches contrast failures, missing labels, focus traps, and more. |
+| `batch_review` | Scan entire project, review all UI files, aggregate score + file ranking. |
 
 ### Generation
 
@@ -152,6 +153,10 @@ npm run build
 | `component_suggest` | 20+ well-designed component templates. Pricing cards, login forms, navbars, hero sections, dashboards, and more. Token-based and framework-ready. |
 | `generate_page` | Full page generation. Landing pages, dashboards, pricing pages, login screens, settings panels, and 404 pages -- complete and production-ready. |
 | `design_identity` | Product design personality system. Choose from 6 archetypes to generate a consistent visual identity: typography, colors, spacing, and tone. |
+| `scaffold_project` | Generate complete project structure with tokens, components, pages. |
+| `export_tokens` | Export design tokens as CSS, Tailwind, SCSS, JSON, Figma Tokens. |
+| `generate_style_guide` | Auto-generate visual HTML style guide from identity. |
+| `screenshot_to_code` | Screenshot to code generation via host LLM Vision. |
 
 ### Fixing
 
@@ -159,6 +164,8 @@ npm run build
 |------|-------------|
 | `design_fix` | Auto-correct design issues in your code. Three modes: **safe** (non-breaking only), **moderate** (visual improvements), **aggressive** (full redesign). |
 | `design_iterate` | Automated render, review, fix, re-render loop. Hands-off iterative improvement until the score meets your target. |
+| `suggest_animations` | Detect static UIs and suggest micro-interactions with code. |
+| `design_compare` | Visual before/after comparison with score diff. |
 
 ### Visual
 
@@ -166,6 +173,8 @@ npm run build
 |------|-------------|
 | `render_and_review` | Render your code in a real Chrome browser, capture a screenshot, and get visual feedback on the actual rendered result. |
 | `screenshot_review` | Analyze existing screenshots or mockups for design issues without needing the source code. |
+| `live_preview` | Real-time local preview server with auto-refresh. |
+| `responsive_preview` | Render at mobile/tablet/desktop simultaneously. |
 
 ### Knowledge
 
@@ -190,6 +199,14 @@ npm run build
 | `log_review` | Track review scores over time. See your design quality trend across sessions. |
 | `log_decision` | Record design decisions with reasoning. Build a searchable decision log for your team. |
 | `design_feedback` | Teach devsigner what works and reject what doesn't. The system learns your preferences within a session. |
+
+Configuration: Project-specific settings can be defined in `.devsignerrc.json`.
+
+### Orchestration
+
+| Tool | Description |
+|------|-------------|
+| `design_wizard` | Interactive step-by-step orchestrator that chains tools into a guided design workflow. |
 
 ---
 
@@ -443,7 +460,7 @@ devsigner also exposes design system knowledge as MCP resources that your AI cli
 **Key design decisions:**
 
 - **No API keys needed** -- All analysis runs locally with a deterministic rules engine. No external AI calls.
-- **Zero config** -- Works out of the box. No `.devsignerrc` needed.
+- **Zero config by default** -- Works out of the box. Optionally configure with `.devsignerrc.json`.
 - **Framework-agnostic** -- Parses React, Vue, Svelte, plain HTML/CSS, and Tailwind classes.
 - **Actionable, not vague** -- Every issue comes with a specific, copy-pasteable fix.
 - **Iterative by design** -- Tools compose into loops. Review, fix, re-render, repeat.
@@ -528,10 +545,10 @@ devsigner also exposes design system knowledge as MCP resources that your AI cli
 - [x] ~~Design sessions~~ -- Persistent context across conversations
 - [x] ~~Full page generation~~ -- Complete pages, not just components
 - [x] ~~Design identity system~~ -- Consistent personality across a product
-- [ ] **Custom rules** -- `.devsignerrc.json` for project-specific design systems
+- [x] ~~Custom rules~~ -- `.devsignerrc.json` for project-specific design systems
 - [ ] **Tailwind v4** -- Native `@theme` block support
 - [ ] **Storybook integration** -- Review components in Storybook
-- [ ] **Design diff** -- Compare before/after screenshots automatically
+- [x] ~~Design diff~~ -- Compare before/after screenshots automatically
 - [ ] **Team presets** -- Shared design identities across a team
 - [ ] **VS Code extension** -- Inline design hints in the editor gutter
 
@@ -561,13 +578,15 @@ npx @modelcontextprotocol/inspector node dist/index.js
 
 ```
 src/
-  tools/            # All 20 tool implementations
+  tools/            # All 33 tool implementations
   rules/            # Design rule modules (spacing, color, typography, layout)
   parsers/          # CSS, Tailwind, JSX, inline style parsers
   components/       # Component templates (20+ designs)
   palettes/         # Color palette presets and generation
   resources/        # MCP resource definitions (design system guides)
   context/          # Session and identity management
+  preview/          # Live preview and responsive preview servers
+  orchestration/    # Design wizard and workflow orchestration
   utils/            # Shared utilities (contrast calculation, etc.)
   server.ts         # MCP server setup and tool registration
   index.ts          # Entry point

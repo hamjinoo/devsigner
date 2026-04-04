@@ -37,7 +37,7 @@ interface ResolvedIdentity {
   motionLevel: string;
 }
 
-function identityDataToResolved(id: DesignIdentityData): ResolvedIdentity {
+export function identityDataToResolved(id: DesignIdentityData): ResolvedIdentity {
   return {
     personality: id.personality,
     signature: id.signature,
@@ -120,7 +120,7 @@ function extractGoogleFontsUrl(typography: Record<string, string>): string {
 
 // --- HTML generation ---
 
-function generateHtml(id: ResolvedIdentity): string {
+export function generateHtml(id: ResolvedIdentity): string {
   const googleFontsUrl = extractGoogleFontsUrl(id.typography);
   const fontLink = googleFontsUrl ? `<link rel="stylesheet" href="${googleFontsUrl}">` : "";
 

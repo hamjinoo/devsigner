@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>devsigner -- Design sense for developers who have none</title>
-  <meta name="description" content="20 MCP tools that analyze, generate, fix, and iterate your UI. Open source design toolkit for developers." />
+  <meta name="description" content="33 MCP tools that analyze, generate, fix, and iterate your UI. Open source design toolkit for developers." />
   <meta property="og:title" content="devsigner" />
-  <meta property="og:description" content="Design sense for developers who have none. 20 MCP tools that analyze, generate, fix, and iterate your UI." />
+  <meta property="og:description" content="Design sense for developers who have none. 33 MCP tools that analyze, generate, fix, and iterate your UI." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hamjinoo.github.io/devsigner" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -403,6 +403,7 @@
     .tool-icon.knowledge { background: rgba(136,136,136,0.12); color: var(--text-secondary); }
     .tool-icon.figma { background: rgba(239,68,68,0.12); color: var(--red); }
     .tool-icon.session { background: rgba(59,130,246,0.12); color: var(--accent); }
+    .tool-icon.orchestration { background: rgba(234,179,8,0.12); color: #eab308; }
     .tool-card h3 {
       font-size: 16px;
       font-weight: 700;
@@ -722,9 +723,9 @@
 <section class="hero">
   <div class="container">
     <div class="fade-in">
-      <div class="hero-badge"><span>v0.2</span> &nbsp;Now with 20 MCP tools</div>
+      <div class="hero-badge"><span>v0.6.0</span> &nbsp;Now with 33 MCP tools</div>
       <h1>Design sense for developers who have none.</h1>
-      <p>20 MCP tools that analyze, generate, fix, and iterate your UI. Connect to Claude, Cursor, or any MCP client. Open source.</p>
+      <p>33 MCP tools that analyze, generate, fix, and iterate your UI. Connect to Claude, Cursor, or any MCP client. Open source.</p>
       <div class="hero-ctas">
         <a href="#install" class="btn btn-primary">Get Started</a>
         <a href="https://github.com/hamjinoo/devsigner" target="_blank" rel="noopener" class="btn btn-secondary">
@@ -842,7 +843,7 @@
   <div class="container">
     <div class="fade-in">
       <p class="section-label">Tools</p>
-      <h2 class="section-title">20 tools. Every design problem covered.</h2>
+      <h2 class="section-title">33 tools. Every design problem covered.</h2>
       <p class="section-subtitle">From first review to Figma handoff. Grouped by what they do.</p>
     </div>
     <div class="tools-grid">
@@ -857,6 +858,7 @@
           <li>screenshot_review -- visual analysis</li>
           <li>scan_project -- auto-detect stack</li>
           <li>a11y_audit -- WCAG 2.1 compliance</li>
+          <li>batch_review -- project-wide scoring</li>
         </ul>
       </div>
 
@@ -864,12 +866,16 @@
         <div class="tool-icon generation">G</div>
         <div class="tool-cat">Generation</div>
         <h3>Pages, Components & Colors</h3>
-        <p>Generate complete pages, component templates, color palettes, and design identities from a text description.</p>
+        <p>Generate complete pages, component templates, color palettes, design identities, and full project scaffolds from a text description.</p>
         <ul>
           <li>generate_page -- full page layouts</li>
           <li>component_suggest -- 20+ templates</li>
           <li>color_palette -- complete color systems</li>
           <li>design_identity -- personality archetypes</li>
+          <li>scaffold_project -- full project structure</li>
+          <li>export_tokens -- CSS/Tailwind/SCSS/JSON</li>
+          <li>generate_style_guide -- HTML style guide</li>
+          <li>screenshot_to_code -- vision-based codegen</li>
         </ul>
       </div>
 
@@ -877,10 +883,12 @@
         <div class="tool-icon fixing">F</div>
         <div class="tool-cat">Fixing</div>
         <h3>Auto-Fix & Iterate</h3>
-        <p>Three fix modes: safe, moderate, aggressive. Or let the iterate loop run until your target score is hit.</p>
+        <p>Three fix modes: safe, moderate, aggressive. Or let the iterate loop run until your target score is hit. Compare before and after.</p>
         <ul>
           <li>design_fix -- auto-correct issues</li>
           <li>design_iterate -- loop until target score</li>
+          <li>suggest_animations -- micro-interactions</li>
+          <li>design_compare -- before/after diff</li>
         </ul>
       </div>
 
@@ -888,10 +896,12 @@
         <div class="tool-icon visual">V</div>
         <div class="tool-cat">Visual</div>
         <h3>Render & Screenshot</h3>
-        <p>Render your code in a real browser, capture the result, and review what users actually see.</p>
+        <p>Render your code in a real browser, capture the result, preview responsively, and review what users actually see.</p>
         <ul>
           <li>render_and_review -- live browser render</li>
           <li>screenshot_review -- analyze mockups</li>
+          <li>live_preview -- auto-refresh dev server</li>
+          <li>responsive_preview -- multi-viewport render</li>
         </ul>
       </div>
 
@@ -927,6 +937,16 @@
           <li>save_identity -- reusable identities</li>
           <li>log_review -- track scores over time</li>
           <li>log_decision -- decision history</li>
+        </ul>
+      </div>
+
+      <div class="tool-card fade-in">
+        <div class="tool-icon orchestration">O</div>
+        <div class="tool-cat">Orchestration</div>
+        <h3>Design Wizard</h3>
+        <p>Interactive step-by-step orchestrator that chains tools into a guided design workflow.</p>
+        <ul>
+          <li>design_wizard -- guided workflow</li>
         </ul>
       </div>
 
@@ -1113,7 +1133,7 @@
   <div class="container">
     <div class="fade-in">
       <div class="stats-row">
-        <span><span class="stat-value">20</span> tools</span>
+        <span><span class="stat-value">33</span> tools</span>
         <span class="stats-sep">&middot;</span>
         <span><span class="stat-value">20+</span> components</span>
         <span class="stats-sep">&middot;</span>

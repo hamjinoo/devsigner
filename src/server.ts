@@ -26,6 +26,7 @@ import { registerDesignCompare } from "./tools/design-compare.js";
 import { registerBatchReview } from "./tools/batch-review.js";
 import { registerSuggestAnimations } from "./tools/suggest-animations.js";
 import { registerGenerateStyleGuide } from "./tools/generate-style-guide.js";
+import { registerDesignWizard } from "./tools/design-wizard.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -56,5 +57,6 @@ export function registerAllTools(server: McpServer): void {
   registerBatchReview(server);
   registerSuggestAnimations(server);
   registerGenerateStyleGuide(server);
+  registerDesignWizard(server);
   registerDesignSystemResources(server);
 }
