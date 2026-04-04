@@ -1,10 +1,19 @@
 import type { StyleDeclaration } from "../parsers/css-extractor.js";
 import type { DesignIssue } from "./types.js";
+import type { DevsignerConfig } from "../config/project-config.js";
 import { parseCSSValue, toPx } from "../utils/css-value-parser.js";
 import { GRID_BASE, GRID_PREFERRED, SPACING_SCALE } from "../constants.js";
+import { isRuleIgnored } from "../config/project-config.js";
 
-export function checkSpacing(declarations: StyleDeclaration[]): DesignIssue[] {
+export function checkSpacing(
+  declarations: StyleDeclaration[],
+  config?: DevsignerConfig,
+): DesignIssue[] {
   const issues: DesignIssue[] = [];
+
+  const gridBase = config?.rules.spacing.gridBase ?? GRID_BASE;
+  const gridPreferred = config?.rules.spacing.gridPreferred ?? GRID_PREFERRED;
+  const maxDistinctValues = config?.rules.spacing.maxDistinctValues ?? 6;
 
   const spacingProps = [
     "padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
@@ -25,46 +34,52 @@ export function checkSpacing(declarations: StyleDeclaration[]): DesignIssue[] {
 
     spacingValues.push(px);
 
-    // Check 4px grid alignment
-    if (px % GRID_BASE !== 0) {
-      const nearest = Math.round(px / GRID_BASE) * GRID_BASE;
+    // Check base grid alignment
+    if (px % gridBase !== 0 && !(config && isRuleIgnored(config, "spacing.gridBase"))) {
+      const nearest = Math.round(px / gridBase) * gridBase;
       issues.push({
         severity: "warning",
         category: "spacing",
-        message: `\`${decl.property}: ${decl.value}\` is not aligned to the ${GRID_BASE}px grid.`,
-        suggestion: `Use \`${decl.property}: ${nearest}px\` instead (${GRID_BASE}px grid alignment).`,
+        message: `\`${decl.property}: ${decl.value}\` is not aligned to the ${gridBase}px grid.`,
+        suggestion: `Use \`${decl.property}: ${nearest}px\` instead (${gridBase}px grid alignment).`,
         line: decl.line,
       });
     }
-    // Prefer 8px multiples
-    else if (px % GRID_PREFERRED !== 0 && px > GRID_PREFERRED) {
-      const nearest = Math.round(px / GRID_PREFERRED) * GRID_PREFERRED;
+    // Prefer preferred grid multiples
+    else if (
+      px % gridPreferred !== 0 &&
+      px > gridPreferred &&
+      !(config && isRuleIgnored(config, "spacing.gridPreferred"))
+    ) {
+      const nearest = Math.round(px / gridPreferred) * gridPreferred;
       issues.push({
         severity: "info",
         category: "spacing",
-        message: `\`${decl.property}: ${decl.value}\` — consider using ${GRID_PREFERRED}px multiples for major spacing.`,
-        suggestion: `\`${decl.property}: ${nearest}px\` would follow the ${GRID_PREFERRED}px grid system.`,
+        message: `\`${decl.property}: ${decl.value}\` — consider using ${gridPreferred}px multiples for major spacing.`,
+        suggestion: `\`${decl.property}: ${nearest}px\` would follow the ${gridPreferred}px grid system.`,
         line: decl.line,
       });
     }
   }
 
   // Check spacing consistency
-  const uniqueValues = [...new Set(spacingValues)];
-  if (uniqueValues.length > 6) {
-    const closest = uniqueValues.map((v) => {
-      return SPACING_SCALE.reduce((prev, curr) =>
-        Math.abs(curr - v) < Math.abs(prev - v) ? curr : prev
-      );
-    });
-    const recommended = [...new Set(closest)].sort((a, b) => a - b);
+  if (!(config && isRuleIgnored(config, "spacing.consistency"))) {
+    const uniqueValues = [...new Set(spacingValues)];
+    if (uniqueValues.length > maxDistinctValues) {
+      const closest = uniqueValues.map((v) => {
+        return SPACING_SCALE.reduce((prev, curr) =>
+          Math.abs(curr - v) < Math.abs(prev - v) ? curr : prev
+        );
+      });
+      const recommended = [...new Set(closest)].sort((a, b) => a - b);
 
-    issues.push({
-      severity: "warning",
-      category: "spacing",
-      message: `Found ${uniqueValues.length} different spacing values — this creates visual inconsistency.`,
-      suggestion: `Consolidate to a spacing scale: ${recommended.join(", ")}px.`,
-    });
+      issues.push({
+        severity: "warning",
+        category: "spacing",
+        message: `Found ${uniqueValues.length} different spacing values — this creates visual inconsistency.`,
+        suggestion: `Consolidate to a spacing scale: ${recommended.join(", ")}px.`,
+      });
+    }
   }
 
   return issues;
