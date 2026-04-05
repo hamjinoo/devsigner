@@ -272,14 +272,39 @@ export async function startDashboard(projectPath: string, port = 4567): Promise<
         // Screenshot BEFORE
         const beforeScreenshot = (await page.screenshot({ type: "png", encoding: "base64" })) as string;
 
-        // Get page HTML
-        const pageHTML = await page.content();
+        // Extract clean body content (no styles, just structure + text)
+        const bodyContent = await page.evaluate(() => {
+          const body = document.body;
+          if (!body) return "";
+
+          // Clone body to avoid modifying the actual page
+          const clone = body.cloneNode(true) as HTMLElement;
+
+          // Remove script tags
+          clone.querySelectorAll("script, noscript, link, style, iframe, svg").forEach(el => el.remove());
+
+          // Remove all inline styles
+          clone.querySelectorAll("[style]").forEach(el => el.removeAttribute("style"));
+
+          // Remove class attributes that are CSS-in-JS generated (random hashes)
+          clone.querySelectorAll("[class]").forEach(el => {
+            const classes = el.getAttribute("class") || "";
+            // Keep semantic classes, remove hash-based ones
+            const kept = classes.split(/\s+/).filter(c =>
+              /^[a-z][\w-]*$/i.test(c) && c.length < 30 && !/^(css|sc|emotion|styled|_|__)/i.test(c)
+            ).join(" ");
+            if (kept) el.setAttribute("class", kept);
+            else el.removeAttribute("class");
+          });
+
+          return clone.innerHTML;
+        });
+
         await browser.close();
 
-        // Transform
-        const result = await designTransform(pageHTML, {
+        // Transform the clean content (not the full page with all its CSS)
+        const result = await designTransform(bodyContent, {
           mood: mood as "warm" | "cool" | "neutral" | "bold" | "soft",
-          stripStyles: true,
         });
 
         res.writeHead(200, { "Content-Type": "application/json" });
