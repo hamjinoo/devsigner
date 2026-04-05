@@ -68,7 +68,7 @@ export function scoreConsistency(
 // 2. Hierarchy — Is there clear visual ordering?
 // ---------------------------------------------------------------------------
 
-export function scoreHierarchy(declarations: StyleDeclaration[]): DimensionScore {
+export function scoreHierarchy(declarations: StyleDeclaration[], blocks: StyleBlock[] = []): DimensionScore {
   const findings: string[] = [];
   let penalties = 0;
 
@@ -119,6 +119,26 @@ export function scoreHierarchy(declarations: StyleDeclaration[]): DimensionScore
   if (weights.size <= 1 && fontSizes.length > 5) {
     penalties += 10;
     findings.push("Only 1 font weight — headings and body text look the same");
+  }
+
+  // Button hierarchy check (research: primary/secondary/tertiary distinction is critical)
+  // Detect if there are multiple button-like styles with different visual weights
+  const bgColors = new Set<string>();
+  const borderStyles = new Set<string>();
+  for (const block of blocks) {
+    const hasBg = block.declarations.some((d) => d.property === "background-color" || d.property === "background");
+    const hasBorder = block.declarations.some((d) => d.property === "border" || d.property === "border-color");
+    if (hasBg) {
+      for (const d of block.declarations) {
+        if (d.property === "background-color" || d.property === "background") bgColors.add(d.value);
+      }
+    }
+    if (hasBorder) borderStyles.add("border");
+  }
+  // If there are buttons but all have same styling, flag it
+  if (bgColors.size === 1 && blocks.length > 3) {
+    penalties += 8;
+    findings.push("All elements share the same background — no visual hierarchy between primary and secondary actions");
   }
 
   const score = Math.max(0, 100 - penalties);
@@ -199,7 +219,7 @@ export function scoreAccessibility(
 // 4. Harmony — Color harmony and visual coherence
 // ---------------------------------------------------------------------------
 
-export function scoreHarmony(declarations: StyleDeclaration[]): DimensionScore {
+export function scoreHarmony(declarations: StyleDeclaration[], blocks: StyleBlock[] = []): DimensionScore {
   const findings: string[] = [];
   let penalties = 0;
 
@@ -248,6 +268,21 @@ export function scoreHarmony(declarations: StyleDeclaration[]): DimensionScore {
   if (nearDupes > 0) {
     penalties += nearDupes * 5;
     findings.push(`${nearDupes} near-duplicate color pair(s) — consolidate for cleaner palette`);
+  }
+
+  // Visual overload check (research: using borders + shadows + colors simultaneously = amateur)
+  for (const block of blocks) {
+    const props = new Set(block.declarations.map((d) => d.property));
+    const hasBorder = props.has("border") || props.has("border-color");
+    const hasShadow = props.has("box-shadow");
+    const hasBgColor = props.has("background-color") || props.has("background");
+    const hasOutline = props.has("outline");
+    const visualTechniques = [hasBorder, hasShadow, hasBgColor, hasOutline].filter(Boolean).length;
+    if (visualTechniques >= 3) {
+      penalties += 8;
+      findings.push("Multiple grouping techniques on same element (border + shadow + background) — use one visual technique per grouping");
+      break; // Only flag once
+    }
   }
 
   // Grid alignment of spacing values
@@ -338,8 +373,92 @@ export function scoreDensity(
     findings.push("No spacing values >= 32px — sections may feel cramped");
   }
 
+  // Center-alignment overuse (research: centering everything = amateur anti-pattern)
+  let centerCount = 0;
+  let totalAlignments = 0;
+  for (const d of declarations) {
+    if (d.property === "text-align") {
+      totalAlignments++;
+      if (d.value === "center") centerCount++;
+    }
+  }
+  if (totalAlignments > 2 && centerCount / totalAlignments > 0.7) {
+    penalties += 10;
+    findings.push(`${centerCount}/${totalAlignments} text-align declarations are center — body text should be left-aligned for readability`);
+  }
+
   const score = Math.max(0, 100 - penalties);
   return { name: "Density", score, label: scoreLabel(score), icon: "📦", findings };
+}
+
+// ---------------------------------------------------------------------------
+// 6. Interactivity — Are interactive states designed?
+// Research: "Every user action needs visible feedback"
+// Research: "All interactive elements need hover/active/focus states"
+// ---------------------------------------------------------------------------
+
+export function scoreInteractivity(
+  declarations: StyleDeclaration[],
+  blocks: StyleBlock[],
+  code?: string,
+): DimensionScore {
+  const findings: string[] = [];
+  let penalties = 0;
+
+  // Check for hover states in CSS
+  const hasHover = code ? /(:hover|hover:)/.test(code) : false;
+  const hasFocus = code ? /(:focus|focus:)/.test(code) : false;
+  const hasActive = code ? /(:active|active:)/.test(code) : false;
+  const hasTransition = declarations.some((d) => d.property === "transition" || d.property === "transition-property");
+  const hasDisabled = code ? /(:disabled|disabled:|opacity:\s*0\.[3-5])/.test(code) : false;
+
+  // Count interactive elements (buttons, links, inputs)
+  const hasButtons = code ? /<button|type="submit"|type="button"|\.btn|btn-/i.test(code) : false;
+  const hasInputs = code ? /<input|<textarea|<select/i.test(code) : false;
+  const hasLinks = code ? /<a\s/i.test(code) : false;
+  const interactiveCount = [hasButtons, hasInputs, hasLinks].filter(Boolean).length;
+
+  if (interactiveCount === 0) {
+    return { name: "Interactivity", score: 100, label: "Excellent", icon: "👆", findings: ["No interactive elements detected"] };
+  }
+
+  // Missing hover state
+  if (!hasHover && interactiveCount > 0) {
+    penalties += 20;
+    findings.push("No hover states defined — interactive elements should have visible hover feedback");
+  }
+
+  // Missing focus state
+  if (!hasFocus && (hasInputs || hasButtons)) {
+    penalties += 15;
+    findings.push("No focus states — keyboard users can't see which element is active");
+  }
+
+  // Missing transitions
+  if (!hasTransition && interactiveCount > 0) {
+    penalties += 10;
+    findings.push("No CSS transitions — state changes feel jarring without smooth transitions");
+  }
+
+  // Missing disabled state
+  if (hasButtons && !hasDisabled) {
+    penalties += 5;
+    findings.push("No disabled state styling — buttons should visually indicate when inactive");
+  }
+
+  // Check for cursor: pointer on clickable elements
+  const hasCursorPointer = declarations.some((d) => d.property === "cursor" && d.value === "pointer");
+  if (hasButtons && !hasCursorPointer) {
+    penalties += 5;
+    findings.push("No cursor: pointer on interactive elements");
+  }
+
+  if (penalties === 0) {
+    findings.push("Interactive states are well covered ✓");
+  }
+
+  const score = Math.max(0, 100 - penalties);
+  return { name: "Interactivity", score, label: scoreLabel(score), icon: "👆", findings };
 }
 
 // ---------------------------------------------------------------------------
@@ -352,18 +471,20 @@ export function computeScorecard(
   options?: {
     pageType?: string;
     ranges?: IndustryRanges;
+    code?: string;
   },
 ): DesignScorecard {
   const consistency = scoreConsistency(declarations, options?.ranges);
-  const hierarchy = scoreHierarchy(declarations);
+  const hierarchy = scoreHierarchy(declarations, blocks);
   const accessibility = scoreAccessibility(declarations, blocks);
-  const harmony = scoreHarmony(declarations);
+  const harmony = scoreHarmony(declarations, blocks);
   const density = scoreDensity(declarations, options?.pageType, options?.ranges);
+  const interactivity = scoreInteractivity(declarations, blocks, options?.code);
 
-  const dimensions = [consistency, hierarchy, accessibility, harmony, density];
+  const dimensions = [consistency, hierarchy, accessibility, harmony, density, interactivity];
 
-  // Weighted average
-  const weights = [0.25, 0.20, 0.20, 0.20, 0.15];
+  // Weighted average (research-backed weights)
+  const weights = [0.20, 0.20, 0.15, 0.15, 0.15, 0.15];
   const overall = Math.round(
     dimensions.reduce((sum, dim, i) => sum + dim.score * weights[i], 0),
   );
@@ -371,6 +492,6 @@ export function computeScorecard(
   return {
     overall,
     dimensions,
-    industryPercentile: null, // Can be computed later with reference data
+    industryPercentile: null,
   };
 }

@@ -70,6 +70,7 @@ export function registerDesignReview(server: McpServer): void {
       const scorecard = computeScorecard(parsed.declarations, parsed.blocks, {
         pageType,
         ranges,
+        code,
       });
 
       const lines = [
