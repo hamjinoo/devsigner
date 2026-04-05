@@ -751,6 +751,61 @@ img {
   }
 }
 
+/* --- Focus States (Research: keyboard users need visible focus indicators) --- */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible,
+textarea:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--ds-primary);
+  outline-offset: 2px;
+}
+
+/* Remove default outline, use custom */
+button:focus:not(:focus-visible), a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* --- Disabled States (Research: buttons must indicate when inactive) --- */
+button:disabled, button[disabled], .btn:disabled,
+input:disabled, select:disabled, textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* --- Loading Indicator --- */
+.loading, [class*="loading"], [aria-busy="true"] {
+  position: relative;
+  color: transparent !important;
+}
+
+.loading::after, [class*="loading"]::after, [aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 2px solid var(--ds-border);
+  border-top-color: var(--ds-primary);
+  border-radius: 50%;
+  animation: ds-spin 0.6s linear infinite;
+}
+
+@keyframes ds-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* --- Selection --- */
+::selection {
+  background: var(--ds-primary-light);
+  color: var(--ds-primary);
+}
+
+/* --- Smooth Scroll --- */
+html {
+  scroll-behavior: smooth;
+}
+
 /* --- Transitions --- */
 * {
   transition-property: color, background-color, border-color, box-shadow, transform, opacity;
