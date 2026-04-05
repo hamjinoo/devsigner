@@ -237,6 +237,7 @@ export function renderDashboard(data: DashboardData): string {
             ${infos > 0 ? `<span class="sev sev-info">${infos}</span>` : ""}
           </span>
           <button class="preview-btn" onclick="event.stopPropagation(); loadPreview('${esc(f.relativePath)}', this)">Preview</button>
+          <button class="preview-btn" style="background:#22c55e" onclick="event.stopPropagation(); loadTransform('${esc(f.relativePath)}', this)">Transform</button>
           <span class="expand-icon">&#9660;</span>
         </div>
         ${f.issues.length > 0 ? `<div class="file-details">${issueDetails}</div>` : ""}
@@ -924,6 +925,66 @@ async function loadPreview(filePath, btn) {
   } finally {
     btn.disabled = false;
     btn.textContent = 'Preview';
+  }
+}
+
+async function loadTransform(filePath, btn) {
+  var panelId = 'preview-' + filePath.replace(/[^a-zA-Z0-9]/g, '-');
+  var panel = document.getElementById(panelId);
+  if (!panel) return;
+
+  if (panel.classList.contains('loaded')) {
+    panel.classList.remove('loaded');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Transforming...';
+
+  panel.innerHTML = '<div class="preview-loading"><div class="spinner"></div>Generating design...</div>';
+  panel.classList.add('loaded');
+
+  try {
+    var res = await fetch('/api/transform?file=' + encodeURIComponent(filePath) + '&mood=cool');
+    var data = await res.json();
+
+    if (data.error) {
+      panel.innerHTML = '<div class="preview-loading" style="color:#ef4444">' + escHtml(String(data.error)) + '</div>';
+      return;
+    }
+
+    var tokensHtml = Object.entries(data.tokens || {}).filter(function(e) {
+      return e[1] && e[1].startsWith && e[1].startsWith('#');
+    }).slice(0, 12).map(function(e) {
+      return '<div style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;background:#22222b;border-radius:4px;font-size:11px;font-family:monospace;color:#a1a1aa">' +
+        '<div style="width:12px;height:12px;border-radius:3px;background:' + e[1] + ';border:1px solid #333"></div>' +
+        e[0].replace('--ds-','') + '</div>';
+    }).join(' ');
+
+    panel.innerHTML =
+      '<div class="preview-header">' +
+        '<div style="font-size:13px;color:#a1a1aa">' +
+          '<strong style="color:#22c55e">Design Transform</strong> &middot; ' +
+          escHtml(data.description || '') +
+        '</div>' +
+      '</div>' +
+      '<div class="preview-compare">' +
+        '<div class="preview-side">' +
+          '<div class="preview-side-label">Current Design</div>' +
+          '<img src="data:image/png;base64,' + data.beforeImage + '" alt="Before">' +
+        '</div>' +
+        '<div class="preview-side">' +
+          '<div class="preview-side-label" style="background:#22c55e;color:#fff">Redesigned by devsigner</div>' +
+          '<img src="data:image/png;base64,' + data.afterImage + '" alt="After">' +
+        '</div>' +
+      '</div>' +
+      '<div style="padding:12px;display:flex;flex-wrap:wrap;gap:6px">' + tokensHtml + '</div>';
+
+  } catch (err) {
+    panel.innerHTML = '<div class="preview-loading" style="color:#ef4444">Failed: ' + escHtml(err.message || String(err)) + '</div>';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Transform';
   }
 }
 </script>
