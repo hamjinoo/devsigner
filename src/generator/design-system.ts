@@ -372,6 +372,7 @@ export function generateDesignSystem(config: DesignSystemConfig = {}): Generated
     "--ds-shadow-sm": shadow.sm,
     "--ds-shadow-md": shadow.md,
     "--ds-shadow-lg": shadow.lg,
+    "--ds-mood": config.mood ?? "neutral",
   };
 
   const css = `/* ================================================================

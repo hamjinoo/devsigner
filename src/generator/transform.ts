@@ -11,6 +11,7 @@ import puppeteer from "puppeteer-core";
 import { findChrome, wrapInHTML } from "../tools/render-and-review.js";
 import { generateDesignSystem, type DesignSystemConfig, type GeneratedDesignSystem } from "./design-system.js";
 import { restructureHTML } from "./restructure.js";
+import { transformTailwind } from "./tailwind-transform.js";
 import { detectPageType } from "../context/page-type-detector.js";
 
 export interface TransformOutput {
@@ -28,8 +29,11 @@ export interface TransformOutput {
 function injectDesignSystem(code: string, ds: GeneratedDesignSystem): string {
   const styleTag = `<style id="devsigner-design-system">\n${ds.css}\n</style>`;
 
-  // First, restructure the HTML for better layout
-  const restructured = restructureHTML(code);
+  // First, apply Tailwind class upgrades (if Tailwind code detected)
+  const tailwindUpgraded = transformTailwind(code, ds.tokens["--ds-mood"] ?? "neutral");
+
+  // Then restructure the HTML for better layout
+  const restructured = restructureHTML(tailwindUpgraded);
 
   // If it's a full HTML document, inject into <head>
   if (restructured.includes("<head>")) {
