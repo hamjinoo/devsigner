@@ -272,40 +272,134 @@ export async function startDashboard(projectPath: string, port = 4567): Promise<
         // Screenshot BEFORE
         const beforeScreenshot = (await page.screenshot({ type: "png", encoding: "base64" })) as string;
 
-        // Extract clean body content (no styles, just structure + text)
-        const bodyContent = await page.evaluate(() => {
-          const body = document.body;
-          if (!body) return "";
-
-          // Clone body to avoid modifying the actual page
-          const clone = body.cloneNode(true) as HTMLElement;
-
-          // Remove script tags
-          clone.querySelectorAll("script, noscript, link, style, iframe, svg").forEach(el => el.remove());
-
-          // Remove all inline styles
-          clone.querySelectorAll("[style]").forEach(el => el.removeAttribute("style"));
-
-          // Remove class attributes that are CSS-in-JS generated (random hashes)
-          clone.querySelectorAll("[class]").forEach(el => {
-            const classes = el.getAttribute("class") || "";
-            // Keep semantic classes, remove hash-based ones
-            const kept = classes.split(/\s+/).filter(c =>
-              /^[a-z][\w-]*$/i.test(c) && c.length < 30 && !/^(css|sc|emotion|styled|_|__)/i.test(c)
-            ).join(" ");
-            if (kept) el.setAttribute("class", kept);
-            else el.removeAttribute("class");
-          });
-
-          return clone.innerHTML;
+        // Generate design system tokens
+        const { generateDesignSystem } = await import("../generator/design-system.js");
+        const ds = generateDesignSystem({
+          mood: mood as "warm" | "cool" | "neutral" | "bold" | "soft",
         });
+
+        // DIRECT STYLE INJECTION: walk every element and override visual properties
+        // This keeps layout + content + images intact, only changes appearance
+        await page.evaluate((tokens) => {
+          const allElements = document.querySelectorAll("*");
+          const s = (el: HTMLElement, prop: string, val: string) =>
+            el.style.setProperty(prop, val, "important");
+
+          for (const el of Array.from(allElements) as HTMLElement[]) {
+            const tag = el.tagName.toLowerCase();
+            const computed = window.getComputedStyle(el);
+
+            // Font family for all text
+            if (computed.fontFamily) {
+              s(el, "font-family", "'Inter', -apple-system, sans-serif");
+            }
+
+            // Text color (not on images/svgs)
+            if (tag !== "img" && tag !== "svg" && tag !== "video" && tag !== "canvas") {
+              const currentColor = computed.color;
+              if (currentColor) {
+                // Keep it proportional — dark text stays dark, light text stays light
+                const match = currentColor.match(/\d+/g);
+                if (match) {
+                  const [r, g, b] = match.map(Number);
+                  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                  if (luminance < 0.3) {
+                    s(el, "color", tokens.text);
+                  } else if (luminance > 0.7) {
+                    s(el, "color", tokens.textLight || "#ffffff");
+                  } else {
+                    s(el, "color", tokens.textSecondary);
+                  }
+                }
+              }
+            }
+
+            // Background color — keep proportional
+            const bgColor = computed.backgroundColor;
+            if (bgColor && bgColor !== "rgba(0, 0, 0, 0)" && bgColor !== "transparent") {
+              const match = bgColor.match(/\d+/g);
+              if (match) {
+                const [r, g, b] = match.map(Number);
+                const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+                if (luminance > 0.9) {
+                  s(el, "background-color", tokens.bg);
+                } else if (luminance > 0.7) {
+                  s(el, "background-color", tokens.surface);
+                } else if (luminance < 0.2) {
+                  s(el, "background-color", tokens.dark);
+                } else {
+                  // Mid-tone backgrounds → use primary
+                  s(el, "background-color", tokens.primary);
+                }
+              }
+            }
+
+            // Border radius
+            const radius = parseFloat(computed.borderRadius);
+            if (radius > 0) {
+              s(el, "border-radius", tokens.radius);
+            }
+
+            // Border color
+            if (computed.borderColor && computed.borderStyle !== "none" && computed.borderWidth !== "0px") {
+              s(el, "border-color", tokens.border);
+            }
+
+            // Headings — adjust size and weight
+            if (tag === "h1") {
+              s(el, "font-weight", "800");
+              s(el, "letter-spacing", "-0.03em");
+            } else if (tag === "h2") {
+              s(el, "font-weight", "700");
+              s(el, "letter-spacing", "-0.02em");
+            } else if (tag === "h3" || tag === "h4") {
+              s(el, "font-weight", "600");
+            }
+
+            // Buttons
+            if (tag === "button" || tag === "a" && el.getAttribute("role") === "button") {
+              s(el, "border-radius", tokens.radius);
+              s(el, "font-weight", "500");
+              s(el, "transition", "all 0.15s ease");
+            }
+
+            // Links
+            if (tag === "a" && el.getAttribute("role") !== "button") {
+              s(el, "color", tokens.primary);
+              s(el, "text-decoration", "none");
+            }
+
+            // Box shadows — standardize
+            if (computed.boxShadow && computed.boxShadow !== "none") {
+              s(el, "box-shadow", tokens.shadow);
+            }
+          }
+        }, {
+          text: ds.tokens["--ds-text"],
+          textSecondary: ds.tokens["--ds-text-secondary"],
+          textLight: "#ffffff",
+          bg: ds.tokens["--ds-bg"],
+          surface: ds.tokens["--ds-surface"],
+          dark: ds.tokens["--ds-text"],
+          primary: ds.tokens["--ds-primary"],
+          border: ds.tokens["--ds-border"],
+          radius: ds.tokens["--ds-radius"],
+          shadow: ds.tokens["--ds-shadow-md"],
+        });
+
+        // Wait for reflow
+        await new Promise((r) => setTimeout(r, 500));
+
+        // Screenshot AFTER
+        const afterScreenshot = (await page.screenshot({ type: "png", encoding: "base64" })) as string;
 
         await browser.close();
 
-        // Transform the clean content (not the full page with all its CSS)
-        const result = await designTransform(bodyContent, {
-          mood: mood as "warm" | "cool" | "neutral" | "bold" | "soft",
-        });
+        const result = {
+          afterScreenshot,
+          designSystem: ds,
+          pageType: "unknown",
+        };
 
         res.writeHead(200, { "Content-Type": "application/json" });
         res.end(JSON.stringify({
