@@ -23,16 +23,35 @@ export interface TransformOutput {
 }
 
 /**
+ * Strip existing styles from HTML so our design system takes effect.
+ * Removes <style>, <link rel="stylesheet">, and inline style attributes.
+ */
+function stripExistingStyles(html: string): string {
+  let result = html;
+  // Remove <style> tags and their contents
+  result = result.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "");
+  // Remove <link rel="stylesheet"> tags
+  result = result.replace(/<link[^>]*rel=["']stylesheet["'][^>]*>/gi, "");
+  // Remove inline style attributes (but keep structure)
+  result = result.replace(/\sstyle="[^"]*"/gi, "");
+  result = result.replace(/\sstyle='[^']*'/gi, "");
+  return result;
+}
+
+/**
  * Inject the design system CSS AND restructure HTML layout.
  * Handles both full HTML documents and code fragments.
  */
-function injectDesignSystem(code: string, ds: GeneratedDesignSystem): string {
+function injectDesignSystem(code: string, ds: GeneratedDesignSystem, stripStyles = false): string {
   const styleTag = `<style id="devsigner-design-system">\n${ds.css}\n</style>`;
 
-  // First, apply Tailwind class upgrades (if Tailwind code detected)
-  const tailwindUpgraded = transformTailwind(code, ds.tokens["--ds-mood"] ?? "neutral");
+  // Strip existing styles if requested (for live URL transforms)
+  let processed = stripStyles ? stripExistingStyles(code) : code;
 
-  // Then restructure the HTML for better layout
+  // Apply Tailwind class upgrades (if Tailwind code detected)
+  const tailwindUpgraded = transformTailwind(processed, ds.tokens["--ds-mood"] ?? "neutral");
+
+  // Restructure the HTML for better layout
   const restructured = restructureHTML(tailwindUpgraded);
 
   // If it's a full HTML document, inject into <head>
@@ -67,7 +86,7 @@ ${restructured}
  */
 export async function designTransform(
   code: string,
-  config: DesignSystemConfig = {},
+  config: DesignSystemConfig & { stripStyles?: boolean } = {},
 ): Promise<TransformOutput> {
   // Auto-detect page type
   const pageType = config.pageType ?? detectPageType(code);
@@ -77,7 +96,7 @@ export async function designTransform(
   const ds = generateDesignSystem(fullConfig);
 
   // Create the redesigned code
-  const redesignedCode = injectDesignSystem(code, ds);
+  const redesignedCode = injectDesignSystem(code, ds, config.stripStyles ?? false);
 
   // Render both versions
   const chromePath = await findChrome();

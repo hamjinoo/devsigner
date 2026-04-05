@@ -279,6 +279,7 @@ export async function startDashboard(projectPath: string, port = 4567): Promise<
         // Transform
         const result = await designTransform(pageHTML, {
           mood: mood as "warm" | "cool" | "neutral" | "bold" | "soft",
+          stripStyles: true,
         });
 
         res.writeHead(200, { "Content-Type": "application/json" });
