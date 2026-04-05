@@ -119,15 +119,83 @@ interface ColorPalette {
   textMuted: string;
 }
 
-function generatePalette(config: DesignSystemConfig): ColorPalette {
+function hexToHsl(hex: string): HSL | null {
+  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  if (!result) return null;
+  let r = parseInt(result[1], 16) / 255;
+  let g = parseInt(result[2], 16) / 255;
+  let b = parseInt(result[3], 16) / 255;
+  const max = Math.max(r, g, b), min = Math.min(r, g, b);
+  let h = 0, s = 0;
+  const l = (max + min) / 2;
+  if (max !== min) {
+    const d = max - min;
+    s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+    switch (max) {
+      case r: h = ((g - b) / d + (g < b ? 6 : 0)) * 60; break;
+      case g: h = ((b - r) / d + 2) * 60; break;
+      case b: h = ((r - g) / d + 4) * 60; break;
+    }
+  }
+  return { h, s, l };
+}
+
+function pickPrimaryFromReferences(refs: NormalizedReference[], mood: string, industry?: string): { h: number; s: number } {
+  // Try to find a good primary color from reference sites
+  const candidates: Array<{ hex: string; h: number; s: number; score: number }> = [];
+
+  for (const ref of refs) {
+    for (const color of ref.colors.palette.slice(0, 5)) {
+      const hsl = hexToHsl(color.hex);
+      if (!hsl) continue;
+      // Skip near-black, near-white, and very desaturated colors
+      if (hsl.l < 0.15 || hsl.l > 0.85 || hsl.s < 0.15) continue;
+
+      let score = color.percentage; // Higher usage = more relevant
+      // Boost if in the "right" hue range for the mood
+      const targetHue = moodToHue(mood, industry);
+      const hueDist = Math.min(Math.abs(hsl.h - targetHue), 360 - Math.abs(hsl.h - targetHue));
+      if (hueDist < 60) score += 10;
+
+      candidates.push({ hex: color.hex, h: hsl.h, s: hsl.s * 100, score });
+    }
+  }
+
+  if (candidates.length > 0) {
+    candidates.sort((a, b) => b.score - a.score);
+    return { h: candidates[0].h, s: candidates[0].s };
+  }
+
+  // Fallback to mood-based generation
+  return { h: moodToHue(mood, industry), s: moodToSaturation(mood) };
+}
+
+function generatePalette(config: DesignSystemConfig, refs: NormalizedReference[]): ColorPalette {
   const mood = config.mood ?? "neutral";
-  const hue = moodToHue(mood, config.industry);
-  const sat = moodToSaturation(mood);
   const dark = config.darkMode ?? false;
 
+  // If user provided primary color, use it
+  let hue: number, sat: number;
+  if (config.primaryColor) {
+    const hsl = hexToHsl(config.primaryColor);
+    if (hsl) {
+      hue = hsl.h;
+      sat = hsl.s * 100;
+    } else {
+      const picked = pickPrimaryFromReferences(refs, mood, config.industry);
+      hue = picked.h;
+      sat = picked.s;
+    }
+  } else {
+    // Learn from reference sites
+    const picked = pickPrimaryFromReferences(refs, mood, config.industry);
+    hue = picked.h;
+    sat = picked.s;
+  }
+
   const primary = generateShadeScale(hue, sat);
-  const neutral = generateShadeScale(hue, 8); // Very desaturated
-  const accentHue = (hue + 150) % 360; // Complementary-ish
+  const neutral = generateShadeScale(hue, 8);
+  const accentHue = (hue + 150) % 360;
   const accent = generateShadeScale(accentHue, Math.min(sat + 15, 80));
 
   return {
@@ -157,20 +225,28 @@ interface TypographySystem {
 }
 
 function generateTypography(config: DesignSystemConfig, refs: NormalizedReference[]): TypographySystem {
-  // Pick font from references or defaults
+  // Pick font from references — use what successful sites in this industry use
   const topFonts = new Map<string, number>();
+  const skipFonts = new Set(["inherit", "initial", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica", "Arial", "sans-serif", "serif", "monospace", ""]);
+
   for (const ref of refs) {
     for (const f of ref.typography.fonts) {
-      const name = f.family.replace(/['"]/g, "");
-      if (!name || name === "inherit" || name.length > 50) continue;
+      const name = f.family.replace(/['"]/g, "").trim();
+      if (skipFonts.has(name) || name.length > 40 || name.length < 2) continue;
       topFonts.set(name, (topFonts.get(name) ?? 0) + f.count);
     }
   }
 
+  const sortedFonts = [...topFonts.entries()].sort(([, a], [, b]) => b - a);
   const personality = config.personality ?? "";
   let fontFamily: string;
+
   if (/editorial|elegant/i.test(personality)) {
     fontFamily = "'Georgia', 'Times New Roman', serif";
+  } else if (sortedFonts.length > 0 && sortedFonts[0][1] > 10) {
+    // Use the most popular font from reference sites
+    const refFont = sortedFonts[0][0];
+    fontFamily = `'${refFont}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
   } else {
     fontFamily = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
   }
@@ -265,7 +341,7 @@ function componentShadow(personality?: string): { sm: string; md: string; lg: st
 
 export function generateDesignSystem(config: DesignSystemConfig = {}): GeneratedDesignSystem {
   const refs = getReferencesForContext(config.industry, config.personality);
-  const palette = generatePalette(config);
+  const palette = generatePalette(config, refs);
   const typo = generateTypography(config, refs);
   const spacing = generateSpacing();
   const radius = componentRadius(config.personality);
@@ -566,12 +642,42 @@ footer, [class*="footer"] {
 /* --- Grid / Flex Utilities --- */
 [class*="grid"] {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: ${spacing["6"]};
 }
 
 [class*="flex"] {
   display: flex;
   gap: ${spacing["4"]};
+  align-items: center;
+}
+
+[class*="flex-col"] {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* --- Feature/Pricing Sections --- */
+[class*="feature"], [class*="pricing"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: ${spacing["6"]};
+}
+
+/* --- CTA Sections --- */
+[class*="cta"] {
+  text-align: center;
+  padding: ${spacing["16"]} ${spacing["6"]};
+  background: var(--ds-surface);
+  border-radius: var(--ds-radius);
+}
+
+/* --- Centered content utility --- */
+[class*="center"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 /* --- Dividers --- */
