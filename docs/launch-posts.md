@@ -1,141 +1,183 @@
-# Launch Posts
+# Launch Posts — devsigner v2
 
 ## Hacker News — Show HN
 
-**Title:** Show HN: devsigner – 23 MCP tools that give developers design sense
+**Title:** Show HN: devsigner – MCP server that redesigns your UI code (before/after screenshots)
 
 **Post:**
 
-I built an MCP server that solves the biggest pain point I've had as a developer for years: **I can code anything, but my UIs look like they were designed by a database.**
+I built an MCP server that does something no other developer tool does: **it takes your existing UI code and generates a professional redesign with before/after screenshots.**
 
-**What it does:**
-- `design_review` — paste your code, get a design score out of 100 with specific fixes
-- `design_identity` — describe your product, get a complete design personality (not just colors — where to be bold, where to restrain)
-- `generate_page` — full landing pages, dashboards, pricing pages with real design opinions
-- `design_fix` — auto-corrects spacing, contrast, typography issues
-- `analyze_url` — study any website's design patterns (I analyzed 30 top sites to build the trend database)
-- `a11y_audit` — WCAG 2.1 accessibility compliance
-- Figma integration, persistent sessions, and more
+Not a linter. Not a template. An actual design generator.
 
-**Key insight:** Every AI design tool generates the same safe, generic UI (white background, blue button, rounded card). devsigner has a "personality system" — 6 archetypes (Bold Minimal, Warm Professional, Energetic Pop, etc.) that make actual design decisions, not just safe ones.
+**How it works:**
 
-**How it works:** Add one line to your Claude/Cursor config, then just talk naturally: "review my component", "make me a fintech dashboard like Stripe but warmer."
+1. Point it at your project: `devsigner serve ./my-app`
+2. Dashboard opens with every UI file scored across 5 dimensions (Consistency, Hierarchy, Accessibility, Harmony, Density)
+3. Click "Transform" on any file → see your code rendered as-is (Before) and redesigned with a complete design system (After)
+4. The design system is generated from patterns learned from 101 analyzed sites (Stripe, Linear, Vercel, Notion, etc.)
+
+**The key difference from v0/Lovable:**
+- They build new apps from scratch (0→1)
+- devsigner improves *existing* projects (1→10)
+- You built your app with Claude Code/Cursor? Great. devsigner makes it look professional.
+
+**What it actually generates:**
+- Complete CSS design system (color palette, typography scale, spacing, component styles)
+- HTML layout restructuring (nav flexbox, hero centering, card grids, section spacing)
+- Tailwind class upgrades (better colors, proper spacing, shadows, hover states)
+- All based on what real successful sites actually use, not textbook rules
+
+**39 MCP tools** including: design_review (with screenshots), design_transform (full redesign), design_compare_reference (compare against Stripe/Linear/Vercel), design_fix (before/after), and more.
 
 - npm: `npx -y devsigner`
 - GitHub: https://github.com/hamjinoo/devsigner
-- Landing page: https://hamjinoo.github.io/devsigner/
-- It's open source (MIT), runs locally, no API keys needed.
+- Open source (MIT), runs locally, no API keys needed.
 
-Built the entire thing in one day with Claude Code. The design trend data comes from real analysis of Stripe, Linear, Notion, Vercel, and 26 other sites.
+The scoring thresholds aren't hardcoded rules — they're statistical ranges (p25/median/p75) computed from 101 real sites. When devsigner says "you have too many colors," it means "SaaS sites typically use 11-15 colors (median 13), you have 22."
 
 ---
 
 ## Reddit — r/webdev
 
-**Title:** I built an MCP server that reviews your UI code and tells you exactly what's wrong with the design (open source)
+**Title:** I made a tool that takes your ugly UI code and shows you what it would look like with proper design [open source]
 
 **Post:**
 
-As a developer, I've always struggled with design. I can build a full-stack app but I can't pick two colors that look good together. Sound familiar?
+You know that feeling when you build something and it *works* but looks like it was designed by a database? That's been my whole career.
 
-So I built **devsigner** — an MCP server with 23 tools that plugs into Claude or Cursor and gives you design sense:
+So I built **devsigner** — an MCP server that redesigns your existing code. Not linting. Not suggesting. Actually redesigning.
 
-**The cool parts:**
-- Paste your code → get a design score with specific fixes ("padding 13px? Use 12px. That's the 4px grid.")
-- Describe your product → get a complete design identity, not just a color palette
-- It studied 30 real sites (Stripe, Linear, Notion) and knows what's actually trending
-- WCAG accessibility audit built in
-- Figma integration — read your design file, convert to code
+**Here's what happens:**
 
-**What makes it different from v0/Lovable:**
-Those tools generate new projects. devsigner improves your existing code. Think of it as ESLint but for design.
+Run `devsigner serve ./your-project` → browser opens with a dashboard showing:
+- Every UI file in your project with a 5-dimension design scorecard
+- Click "Transform" on any file → Before/After screenshots side by side
+- The "After" has a complete design system: proper typography scale, color palette, spacing rhythm, component styles
 
-`npx -y devsigner` to try it. Open source, MIT licensed.
+**What makes it different:**
+- It learned design patterns from 101 real sites (Stripe, Linear, Notion, Vercel, etc.)
+- It detects your page type (landing page? dashboard? pricing page?) and applies different standards
+- Recommendations are based on data, not opinions: "SaaS sites use 11-15 colors (median 13), you have 22"
+- It restructures your HTML layout (nav → flexbox, cards → grid, hero → centered)
+- It upgrades Tailwind classes (adds proper padding, shadows, hover states)
 
-GitHub: https://github.com/hamjinoo/devsigner
+**It's NOT:**
+- A Figma replacement
+- A competitor to v0/Lovable (they build new apps, this improves existing ones)
+- Just a linter (it generates actual design, not just warnings)
 
-Would love feedback from anyone who's struggled with the same problem.
+Free, open source (MIT), runs locally.
+- npm: `npx -y devsigner`
+- GitHub: https://github.com/hamjinoo/devsigner
 
 ---
 
 ## Reddit — r/reactjs
 
-**Title:** Open source MCP server that reviews your React components for design issues (spacing, contrast, typography)
+**Title:** Built a design tool for React devs who can't design (MCP server, generates before/after screenshots)
 
 **Post:**
 
-Built this because I was tired of my React components looking "developer-made."
+I can build a full React app in a weekend. But ask me to make it look good? I'll spend 3 hours picking button colors and end up with something that looks like 2012.
 
-**devsigner** is an MCP server (works with Claude Desktop, Cursor, Windsurf) that:
+**devsigner** solves this. It's an MCP server (works with Claude Code, Cursor, etc.) with 39 design tools:
 
-1. Reviews your JSX/TSX for design issues — catches bad spacing (13px → use 12px), low contrast, inconsistent typography
-2. Auto-fixes the issues and returns corrected code
-3. Generates components and full pages with proper design tokens
-4. Runs a WCAG 2.1 accessibility audit
+**The one you'll use most:** `design_transform`
+- Paste your React component
+- It generates a complete design system (colors, typography, spacing) learned from 101 real sites
+- Returns before/after screenshots
+- Gives you the redesigned code
 
-It understands Tailwind classes, inline styles, and CSS. No build step needed — just `npx -y devsigner`.
+**Works with Tailwind:** Automatically upgrades your classes — adds proper padding to buttons, shadows to cards, responsive grid columns, hover states.
 
-The design rules are based on analysis of 30 top sites. For example: 83% use pill corners (border-radius 16px+), Inter and Geist are the dominant fonts, 47% use dark mode.
+**Works with plain CSS too:** Injects a complete CSS design system with custom properties.
 
-https://github.com/hamjinoo/devsigner
-
----
-
-## Dev.to
-
-**Title:** I analyzed 30 top websites and built an MCP server that teaches your IDE design sense
-
-**Tags:** mcp, design, react, opensource, webdev
-
-*(Use the HN post as the base, expand with code examples and screenshots)*
+- npm: `npx -y devsigner`
+- GitHub: https://github.com/hamjinoo/devsigner
 
 ---
 
-## X/Twitter
+## X/Twitter Thread
 
-**Thread:**
+**Tweet 1:**
+I built a tool that takes your ugly UI code and shows you exactly how it should look.
 
-1/ I built devsigner — an MCP server that gives developers design sense.
+Before → After screenshots. Real design, not linting.
 
-23 tools. Analyzes your UI, generates pages, fixes issues, audits accessibility.
+It learned from 101 sites (Stripe, Linear, Notion). Open source.
 
-Open source. `npx -y devsigner`
+🔗 github.com/hamjinoo/devsigner
 
-🧵 Here's what I learned building it:
+**Tweet 2:**
+How it works:
 
-2/ The biggest insight: AI design tools all generate the SAME design.
+`devsigner serve ./your-project`
 
-White bg. Blue button. Rounded card. Inter font.
+→ Dashboard opens
+→ Every file scored on 5 dimensions
+→ Click "Transform" on any file
+→ See your design vs what devsigner generates
 
-It's "safe." It's also forgettable. Every SaaS looks identical.
+No Figma. No designer. Just better code.
 
-3/ So I built a "personality system" — 6 archetypes based on real products:
+**Tweet 3:**
+The scoring isn't random rules.
 
-- Bold Minimal (Linear, Vercel)
-- Warm Professional (Stripe, Mercury)
-- Energetic Pop (Duolingo, Discord)
-- Elegant Editorial (Notion, Medium)
-- Data Dense (GitHub, Grafana)
-- Soft Wellness (Calm, Headspace)
+It analyzed 101 real sites and computed statistical ranges:
+- "SaaS sites use 11-15 colors (median 13)"
+- "Landing page hero padding: 48-80px"
+- "Top fonts: Inter, system-ui, SF Pro"
 
-4/ I analyzed 30 real sites to validate.
+Your code is scored against real data, not textbook theory.
 
-Results:
-- 83% use pill corners (16px+)
-- 50/47 light/dark split
-- Inter + Geist dominate
-- Only 23% use sticky headers (surprising)
+**Tweet 4:**
+Who this is for:
 
-This data feeds back into the tool.
+✅ Developers who build with Claude Code / Cursor
+✅ Solo devs who can't afford a designer
+✅ Teams that want design quality gates on PRs
+✅ Anyone whose UI "works but looks meh"
 
-5/ The key positioning:
+❌ Not for: replacing Figma, competing with Lovable
 
-Lovable creates 0→1 (new projects)
-devsigner makes 1→10 (improves existing)
+**Tweet 5:**
+39 MCP tools. Open source. MIT license.
+Runs locally. No API keys.
 
-Nobody else does design review for existing codebases.
+`npx -y devsigner`
 
-That's the moat.
+github.com/hamjinoo/devsigner
 
-GitHub: https://github.com/hamjinoo/devsigner
-npm: npx -y devsigner
+---
+
+## Dev.to Article
+
+**Title:** How I Built a Design Generator That Learns From Real Sites (Not Rules)
+
+**Subtitle:** From "your spacing is wrong" to "here's what Stripe does — and here's your code redesigned"
+
+*[Article should include actual Before/After screenshots, the radar chart scorecard, and code examples. Focus on the technical approach: reference-based intelligence vs rule-based linting.]*
+
+**Key sections:**
+1. The problem: developers can code but can't design
+2. Why linters don't work (hardcoded rules vs real-world patterns)
+3. The approach: learn from 101 real sites
+4. How the design system generator works
+5. Before/After examples
+6. How to use it (npm install, MCP config)
+7. What's next
+
+---
+
+## Product Hunt
+
+**Tagline:** The design assistant for developers who can't design
+
+**Description:**
+devsigner takes your existing UI code and generates a professional redesign. Not a linter — a design generator. Learned from 101 real sites (Stripe, Linear, Notion). Shows before/after screenshots. Works as an MCP server with Claude Code/Cursor.
+
+**Topics:** Developer Tools, Design Tools, AI, Open Source
+
+**Maker comment:**
+"I can build anything but my UIs always look like they were designed by a database. So I built the tool I wished existed — one that doesn't just tell me what's wrong, but shows me what it should look like."
