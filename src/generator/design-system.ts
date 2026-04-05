@@ -11,6 +11,7 @@
 
 import { getRangesForContext, type IndustryRanges } from "../data/reference-ranges.js";
 import { getReferencesForContext, type NormalizedReference } from "../data/reference-db.js";
+import { getPatternForCategory, getPatternForAll, type DesignPattern } from "../data/pattern-matcher.js";
 import type { PageType } from "../context/page-type-detector.js";
 
 // ---------------------------------------------------------------------------
@@ -243,27 +244,53 @@ function generateTypography(config: DesignSystemConfig, refs: NormalizedReferenc
 
   if (/editorial|elegant/i.test(personality)) {
     fontFamily = "'Georgia', 'Times New Roman', serif";
+  } else if (pattern.bodyFont && pattern.bodyFont !== "Inter" && pattern.sampleSize >= 3) {
+    // Use the most popular font from crawled sites in this category
+    fontFamily = `'${pattern.bodyFont}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
   } else if (sortedFonts.length > 0 && sortedFonts[0][1] > 10) {
-    // Use the most popular font from reference sites
     const refFont = sortedFonts[0][0];
     fontFamily = `'${refFont}', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif`;
   } else {
     fontFamily = "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif";
   }
 
-  // Type scale: 1.25 ratio (Major Third)
-  const base = 16;
-  const ratio = 1.25;
-  const sizes = {
-    xs:   Math.round(base / ratio / ratio),
-    sm:   Math.round(base / ratio),
-    base: base,
-    lg:   Math.round(base * ratio),
-    xl:   Math.round(base * ratio * ratio),
-    "2xl": Math.round(base * ratio * ratio * ratio),
-    "3xl": Math.round(base * ratio * ratio * ratio * ratio),
-    "4xl": Math.round(base * ratio * ratio * ratio * ratio * ratio),
-  };
+  // Type scale: from crawled data (real sites) or fallback to 1.25 ratio
+  const pattern = config.industry
+    ? getPatternForCategory(config.industry)
+    : getPatternForAll();
+
+  // Use actual sizes from crawled sites if available
+  const crawledSizes = pattern.topTypeSizes;
+  let sizes: Record<string, number>;
+
+  if (crawledSizes.length >= 6) {
+    // Map crawled sizes to our scale positions
+    const sorted = [...crawledSizes].sort((a, b) => a - b);
+    sizes = {
+      xs:   sorted[0] ?? 10,
+      sm:   sorted[Math.floor(sorted.length * 0.15)] ?? 13,
+      base: sorted[Math.floor(sorted.length * 0.3)] ?? 16,
+      lg:   sorted[Math.floor(sorted.length * 0.45)] ?? 18,
+      xl:   sorted[Math.floor(sorted.length * 0.6)] ?? 20,
+      "2xl": sorted[Math.floor(sorted.length * 0.7)] ?? 24,
+      "3xl": sorted[Math.floor(sorted.length * 0.85)] ?? 32,
+      "4xl": sorted[sorted.length - 1] ?? 48,
+    };
+  } else {
+    // Fallback: 1.25 ratio (Major Third)
+    const base = 16;
+    const ratio = 1.25;
+    sizes = {
+      xs:   Math.round(base / ratio / ratio),
+      sm:   Math.round(base / ratio),
+      base: base,
+      lg:   Math.round(base * ratio),
+      xl:   Math.round(base * ratio * ratio),
+      "2xl": Math.round(base * ratio * ratio * ratio),
+      "3xl": Math.round(base * ratio * ratio * ratio * ratio),
+      "4xl": Math.round(base * ratio * ratio * ratio * ratio * ratio),
+    };
+  }
 
   return {
     fontFamily,
@@ -307,7 +334,14 @@ function generateSpacing(): Record<string, string> {
 // Component styles
 // ---------------------------------------------------------------------------
 
-function componentRadius(personality?: string): string {
+function componentRadius(personality?: string, industry?: string): string {
+  // Try crawled data first
+  const pattern = industry ? getPatternForCategory(industry) : getPatternForAll();
+  if (pattern.sampleSize >= 3 && pattern.avgBorderRadius > 0) {
+    return `${pattern.avgBorderRadius}px`;
+  }
+
+  // Fallback to personality-based
   if (/bold|minimal/i.test(personality ?? "")) return "6px";
   if (/soft|wellness/i.test(personality ?? "")) return "16px";
   if (/editorial|elegant/i.test(personality ?? "")) return "2px";
@@ -344,7 +378,7 @@ export function generateDesignSystem(config: DesignSystemConfig = {}): Generated
   const palette = generatePalette(config, refs);
   const typo = generateTypography(config, refs);
   const spacing = generateSpacing();
-  const radius = componentRadius(config.personality);
+  const radius = componentRadius(config.personality, config.industry);
   const shadow = componentShadow(config.personality);
   const pageType = config.pageType ?? "landing";
 
