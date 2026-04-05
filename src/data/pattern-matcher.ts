@@ -234,15 +234,18 @@ export function extractPattern(sites: CrawledSite[]): DesignPattern {
   const shadowStyles = sites.map(s => s.shapes.shadowStyle);
   const dominantShadowStyle = mode(shadowStyles) ?? "subtle";
 
-  // Button pattern
-  const allButtons = sites.flatMap(s => s.components.buttons).filter(b => b.fontSize > 0);
+  // Button pattern — filter out zero-padding buttons (computed style artifacts)
+  const allButtons = sites.flatMap(s => s.components.buttons)
+    .filter(b => b.fontSize > 0 && b.padding !== "0px 0px" && b.padding !== "0px 0px");
   let buttonPattern: DesignPattern["buttonPattern"] = null;
   if (allButtons.length > 0) {
+    // Filter paddings to only real ones
+    const validPaddings = allButtons.map(b => b.padding).filter(p => !p.startsWith("0px"));
     buttonPattern = {
-      padding: mode(allButtons.map(b => b.padding)) ?? "8px 16px",
+      padding: mode(validPaddings) ?? "10px 20px",
       fontSize: Math.round(median(allButtons.map(b => b.fontSize))),
       fontWeight: mode(allButtons.map(b => b.fontWeight)) ?? "500",
-      borderRadius: Math.round(median(allButtons.map(b => b.borderRadius))),
+      borderRadius: Math.round(median(allButtons.filter(b => b.borderRadius > 0).map(b => b.borderRadius))),
     };
   }
 

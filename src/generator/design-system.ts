@@ -375,12 +375,29 @@ function componentShadow(personality?: string): { sm: string; md: string; lg: st
 
 export function generateDesignSystem(config: DesignSystemConfig = {}): GeneratedDesignSystem {
   const refs = getReferencesForContext(config.industry, config.personality);
+  const crawledPattern = config.industry
+    ? getPatternForCategory(config.industry)
+    : getPatternForAll();
   const palette = generatePalette(config, refs);
   const typo = generateTypography(config, refs);
   const spacing = generateSpacing();
   const radius = componentRadius(config.personality, config.industry);
   const shadow = componentShadow(config.personality);
   const pageType = config.pageType ?? "landing";
+  const btnPad = crawledPattern.buttonPattern?.padding ?? `${spacing["3"]} ${spacing["6"]}`;
+  const btnRadius = crawledPattern.buttonPattern?.borderRadius
+    ? `${crawledPattern.buttonPattern.borderRadius}px`
+    : "var(--ds-radius)";
+  const btnFontSize = crawledPattern.buttonPattern?.fontSize
+    ? `${crawledPattern.buttonPattern.fontSize}px`
+    : typo.scale.sm.size;
+  const btnWeight = crawledPattern.buttonPattern?.fontWeight ?? "500";
+  const cardPad = crawledPattern.cardPattern?.padding
+    ? `${crawledPattern.cardPattern.padding}px`
+    : spacing["6"];
+  const cardRadius = crawledPattern.cardPattern?.borderRadius
+    ? `${crawledPattern.cardPattern.borderRadius}px`
+    : "var(--ds-radius)";
 
   // Section spacing based on page type
   const sectionPadding = (pageType === "dashboard" || pageType === "settings") ? "32px" : "80px";
@@ -534,13 +551,13 @@ button, [type="button"], [type="submit"], .btn, [class*="button"], [class*="btn"
   align-items: center;
   justify-content: center;
   gap: ${spacing["2"]};
-  padding: ${spacing["3"]} ${spacing["6"]};
-  font-size: ${typo.scale.sm.size};
-  font-weight: 500;
+  padding: ${btnPad};
+  font-size: ${btnFontSize};
+  font-weight: ${btnWeight};
   font-family: inherit;
   line-height: 1;
   border: 1px solid transparent;
-  border-radius: var(--ds-radius);
+  border-radius: ${btnRadius};
   cursor: pointer;
   transition: all 0.15s ease;
   background: var(--ds-primary);
@@ -574,8 +591,8 @@ button[class*="outline"]:hover, .btn-outline:hover, .btn-secondary:hover {
 [class*="card"], .card, article {
   background: var(--ds-surface);
   border: 1px solid var(--ds-border);
-  border-radius: var(--ds-radius);
-  padding: ${spacing["6"]};
+  border-radius: ${cardRadius};
+  padding: ${cardPad};
   box-shadow: var(--ds-shadow-sm);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
