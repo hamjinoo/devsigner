@@ -267,6 +267,11 @@ function generateTypography(config: DesignSystemConfig, refs: NormalizedReferenc
   }
 
   const sortedFonts = [...topFonts.entries()].sort(([, a], [, b]) => b - a);
+  // Load crawled pattern data first
+  const pattern = config.industry
+    ? getPatternForCategory(config.industry)
+    : getPatternForAll();
+
   const personality = config.personality ?? "";
   let fontFamily: string;
 
@@ -283,9 +288,6 @@ function generateTypography(config: DesignSystemConfig, refs: NormalizedReferenc
   }
 
   // Type scale: from crawled data (real sites) or fallback to 1.25 ratio
-  const pattern = config.industry
-    ? getPatternForCategory(config.industry)
-    : getPatternForAll();
 
   // Use actual sizes from crawled sites if available
   const crawledSizes = pattern.topTypeSizes;
