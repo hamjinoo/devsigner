@@ -46,7 +46,7 @@ ${close}`;
 
 function restructureHero(html: string): string {
   return html.replace(
-    /(<(?:div|section)[^>]*class="[^"]*hero[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
+    /(<(?:div|section)[^>]*(?:class|className)="[^"]*hero[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
     (match, open: string, inner: string, close: string) => {
       // Add centering and padding
       const heroStyle = "display:flex;flex-direction:column;align-items:center;text-align:center;padding:96px 24px;max-width:800px;margin:0 auto";
@@ -84,9 +84,9 @@ function restructureHero(html: string): string {
 function restructureCards(html: string): string {
   // Find a container with multiple .card children
   return html.replace(
-    /(<(?:div|section)[^>]*class="[^"]*grid[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
+    /(<(?:div|section)[^>]*(?:class|className)="[^"]*grid[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
     (match, open: string, inner: string, close: string) => {
-      const cardCount = (inner.match(/class="[^"]*card[^"]*"/gi) || []).length;
+      const cardCount = (inner.match(/(?:class|className)="[^"]*card[^"]*"/gi) || []).length;
       if (cardCount < 2) return match;
 
       const gridStyle = `display:grid;grid-template-columns:repeat(${Math.min(cardCount, 3)}, 1fr);gap:24px`;
@@ -146,7 +146,7 @@ function restructureFooter(html: string): string {
 
 function restructureCardContent(html: string): string {
   return html.replace(
-    /(<(?:div|article)[^>]*class="[^"]*card[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|article)>)/gi,
+    /(<(?:div|article)[^>]*(?:class|className)="[^"]*card[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|article)>)/gi,
     (match, open: string, inner: string, close: string) => {
       const cardStyle = "padding:32px;border-radius:12px;background:var(--ds-surface, #f8f9fa);border:1px solid var(--ds-border, #e5e7eb)";
 
@@ -165,7 +165,7 @@ function restructureCardContent(html: string): string {
 
 function restructureCTA(html: string): string {
   return html.replace(
-    /(<(?:div|section)[^>]*class="[^"]*cta[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
+    /(<(?:div|section)[^>]*(?:class|className)="[^"]*cta[^"]*"[^>]*>)([\s\S]*?)(<\/(?:div|section)>)/gi,
     (match, open: string, inner: string, close: string) => {
       const ctaStyle = "text-align:center;padding:80px 24px;background:var(--ds-surface, #f8f9fa);border-radius:16px;max-width:800px;margin:0 auto";
 
