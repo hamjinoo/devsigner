@@ -188,10 +188,38 @@ function generatePalette(config: DesignSystemConfig, refs: NormalizedReference[]
       sat = picked.s;
     }
   } else {
-    // Learn from reference sites
-    const picked = pickPrimaryFromReferences(refs, mood, config.industry);
-    hue = picked.h;
-    sat = picked.s;
+    // Learn from crawled sites first (larger dataset), fall back to reference DB
+    const crawled = config.industry
+      ? getPatternForCategory(config.industry)
+      : getPatternForAll();
+
+    if (crawled.topColors.length > 0 && crawled.sampleSize >= 3) {
+      // Parse the most popular chromatic color from crawled data
+      const topColor = crawled.topColors[0].raw;
+      const match = topColor.match(/\d+/g);
+      if (match && match.length >= 3) {
+        const [r, g, b] = match.map(Number);
+        const parsed = hexToHsl(
+          "#" + [r, g, b].map(v => v.toString(16).padStart(2, "0")).join("")
+        );
+        if (parsed) {
+          hue = parsed.h;
+          sat = parsed.s * 100;
+        } else {
+          const picked = pickPrimaryFromReferences(refs, mood, config.industry);
+          hue = picked.h;
+          sat = picked.s;
+        }
+      } else {
+        const picked = pickPrimaryFromReferences(refs, mood, config.industry);
+        hue = picked.h;
+        sat = picked.s;
+      }
+    } else {
+      const picked = pickPrimaryFromReferences(refs, mood, config.industry);
+      hue = picked.h;
+      sat = picked.s;
+    }
   }
 
   const primary = generateShadeScale(hue, sat);
