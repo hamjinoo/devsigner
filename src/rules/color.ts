@@ -1,5 +1,5 @@
 import type { StyleDeclaration, StyleBlock } from "../parsers/css-extractor.js";
-import type { DesignIssue } from "./types.js";
+import type { DesignIssue, RuleContext } from "./types.js";
 import type { DevsignerConfig } from "../config/project-config.js";
 import { parseColor, contrastRatio, rgbToHex } from "../utils/color-utils.js";
 import { WCAG_AA_NORMAL, WCAG_AA_LARGE, WCAG_AAA_NORMAL, WCAG_AAA_LARGE, MAX_DISTINCT_COLORS } from "../constants.js";
@@ -9,6 +9,7 @@ export function checkColors(
   declarations: StyleDeclaration[],
   blocks: StyleBlock[] = [],
   config?: DevsignerConfig,
+  context?: RuleContext,
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
 
@@ -101,12 +102,24 @@ export function checkColors(
       ? allColors.filter((c) => !isAllowedColor(config, c))
       : allColors;
     const uniqueHues = [...new Set(filteredColors)];
-    if (uniqueHues.length > maxDistinctColors) {
+
+    // Use reference ranges if available, otherwise fall back to config/constant
+    const refRanges = context?.ranges;
+    const effectiveMax = refRanges
+      ? refRanges.colorCount.p75
+      : maxDistinctColors;
+
+    if (uniqueHues.length > effectiveMax) {
+      const industryLabel = context?.industry ?? "reference";
+      const suggestion = refRanges
+        ? `${industryLabel} sites typically use ${refRanges.colorCount.p25}-${refRanges.colorCount.p75} colors (median ${refRanges.colorCount.median}). Consider consolidating.`
+        : `Limit your palette to ${maxDistinctColors} or fewer colors. Use a design system with primary, secondary, and accent colors.`;
+
       issues.push({
         severity: "warning",
         category: "color",
-        message: `Found ${uniqueHues.length} distinct colors — too many colors create a chaotic look.`,
-        suggestion: `Limit your palette to ${maxDistinctColors} or fewer colors. Use a design system with primary, secondary, and accent colors.`,
+        message: `Found ${uniqueHues.length} distinct colors — above the typical range${refRanges ? ` for ${industryLabel} sites` : ""}.`,
+        suggestion,
       });
     }
   }

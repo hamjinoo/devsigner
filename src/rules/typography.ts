@@ -1,5 +1,5 @@
 import type { StyleDeclaration } from "../parsers/css-extractor.js";
-import type { DesignIssue } from "./types.js";
+import type { DesignIssue, RuleContext } from "./types.js";
 import type { DevsignerConfig } from "../config/project-config.js";
 import { parseCSSValue, toPx } from "../utils/css-value-parser.js";
 import {
@@ -12,6 +12,7 @@ import { isRuleIgnored } from "../config/project-config.js";
 export function checkTypography(
   declarations: StyleDeclaration[],
   config?: DevsignerConfig,
+  context?: RuleContext,
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
 
@@ -52,12 +53,22 @@ export function checkTypography(
   // Check font size count
   if (!(config && isRuleIgnored(config, "typography.fontSizes"))) {
     const uniqueSizes = [...new Set(fontSizes)];
-    if (uniqueSizes.length > maxFontSizes) {
+    const refRanges = context?.ranges;
+    const effectiveMax = refRanges
+      ? refRanges.typographySizeCount.p75
+      : maxFontSizes;
+
+    if (uniqueSizes.length > effectiveMax) {
+      const industryLabel = context?.industry ?? "reference";
+      const suggestion = refRanges
+        ? `${industryLabel} sites typically use ${refRanges.typographySizeCount.p25}-${refRanges.typographySizeCount.p75} font sizes (median ${refRanges.typographySizeCount.median}). Consider consolidating.`
+        : `Use a type scale with ${maxFontSizes} or fewer sizes (e.g., 12, 14, 16, 20, 24, 32px).`;
+
       issues.push({
         severity: "warning",
         category: "typography",
-        message: `Found ${uniqueSizes.length} distinct font sizes — too many sizes break visual hierarchy.`,
-        suggestion: `Use a type scale with ${maxFontSizes} or fewer sizes (e.g., 12, 14, 16, 20, 24, 32px).`,
+        message: `Found ${uniqueSizes.length} distinct font sizes — above the typical range${refRanges ? ` for ${industryLabel} sites` : ""}.`,
+        suggestion,
       });
     }
   }
@@ -97,12 +108,22 @@ export function checkTypography(
   // Check font weight count
   if (!(config && isRuleIgnored(config, "typography.fontWeights"))) {
     const uniqueWeights = [...new Set(fontWeights)];
-    if (uniqueWeights.length > maxFontWeights) {
+    const refRanges = context?.ranges;
+    const effectiveMax = refRanges
+      ? refRanges.typographyWeightCount.p75
+      : maxFontWeights;
+
+    if (uniqueWeights.length > effectiveMax) {
+      const industryLabel = context?.industry ?? "reference";
+      const suggestion = refRanges
+        ? `${industryLabel} sites typically use ${refRanges.typographyWeightCount.p25}-${refRanges.typographyWeightCount.p75} font weights (median ${refRanges.typographyWeightCount.median}). Stick to regular (400), medium (500), and bold (700).`
+        : `Limit to ${maxFontWeights} weights: regular (400), medium (500), and bold (700).`;
+
       issues.push({
         severity: "warning",
         category: "typography",
-        message: `Found ${uniqueWeights.length} font weights — excessive weight variation is distracting.`,
-        suggestion: `Limit to ${maxFontWeights} weights: regular (400), medium (500), and bold (700).`,
+        message: `Found ${uniqueWeights.length} font weights — above the typical range${refRanges ? ` for ${industryLabel} sites` : ""}.`,
+        suggestion,
       });
     }
   }

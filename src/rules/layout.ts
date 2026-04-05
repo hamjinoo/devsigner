@@ -1,5 +1,5 @@
 import type { StyleDeclaration } from "../parsers/css-extractor.js";
-import type { DesignIssue } from "./types.js";
+import type { DesignIssue, RuleContext } from "./types.js";
 import type { DevsignerConfig } from "../config/project-config.js";
 import { parseCSSValue, toPx } from "../utils/css-value-parser.js";
 import { READABLE_MAX_WIDTH } from "../constants.js";
@@ -8,6 +8,7 @@ import { isRuleIgnored } from "../config/project-config.js";
 export function checkLayout(
   declarations: StyleDeclaration[],
   config?: DevsignerConfig,
+  _context?: RuleContext,
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
 

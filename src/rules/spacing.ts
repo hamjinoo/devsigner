@@ -1,5 +1,5 @@
 import type { StyleDeclaration } from "../parsers/css-extractor.js";
-import type { DesignIssue } from "./types.js";
+import type { DesignIssue, RuleContext } from "./types.js";
 import type { DevsignerConfig } from "../config/project-config.js";
 import { parseCSSValue, toPx } from "../utils/css-value-parser.js";
 import { GRID_BASE, GRID_PREFERRED, SPACING_SCALE } from "../constants.js";
@@ -8,6 +8,7 @@ import { isRuleIgnored } from "../config/project-config.js";
 export function checkSpacing(
   declarations: StyleDeclaration[],
   config?: DevsignerConfig,
+  context?: RuleContext,
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
 
@@ -65,7 +66,14 @@ export function checkSpacing(
   // Check spacing consistency
   if (!(config && isRuleIgnored(config, "spacing.consistency"))) {
     const uniqueValues = [...new Set(spacingValues)];
-    if (uniqueValues.length > maxDistinctValues) {
+
+    // Use reference ranges if available
+    const refRanges = context?.ranges;
+    const effectiveMax = refRanges
+      ? refRanges.spacingUniqueCount.p75
+      : maxDistinctValues;
+
+    if (uniqueValues.length > effectiveMax) {
       const closest = uniqueValues.map((v) => {
         return SPACING_SCALE.reduce((prev, curr) =>
           Math.abs(curr - v) < Math.abs(prev - v) ? curr : prev
@@ -73,11 +81,16 @@ export function checkSpacing(
       });
       const recommended = [...new Set(closest)].sort((a, b) => a - b);
 
+      const industryLabel = context?.industry ?? "reference";
+      const suggestion = refRanges
+        ? `${industryLabel} sites typically use ${refRanges.spacingUniqueCount.p25}-${refRanges.spacingUniqueCount.p75} spacing values (median ${refRanges.spacingUniqueCount.median}). Consolidate to: ${recommended.join(", ")}px.`
+        : `Consolidate to a spacing scale: ${recommended.join(", ")}px.`;
+
       issues.push({
         severity: "warning",
         category: "spacing",
-        message: `Found ${uniqueValues.length} different spacing values — this creates visual inconsistency.`,
-        suggestion: `Consolidate to a spacing scale: ${recommended.join(", ")}px.`,
+        message: `Found ${uniqueValues.length} different spacing values — above the typical range${refRanges ? ` for ${industryLabel} sites` : ""}.`,
+        suggestion,
       });
     }
   }

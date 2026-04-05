@@ -713,7 +713,7 @@ export function applyFixes(code: string, level: FixLevel): { fixedCode: string; 
 export function registerDesignFix(server: McpServer): void {
   server.tool(
     "design_fix",
-    "Fix design issues in UI code automatically. Corrects spacing grid alignment, WCAG contrast violations, typography oddities, and layout problems. Returns corrected code ready to paste.",
+    "Fix design issues in UI code automatically. Corrects spacing grid alignment, WCAG contrast violations, typography oddities, and layout problems. Returns before/after screenshots and corrected code ready to paste.",
     {
       code: z.string().describe("The UI code with design issues (HTML, CSS, React, Vue, or Svelte)"),
       framework: z
@@ -726,8 +726,12 @@ export function registerDesignFix(server: McpServer): void {
         .describe(
           "Fix intensity: safe = only rule violations, moderate = rules + typography/spacing consistency, aggressive = everything + restructure"
         ),
+      visual: z
+        .boolean()
+        .default(true)
+        .describe("Include before/after rendered screenshots"),
     },
-    async ({ code, framework, fix_level }) => {
+    async ({ code, framework, fix_level, visual }) => {
       // 1. Parse and score BEFORE
       const parsedBefore = parseCode(code, framework);
       const issuesBefore = runDesignRules(parsedBefore.declarations, ["all"] as FocusArea[], parsedBefore.blocks);
@@ -806,9 +810,24 @@ export function registerDesignFix(server: McpServer): void {
       lines.push(fixedCode);
       lines.push("```");
 
-      return {
-        content: [{ type: "text" as const, text: lines.join("\n") }],
-      };
+      // Build response with optional before/after screenshots
+      const content: Array<{ type: "image"; data: string; mimeType: string } | { type: "text"; text: string }> = [];
+
+      if (visual && fixes.length > 0) {
+        try {
+          const { transformAndRender } = await import("../pipeline/transform.js");
+          const result = await transformAndRender(code, { fixLevel: fix_level });
+          content.push({ type: "image" as const, data: result.beforeScreenshot, mimeType: "image/png" });
+          content.push({ type: "text" as const, text: "**Before** ↑ — **After** ↓" });
+          content.push({ type: "image" as const, data: result.afterScreenshot, mimeType: "image/png" });
+        } catch {
+          // Chrome not available — skip screenshots
+        }
+      }
+
+      content.push({ type: "text" as const, text: lines.join("\n") });
+
+      return { content };
     }
   );
 }

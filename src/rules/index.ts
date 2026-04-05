@@ -1,5 +1,5 @@
 import type { StyleDeclaration, StyleBlock } from "../parsers/css-extractor.js";
-import type { DesignIssue } from "./types.js";
+import type { DesignIssue, RuleContext } from "./types.js";
 import type { DevsignerConfig } from "../config/project-config.js";
 import { checkSpacing } from "./spacing.js";
 import { checkColors } from "./color.js";
@@ -13,24 +13,25 @@ export function runDesignRules(
   focus: FocusArea[] = ["all"],
   blocks: StyleBlock[] = [],
   config?: DevsignerConfig,
+  context?: RuleContext,
 ): DesignIssue[] {
   const issues: DesignIssue[] = [];
   const runAll = focus.includes("all");
 
   if (runAll || focus.includes("spacing")) {
-    issues.push(...checkSpacing(declarations, config));
+    issues.push(...checkSpacing(declarations, config, context));
   }
 
   if (runAll || focus.includes("color")) {
-    issues.push(...checkColors(declarations, blocks, config));
+    issues.push(...checkColors(declarations, blocks, config, context));
   }
 
   if (runAll || focus.includes("typography")) {
-    issues.push(...checkTypography(declarations, config));
+    issues.push(...checkTypography(declarations, config, context));
   }
 
   if (runAll || focus.includes("layout")) {
-    issues.push(...checkLayout(declarations, config));
+    issues.push(...checkLayout(declarations, config, context));
   }
 
   return issues;
@@ -62,4 +63,4 @@ export function calculateScore(issues: DesignIssue[]): number {
   return Math.max(0, score);
 }
 
-export { type DesignIssue, type Severity, type Category } from "./types.js";
+export { type DesignIssue, type Severity, type Category, type RuleContext } from "./types.js";
