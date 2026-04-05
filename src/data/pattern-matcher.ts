@@ -96,6 +96,9 @@ export interface DesignPattern {
     hasShadow: boolean;
   } | null;
 
+  // Colors from crawled sites
+  topColors: Array<{ raw: string; count: number }>;
+
   sampleSize: number;
 }
 
@@ -260,6 +263,31 @@ export function extractPattern(sites: CrawledSite[]): DesignPattern {
     };
   }
 
+  // Colors — find most common non-black/white/gray colors across sites
+  const colorFreq = new Map<string, number>();
+  for (const site of sites) {
+    for (const c of site.colors.palette.slice(0, 5)) {
+      const raw = c.raw;
+      // Skip near-black, near-white, transparent
+      if (!raw || raw === "rgba(0, 0, 0, 0)" || raw === "transparent") continue;
+      const match = raw.match(/\d+/g);
+      if (match) {
+        const [r, g, b] = match.map(Number);
+        // Skip very dark (<30 all channels) and very light (>225 all channels)
+        if (r < 30 && g < 30 && b < 30) continue;
+        if (r > 225 && g > 225 && b > 225) continue;
+        // Skip grays (where R ≈ G ≈ B)
+        const maxDiff = Math.max(Math.abs(r - g), Math.abs(g - b), Math.abs(r - b));
+        if (maxDiff < 20) continue;
+      }
+      colorFreq.set(raw, (colorFreq.get(raw) ?? 0) + c.count);
+    }
+  }
+  const topColors = [...colorFreq.entries()]
+    .sort(([, a], [, b]) => b - a)
+    .slice(0, 20)
+    .map(([raw, count]) => ({ raw, count }));
+
   return {
     topFonts,
     topTypeSizes,
@@ -276,6 +304,7 @@ export function extractPattern(sites: CrawledSite[]): DesignPattern {
     dominantShadowStyle,
     buttonPattern,
     cardPattern,
+    topColors,
     sampleSize: sites.length,
   };
 }
@@ -297,6 +326,7 @@ function emptyPattern(): DesignPattern {
     dominantShadowStyle: "subtle",
     buttonPattern: { padding: "8px 16px", fontSize: 14, fontWeight: "500", borderRadius: 8 },
     cardPattern: { padding: 24, borderRadius: 12, hasShadow: true },
+    topColors: [],
     sampleSize: 0,
   };
 }
