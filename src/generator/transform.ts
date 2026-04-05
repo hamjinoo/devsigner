@@ -23,18 +23,26 @@ export interface TransformOutput {
 }
 
 /**
- * Strip existing styles from HTML so our design system takes effect.
- * Removes <style>, <link rel="stylesheet">, and inline style attributes.
+ * Instead of stripping all styles (which breaks layout),
+ * inject our CSS with !important to override visual properties
+ * while keeping the site's layout intact.
  */
-function stripExistingStyles(html: string): string {
-  let result = html;
-  // Remove <style> tags and their contents
-  result = result.replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "");
-  // Remove <link rel="stylesheet"> tags
-  result = result.replace(/<link[^>]*rel=["']stylesheet["'][^>]*>/gi, "");
-  // Remove inline style attributes (but keep structure)
-  result = result.replace(/\sstyle="[^"]*"/gi, "");
-  result = result.replace(/\sstyle='[^']*'/gi, "");
+function makeOverrideCSS(css: string): string {
+  // Add !important to visual properties but NOT layout properties
+  const visualProps = [
+    "color", "background-color", "background", "border-color", "border",
+    "font-family", "font-size", "font-weight", "line-height", "letter-spacing",
+    "border-radius", "box-shadow", "text-shadow",
+    "padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
+    "margin-top", "margin-bottom",
+  ];
+
+  let result = css;
+  for (const prop of visualProps) {
+    // Match property: value; and add !important
+    const regex = new RegExp(`(${prop}\\s*:\\s*)([^;!}]+)(;)`, "gi");
+    result = result.replace(regex, `$1$2 !important$3`);
+  }
   return result;
 }
 
@@ -42,11 +50,12 @@ function stripExistingStyles(html: string): string {
  * Inject the design system CSS AND restructure HTML layout.
  * Handles both full HTML documents and code fragments.
  */
-function injectDesignSystem(code: string, ds: GeneratedDesignSystem, stripStyles = false): string {
-  const styleTag = `<style id="devsigner-design-system">\n${ds.css}\n</style>`;
+function injectDesignSystem(code: string, ds: GeneratedDesignSystem, overrideMode = false): string {
+  // In override mode, add !important to visual properties so our CSS wins over existing styles
+  const cssToInject = overrideMode ? makeOverrideCSS(ds.css) : ds.css;
+  const styleTag = `<style id="devsigner-design-system">\n${cssToInject}\n</style>`;
 
-  // Strip existing styles if requested (for live URL transforms)
-  let processed = stripStyles ? stripExistingStyles(code) : code;
+  let processed = code;
 
   // Apply Tailwind class upgrades (if Tailwind code detected)
   const tailwindUpgraded = transformTailwind(processed, ds.tokens["--ds-mood"] ?? "neutral");
