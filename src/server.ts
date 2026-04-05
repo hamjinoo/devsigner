@@ -31,6 +31,7 @@ import { registerCompeteAnalyze } from "./tools/compete-analyze.js";
 import { registerPerfAudit } from "./tools/perf-audit.js";
 import { registerMigrateStyles } from "./tools/migrate-styles.js";
 import { registerReferenceCompare } from "./tools/reference-compare.js";
+import { registerDesignTransform } from "./tools/design-transform.js";
 import { registerDesignSystemResources } from "./resources/design-systems.js";
 
 export function registerAllTools(server: McpServer): void {
@@ -66,5 +67,6 @@ export function registerAllTools(server: McpServer): void {
   registerPerfAudit(server);
   registerMigrateStyles(server);
   registerReferenceCompare(server);
+  registerDesignTransform(server);
   registerDesignSystemResources(server);
 }
