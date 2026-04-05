@@ -10,6 +10,7 @@
 import puppeteer from "puppeteer-core";
 import { findChrome, wrapInHTML } from "../tools/render-and-review.js";
 import { generateDesignSystem, type DesignSystemConfig, type GeneratedDesignSystem } from "./design-system.js";
+import { restructureHTML } from "./restructure.js";
 import { detectPageType } from "../context/page-type-detector.js";
 
 export interface TransformOutput {
@@ -21,19 +22,22 @@ export interface TransformOutput {
 }
 
 /**
- * Inject the design system CSS into the user's code.
+ * Inject the design system CSS AND restructure HTML layout.
  * Handles both full HTML documents and code fragments.
  */
 function injectDesignSystem(code: string, ds: GeneratedDesignSystem): string {
   const styleTag = `<style id="devsigner-design-system">\n${ds.css}\n</style>`;
 
+  // First, restructure the HTML for better layout
+  const restructured = restructureHTML(code);
+
   // If it's a full HTML document, inject into <head>
-  if (code.includes("<head>")) {
-    return code.replace("<head>", `<head>\n${styleTag}`);
+  if (restructured.includes("<head>")) {
+    return restructured.replace("<head>", `<head>\n${styleTag}`);
   }
 
-  if (code.includes("<!DOCTYPE") || code.includes("<html")) {
-    return code.replace(/<html[^>]*>/, (match) => `${match}\n<head>${styleTag}</head>`);
+  if (restructured.includes("<!DOCTYPE") || restructured.includes("<html")) {
+    return restructured.replace(/<html[^>]*>/, (match) => `${match}\n<head>${styleTag}</head>`);
   }
 
   // For fragments, wrap with the design system
@@ -48,7 +52,7 @@ function injectDesignSystem(code: string, ds: GeneratedDesignSystem): string {
 ${styleTag}
 </head>
 <body>
-${code}
+${restructured}
 </body>
 </html>`;
 }
