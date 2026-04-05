@@ -516,48 +516,67 @@ export function estimatePersonality(colors: any, typography: any, spacing: any, 
     "Soft Wellness": 0,
   };
 
-  // Bold Minimal
-  if (colors.color_scheme === "dark") scores["Bold Minimal"] += 3;
+  // --- Bold Minimal: dark, few colors, no shadows, clean ---
+  if (colors.color_scheme === "dark") scores["Bold Minimal"] += 4;
   if (shapes.shadow_style === "none") scores["Bold Minimal"] += 2;
   if (colors.color_count < 8) scores["Bold Minimal"] += 2;
-  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Bold Minimal"] += 1;
-  if (spacing.density === "spacious") scores["Bold Minimal"] += 2;
-
-  // Warm Professional
-  if (colors.color_scheme === "light") scores["Warm Professional"] += 3;
-  if (shapes.shadow_style === "subtle") scores["Warm Professional"] += 2;
-  if (shapes.corner_style === "rounded") scores["Warm Professional"] += 2;
-  if (spacing.density === "balanced") scores["Warm Professional"] += 1;
-  if (colors.color_count >= 8 && colors.color_count <= 15) scores["Warm Professional"] += 1;
-
-  // Energetic Pop
-  if (colors.color_count > 15) scores["Energetic Pop"] += 3;
-  if (shapes.corner_style === "pill") scores["Energetic Pop"] += 2;
-  if (shapes.shadow_style === "dramatic") scores["Energetic Pop"] += 2;
-  if (spacing.density === "balanced") scores["Energetic Pop"] += 1;
-  if (colors.accent_color) {
-    const accent = colors.palette?.find((c: any) => c.hex === colors.accent_color);
-    if (accent && accent.hsl.s > 0.7) scores["Energetic Pop"] += 2;
+  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Bold Minimal"] += 2;
+  if (spacing.density === "spacious") scores["Bold Minimal"] += 1;
+  // Monospace fonts signal dev/minimal aesthetic
+  if (typography.heading_font && /mono|code|consolas|fira|jetbrains/i.test(typography.heading_font)) {
+    scores["Bold Minimal"] += 2;
   }
 
-  // Elegant Editorial
-  if (typography.heading_font && typography.heading_font.toLowerCase().includes("serif")) scores["Elegant Editorial"] += 4;
-  if (shapes.shadow_style === "none") scores["Elegant Editorial"] += 2;
+  // --- Warm Professional: light, rounded, moderate palette ---
+  if (colors.color_scheme === "light") scores["Warm Professional"] += 2;
+  if (shapes.shadow_style === "subtle") scores["Warm Professional"] += 2;
+  if (shapes.corner_style === "rounded") scores["Warm Professional"] += 3;
+  if (spacing.density === "balanced") scores["Warm Professional"] += 2;
+  if (colors.color_count >= 8 && colors.color_count <= 15) scores["Warm Professional"] += 1;
+
+  // --- Energetic Pop: colorful, pill, dramatic ---
+  if (colors.color_count > 12) scores["Energetic Pop"] += 2;
+  if (shapes.corner_style === "pill") scores["Energetic Pop"] += 2;
+  if (shapes.shadow_style === "dramatic" || shapes.shadow_style === "medium") scores["Energetic Pop"] += 2;
+  if (colors.accent_color) {
+    const accent = colors.palette?.find((c: any) => c.hex === colors.accent_color);
+    if (accent && accent.hsl && accent.hsl.s > 0.6) scores["Energetic Pop"] += 3;
+  }
+  // Bright, saturated dominant colors
+  if (colors.palette?.length > 0) {
+    const topColor = colors.palette[0];
+    if (topColor.hsl && topColor.hsl.s > 0.5 && topColor.hsl.l > 0.3 && topColor.hsl.l < 0.7) {
+      scores["Energetic Pop"] += 2;
+    }
+  }
+
+  // --- Elegant Editorial: serif, no shadows, spacious ---
+  if (typography.heading_font && /serif|georgia|playfair|lora|merriweather|garamond|times/i.test(typography.heading_font)) {
+    scores["Elegant Editorial"] += 5;
+  }
+  if (shapes.shadow_style === "none") scores["Elegant Editorial"] += 1;
   if (spacing.density === "spacious") scores["Elegant Editorial"] += 2;
-  if (shapes.corner_style === "sharp") scores["Elegant Editorial"] += 1;
+  if (shapes.corner_style === "sharp") scores["Elegant Editorial"] += 2;
 
-  // Data Dense
-  if (spacing.density === "compact") scores["Data Dense"] += 3;
-  if (shapes.shadow_style === "none") scores["Data Dense"] += 2;
-  if (colors.color_count < 6) scores["Data Dense"] += 2;
-  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Data Dense"] += 1;
+  // --- Data Dense: compact, functional, many elements ---
+  if (spacing.density === "compact") scores["Data Dense"] += 4;
+  if (shapes.shadow_style === "none") scores["Data Dense"] += 1;
+  if (colors.color_count < 8) scores["Data Dense"] += 1;
+  if (shapes.corner_style === "sharp" || shapes.corner_style === "subtle") scores["Data Dense"] += 2;
+  // Many small font sizes indicate data-heavy UI
+  if (typography.sizes?.length > 6) scores["Data Dense"] += 2;
 
-  // Soft Wellness
-  if (shapes.corner_style === "pill") scores["Soft Wellness"] += 3;
-  if (shapes.shadow_style === "subtle") scores["Soft Wellness"] += 2;
-  if (spacing.density === "spacious") scores["Soft Wellness"] += 2;
-  if (colors.color_scheme === "light") scores["Soft Wellness"] += 1;
-  if (colors.color_count < 10) scores["Soft Wellness"] += 1;
+  // --- Soft Wellness: pill alone is NOT enough, need warm + soft signals ---
+  if (shapes.corner_style === "pill" && shapes.shadow_style === "subtle") scores["Soft Wellness"] += 2;
+  if (spacing.density === "spacious" && colors.color_scheme === "light") scores["Soft Wellness"] += 2;
+  if (colors.color_count < 8 && colors.color_scheme === "light") scores["Soft Wellness"] += 1;
+  // Require low saturation / pastel colors for wellness
+  if (colors.palette?.length > 0) {
+    const avgSat = colors.palette
+      .filter((c: any) => c.hsl && c.hsl.s > 0.05)
+      .reduce((sum: number, c: any) => sum + (c.hsl?.s ?? 0), 0) / Math.max(1, colors.palette.length);
+    if (avgSat < 0.35) scores["Soft Wellness"] += 2;
+  }
 
   // Find highest score; ties go to "Warm Professional"
   let best = "Warm Professional";

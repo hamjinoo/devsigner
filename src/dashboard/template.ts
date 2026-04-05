@@ -69,6 +69,63 @@ function scoreRing(score: number, size = 180): string {
     </svg>`;
 }
 
+function radarChart(dimensions: Array<{ name: string; score: number; icon: string }>, size = 220): string {
+  const cx = size / 2;
+  const cy = size / 2;
+  const r = (size - 40) / 2;
+  const n = dimensions.length;
+  const angleStep = (2 * Math.PI) / n;
+
+  // Grid rings
+  const rings = [0.25, 0.5, 0.75, 1.0];
+  const gridLines = rings.map((pct) => {
+    const points = [];
+    for (let i = 0; i < n; i++) {
+      const angle = i * angleStep - Math.PI / 2;
+      points.push(`${cx + r * pct * Math.cos(angle)},${cy + r * pct * Math.sin(angle)}`);
+    }
+    return `<polygon points="${points.join(" ")}" fill="none" stroke="#2a2a35" stroke-width="1" />`;
+  }).join("");
+
+  // Axis lines
+  const axes = dimensions.map((_, i) => {
+    const angle = i * angleStep - Math.PI / 2;
+    const x = cx + r * Math.cos(angle);
+    const y = cy + r * Math.sin(angle);
+    return `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}" stroke="#2a2a35" stroke-width="1" />`;
+  }).join("");
+
+  // Data polygon
+  const dataPoints = dimensions.map((d, i) => {
+    const angle = i * angleStep - Math.PI / 2;
+    const pct = d.score / 100;
+    return `${cx + r * pct * Math.cos(angle)},${cy + r * pct * Math.sin(angle)}`;
+  });
+  const dataPolygon = `<polygon points="${dataPoints.join(" ")}" fill="rgba(139,92,246,0.2)" stroke="#8b5cf6" stroke-width="2" />`;
+
+  // Data points
+  const dots = dimensions.map((d, i) => {
+    const angle = i * angleStep - Math.PI / 2;
+    const pct = d.score / 100;
+    const x = cx + r * pct * Math.cos(angle);
+    const y = cy + r * pct * Math.sin(angle);
+    return `<circle cx="${x}" cy="${y}" r="4" fill="${scoreColor(d.score)}" />`;
+  }).join("");
+
+  // Labels
+  const labels = dimensions.map((d, i) => {
+    const angle = i * angleStep - Math.PI / 2;
+    const lx = cx + (r + 18) * Math.cos(angle);
+    const ly = cy + (r + 18) * Math.sin(angle);
+    const anchor = Math.abs(Math.cos(angle)) < 0.1 ? "middle" : Math.cos(angle) > 0 ? "start" : "end";
+    return `<text x="${lx}" y="${ly + 4}" text-anchor="${anchor}" fill="#a1a1aa" font-size="11">${d.icon} ${d.score}</text>`;
+  }).join("");
+
+  return `<svg width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" class="radar-chart">
+    ${gridLines}${axes}${dataPolygon}${dots}${labels}
+  </svg>`;
+}
+
 // ---------------------------------------------------------------------------
 // Main template
 // ---------------------------------------------------------------------------
@@ -77,7 +134,7 @@ export function renderDashboard(data: DashboardData): string {
   const {
     projectName, techStack, overallScore, totalFiles, totalIssues,
     distribution, categoryScores, topIssues, files, colors, typography,
-    spacing, scannedAt,
+    spacing, scorecard, scannedAt,
   } = data;
 
   // Category cards
@@ -264,15 +321,22 @@ header {
 .hero {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 48px;
-  align-items: center;
+  gap: 32px;
+  align-items: start;
   margin-bottom: 40px;
+}
+.hero-scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 .hero-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
+.radar-chart { display: block; margin: 0 auto; }
 .stat-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -692,7 +756,10 @@ footer a { color: var(--accent); text-decoration: none; }
 </header>
 
 <div class="hero">
-  <div>${scoreRing(overallScore)}</div>
+  <div class="hero-scores">
+    <div>${scoreRing(scorecard.overall, 160)}</div>
+    <div>${radarChart(scorecard.dimensions)}</div>
+  </div>
   <div class="hero-stats">
     <div class="stat-card">
       <div class="stat-value">${totalFiles}</div>
@@ -706,6 +773,11 @@ footer a { color: var(--accent); text-decoration: none; }
       <div class="stat-value">${colors.length}</div>
       <div class="stat-label">Distinct Colors</div>
     </div>
+    ${scorecard.dimensions.map((d) => `
+    <div class="stat-card">
+      <div class="stat-value" style="color:${scoreColor(d.score)};font-size:24px">${d.icon} ${d.score}</div>
+      <div class="stat-label">${d.name}</div>
+    </div>`).join("")}
   </div>
 </div>
 

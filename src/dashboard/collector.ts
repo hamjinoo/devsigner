@@ -15,6 +15,8 @@ import {
   type ProjectDesignProfile,
 } from "../tools/scan-project.js";
 import type { DesignIssue, Category, Severity } from "../rules/types.js";
+import { computeScorecard } from "../scoring/calculators.js";
+import type { DesignScorecard } from "../scoring/dimensions.js";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -62,6 +64,7 @@ export interface DashboardData {
   typography: { fonts: Record<string, number>; sizes: Record<string, number>; weights: Record<string, number> };
   spacing: { value: string; px: number; count: number; gridAligned: boolean }[];
   reviewHistory: { timestamp: string; score: number; issueCount: number }[];
+  scorecard: DesignScorecard;
   scannedAt: string;
 }
 
@@ -123,8 +126,11 @@ export async function collectDashboardData(projectPath: string): Promise<Dashboa
     extractSpacingPatterns(absPath),
   ]);
 
-  // Review each file
+  // Review each file + collect all declarations for project scorecard
   const files: FileResult[] = [];
+  const allDeclarations: import("../parsers/css-extractor.js").StyleDeclaration[] = [];
+  const allBlocks: import("../parsers/css-extractor.js").StyleBlock[] = [];
+
   for (const filePath of uiFiles) {
     const relativePath = path.relative(absPath, filePath).replace(/\\/g, "/");
     try {
@@ -138,6 +144,8 @@ export async function collectDashboardData(projectPath: string): Promise<Dashboa
         files.push({ relativePath, score: 100, issues: [] });
         continue;
       }
+      allDeclarations.push(...parsed.declarations);
+      allBlocks.push(...parsed.blocks);
       // Build reference-aware context
       const ruleContext: RuleContext = { ranges: getRangesForAll() };
       const issues = runDesignRules(parsed.declarations, ["all"], parsed.blocks, config, ruleContext);
@@ -147,6 +155,9 @@ export async function collectDashboardData(projectPath: string): Promise<Dashboa
       files.push({ relativePath, score: -1, issues: [], error: String(err) });
     }
   }
+
+  // Compute project-wide scorecard
+  const scorecard = computeScorecard(allDeclarations, allBlocks, { ranges: getRangesForAll() });
 
   // Aggregate
   const reviewed = files.filter((f) => f.score >= 0);
@@ -233,6 +244,7 @@ export async function collectDashboardData(projectPath: string): Promise<Dashboa
     typography,
     spacing: spacing.sort((a, b) => b.count - a.count),
     reviewHistory,
+    scorecard,
     scannedAt: new Date().toISOString(),
   };
 }
