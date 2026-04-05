@@ -1,0 +1,87 @@
+{
+  "saas": [
+    "https://linear.app", "https://notion.so", "https://slack.com", "https://figma.com",
+    "https://airtable.com", "https://monday.com", "https://asana.com", "https://clickup.com",
+    "https://miro.com", "https://loom.com", "https://calendly.com", "https://typeform.com",
+    "https://intercom.com", "https://zendesk.com", "https://hubspot.com", "https://mailchimp.com",
+    "https://canva.com", "https://dropbox.com", "https://zoom.us", "https://todoist.com",
+    "https://1password.com", "https://grammarly.com", "https://webflow.com", "https://framer.com",
+    "https://pitch.com", "https://coda.io", "https://retool.com", "https://amplitude.com",
+    "https://mixpanel.com", "https://hotjar.com", "https://posthog.com", "https://segment.com",
+    "https://launchdarkly.com", "https://datadog.com", "https://pagerduty.com", "https://sentry.io",
+    "https://render.com", "https://railway.app", "https://fly.io", "https://planetscale.com",
+    "https://neon.tech", "https://upstash.com", "https://resend.com", "https://clerk.com",
+    "https://convex.dev", "https://inngest.com", "https://trigger.dev", "https://cal.com",
+    "https://dub.co", "https://tally.so"
+  ],
+  "fintech": [
+    "https://stripe.com", "https://mercury.com", "https://wise.com", "https://revolut.com",
+    "https://brex.com", "https://ramp.com", "https://plaid.com", "https://square.com",
+    "https://coinbase.com", "https://robinhood.com", "https://wealthsimple.com", "https://chime.com",
+    "https://affirm.com", "https://klarna.com", "https://marqeta.com", "https://adyen.com",
+    "https://moderntreasury.com", "https://moov.io", "https://column.com", "https://lithic.com",
+    "https://increase.com", "https://unit.co", "https://treasuryprime.com", "https://alloy.com",
+    "https://middesk.com"
+  ],
+  "developer_tools": [
+    "https://vercel.com", "https://netlify.com", "https://github.com", "https://gitlab.com",
+    "https://supabase.com", "https://firebase.google.com", "https://aws.amazon.com",
+    "https://tailwindcss.com", "https://nextjs.org", "https://astro.build", "https://vitejs.dev",
+    "https://svelte.dev", "https://vuejs.org", "https://angular.dev", "https://remix.run",
+    "https://nuxt.com", "https://turborepo.com", "https://nx.dev", "https://storybook.js.org",
+    "https://prisma.io", "https://drizzle.team", "https://trpc.io", "https://zod.dev",
+    "https://biomejs.dev", "https://bun.sh", "https://deno.com", "https://docker.com",
+    "https://kubernetes.io", "https://terraform.io", "https://pulumi.com", "https://buf.build",
+    "https://grafana.com", "https://prometheus.io", "https://opentelemetry.io", "https://ray.so"
+  ],
+  "ai": [
+    "https://openai.com", "https://anthropic.com", "https://midjourney.com", "https://stability.ai",
+    "https://huggingface.co", "https://replicate.com", "https://together.ai", "https://anyscale.com",
+    "https://modal.com", "https://banana.dev", "https://deepmind.google", "https://cohere.com",
+    "https://mistral.ai", "https://perplexity.ai", "https://jasper.ai", "https://copy.ai",
+    "https://runway.ml", "https://pika.art", "https://elevenlabs.io", "https://descript.com",
+    "https://otter.ai", "https://cursor.com", "https://v0.dev", "https://lovable.dev",
+    "https://bolt.new"
+  ],
+  "ecommerce": [
+    "https://shopify.com", "https://bigcommerce.com", "https://woocommerce.com",
+    "https://gumroad.com", "https://lemonsqueezy.com", "https://paddle.com",
+    "https://amazon.com", "https://etsy.com", "https://ebay.com", "https://walmart.com",
+    "https://target.com", "https://nike.com", "https://apple.com/store", "https://allbirds.com",
+    "https://warbyparker.com", "https://glossier.com", "https://everlane.com", "https://casper.com",
+    "https://away.com", "https://peloton.com"
+  ],
+  "design_tools": [
+    "https://figma.com", "https://framer.com", "https://webflow.com", "https://canva.com",
+    "https://sketch.com", "https://adobe.com", "https://invisionapp.com", "https://zeplin.io",
+    "https://principle.app", "https://protopie.io", "https://spline.design", "https://rive.app",
+    "https://lottiefiles.com", "https://coolors.co", "https://fontjoy.com"
+  ],
+  "media": [
+    "https://medium.com", "https://substack.com", "https://ghost.org", "https://wordpress.com",
+    "https://nytimes.com", "https://washingtonpost.com", "https://theverge.com",
+    "https://techcrunch.com", "https://arstechnica.com", "https://wired.com",
+    "https://bloomberg.com", "https://reuters.com", "https://bbc.com", "https://cnn.com",
+    "https://spotify.com", "https://youtube.com", "https://netflix.com", "https://twitch.tv",
+    "https://tiktok.com", "https://reddit.com"
+  ],
+  "education": [
+    "https://duolingo.com", "https://coursera.org", "https://udemy.com", "https://edx.org",
+    "https://khanacademy.org", "https://brilliant.org", "https://codecademy.com",
+    "https://freecodecamp.org", "https://leetcode.com", "https://hackerrank.com",
+    "https://exercism.org", "https://replit.com", "https://codepen.io", "https://codesandbox.io",
+    "https://skillshare.com"
+  ],
+  "healthcare": [
+    "https://calm.com", "https://headspace.com", "https://noom.com", "https://oura.com",
+    "https://whoop.com", "https://fitbit.com", "https://myfitnesspal.com", "https://strava.com",
+    "https://peloton.com", "https://talkspace.com", "https://betterhelp.com", "https://hims.com",
+    "https://ro.co", "https://nurx.com", "https://zocdoc.com"
+  ],
+  "social": [
+    "https://twitter.com", "https://instagram.com", "https://threads.net", "https://mastodon.social",
+    "https://bluesky.app", "https://discord.com", "https://telegram.org", "https://signal.org",
+    "https://whatsapp.com", "https://linkedin.com", "https://facebook.com", "https://pinterest.com",
+    "https://snapchat.com", "https://tiktok.com", "https://clubhouse.com"
+  ]
+}
