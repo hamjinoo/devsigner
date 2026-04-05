@@ -756,6 +756,36 @@ footer a { color: var(--accent); text-decoration: none; }
   <div class="badges">${techBadges}</div>
 </header>
 
+<div class="url-input-section" style="margin-bottom:32px;padding:24px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius)">
+  <div style="font-size:16px;font-weight:600;margin-bottom:8px">Transform any website</div>
+  <div style="font-size:13px;color:var(--text3);margin-bottom:16px">Paste a URL to see how devsigner would redesign it</div>
+  <div style="display:flex;gap:8px">
+    <input id="urlInput" type="url" placeholder="https://your-site.com" style="flex:1;padding:10px 16px;background:var(--bg);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:14px;font-family:inherit;outline:none">
+    <select id="urlMood" style="padding:10px 12px;background:var(--surface2);color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:13px">
+      <option value="neutral">Neutral</option>
+      <option value="cool">Cool</option>
+      <option value="warm">Warm</option>
+      <option value="bold">Bold</option>
+      <option value="soft">Soft</option>
+    </select>
+    <button id="urlTransformBtn" onclick="transformURL()" style="padding:10px 24px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer">Transform</button>
+  </div>
+  <div id="urlLoading" style="display:none;padding:32px;text-align:center;color:var(--text3)"><div class="spinner" style="display:inline-block;margin-right:8px"></div>Fetching and redesigning...</div>
+  <div id="urlResult" style="display:none;margin-top:20px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+      <div style="background:var(--surface2);border-radius:var(--radius);overflow:hidden">
+        <div style="padding:8px 12px;font-size:12px;font-weight:600;color:var(--text3);text-transform:uppercase;text-align:center">Before</div>
+        <img id="urlBefore" src="" style="width:100%;display:block" alt="Before">
+      </div>
+      <div style="background:var(--surface2);border-radius:var(--radius);overflow:hidden">
+        <div style="padding:8px 12px;font-size:12px;font-weight:600;color:#fff;background:var(--accent);text-transform:uppercase;text-align:center">After — devsigner</div>
+        <img id="urlAfter" src="" style="width:100%;display:block" alt="After">
+      </div>
+    </div>
+    <div id="urlInfo" style="margin-top:12px;font-size:13px;color:var(--text2)"></div>
+  </div>
+</div>
+
 <div class="hero">
   <div class="hero-scores">
     <div>${scoreRing(scorecard.overall, 160)}</div>
@@ -854,6 +884,48 @@ function escHtml(s) {
   var d = document.createElement('div');
   d.textContent = s;
   return d.innerHTML;
+}
+
+async function transformURL() {
+  var urlInput = document.getElementById('urlInput');
+  var siteUrl = urlInput.value.trim();
+  if (!siteUrl) return;
+  if (!siteUrl.startsWith('http')) siteUrl = 'https://' + siteUrl;
+
+  var btn = document.getElementById('urlTransformBtn');
+  var loading = document.getElementById('urlLoading');
+  var result = document.getElementById('urlResult');
+  var mood = document.getElementById('urlMood').value;
+
+  btn.disabled = true;
+  btn.textContent = 'Transforming...';
+  loading.style.display = 'block';
+  result.style.display = 'none';
+
+  try {
+    var res = await fetch('/api/transform-url?url=' + encodeURIComponent(siteUrl) + '&mood=' + mood);
+    var data = await res.json();
+
+    if (data.error) {
+      loading.innerHTML = '<span style="color:#ef4444">' + escHtml(String(data.error)) + '</span>';
+      return;
+    }
+
+    document.getElementById('urlBefore').src = 'data:image/png;base64,' + data.beforeImage;
+    document.getElementById('urlAfter').src = 'data:image/png;base64,' + data.afterImage;
+    document.getElementById('urlInfo').innerHTML =
+      '<strong>' + escHtml(data.url) + '</strong> &middot; ' +
+      'Page type: ' + (data.pageType || 'unknown') + ' &middot; ' +
+      escHtml(data.description || '');
+
+    loading.style.display = 'none';
+    result.style.display = 'block';
+  } catch (err) {
+    loading.innerHTML = '<span style="color:#ef4444">Failed: ' + escHtml(err.message || String(err)) + '</span>';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Transform';
+  }
 }
 
 async function loadPreview(filePath, btn) {

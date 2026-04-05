@@ -237,6 +237,67 @@ export async function startDashboard(projectPath: string, port = 4567): Promise<
       return;
     }
 
+    // API: transform a live URL
+    if (pathname === "/api/transform-url") {
+      const query = parseQuery(url);
+      const siteUrl = query.url;
+      const mood = query.mood ?? "neutral";
+
+      if (!siteUrl) {
+        res.writeHead(400, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: "Missing ?url= parameter" }));
+        return;
+      }
+
+      console.log(`  Transforming URL: ${siteUrl} (mood: ${mood})`);
+
+      try {
+        const puppeteer = await import("puppeteer-core");
+        const { findChrome } = await import("../tools/render-and-review.js");
+        const chromePath = await findChrome();
+        if (!chromePath) throw new Error("Chrome not found");
+
+        const browser = await puppeteer.default.launch({
+          executablePath: chromePath,
+          headless: true,
+          args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-gpu"],
+        });
+
+        const page = await browser.newPage();
+        await page.setViewport({ width: 1280, height: 800 });
+        await page.setUserAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36");
+        await page.goto(siteUrl, { waitUntil: "domcontentloaded", timeout: 20000 });
+        await new Promise((r) => setTimeout(r, 2000));
+
+        // Screenshot BEFORE
+        const beforeScreenshot = (await page.screenshot({ type: "png", encoding: "base64" })) as string;
+
+        // Get page HTML
+        const pageHTML = await page.content();
+        await browser.close();
+
+        // Transform
+        const result = await designTransform(pageHTML, {
+          mood: mood as "warm" | "cool" | "neutral" | "bold" | "soft",
+        });
+
+        res.writeHead(200, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({
+          url: siteUrl,
+          pageType: result.pageType,
+          description: result.designSystem.description,
+          beforeImage: beforeScreenshot,
+          afterImage: result.afterScreenshot,
+          tokens: result.designSystem.tokens,
+        }));
+        console.log(`  URL transform done: ${siteUrl}`);
+      } catch (err) {
+        res.writeHead(500, { "Content-Type": "application/json" });
+        res.end(JSON.stringify({ error: String(err) }));
+      }
+      return;
+    }
+
     // API: before/after preview
     if (pathname === "/api/preview") {
       const query = parseQuery(url);
